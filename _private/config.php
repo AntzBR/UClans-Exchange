@@ -10,8 +10,8 @@ return [
     'sqlite_templates_v9' => __DIR__ . '/templates/sqlite-v9',
     'yaml_templates_v9' => __DIR__ . '/templates/yaml-v9',
     'runtime' => __DIR__ . '/runtime',
-    'rate_limit_client_max' => 3,
+    'rate_limit_client_max' => 30,
     'rate_limit_client_window' => 600,
-    'rate_limit_global_max' => 30,
+    'rate_limit_global_max' => 300,
     'rate_limit_global_window' => 3600,
 ];

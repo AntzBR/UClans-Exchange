@@ -1,18 +1,203 @@
-.exchange-access-card{max-width:620px;margin:0 auto;text-align:center;padding:35px}.exchange-access-icon{font-size:3rem;color:var(--nav-blue);margin-bottom:18px}.exchange-access-card h2{color:#fff;margin-bottom:12px}.exchange-access-card p{color:#a0a0a0;line-height:1.7;margin-bottom:24px}.exchange-access-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}.exchange-access-actions .btn{border:0;cursor:pointer}.exchange-access-actions .btn-secondary{background:#2d2d2d;border:1px solid #3a3a3a}
-/* UltimateClans Exchange: standalone theme, no CDN/assets outside /exchange/ */
-:root{color-scheme:dark;--nav-blue:#8b75ec;--btn-blue:linear-gradient(135deg,#6958cf,#8873e8);--bg:#0b0c14;--fg:#f1f0fc;--muted:#a5a7b9;--line:#2d2d3d;--pane:#161721;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-*{box-sizing:border-box}html{min-width:320px}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% -18%,rgba(104,75,192,.25),transparent 46%),var(--bg);color:var(--fg);font-size:15px}
-a{color:#c5b5ff;text-decoration:none}a:hover{text-decoration:underline}button,input{font:inherit}
-.site-head{height:76px;border-bottom:1px solid #272637;background:#0c0d18c9;display:flex;align-items:center}
-.site-head-inner{width:100%;max-width:1050px;padding:0 20px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:16px}
-.site-brand{color:#faf9ff;display:inline-flex;align-items:center;gap:10px;font-size:14px;font-weight:850;letter-spacing:.04em;text-decoration:none!important}.site-symbol{border:1px solid #5a4989;background:#1b1a2f;color:#c4b5ff;padding:4px 9px;border-radius:9px;font-size:20px}.brand-soft{color:#b9a4ff}.brand-badge{display:inline-block;margin-left:7px;padding:5px 7px;border-radius:5px;background:#272339;font-weight:750;color:#e6dfff;font-size:9px;letter-spacing:.1em}.site-version{color:#aea9be;font-weight:650;font-size:13px;white-space:nowrap}
-.exchange-wrapper{margin:0 auto 50px!important;padding-top:37px!important;max-width:1000px!important}.products-header{margin:0 auto 25px;max-width:900px;text-align:center}.products-header h2{font-size:clamp(1.7rem,4vw,2.35rem);letter-spacing:-.035em;margin:0 0 12px;color:#fff;font-weight:780}.products-header h2 span{background:linear-gradient(100deg,#f9f8ff,#b7a8f5);color:transparent;background-clip:text}.products-header p{color:var(--muted);font-size:1rem;line-height:1.75;max-width:790px;margin:0 auto}.exchange-card{background:#151520!important;border:1px solid #323043!important;border-radius:16px!important;padding:27px!important;box-shadow:0 12px 45px rgba(0,0,0,.15)}
-.exchange-drop{background:#12121c!important;border-color:#55506c!important;min-height:166px;display:flex!important;flex-direction:column;align-items:center;justify-content:center}.exchange-drop:hover,.exchange-drop:focus-within{background:#1c1a2b!important;border-color:#8b75ec!important}.exchange-drop strong{color:#fff!important}.exchange-drop .exchange-small{max-width:700px}
-.exchange-small,.exchange-notice,.exchange-mode,.exchange-storage-text span{color:#abaabd!important}.exchange-storage-option{background:#1b1b29!important;border-color:#373346!important}.exchange-stat{background:#1b1b28!important;border-color:#333043!important}.exchange-stat strong{font-variant-numeric:tabular-nums}.exchange-details{border-color:#302d3b!important}.exchange-details summary{color:#ece7ff!important}
-.btn,.exchange-submit,.btn-stripe-checkout{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:1px solid transparent;border-radius:9px;font-weight:700;font-size:14px;line-height:1.4;padding:12px 17px;text-decoration:none!important;cursor:pointer;transition:filter .2s,transform .2s;background:var(--btn-blue);color:#fff!important;white-space:normal;text-align:center}.btn:hover,.exchange-submit:hover,.btn-stripe-checkout:hover{filter:brightness(1.1);transform:translateY(-1px)}.exchange-submit{width:100%!important;border:0!important;margin-top:20px!important;padding:14px 26px!important;background:var(--btn-blue)!important}.exchange-submit:disabled{cursor:not-allowed;opacity:.5;transform:none}.exchange-actions .btn-secondary{background:#292634;color:#f1eefe!important;border-color:#474056}
-.exchange-error{background:#30191f!important;border-color:#84414a!important}.exchange-final-status{background:#1b1b29!important}.exchange-review-warning{color:#f0c991!important}.exchange-storage-error{color:#ffb2b2!important}
-.exchange-result-title.safe i{color:#88d4aa}.exchange-result-title.change i,.exchange-result-title.review i{color:#f6a849}.exchange-result-title.unsafe i{color:#ff6b6b}
-.exchange-list{overflow-wrap:anywhere}.site-footer{max-width:1000px;margin:28px auto 38px;padding:20px;border-top:1px solid #2a2838;color:#86849a;display:flex;justify-content:space-between;gap:20px;font-size:12px;line-height:1.6}
-.fa-solid{display:inline-flex;align-items:center;justify-content:center;font-style:normal;width:1.2em;line-height:1}.fa-solid:before{content:"◇"}.fa-triangle-exclamation:before{content:"⚠"}.fa-file-zipper:before{content:"▣"}.fa-arrows-rotate:before{content:"↻"}.fa-circle-check:before{content:"✓"}.fa-circle-xmark:before{content:"✕"}.fa-magnifying-glass:before{content:"⌕"}.fa-download:before{content:"↓"}.fa-file-lines:before{content:"☷"}
-.exchange-drop-icon .fa-solid{font-size:30px;line-height:1}.exchange-drop-icon{margin-bottom:9px!important}
-@media(max-width:640px){.site-head{height:68px}.site-brand{font-size:11px}.site-symbol{font-size:15px}.brand-badge{font-size:8px}.exchange-wrapper{padding-top:25px!important}.exchange-card{padding:20px!important}.site-footer{flex-direction:column;gap:6px}.exchange-actions .btn{flex:1 1 100%}}
+/* UltimateClans Exchange — complete standalone stylesheet, no theme dependencies. */
+:root {
+  color-scheme: dark;
+  --bg: #0c0c15;
+  --panel: #161621;
+  --panel-deep: #12131e;
+  --panel-raised: #1d1d2c;
+  --border: #353246;
+  --border-soft: #292837;
+  --text: #f3f1ff;
+  --muted: #b0adbf;
+  --subtle: #8c899f;
+  --accent: #9878ed;
+  --accent-light: #c9b7ff;
+  --success: #8bd6aa;
+  --warning: #f0c48b;
+  --danger: #f79da6;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { min-width: 320px; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(ellipse 900px 360px at 50% 1%, #241b40 0%, rgba(36, 27, 64, 0) 75%), var(--bg);
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.55;
+}
+a { color: var(--accent-light); text-decoration: none; }
+a:hover { text-decoration: underline; }
+button, input { font: inherit; }
+button:focus-visible, a:focus-visible, summary:focus-visible { outline: 3px solid var(--accent-light); outline-offset: 3px; }
+
+/* Header + introduction */
+.site-head { height: 76px; border-bottom: 1px solid var(--border-soft); background: rgba(10, 10, 18, .82); }
+.site-head-inner {
+  width: min(100%, 1100px); height: 100%; margin-inline: auto; padding-inline: 24px;
+  display: flex; align-items: center; justify-content: space-between; gap: 20px;
+}
+.site-brand { display: inline-flex; align-items: center; gap: 11px; color: #fff; font-size: 13px; font-weight: 800; letter-spacing: .04em; }
+.site-brand:hover { text-decoration: none; }
+.site-symbol { display: inline-grid; place-items: center; width: 37px; height: 37px; border: 1px solid #67529c; border-radius: 10px; background: #1c1a32; color: var(--accent-light); font-size: 20px; }
+.brand-soft { color: #c3b2ff; }
+.brand-badge { display: inline-block; margin-left: 5px; padding: 4px 8px; border-radius: 5px; background: #292438; color: #ded4ff; font-size: 10px; font-weight: 750; letter-spacing: .065em; vertical-align: middle; }
+.site-version { color: var(--accent-light); font-size: 13px; font-weight: 700; white-space: nowrap; }
+.exchange-wrapper { width: min(100% - 40px, 960px); margin: 0 auto 68px; padding-top: 48px; }
+.products-header { margin: 0 auto 32px; max-width: 800px; text-align: center; }
+.products-header h2 { margin: 0 0 15px; font-size: clamp(28px, 4vw, 38px); letter-spacing: -.035em; font-weight: 790; line-height: 1.2; }
+.products-header h2 span { background: linear-gradient(100deg, #fff 10%, #bca9f6 90%); color: transparent; background-clip: text; }
+.products-header p { max-width: 760px; margin: 0 auto; color: var(--muted); font-size: 15px; line-height: 1.8; }
+
+/* Main card and form groups */
+.exchange-card { margin-bottom: 24px; padding: 34px; border: 1px solid var(--border); border-radius: 18px; background: rgba(22, 22, 33, .97); box-shadow: 0 18px 50px rgba(0,0,0,.13); }
+.exchange-section-heading { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; margin-bottom: 20px; }
+.exchange-step { display: inline-block; margin-bottom: 6px; color: var(--accent-light); font-size: 10px; font-weight: 850; letter-spacing: .15em; }
+.exchange-section-heading h3, .exchange-options-header h3 { margin: 0; color: var(--text); font-size: 21px; line-height: 1.3; letter-spacing: -.02em; }
+.exchange-format { border: 1px solid #54476f; padding: 5px 10px; border-radius: 7px; background: #211d34; color: #dacdff; font-size: 12px; font-weight: 700; }
+
+/* ZIP selector — the native file input remains keyboard and screen-reader accessible. */
+.exchange-upload-area { position: relative; }
+.exchange-drop {
+  min-height: 128px; padding: 22px 24px; cursor: pointer; display: flex; align-items: center;
+  gap: 18px; border: 1px dashed #645381; border-radius: 13px; background: var(--panel-deep);
+  transition: background .15s ease, border-color .15s ease, box-shadow .15s ease;
+}
+.exchange-drop:hover, .exchange-upload-area:focus-within .exchange-drop { background: #1b192b; border-color: var(--accent); box-shadow: 0 0 0 2px rgba(152, 120, 237, .12); }
+.exchange-drop-icon { flex: 0 0 54px; display: grid; place-items: center; width: 54px; height: 54px; border: 1px solid #4b4067; border-radius: 13px; background: #29223c; color: #c5afff; }
+.exchange-drop-icon .fa-solid { font-size: 24px; }
+.exchange-drop-copy { min-width: 0; flex: 1; display: flex; flex-direction: column; gap: 5px; }
+.exchange-drop-copy strong { font-size: 15px; font-weight: 750; overflow-wrap: anywhere; }
+.exchange-drop-hint { color: var(--muted); font-size: 13px; line-height: 1.6; }
+.exchange-file-choose { flex-shrink: 0; padding: 10px 15px; border: 1px solid #6f5b9d; border-radius: 9px; background: #2e2548; color: #e4d9ff; font-size: 13px; font-weight: 750; }
+.exchange-file-input { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; opacity: 0; }
+.exchange-file-help { margin: 13px 2px 0; color: var(--muted); font-size: 12px; line-height: 1.65; }
+.exchange-upload-details { margin: 10px 2px 0; font-size: 12px; }
+.exchange-upload-details summary { width: fit-content; cursor: pointer; color: var(--accent-light); }
+.exchange-upload-details summary:hover { text-decoration: underline; }
+.exchange-upload-details p { margin: 11px 0 0; padding: 12px 16px; border-left: 2px solid #68529e; border-radius: 3px; background: #1d1a2b; color: var(--muted); line-height: 1.75; }
+
+/* Migration options */
+.exchange-options-header { margin-top: 32px; padding-top: 30px; border-top: 1px solid var(--border-soft); }
+.exchange-options-header p { margin: 6px 0 0; color: var(--muted); font-size: 13px; }
+.exchange-options { display: grid; gap: 12px; margin-top: 19px; }
+.exchange-storage-option {
+  display: flex; align-items: flex-start; gap: 17px; min-height: 96px; padding: 19px 20px;
+  border: 1px solid #393448; border-radius: 12px; background: var(--panel-raised);
+  cursor: pointer; transition: background .15s, border-color .15s;
+}
+.exchange-storage-option:hover, .exchange-storage-option:focus-within { border-color: #7763ab; background: #232135; }
+.exchange-storage-option input { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; opacity: 0; clip-path: inset(50%); }
+.exchange-toggle { position: relative; flex: 0 0 40px; width: 40px; height: 24px; margin-top: 2px; border: 1px solid #555267; border-radius: 999px; background: #3d3a4d; transition: background .2s, border-color .2s; }
+.exchange-toggle::after { content: ""; position: absolute; top: 3px; left: 3px; width: 16px; height: 16px; border-radius: 50%; background: white; box-shadow: 0 1px 3px #0005; transition: transform .2s; }
+.exchange-storage-option input:checked + .exchange-toggle { background: #7c5dd7; border-color: #9477eb; }
+.exchange-storage-option input:checked + .exchange-toggle::after { transform: translateX(16px); }
+.exchange-storage-option input:focus-visible + .exchange-toggle { outline: 3px solid var(--accent-light); outline-offset: 3px; }
+.exchange-storage-text { min-width: 0; display: flex; flex-direction: column; gap: 7px; }
+.exchange-storage-text strong { font-size: 14px; font-weight: 750; line-height: 1.35; }
+.exchange-storage-text span { color: var(--muted); font-size: 13px; line-height: 1.65; }
+
+/* Submit + environment details */
+.exchange-form-action { margin-top: 26px; }
+.btn, .btn-stripe-checkout, .exchange-submit {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 13px 20px;
+  border: 1px solid transparent; border-radius: 10px; background: linear-gradient(105deg,#6d58cd,#9273e7);
+  color: white; font-size: 14px; font-weight: 750; line-height: 1.4; text-align: center;
+  cursor: pointer; transition: filter .15s, transform .15s; text-decoration: none;
+}
+.btn:hover, .btn-stripe-checkout:hover, .exchange-submit:hover { filter: brightness(1.10); transform: translateY(-1px); text-decoration: none; }
+.btn:disabled, .exchange-submit:disabled { opacity: .50; cursor: not-allowed; transform: none; }
+.exchange-submit { width: 100%; min-height: 52px; }
+.exchange-notice { margin-top: 17px; color: var(--subtle); font-size: 12px; line-height: 1.7; text-align: center; }
+.exchange-notice p { margin: 0; }
+.exchange-notice strong { color: #c9c4d7; font-weight: 750; }
+.exchange-server-status { margin-top: 13px; padding-top: 13px; border-top: 1px solid var(--border-soft); display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 7px 12px; }
+.exchange-status-title { color: var(--subtle); }
+.exchange-server-item { white-space: normal; }
+.exchange-server-status .ok, .ok { color: var(--success); }
+.exchange-server-status .warn, .warn { color: var(--warning); }
+
+/* Conversion results (also need standalone styles). */
+.exchange-card + .exchange-card { margin-top: 24px; }
+.exchange-result-title { display: flex; align-items: center; gap: 11px; margin: 0 0 12px; font-size: 22px; }
+.exchange-result-title.safe i { color: var(--success); }
+.exchange-result-title.change i, .exchange-result-title.review i { color: var(--warning); }
+.exchange-result-title.unsafe i { color: var(--danger); }
+.exchange-small { color: var(--muted); font-size: 13px; line-height: 1.65; }
+.exchange-mode { margin-top: 10px; color: var(--muted); font-size: 13px; }
+.exchange-mode strong { color: var(--text); }
+.exchange-final-status { display: flex; gap: 13px; align-items: flex-start; margin: 22px 0; padding: 17px 19px; border: 1px solid #504463; border-radius: 12px; background: #221d30; }
+.exchange-final-status i { margin-top: 2px; }
+.exchange-final-status.safe { border-color: #346049; background: #17271f; }
+.exchange-final-status.unsafe { border-color: #813d4a; background: #301c26; }
+.exchange-final-status > div { display: grid; gap: 5px; }
+.exchange-final-status strong { font-size: 14px; }
+.exchange-final-status span { color: var(--muted); font-size: 13px; }
+.exchange-stats { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 10px; margin: 22px 0; }
+.exchange-stat { display: flex; flex-direction: column; gap: 6px; padding: 17px 15px; border: 1px solid var(--border); border-radius: 10px; background: var(--panel-raised); color: var(--muted); font-size: 12px; line-height: 1.5; }
+.exchange-stat strong { color: var(--text); font-size: 24px; font-weight: 800; font-variant-numeric: tabular-nums; }
+.exchange-stat strong.ok { color: var(--success); }
+.exchange-stat strong.warn { color: var(--warning); }
+.exchange-review-warning, .exchange-storage-error { margin: 15px 0; padding: 15px 17px; border: 1px solid #705a3f; border-radius: 10px; background: #2b241e; color: #f2d1a7; font-size: 13px; line-height: 1.7; }
+.exchange-storage-error { border-color: #873f4d; background: #302028; color: #ffb8be; }
+.exchange-review-warning strong, .exchange-storage-error strong { display: block; margin-bottom: 4px; }
+.exchange-actions { display: flex; flex-wrap: wrap; gap: 11px; margin: 24px 0; }
+.exchange-actions .btn { flex: 1 1 230px; }
+.exchange-actions .btn-secondary { background: #2c293b; border-color: #50475e; }
+.exchange-details { margin-top: 10px; border: 1px solid var(--border); border-radius: 10px; background: var(--panel-deep); }
+.exchange-details summary { padding: 13px 16px; color: #e6dffd; font-size: 13px; font-weight: 650; cursor: pointer; }
+.exchange-details[open] summary { border-bottom: 1px solid var(--border); }
+.exchange-list { margin: 0; padding: 16px 20px 17px 35px; color: var(--muted); font-size: 12px; line-height: 1.8; overflow-wrap: anywhere; }
+.exchange-list li + li { margin-top: 6px; }
+.exchange-list code { white-space: pre-wrap; overflow-wrap: anywhere; font: inherit; }
+.exchange-error { border-color: #84414a; background: #271b23; }
+.exchange-error-title { display: flex; gap: 9px; align-items: center; margin-bottom: 10px; color: #ffbdc4; }
+
+/* Footer and icon fallback: no external fonts or CDNs. */
+.site-footer { width: min(100% - 40px, 960px); margin: 0 auto 38px; padding: 24px 0; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px 24px; border-top: 1px solid var(--border-soft); color: var(--subtle); font-size: 12px; }
+.fa-solid { display: inline-flex; align-items: center; justify-content: center; min-width: 1.2em; font-style: normal; line-height: 1; }
+.fa-solid::before { content: "◇"; }
+.fa-triangle-exclamation::before { content: "⚠"; }
+.fa-file-zipper::before { content: "▣"; }
+.fa-arrows-rotate::before { content: "↻"; }
+.fa-circle-check::before { content: "✓"; }
+.fa-circle-xmark::before { content: "✕"; }
+.fa-magnifying-glass::before { content: "⌕"; }
+.fa-download::before { content: "↓"; }
+.fa-file-lines::before { content: "☷"; }
+
+@media (max-width: 760px) {
+  .exchange-wrapper { padding-top: 34px; }
+  .exchange-card { padding: 25px; }
+  .exchange-stats { grid-template-columns: repeat(3, minmax(0,1fr)); }
+  .exchange-drop { gap: 13px; padding: 18px; }
+}
+@media (max-width: 540px) {
+  .site-head { height: 68px; }
+  .site-head-inner { padding-inline: 16px; }
+  .site-brand { gap: 7px; font-size: 11px; }
+  .site-symbol { width: 32px; height: 32px; font-size: 16px; }
+  .brand-badge { font-size: 9px; padding: 3px 5px; }
+  .site-version { font-size: 11px; }
+  .exchange-wrapper, .site-footer { width: min(100% - 28px, 960px); }
+  .exchange-wrapper { padding-top: 30px; margin-bottom: 46px; }
+  .products-header { margin-bottom: 25px; }
+  .products-header h2 { font-size: 27px; }
+  .products-header p { font-size: 13px; }
+  .exchange-card { padding: 20px 17px; border-radius: 14px; }
+  .exchange-section-heading h3, .exchange-options-header h3 { font-size: 19px; }
+  .exchange-drop { align-items: center; flex-direction: column; gap: 12px; text-align: center; }
+  .exchange-drop-icon { flex-basis: auto; width: 48px; height: 48px; }
+  .exchange-file-choose { margin-top: 3px; }
+  .exchange-storage-option { padding: 16px 13px; gap: 12px; }
+  .exchange-storage-text span { font-size: 12px; }
+  .exchange-stats { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .exchange-final-status { padding: 14px; }
+  .exchange-actions { flex-direction: column; }
+  .site-footer { flex-direction: column; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}

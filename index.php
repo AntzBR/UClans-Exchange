@@ -171,7 +171,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?= e($pageTitle) ?></title>
     <meta name="description" content="Migrate UltimateClans V8 configuration and supported data to V9.">
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/style.css?v=2">
     <script src="assets/app.js" defer></script>
 </head>
 <body>
@@ -203,53 +203,76 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <section class="exchange-card">
         <form method="post" enctype="multipart/form-data" id="exchangeForm">
             <input type="hidden" name="exchange_csrf" value="<?= e($csrfToken) ?>">
-            <label class="exchange-drop" for="v8_zip">
-                <span class="exchange-drop-icon"><i class="fa-solid fa-file-zipper"></i></span>
-                <strong id="fileLabel" data-default-label="<?= e(xt('exchange_select_zip', 'Select the UltimateClans V8 ZIP')) ?>"><?= e(xt('exchange_select_zip', 'Select the UltimateClans V8 ZIP')) ?></strong>
-                <span class="exchange-small">
-                    <?= e(xt('exchange_zip_help', 'The ZIP may contain the entire plugin folder or the UltimateClans files directly at the ZIP root. Storage migration is optional. Legacy material conversion is recommended to replace old Bukkit material names that no longer exist in V9-supported Minecraft versions. Custom language files are preserved when present, but their YAML schema is not automatically translated to new V9 keys. Only detected V8 addons are included.')) ?>
-                </span>
-            </label>
 
-            <input id="v8_zip" class="exchange-file-input" type="file" name="v8_zip" accept=".zip,application/zip" required>
+            <div class="exchange-section-heading">
+                <div>
+                    <span class="exchange-step"><?= e(xt('exchange_step_source', '01 / SOURCE FILE')) ?></span>
+                    <h3><?= e(xt('exchange_upload_heading', 'Upload your V8 files')) ?></h3>
+                </div>
+                <span class="exchange-format">.ZIP</span>
+            </div>
 
-            <label class="exchange-storage-option" for="migrate_storage">
-                <input id="migrate_storage" type="checkbox" name="migrate_storage" value="1" <?= $migrateStorage ? 'checked' : '' ?>>
-                <span class="exchange-toggle" aria-hidden="true"></span>
-                <span class="exchange-storage-text">
-                    <strong><?= e(xt('exchange_migrate_storage', 'Migrate storage data')) ?></strong>
-                    <span><?= e(xt('exchange_migrate_storage_help', 'When enabled, active SQLite and compatible YAML data are migrated. Disable this to convert configuration files only.')) ?></span>
-                </span>
-            </label>
+            <div class="exchange-upload-area">
+                <label class="exchange-drop" for="v8_zip">
+                    <span class="exchange-drop-icon"><i class="fa-solid fa-file-zipper" aria-hidden="true"></i></span>
+                    <span class="exchange-drop-copy">
+                        <strong id="fileLabel" data-default-label="<?= e(xt('exchange_select_zip', 'Select the UltimateClans V8 ZIP')) ?>"><?= e(xt('exchange_select_zip', 'Select the UltimateClans V8 ZIP')) ?></strong>
+                        <span class="exchange-drop-hint"><?= e(xt('exchange_file_click_help', 'Choose the ZIP exported from your old server')) ?></span>
+                    </span>
+                    <span class="exchange-file-choose" aria-hidden="true"><?= e(xt('exchange_browse_zip', 'Browse files')) ?></span>
+                </label>
+                <input id="v8_zip" class="exchange-file-input" type="file" name="v8_zip" accept=".zip,application/zip" required>
+            </div>
+            <p class="exchange-file-help"><?= e(xt('exchange_zip_structure', 'The ZIP can contain the full plugin folder or the UltimateClans files directly at its root.')) ?></p>
+            <details class="exchange-upload-details">
+                <summary><?= e(xt('exchange_upload_details_title', 'What does the converter preserve?')) ?></summary>
+                <p><?= e(xt('exchange_zip_help', 'The ZIP may contain the entire plugin folder or the UltimateClans files directly at the ZIP root. Storage migration is optional. Legacy material conversion is recommended to replace old Bukkit material names that no longer exist in V9-supported Minecraft versions. Custom language files are preserved when present, but their YAML schema is not automatically translated to new V9 keys. Only detected V8 addons are included.')) ?></p>
+            </details>
 
+            <div class="exchange-options-header">
+                <span class="exchange-step"><?= e(xt('exchange_step_options', '02 / MIGRATION OPTIONS')) ?></span>
+                <h3><?= e(xt('exchange_options_heading', 'Conversion settings')) ?></h3>
+                <p><?= e(xt('exchange_options_help', 'Both options are enabled by default. You can adjust them before converting.')) ?></p>
+            </div>
 
-            <label class="exchange-storage-option" for="migrate_materials">
-                <input id="migrate_materials" type="checkbox" name="migrate_materials" value="1" <?= $migrateMaterials ? 'checked' : '' ?>>
-                <span class="exchange-toggle" aria-hidden="true"></span>
-                <span class="exchange-storage-text">
-                    <strong><?= e(xt('exchange_migrate_materials', 'Convert legacy V8 materials')) ?></strong>
-                    <span><?= e(xt('exchange_migrate_materials_help', 'Recommended. Converts known legacy Bukkit material names and old material + data variants to modern V9-compatible names.')) ?></span>
-                </span>
-            </label>
+            <div class="exchange-options">
+                <label class="exchange-storage-option" for="migrate_storage">
+                    <input id="migrate_storage" type="checkbox" name="migrate_storage" value="1" <?= $migrateStorage ? 'checked' : '' ?>>
+                    <span class="exchange-toggle" aria-hidden="true"></span>
+                    <span class="exchange-storage-text">
+                        <strong><?= e(xt('exchange_migrate_storage', 'Migrate storage data')) ?></strong>
+                        <span><?= e(xt('exchange_migrate_storage_help', 'When enabled, active SQLite and compatible YAML data are migrated. Disable this to convert configuration files only.')) ?></span>
+                    </span>
+                </label>
+                <label class="exchange-storage-option" for="migrate_materials">
+                    <input id="migrate_materials" type="checkbox" name="migrate_materials" value="1" <?= $migrateMaterials ? 'checked' : '' ?>>
+                    <span class="exchange-toggle" aria-hidden="true"></span>
+                    <span class="exchange-storage-text">
+                        <strong><?= e(xt('exchange_migrate_materials', 'Convert legacy V8 materials')) ?></strong>
+                        <span><?= e(xt('exchange_migrate_materials_help', 'Recommended. Converts known legacy Bukkit material names and old material + data variants to modern V9-compatible names.')) ?></span>
+                    </span>
+                </label>
+            </div>
 
-            <button class="btn-stripe-checkout exchange-submit" type="submit" data-progress-label="<?= e(xt('exchange_converting', 'Converting…')) ?>" <?= !$zipAvailable ? 'disabled' : '' ?>>
-                <i class="fa-solid fa-arrows-rotate"></i>
-                <span><?= e(xt('exchange_convert_button', 'Convert to V9')) ?></span>
-            </button>
-
-            <div class="exchange-notice">
-                <?= e(xt('exchange_max_upload', 'Maximum upload:')) ?>
-                <strong><?= number_format($cfg['max_upload_bytes'] / 1024 / 1024, 0) ?> MB</strong>.
-                <?= e(xt('exchange_expire_notice', 'Converted files expire automatically after')) ?>
-                <strong><?= number_format($cfg['result_ttl'] / 60) ?> <?= e(xt('exchange_minutes', 'minutes')) ?></strong>.
-
-                <div class="exchange-server-status">
-                    <span><?= e(xt('exchange_server_support', 'Server support:')) ?></span>
-                    <span>ZipArchive <strong class="<?= $zipAvailable ? 'ok' : 'warn' ?>"><?= e($zipAvailable ? xt('exchange_available', 'available') : xt('exchange_missing', 'missing')) ?></strong></span>
-                    <span>·</span>
-                    <span>PDO_SQLite <strong class="<?= $sqliteAvailable ? 'ok' : 'warn' ?>"><?= e($sqliteAvailable ? xt('exchange_available', 'available') : xt('exchange_sqlite_missing', 'missing — SQLite data migration disabled')) ?></strong></span>
-                    <span>·</span>
-                    <span>YAML <strong class="ok"><?= e(xt('exchange_builtin', 'built-in')) ?></strong></span>
+            <div class="exchange-form-action">
+                <button class="btn-stripe-checkout exchange-submit" type="submit" data-progress-label="<?= e(xt('exchange_converting', 'Converting…')) ?>" <?= !$zipAvailable ? 'disabled' : '' ?>>
+                    <i class="fa-solid fa-arrows-rotate" aria-hidden="true"></i>
+                    <span><?= e(xt('exchange_convert_button', 'Convert to V9')) ?></span>
+                </button>
+                <div class="exchange-notice">
+                    <p>
+                        <?= e(xt('exchange_max_upload', 'Maximum upload:')) ?>
+                        <strong><?= number_format($cfg['max_upload_bytes'] / 1024 / 1024, 0) ?> MB</strong>
+                        <span aria-hidden="true">·</span>
+                        <?= e(xt('exchange_expire_notice', 'Converted files expire automatically after')) ?>
+                        <strong><?= number_format($cfg['result_ttl'] / 60) ?> <?= e(xt('exchange_minutes', 'minutes')) ?></strong>
+                    </p>
+                    <div class="exchange-server-status">
+                        <span class="exchange-status-title"><?= e(xt('exchange_server_support', 'Server support:')) ?></span>
+                        <span class="exchange-server-item">ZipArchive <strong class="<?= $zipAvailable ? 'ok' : 'warn' ?>"><?= e($zipAvailable ? xt('exchange_available', 'available') : xt('exchange_missing', 'missing')) ?></strong></span>
+                        <span class="exchange-server-item">PDO_SQLite <strong class="<?= $sqliteAvailable ? 'ok' : 'warn' ?>"><?= e($sqliteAvailable ? xt('exchange_available', 'available') : xt('exchange_sqlite_missing', 'missing — SQLite data migration disabled')) ?></strong></span>
+                        <span class="exchange-server-item">YAML <strong class="ok"><?= e(xt('exchange_builtin', 'built-in')) ?></strong></span>
+                    </div>
                 </div>
             </div>
         </form>

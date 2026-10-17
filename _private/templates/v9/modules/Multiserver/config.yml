@@ -1,0 +1,30 @@
+Sync:
+  high:
+    enabled: false
+    # in ticks
+    sync_delay: 40
+    # unique name
+    server_name: Clans
+    redis:
+      # redis channel
+      channel: uclans:highsync
+      # Redis server address
+      host: localhost
+      # Redis server port
+      port: 6379
+      # Authentication user (Redis 6 ACL). Leave empty if not used.
+      user: ''
+      # Authentication password. Leave empty if not used.
+      password: password
+      # Database number (Index)
+      database: 0
+      # Enable secure connection via SSL/TLS
+      ssl: false
+     
+    debug:
+      console_messages_sent: false
+      file_messages_sent: false
+      console_received_messages: false
+      file_received_messages: false
+      dispatch: false
+      file_dispatch: false

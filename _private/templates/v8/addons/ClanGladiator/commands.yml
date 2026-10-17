@@ -1,0 +1,208 @@
+ 
+#permissions and alias
+Commands:
+   
+  admin:
+    # NOT RECOMMENDED: Use empty for don't need permissions
+    permission: clanglad.admin
+    # Alias for command.
+    alias: clangladiator
+   
+  player:
+    # Use empty for don't need permissions
+    permission: clanglad.player
+    # Alias for command.
+    alias: glad
+  #admin command
+  clanglad:
+    help:
+      aliases:
+      - ajuda
+      show: ' <click:run_command:"/clanglad help"><hover:show_text:"<green>Click to show."><green>/clanglad help <gray>- <yellow>Show help menu.</hover></click>'
+      usage: '%tag% <red>Error, use: <green>/clanglad help'
+      error: '%tag% <red>Error to execute.'
+      success: '%tag% <green>Success to execute.'
+    reload:
+      aliases:
+      - recarregar
+      show: ' <green>/clanglad reload <gray>- <yellow>Reload settings.'
+      usage: '%tag% <red>Error, use: <green>/clanglad reload'
+      error: '%tag% <red>An error occurred while reloading.'
+      success: '%tag% <green>Plugin reloaded successfully.'
+    wand:
+      aliases:
+      - wand
+      show: ' <green>/clanglad wand <gray>- <yellow>Gives a wand.'
+      usage: '%tag% <red>Error, use: <green>/clanglad wand'
+      error: '%tag% <red>There was an error receiving the wand.'
+      success: '%tag% <green>Successfully received the wand!'
+    createarena:
+      aliases:
+      - criararena
+      show: ' <green>/clanglad arena create <red><name> <gray>- <yellow>Add an arena.'
+      usage: '%tag% <red>Error, use: <green>/clanglad arena create <red><name>'
+      error: '%tag% <red>An error occurred while creating.'
+      success: '%tag% <green>Arena was successfully created, use <aqua>/clanglad arena point <arena> <point> <green>to set the arena points.'
+    deletearena:
+      aliases:
+      - deletararena
+      show: ' <green>/clanglad arena delete <red><name> <gray>- <yellow>Delete an arena.'
+      usage: '%tag% <red>Error, use: <green>/clanglad arena delete <red><name>'
+      error: '%tag% <red>There was an error remove the arena.'
+      success: '%tag% <green>Arena successfully removed!.'
+    listarenas:
+      aliases:
+      - listararenas
+      show: ' <green>/clanglad arena list <gray>- <yellow>List arenas.'
+      usage: '%tag% <red>Error, use: <green>/clanglad arena list'
+      error: '%tag% <red>An error occurred while listing arenas'
+      success: '%tag% <green>Success!'
+    pointarena:
+      aliases:
+      - pointarena
+      show: ' <green>/clanglad arena point <arena> <red><SPAWN|EXIT|LOBBY|WATCH> <gray>- <yellow>Set the arena points.'
+      usage: '%tag% <red>Error, use: <green>/clanglad arena point <red><arena> <SPAWN|EXIT|LOBBY|WATCH>'
+      error: '%tag% <red>An error occurred while save point.'
+      success: '%tag% <green>The point <aqua>%point% <green>of the arena <aqua>%arena_name% <green>has been successfully saved to your location.'
+    togglearena:
+      aliases:
+      - togglearena
+      show: ' <green>/clanglad arena toggle <red><name> <gray>- <yellow>Toggle the arena.'
+      usage: '%tag% <red>Error, use: <green>/clanglad arena toggle <red><name>'
+      error: '%tag% <red>The arena cannot be changed, check the points using <aqua>/uclan setpoint %arena_name% <point>'
+      success: '%tag% <yellow>The arena is now %arena_enabled%'
+    seticon:
+      aliases:
+      - setaricone
+      show: ' <green>/clanglad arena seticon <red><arena> <material> <gray>- <yellow>Change the arena icon.'
+      usage: '%tag% <red>Error, use: <green>/clanglad arena seticon <red><arena> <material>'
+      error: '%tag% <red>There was an error changing the icon.'
+      success: '%tag% <green>Arena icon has been updated successfully.'
+    settag:
+      aliases:
+      - setartag
+      show: ' <green>/clanglad arena settag <red><arena> <tag> <gray>- <yellow>Change the arena tag.'
+      usage: '%tag% <red>Error, use: <green>/clanglad arena settag <red><arena> <tag>'
+      error: '%tag% <red>There was an error changing the Tag.'
+      success: '%tag% <green>Arena Tag has been updated successfully.'
+    desc:
+      aliases:
+      - desc
+      show: ' <green>/clanglad arena desc <red><arena> <desc> <gray>- <yellow>Set the arena description.'
+      usage: '%tag% <red>Error, use: <green>/clanglad arena desc <red><arena> <desc>'
+      error: '%tag% <red>There was an error updating the description.'
+      success: '%tag% <green>The arena description has been successfully changed.'
+    rewardlist:
+      aliases:
+      - rewardlist
+      show: ' <green>/clanglad reward list <red><arena> <gray>- <yellow>Adds arena rewards.'
+      usage: '%tag% <red>Error, use: <green>/clanglad reward list <red><arena>'
+      error: '%tag% <red>There was an error displaying the list'
+      success: '%tag% <green>Success.'
+    rewardclean:
+      aliases:
+      - rewardclean
+      show: ' <green>/clanglad reward clean <red><arena> <gray>- <yellow>Clear arena rewards.'
+      usage: '%tag% <red>Error, use: <green>/clanglad reward clean <red><arena>'
+      error: '%tag% <red>An error occurred while clearing commands.'
+      success: '%tag% <green>Commands were cleared successfully.'
+    rewardadd:
+      aliases:
+      - rewardadd
+      show: ' <green>/clanglad reward add <red><arena> <cmd> <gray>- <yellow>Add reward to arena.'
+      usage: '%tag% <red>Error, use: <green>/clanglad reward add <red><arena> <cmd>'
+      error: '%tag% <red>There was an error adding the command.'
+      success: '%tag% <green>The command was successfully added.'
+    start:
+      aliases:
+      - start
+      show: ' <green>/clanglad start <red><arena> <gray>- <yellow>Start arena event.'
+      usage: '%tag% <red>Error, use: <green>/clanglad start <red><arena>'
+      error: '%tag% <red>There was an error on start event.'
+      success: '%tag% <green>The event started successfully.'
+    stop:
+      aliases:
+      - stop
+      show: ' <green>/clanglad stop <red><arena> <gray>- <yellow>Stop arena event.'
+      usage: '%tag% <red>Error, use: <green>/clanglad stop <red><arena>'
+      error: '%tag% <red>There was an error on stop event.'
+      success: '%tag% <green>The event stoped successfully.'
+    view:
+      aliases:
+      - view
+      show: ' <green>/clanglad view <red><arena> <gray>- <yellow>View arena event.'
+      usage: '%tag% <red>Error, use: <green>/clanglad view <red><arena>'
+      error: '%tag% <red>There was an error on view event.'
+      success: '%tag% <green>The event viewed successfully.'
+    schedulerlist:
+      aliases:
+      - schedulerlist
+      show: ' <green>/clanglad scheduler list <red><arena> <gray>- <yellow>List arena schedulers.'
+      usage: '%tag% <red>Error, use: <green>/clanglad scheduler list <red><arena>'
+      error: '%tag% <red>There was an error displaying the list'
+      success: '%tag% <green>Success.'
+    schedulerremove:
+      aliases:
+      - schedulerremove
+      show: ' <green>/clanglad scheduler remove <red><arena> <id> <gray>- <yellow>Remove arena scheduler.'
+      usage: '%tag% <red>Error, use: <green>/clanglad scheduler remove <red><arena> <id>'
+      error: '%tag% <red>There was an error removing the scheduler.'
+      success: '%tag% <green>The new scheduler was removed successfully.'
+    schedulercreate:
+      aliases:
+      - schedulercreate
+      show: ' <green>/clanglad scheduler create <red><arena> <type> <day> <hour:minute> <gray>- <yellow>Add scheduler to arena.'
+      usage: '%tag% <red>Error, use: <green>/clanglad scheduler create <red><arena> <type> <day> <hour:minute>'
+      error: '%tag% <red>There was an error add the new scheduler.'
+      success: '%tag% <green>The new scheduler was created successfully.'
+   
+  # player command
+  playerglad:
+    help:
+      permission: clanglad.player.help
+      aliases:
+      - ajuda
+      show: ' <click:run_command:"/gladiator help"><hover:show_text:"<green>Click to show."><green>/gladiator help <gray>- <yellow>Show help menu.</hover></click>'
+      usage: '%tag% <red>Error, use: <green>/playerglad help'
+      error: '%tag% <red>Error to execute.'
+      success: '%tag% <green>Success to execute.'
+    join:
+      permission: clanglad.player.join
+      aliases:
+      - entrar
+      show: ' <green>/gladiator join <red><arena> <gray>- <yellow>Join an event.'
+      usage: '%tag% <red>Error, use: <green>/gladiator join <red><arena>'
+      error: '%tag% <red>An error occurred while entering the event.'
+      success: '%tag% <green>You have entered the Gladiator event.'
+    leave:
+      permission: clanglad.player.leave
+      aliases:
+      - sair
+      show: ' <green>/gladiator leave <gray>- <yellow>Leave the event.'
+      usage: '%tag% <red>Error, use: <green>/gladiator leave'
+      error: '%tag% <red>An error occurred while leaving the event.'
+      success: '%tag% <green>You left the Gladiator event.'
+    watch:
+      permission: clanglad.player.watch
+      aliases:
+      - assistir
+      show: ' <green>/gladiator watch <red><arena> <gray>- <yellow>Watch the event.'
+      usage: '%tag% <red>Error, use: <green>/gladiator watch <red><arena>'
+      error: '%tag% <red>An error occurred while watch the event.'
+      success: '%tag% <green>You were teleported to watch the event.'
+    view:
+      permission: clanglad.player.view
+      aliases:
+      - ver
+      show: ' <green>/gladiator view <gray>- <yellow>View event menu.'
+      usage: '%tag% <red>Error, use: <green>/gladiator view'
+      error: '%tag% <red>An error occurred while view the menu.'
+      success: '%tag% <green>Success.'
+    warp:
+      permission: clanglad.player.warp
+      aliases:
+      - warp
+      show: ' <green>/gladiator warp <red><arena> <gray>- <yellow>Warp to arena.'
+      usage: '%tag% <red>Error, use: <green>/gladiator warp <red><arena>'
+      error: '%tag% <red>An error occurred while teleporting to the warp.'
+      success: '%tag% <green>Connecting you to the arena warp.'

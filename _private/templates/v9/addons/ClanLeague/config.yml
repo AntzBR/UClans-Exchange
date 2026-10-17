@@ -1,0 +1,81 @@
+Config:
+  date_format: MM/dd/yyy hh:mm
+   
+  # Timezone is the definition of times by locations and countries. you can choose which timezone best fits your schedule
+  # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  timezone: America/Sao_Paulo
+   
+  League:
+    sync_if_enabled: true
+    forge_open-gui: true
+  Season:
+    default_material: DIAMOND_SWORD
+    #This option joins the points of the same trigger, this saves storage data
+    merge_points: true
+    default_description: <gold>A new season!
+    date_format: MM/dd/yyy-hh:mm
+    # {tag}, {points}, {position}
+    clanpoint_format: <gold>{tag} <gray>(<aqua>{points}<gray>)
+    #acceptable: CLAN, LEADER, PERMISSION
+    claim_rewards: CLAN
+   
+  Icon:
+    click_sound: ''
+    material: DIAMOND_SWORD
+    name: <green>League of Clan.
+    texture: ''
+    lore:
+    - ' <yellow>Current Season: %uclans_has_season_formated%'
+    - ' '
+    - ' <gray>Clans involved: <green>%uclans_current_season_clans_involved_amount%'
+    - ' <gray>Highest score: <gray>%uclans_current_season_highest_score%'
+    - ''
+    - <yellow>Click to open.
+    glow: true
+    slot: 5
+    page: clan_home
+    # avaliable: TOP, BOTTOM, BORDER, ALL or numeric list
+    mimeslots: [
+      ]
+    nbt:
+      string: [
+        ]
+    model: 0
+    left_click_action:
+    - /{_clan} {_league} {_view} -gui
+    right_click_action:
+    - /{_clan} {_league} {_view} -gui
+   
+  #Permissions are for advanced connoisseurs, be careful when editing this!
+  Permissions:
+    claim_rewards:
+      name: League-Claim-Rewards
+      default_value: true
+      applicable_roles:
+      - moderator
+      - admin
+   
+  logger:
+    enable_colors: true
+    plugin_material: DIAMOND_SWORD
+    plugin_name: League
+    events:
+      ClanLeagueAddEvent: true
+ 
+# LEAGUE STORAGE
+Storage:
+  #mysql/sqlite/yaml (It is highly recommended to use mysql for better performance!!!)
+  type: sqlite
+  mysql:
+    host: localhost
+    port: 3306
+    base: YOUR-BASE-PRE-CREATED
+    #SSL is only valid for MYSQL, most servers are not necessary to use it as true.
+    useSSL: false
+  # Used for Mysql mandatory and optional for H2 and Sqlite (default: root)
+  user: root
+  # Used for Mysql mandatory and optional for H2 and Sqlite (default is empty)
+  pass: ''
+  databases:
+    league_table: uclans-league-points
+    season_table: uclans-league-season

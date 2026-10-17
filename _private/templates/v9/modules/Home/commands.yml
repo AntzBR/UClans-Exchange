@@ -1,0 +1,56 @@
+ 
+#permissions and alias
+Commands:
+   
+  player:
+    # Use empty for don't need permissions
+    permission: uclans.player.home
+    # Alias for command.
+    alias: home
+    # Command cooldown.
+    cooldown: 0
+    # Value to use.
+    value: 0.0
+    disabled_worlds: [
+      ]
+    disabled_regions: [
+      ]
+   
+  # home command
+  home:
+    help:
+      aliases: home
+      show: <click:run_command:"/{_clan} {_home} "><hover:show_text:'<green>Click to expand home commands.'> <aqua>/{_clan} {_home} <gray>-<yellow> Clan homes.</hover></click> <hover:show_text:'<green>With sub commands.'><green>[!]</hover>
+      usage: '%tag% <red>Use <aqua>/{_clan} {_home}'
+      error: '%tag% <red>Error when using command.'
+      success: '%tag% <green>Success!'
+    create:
+      aliases: create
+      show: <click:suggest_command:"/{_clan} {_home} {_create} "><hover:show_text:'<green>Click to create.'> <aqua>/{_clan} {_home} {_create} <red><name> <light_purple>(password)<gray>-<yellow> Create a home.</hover></click>
+      usage: '%tag% <red>Use <aqua>/{_clan} {_home} {_create} <red><name> <light_purple>(password)'
+      error: '%tag% <red>An error occurred while creating.'
+      success: '%tag% <green>The new clan home has been successfully created.'
+    delete:
+      aliases: delete
+      show: <click:suggest_command:"/{_clan} {_home} {_delete} "><hover:show_text:'<green>Click to delete a home.'> <aqua>/{_clan} {_home} {_delete} <red><name> <gray>-<yellow> Delete a home.</hover></click>
+      usage: '%tag% <red>Use <aqua>/{_clan} {_home} {_delete} <red><name>'
+      error: '%tag% <red>An error occurred while deleting.'
+      success: '%tag% <green>The new clan home has been successfully deleted.'
+    list:
+      aliases: list
+      show: <click:suggest_command:"/{_clan} {_home} {_list} "><hover:show_text:'<green>Click to list all homes.'> <aqua>/{_clan} {_home} {_list} <light_purple>(tag) <light_purple>(-gui) <gray>-<yellow> List all homes.</hover></click>
+      usage: '%tag% <red>Use <aqua>/{_clan} {_home} {_list} <light_purple>(tag) <light_purple>(-gui)'
+      error: '%tag% <red>An error occurred while listing.'
+      success: '%tag% <green>Success.'
+    teleport:
+      aliases: teleport
+      show: <click:suggest_command:"/{_clan} {_home} {_teleport} "><hover:show_text:'<green>Click to teleport to home.'> <aqua>/{_clan} {_home} {_teleport} <red><name> <light_purple>(password) <gray>-<yellow> Teleport to home.</hover></click>
+      usage: '%tag% <red>Use <aqua>/{_clan} {_home} {_teleport} <red><name>'
+      error: '%tag% <red>An error occurred while teleport.'
+      success: '%tag% <green>Success.'
+    view:
+      aliases: view
+      show: <click:suggest_command:"/{_clan} {_home} {_view} "><hover:show_text:'<green>Click to view a home.'> <aqua>/{_clan} {_home} {_view} <red><name> <gray>-<yellow> View a home.</hover></click>
+      usage: '%tag% <red>Use <aqua>/{_clan} {_home} {_view} <red><name>'
+      error: '%tag% <red>An error occurred while view.'
+      success: '%tag% <green>Success.'

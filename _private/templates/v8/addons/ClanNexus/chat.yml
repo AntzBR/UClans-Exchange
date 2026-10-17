@@ -1,0 +1,134 @@
+#
+#
+# Time: in seconds
+#
+# BossBar:
+# Colors: BLUE, GREEN, PINK, PURPLE, RED, WHITE, YELLOW
+# Styles: PROGRESS, NOTCHED_6, NOTCHED_10, NOTCHED_12, NOTCHED_20
+# Flags: DARKEN_SCREEN, PLAY_BOSS_MUSIC, CREATE_WORLD_FOG
+#
+#
+# All texts are located in the language files and accept all placeholders from UClans.
+Chat:
+   
+  commandunknownplayer:
+    enabled: true
+    time: 5
+    sound:
+      enabled: true
+      display: block.anvil.use
+    message:
+      enabled: true
+    bossbar:
+      enabled: true
+      color: YELLOW
+      style: PROGRESS
+      flags:
+      - DARKEN_SCREEN
+      animated: true
+    title:
+      enabled: true
+    actionbar:
+      enabled: true
+   
+  commandunknownadmin:
+    enabled: true
+    time: 5
+    sound:
+      enabled: true
+      display: block.anvil.use
+    message:
+      enabled: true
+    bossbar:
+      enabled: true
+      color: YELLOW
+      style: PROGRESS
+      flags:
+      - DARKEN_SCREEN
+      animated: true
+    title:
+      enabled: true
+    actionbar:
+      enabled: true
+   
+  wildernessenter:
+    enabled: true
+    time: 3
+    sound:
+      enabled: true
+      display: block.anvil.use
+    message:
+      enabled: false
+    bossbar:
+      enabled: true
+      color: GREEN
+      style: PROGRESS
+      flags:
+      - DARKEN_SCREEN
+      animated: true
+    title:
+      enabled: true
+    actionbar:
+      enabled: true
+   
+  nexusenter:
+    enabled: true
+    time: 3
+    sound:
+      enabled: true
+      display: block.anvil.use
+    message:
+      enabled: false
+    bossbar:
+      enabled: true
+      color: YELLOW
+      style: PROGRESS
+      flags:
+      - DARKEN_SCREEN
+      animated: true
+    title:
+      enabled: true
+    actionbar:
+      enabled: true
+   
+  nexusbanned:
+    enabled: true
+    time: 2
+    sound:
+      enabled: true
+      display: block.anvil.use
+    message:
+      enabled: false
+    bossbar:
+      enabled: false
+      color: YELLOW
+      style: PROGRESS
+      flags:
+      - DARKEN_SCREEN
+      animated: false
+    title:
+      enabled: true
+    actionbar:
+      enabled: false
+   
+  nexusinside:
+    enabled: true
+    time: 5
+    sound:
+      enabled: false
+      display: block.anvil.use
+    message:
+      enabled: false
+    bossbar:
+      enabled: false
+      color: YELLOW
+      style: PROGRESS
+      flags:
+      - DARKEN_SCREEN
+      animated: false
+    title:
+      enabled: false
+    actionbar:
+      enabled: false
+    scoreboard:
+      enabled: true

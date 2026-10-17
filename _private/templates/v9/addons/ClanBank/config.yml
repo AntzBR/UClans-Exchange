@@ -1,0 +1,243 @@
+Config:
+   
+  Bank:
+    forge_open-gui: true
+    format: '#,##0'
+     
+    values:
+      init: 0.0
+      min: 1000.0
+      max: 100000.0
+      add: 1000.0
+      add2: 10000.0
+      remove: 1000.0
+      remove2: 10000.0
+     
+    limit:
+      # Controls the maximum MAIN clan balance stored by UltimateClans Core.
+      enabled: true
+       
+      # format: BALANCE_LIMIT: REQUIRED_CLAN_LEVEL
+      # Add multiple entries for progressive clan levels.
+      list:
+        '2147483646': 0
+     
+    history:
+      enabled: true
+      # Maximum transaction entries kept per clan in storage/yaml/data.yml.
+      max_entries: 200
+     
+    contributions:
+      enabled: true
+     
+    statistics:
+      enabled: true
+     
+    # Optional approval flow for large withdrawals.
+    withdraw_requests:
+      enabled: false
+      # Amount equal/above this value becomes a request unless the role has Bank-Withdraw-Direct.
+      require_request_above: 100000.0
+      allow_self_approval: false
+      # Pays an approved request immediately when its requester is online.
+      auto_claim_when_online: true
+      approvals:
+        default: 1
+        # Threshold based required approvals.
+        list:
+          '100000': 1
+          '500000': 2
+     
+    # Protected amount that normal withdrawals cannot consume.
+    reserve:
+      enabled: true
+     
+    # -1 means unlimited. Role IDs must match UltimateClans moderation role IDs.
+    withdraw_limits:
+      enabled: true
+      default:
+        transaction: -1.0
+        daily: -1.0
+        weekly: -1.0
+      roles:
+        member:
+          transaction: -1.0
+          daily: -1.0
+          weekly: -1.0
+        moderator:
+          transaction: -1.0
+          daily: -1.0
+          weekly: -1.0
+        admin:
+          transaction: -1.0
+          daily: -1.0
+          weekly: -1.0
+     
+    # Vault values are protected ALLOCATIONS inside the Core balance. No real money is stored outside UltimateClans Core.
+    vaults:
+      enabled: true
+      default_limit: 1
+      max_name_length: 32
+     
+    goals:
+      enabled: true
+      max_name_length: 48
+     
+    transfers:
+      enabled: true
+      count_toward_withdraw_limits: true
+     
+    # Optional interest system. Disabled by default to preserve existing economy behavior.
+    interest:
+      enabled: false
+      interval_hours: 24
+      percentage: 0.5
+      # Use -1 for no per-period cap.
+      maximum_per_period: 5000.0
+      minimum_balance: 0.0
+      max_catch_up_periods: 1
+     
+    # Bank tiers are selected from the clan's existing Core level.
+    upgrades:
+      enabled: true
+      tiers:
+        '1':
+          required_clan_level: 0
+          max_vaults: 1
+          interest_bonus: 0.0
+          withdraw_limit_multiplier: 1.0
+        '2':
+          required_clan_level: 5
+          max_vaults: 2
+          interest_bonus: 0.05
+          withdraw_limit_multiplier: 1.25
+        '3':
+          required_clan_level: 10
+          max_vaults: 4
+          interest_bonus: 0.1
+          withdraw_limit_multiplier: 1.5
+     
+    # RESERVED FOR FUTURE USE. No fees are charged by this version.
+    fees:
+      enabled: false
+      withdraw_percentage: 0.0
+      transfer_percentage: 0.0
+   
+  Icon:
+    click_sound: ''
+    material: SUNFLOWER
+    name: <green>Bank of Clan.
+    texture: ''
+    lore:
+    - ''
+    - ' <gray>Bank: <green>%uclans_money_currency%%uclans_bank_balance%'
+    - ''
+    - <yellow>Click to open.
+    glow: false
+    slot: 40
+    page: clan_home
+    # available: TOP, BOTTOM, BORDER, ALL or numeric list
+    mimeslots: [
+      ]
+    nbt:
+      string: [
+        ]
+    model: 0
+    left_click_action:
+    - /{_clan} {_bank} {_view} -gui
+    right_click_action:
+    - /{_clan} {_bank} {_view} -gui
+   
+  # Role permissions are injected into UltimateClans moderation roles.
+  Permissions:
+    withdraw:
+      name: Bank-Withdraw
+      default_value: true
+      applicable_roles:
+      - member
+      - moderator
+      - admin
+    add:
+      name: Bank-Add
+      default_value: true
+      applicable_roles:
+      - member
+      - moderator
+      - admin
+    view:
+      name: Bank-View
+      default_value: true
+      applicable_roles:
+      - member
+      - moderator
+      - admin
+    history:
+      name: Bank-History
+      default_value: true
+      applicable_roles:
+      - member
+      - moderator
+      - admin
+    statistics:
+      name: Bank-Statistics
+      default_value: true
+      applicable_roles:
+      - member
+      - moderator
+      - admin
+    contributions:
+      name: Bank-Contributions
+      default_value: true
+      applicable_roles:
+      - member
+      - moderator
+      - admin
+    requests:
+      name: Bank-Requests
+      default_value: true
+      applicable_roles:
+      - member
+      - moderator
+      - admin
+    approve_requests:
+      name: Bank-Approve-Request
+      default_value: true
+      applicable_roles:
+      - moderator
+      - admin
+    withdraw_direct:
+      name: Bank-Withdraw-Direct
+      default_value: true
+      applicable_roles:
+      - admin
+    vault:
+      name: Bank-Vault
+      default_value: true
+      applicable_roles:
+      - moderator
+      - admin
+    reserve:
+      name: Bank-Reserve
+      default_value: true
+      applicable_roles:
+      - admin
+    goal:
+      name: Bank-Goal
+      default_value: true
+      applicable_roles:
+      - moderator
+      - admin
+    transfer:
+      name: Bank-Transfer
+      default_value: true
+      applicable_roles:
+      - moderator
+      - admin
+   
+  logger:
+    enable_colors: true
+    plugin_material: SUNFLOWER
+    plugin_name: Bank
+    events:
+      ClanBankAddEvent: true
+      ClanBankWithdrawEvent: true

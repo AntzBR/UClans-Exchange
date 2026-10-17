@@ -1,0 +1,269 @@
+Config:
+  version: '1'
+  # available: [EN, BR, PL]
+  language: EN
+  date_format: dd/MM/yyyy HH:mm
+   
+  # GLADIATOR
+  Gladiator:
+    # Force the gamemode when the player goes to event.
+    force_gamemode:
+      enabled: true
+      change: SURVIVAL
+      watch: SPECTATOR
+    tasks:
+      #in seconds
+      event: 3
+    check_players_region: true
+    clear_effects:
+      enabled: true
+    allowed_commands:
+    - /glad
+    - /gladiator
+    - /clans
+    - /chat
+    event:
+      dispatch:
+        join: [
+          ]
+        leave: [
+          ]
+    # Schedulers pre-programmed events to start arenas at certain times.
+    scheduler:
+      # If this is FALSE the count does not start a new Thread with periodic tasks.
+      enabled: true
+      # Timezone is the definition of times by locations and countries. you can choose which timezone best fits your schedule
+      # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+      timezone: America/Sao_Paulo
+     
+    # Tags are delivered using the %clanglad_tag:glad% placeholder to clans that have already received this tag by selling an event
+    # Other tags can be added to this list following the pattern "name: '<color>text'"
+    # You must tag each event arena with /clanglad arena addtag <arena> <tagname>
+    tags:
+      glad: <red>[GLAD]</red>
+      miniglad: <yellow>[MiniGLAD]</yellow>
+     
+    #These are the times between each announcement/event. With the maximum amount of waves defined
+    waves:
+      INWAIT:
+        amount: 3
+        secs: 60
+      INLOBBY:
+        amount: 1
+        secs: 60
+      ENDING:
+        amount: 1
+        secs: 60
+      CANCELED:
+        amount: 1
+        secs: 30
+      STOPED:
+        secs: 30
+      STARTED:
+        maxtime: 30
+  gui:
+    titles:
+      # This is the character limiter for menu titles, by default minecraft supports 32 but this value can be exceeded with ProtocolLib
+      max_characters: 30
+      ellipsis: ..
+   
+  borders:
+    enable: true
+    increase_time: 30
+    min_size: 10
+   
+  logger:
+    enable_colors: true
+    plugin_material: DIAMOND_AXE
+    plugin_name: Gladiator
+    events:
+      ClanGladiatorJoinEvent: true
+      ClanGladiatorLoseEvent: true
+      ClanGladiatorWinEvent: true
+   
+  league:
+    dispatch_points: true
+    plugin_name: Gladiator Win
+    glad_points_amount: 50.0
+  #
+  #
+  # Time: in seconds
+  #
+  # BossBar:
+  # Colors: BLUE, GREEN, PINK, PURPLE, RED, WHITE, YELLOW
+  # Styles: PROGRESS, NOTCHED_6, NOTCHED_10, NOTCHED_12, NOTCHED_20
+  # Flags: DARKEN_SCREEN, PLAY_BOSS_MUSIC, CREATE_WORLD_FOG
+  #
+  #
+  # All texts are located in the language files and accept all placeholders from UClans.
+  Announce:
+     
+    INWAIT:
+      enabled: true
+      timer: 60
+      sound:
+        enabled: true
+        display: ''
+      message:
+        enabled: true
+        center: true
+      bossbar:
+        enabled: true
+        color: YELLOW
+        style: PROGRESS
+        flags: [
+          ]
+        animated: true
+      title:
+        enabled: true
+      actionbar:
+        enabled: true
+     
+    INLOBBY:
+      enabled: true
+      timer: 60
+      sound:
+        enabled: true
+        display: ''
+      message:
+        enabled: true
+        center: true
+      bossbar:
+        enabled: true
+        color: YELLOW
+        style: PROGRESS
+        flags: [
+          ]
+        animated: true
+      title:
+        enabled: true
+      actionbar:
+        enabled: true
+     
+    STARTED:
+      enabled: true
+      timer: 10
+      sound:
+        enabled: true
+        display: ''
+      message:
+        enabled: true
+        center: true
+      bossbar:
+        enabled: true
+        color: RED
+        style: PROGRESS
+        flags: [
+          ]
+        animated: true
+      title:
+        enabled: true
+      actionbar:
+        enabled: true
+     
+    ENDING:
+      enabled: true
+      timer: 60
+      sound:
+        enabled: true
+        display: ''
+      message:
+        enabled: true
+        center: true
+      bossbar:
+        enabled: true
+        color: YELLOW
+        style: PROGRESS
+        flags: [
+          ]
+        animated: true
+      title:
+        enabled: true
+      actionbar:
+        enabled: true
+     
+    CANCELED:
+      enabled: true
+      timer: 10
+      sound:
+        enabled: true
+        display: ''
+      message:
+        enabled: true
+        center: true
+      bossbar:
+        enabled: true
+        color: YELLOW
+        style: PROGRESS
+        flags: [
+          ]
+        animated: true
+      title:
+        enabled: true
+      actionbar:
+        enabled: true
+     
+    STOPED:
+      enabled: false
+      timer: 10
+      sound:
+        enabled: false
+        display: ''
+      message:
+        enabled: false
+        center: false
+      bossbar:
+        enabled: false
+        color: YELLOW
+        style: PROGRESS
+        flags: [
+          ]
+        animated: false
+      title:
+        enabled: true
+      actionbar:
+        enabled: false
+   
+  Icon:
+    click_sound: ''
+    material: DIAMOND_AXE
+    name: <green>Gladiator Event
+    lore:
+    - ' <yellow>Click to see events.'
+    glow: true
+    slot: 33
+    texture: ''
+    # avaliable: TOP, BOTTOM, BORDER, ALL or numeric list
+    mimeslots: [
+      ]
+    nbt:
+      string: [
+        ]
+    model: 0
+    left_click_action:
+    - /gladiator {_view} -gui
+    right_click_action:
+    - /gladiator {_view} -gui
+ 
+# GLADIATOR STORAGE
+Storage:
+  #mysql/sqlite/yaml (It is highly recommended to use mysql for better performance!!!)
+  type: sqlite
+  mysql:
+    host: localhost
+    port: 3306
+    base: YOUR-BASE-PRE-CREATED
+    #SSL is only valid for MYSQL, most servers are not necessary to use it as true.
+    useSSL: false
+  # Used for Mysql mandatory and optional for H2 and Sqlite (default: root)
+  user: root
+  # Used for Mysql mandatory and optional for H2 and Sqlite (default is empty)
+  pass: ''
+  databases:
+    gladiator_table_arenas: uclans_gladiator-arenas
+  # https://github.com/brettwooldridge/HikariCP#popular-datasource-class-names
+  datasource:
+    mysql: jdbc:mysql://
+    mysql_class: ''
+    sqlite: 'jdbc:sqlite:'
+    sqlite_class: org.sqlite.JDBC

@@ -1,0 +1,103 @@
+Config:
+  date_format_short: dd/MM/yyyy
+   
+  Icon:
+    click_sound: ''
+    material: ''
+    name: <green>Clan Banner.
+    texture: '%uclans_banner%'
+    lore:
+    - ' '
+    - ' <yellow>Banner Information:'
+    - ''
+    - ' <white>Has Banner: <aqua>%uclans_hasbanner_formated%'
+    - ' <white>Banner: <aqua>%uclans_banner_material%'
+    - ' '
+    - ' <yellow>The clan banner is your brand!'
+    glow: false
+    slot: 4
+    # avaliable: TOP, BOTTOM, BORDER, ALL or numeric list
+    mimeslots: [
+      ]
+    nbt:
+      string: [
+        ]
+    model: 0
+    left_click_action:
+    - /{_clan} {_banner} {_view} -gui
+    right_click_action:
+    - /{_clan} {_banner} {_view} -gui
+   
+  #Permissions are for advanced connoisseurs, be careful when editing this!
+  Permissions:
+    manager:
+      name: Banner-manager
+      default_value: true
+      applicable_roles:
+      - moderator
+      - admin
+  Unlocker:
+     
+     
+    # format: BANNER_GROUP/REQUIRED_LEVEL
+    #You can add multiple slots for various clan levels.
+    #example:
+    #    banner:
+    #      - 'GROUP_1:0' # Clan can use these groups if it is level 0
+    #      - 'GROUP_1,HEAD_GROUP_1:10' # Clan can use these groups if it is level 10
+    #      - 'GROUP_1,HEAD_GROUP_1,BANNER_GROUP_1:20' # Clan can use these groups if it is level 20
+    banner:
+    - GROUP_1:0
+    - HEAD_GROUP_1:10
+    - BANNER_GROUP_1:20
+  Banner:
+    default_material: ARMOR_STAND
+    ucfirst_id: true
+     
+    groups:
+       
+      # Use ALL to enable all materials.
+      # Filters are always required to show specific groups or items.
+      # PREFIX_ can be used as ex PREFIX_DIAMOND, results in all items starting with DIAMOND
+      # SUFFIX_ can be used as ex SUFFIX_BANNER, results in all items ending with BANNER
+      # Item MATERIAL can be used like ANVIL, IRON_CHESTPLATE, APPLE etc.
+      
+      common:
+        GROUP_1:
+        - BLACK_BANNER
+        - RED_BANNER
+        - GREEN_BANNER
+        - BROWN_BANNER
+        - BLUE_BANNER
+        - PURPLE_BANNER
+        - CYAN_BANNER
+        - LIGHT_GRAY_BANNER
+        - GRAY_BANNER
+        - PINK_BANNER
+        - LIME_BANNER
+        - YELLOW_BANNER
+        - LIGHT_BLUE_BANNER
+        - MAGENTA_BANNER
+        - ORANGE_BANNER
+        - WHITE_BANNER
+        # New custom groups can be created such as GROUP_3, MyGroup etc...
+        GROUP_2:
+        - ALL
+       
+      # The head groups only receive the texture in base64 format
+      # try to always use lowercase for the ids
+      head:
+        HEAD_GROUP_1:
+          brasil: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWE0NjQ3NWQ1ZGNjODE1ZjZjNWYyODU5ZWRiYjEwNjExZjNlODYxYzBlYjE0ZjA4ODE2MWIzYzBjY2IyYjBkOSJ9fX0=
+          bunny: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjMzODlhMzI0M2EyOWRiZjg4OTkwYmQ0MmM4OTQ1ZWMyMDFmNjk4MTQ5OWU3OGU1MWQwMTU3MjQzMGU5Mzk4YSJ9fX0=
+          eye: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzAwY2U1MjBmMjY3YTBkMDI1OGQwYmM2NWY0N2U4ZTMxYTVkNmFkMzI2ZjcwNTE3Yjg2NjNmNTJkZGEyNjcwYyJ9fX0=
+       
+      # Banner groups must have pattern and color specifications.
+      # The banner groups only receive the banners in JSON format
+      # Available colors: [WHITE, ORANGE, MAGENTA, LIGHT_BLUE, YELLOW, LIME, PINK, GRAY, LIGHT_GRAY, CYAN, PURPLE, BLUE, BROWN, GREEN, RED, BLACK]
+      # try to always use lowercase for the ids
+      # Pattern group example "Patterns": [{Pattern:creeper, Color:BLACK},{Pattern:MOJANG, Color:YELLOW}]
+      banner:
+        BANNER_GROUP_1:
+          creeper: '{"Color": "GREEN","Patterns": [{Pattern: "CREEPER", Color: "BLACK"}]}'
+          mojang: '{"Color": "WHITE","Patterns": [{Pattern: "MOJANG", Color: "YELLOW"}]}'

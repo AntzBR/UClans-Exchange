@@ -1,0 +1,61 @@
+Config:
+  date_format_short: dd/MM/yyyy
+  Rewards:
+     
+    Icon:
+      click_sound: ''
+      material: HOPPER_MINECART
+      name: <green>Rewards center.
+      texture: ''
+      lore:
+      - ' '
+      - ' <gray>To claim: <aqua>%uclans_player_rewards_amount%'
+      - ' '
+      - ' <yellow>Click to open.'
+      glow: false
+      slot: 38
+      page: clan_home
+      # avaliable: TOP, BOTTOM, BORDER, ALL or numeric list
+      mimeslots: [
+        ]
+      nbt:
+        string: [
+          ]
+      model: 0
+      left_click_action:
+      - /{_clan} {_rewards} {_list} -gui
+      right_click_action:
+      - /{_clan} {_rewards} {_list} -gui
+   
+  #Permissions are for advanced connoisseurs, be careful when editing this!
+  Permissions:
+    use:
+      name: Rewards-Use
+      default_value: true
+      applicable_roles:
+      - member
+      - moderator
+      - admin
+ 
+# REWARDS STORAGE
+Storage:
+  #yaml/mysql/sqlite (It is highly recommended to use mysql for better performance!!!)
+  type: sqlite
+  mysql:
+    host: localhost
+    port: 3306
+    base: YOUR-BASE-PRE-CREATED
+    #SSL is only valid for MYSQL, most servers are not necessary to use it as true.
+    useSSL: false
+  # Used for Mysql mandatory and optional for H2 and Sqlite (default: root)
+  user: root
+  # Used for Mysql mandatory and optional for H2 and Sqlite (default is empty)
+  pass: ''
+  databases:
+    rewards_table: uclans-rewards
+  # https://github.com/brettwooldridge/HikariCP#popular-datasource-class-names
+  datasource:
+    mysql: jdbc:mysql://
+    mysql_class: ''
+    sqlite: 'jdbc:sqlite:'
+    sqlite_class: org.sqlite.JDBC

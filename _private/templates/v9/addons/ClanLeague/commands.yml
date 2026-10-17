@@ -1,0 +1,168 @@
+ 
+#permissions and alias
+Commands:
+   
+  admin:
+    # NOT RECOMMENDED: Use empty for don't need permissions
+    permission: clanleague.admin
+    # Alias for command.
+    alias: clanleague
+   
+  player:
+    # Use empty for don't need permissions
+    permission: clanleague.player
+    # Alias for command.
+    alias: league
+  #admin command
+  clanleague:
+    help:
+      aliases:
+      - ajuda
+      show: ' <click:run_command:"/clanleague help"><hover:show_text:"<green>Click to show."><green>/clanleague help <gray>- <yellow>Show help menu.</hover></click>'
+      usage: '%tag% <red>Error, use: <green>/clanleague help'
+      error: '%tag% <red>Error to execute.'
+      success: '%tag% <green>Success to execute.'
+    reload:
+      aliases:
+      - recarregar
+      show: ' <green>/clanleague reload <gray>- <yellow>Reload settings.'
+      usage: '%tag% <red>Error, use: <green>/clanleague reload'
+      error: '%tag% <red>An error occurred while reloading.'
+      success: '%tag% <green>Plugin reloaded successfully.'
+    addevent:
+      aliases:
+      - addevent
+      show: ' <green>/clanleague addevent <red><tag/player> <points> <name> <gray>- <yellow>Dispatch event points.'
+      usage: '%tag% <red>Error, use: <green>/clanleague addevent <red><tag/player> <points> <name>'
+      error: '%tag% <red>An error occurred while triggering the event.'
+      success: '%tag% <green>The event was triggered successfully!'
+    adddiscount:
+      aliases:
+      - adddiscount
+      show: ' <green>/clanleague adddiscount <red><tag/player> <points> <name> <gray>- <yellow>Add discount points.'
+      usage: '%tag% <red>Error, use: <green>/clanleague adddiscount <red><tag/player> <points> <name>'
+      error: '%tag% <red>An error occurred while triggering the event.'
+      success: '%tag% <green>The discount event was triggered successfully!'
+    seasoncreate:
+      aliases:
+      - create
+      show: ' <blue>/clanleague season create <red><name> <start> <end> <gray>- <yellow>Create a new season.'
+      usage: '%tag% <red>Error, use: <green>/clanleague season create <red><name> <start> <end>'
+      error: '%tag% <red>An error occurred while creating the new Season.'
+      success: '%tag% <green>A new season has been successfully created.'
+    seasondelete:
+      aliases:
+      - delete
+      show: ' <blue>/clanleague season delete <red><name> <gray>- <yellow>Create a new season.'
+      usage: '%tag% <red>Error, use: <green>/clanleague season delete <red><name>'
+      error: '%tag% <red>An error occurred while deleting Season.'
+      success: '%tag% <green>The season was successfully deleted.'
+    seasonlist:
+      aliases:
+      - list
+      show: ' <blue>/clanleague season list <light_purple>(-old) <gray>- <yellow>List all seasons.'
+      usage: '%tag% <red>Error, use: <green>/clanleague season list <light_purple>(-old)'
+      error: '%tag% <red>An error occurred while listing Seasons.'
+      success: '%tag% <green>Success.'
+    seasonforcestart:
+      aliases:
+      - forcestart
+      show: ' <blue>/clanleague season forcestart <red><name> <gray>- <yellow>Force The Season start.'
+      usage: '%tag% <red>Error, use: <green>/clanleague season forcestart <red><name>'
+      error: '%tag% <red>An error occurred when starting the Season.'
+      success: '%tag% <green>The Season was force started with the start date of <red>NOW'
+    seasonforcestop:
+      aliases:
+      - forcestop
+      show: ' <blue>/clanleague season forcestop <red><name> <gray>- <yellow>Stop current Season.'
+      usage: '%tag% <red>Error, use: <green>/clanleague season forcestop <red><name>'
+      error: '%tag% <red>An error occurred when stop the Season.'
+      success: '%tag% <green>The Season was forced to end.'
+    seasonseticon:
+      aliases:
+      - seticon
+      show: ' <blue>/clanleague season seticon <red><name> <gray>- <yellow>Set the Season icon.'
+      usage: '%tag% <red>Error, use: <green>/clanleague season seticon <red><name>'
+      error: '%tag% <red>An error occurred when setting the Season icon.'
+      success: '%tag% <green>The Season icon was set successfully.'
+    seasondesc:
+      aliases:
+      - desc
+      show: ' <blue>/clanleague season desc <red><name> <text> <gray>- <yellow>Set the Season icon.'
+      usage: '%tag% <red>Error, use: <green>/clanleague season desc <red><name> <text>'
+      error: '%tag% <red>An error occurred when setting the Season description.'
+      success: '%tag% <green>The Season desctiption was set successfully.'
+    itemadd:
+      aliases:
+      - add
+      show: ' <aqua>/clanleague item add <red><name> <gray>- <yellow>Add reward item.'
+      usage: '%tag% <red>Error, use: <green>/clanleague item add <red><name>'
+      error: '%tag% <red>An error occurred while adding the item.'
+      success: '%tag% <green>he new item has been added successfully.'
+    itemremove:
+      aliases:
+      - remove
+      show: ' <aqua>/clanleague item remove <red><name> <id> <gray>- <yellow>Remove the item.'
+      usage: '%tag% <red>Error, use: <green>/clanleague item remove <red><name> <id>'
+      error: '%tag% <red>An error occurred while remove the item.'
+      success: '%tag% <green>The item has been successfully removed.'
+    itemlist:
+      aliases:
+      - list
+      show: ' <aqua>/clanleague item list <red><name> <gray>- <yellow>List all item.'
+      usage: '%tag% <red>Error, use: <green>/clanleague item list <red><name>'
+      error: '%tag% <red>An error occurred while listing items.'
+      success: '%tag% <green>Success.'
+    commandadd:
+      aliases:
+      - add
+      show: ' <red>/clanleague command add <red><name> <command><gray>- <yellow>Add reward command.'
+      usage: '%tag% <red>Error, use: <green>/clanleague command add <red><name> <command>'
+      error: '%tag% <red>An error occurred while adding the command.'
+      success: '%tag% <green>he new command has been added successfully.'
+    commandremove:
+      aliases:
+      - remove
+      show: ' <red>/clanleague command remove <red><name> <id> <gray>- <yellow>Remove the command.'
+      usage: '%tag% <red>Error, use: <green>/clanleague command remove <red><name> <id>'
+      error: '%tag% <red>An error occurred while remove the command.'
+      success: '%tag% <green>The command has been successfully removed.'
+    commandlist:
+      aliases:
+      - list
+      show: ' <red>/clanleague command list <red><name> <gray>- <yellow>List all command.'
+      usage: '%tag% <red>Error, use: <green>/clanleague command list <red><name>'
+      error: '%tag% <red>An error occurred while listing commands.'
+      success: '%tag% <green>Success.'
+   
+  # player command
+  league:
+    help:
+      permission: clanleague.player.help
+      aliases:
+      - ajuda
+      show: ' <click:run_command:"/{_clan} {_league}"><hover:show_text:"<green>Click to show."><aqua>/{_clan} {_league} <gray>- <yellow>Show help menu.</hover></click> <hover:show_text:''<green>With sub commands.''><green>[!]</hover>'
+      usage: '%tag% <red>Error, use: <green>/{_clan} {_league}'
+      error: '%tag% <red>Error to execute.'
+      success: '%tag% <green>Success to execute.'
+    view:
+      aliases:
+      - ver
+      show: ' <click:run_command:"/{_clan} {_league} {_view}"><hover:show_text:"<green>Click to show."><aqua>/{_clan} {_league} {_view} <light_purple>(-gui) <gray>- <yellow>View League.</hover></click>'
+      usage: '%tag% <red>Error, use: <green>/{_clan} {_league} {_view}'
+      error: '%tag% <red>An error occurred while viewing.'
+      success: '%tag% <green>Success.'
+    rewards:
+      aliases:
+      - recompensas
+      show: ' <click:run_command:"/{_clan} {_league} {_rewards}"><hover:show_text:"<green>Click to show."><aqua>/{_clan} {_league} {_rewards} <gray>- <yellow>View rewards.</hover></click>'
+      usage: '%tag% <red>Error, use: <green>/{_clan} {_league} {_rewards}'
+      error: '%tag% <red>An error occurred when viewing rewards.'
+      success: '%tag% <green>Success.'
+    previous:
+      aliases:
+      - anteriores
+      show: ' <click:run_command:"/{_clan} {_league} {_previous}"><hover:show_text:"<green>Click to show."><aqua>/{_clan} {_league} {_previous} <gray>- <yellow>View previous league.</hover></click>'
+      usage: '%tag% <red>Error, use: <green>/{_clan} {_league} {_previous}'
+      error: '%tag% <red>An error occurred when viewing previous league.'
+      success: '%tag% <green>Success.'

@@ -1,0 +1,128 @@
+ 
+#permissions and alias
+Commands:
+  player:
+     
+    rival:
+      # Use empty for don't need permissions
+      permission: uclans.player.rival
+      # Alias for command.
+      alias: rival
+      # Command cooldown.
+      cooldown: 0
+      # Value to use.
+      value: 0.0
+      disabled_worlds: [
+        ]
+      disabled_regions: [
+        ]
+     
+    ally:
+      # Use empty for don't need permissions
+      permission: uclans.player.ally
+      # Alias for command.
+      alias: ally
+      # Command cooldown.
+      cooldown: 0
+      # Value to use.
+      value: 0.0
+      disabled_worlds: [
+        ]
+      disabled_regions: [
+        ]
+   
+  # RivalAlly command
+  rival:
+    permission: uclans.player.rival
+    # in seconds
+    cooldown: 0
+    subcommands:
+    - add
+    - remove
+    - list
+    - deny
+    - accept
+    help:
+      aliases: help
+      show: <click:run_command:"/{_clan} {_rival} "><hover:show_text:'<green>Click to expand rival commands.'> <aqua>/{_clan} {_rival} <gray>-<yellow> Clan Rival.</hover></click> <hover:show_text:'<green>With sub commands.'><green>[!]</hover>
+      usage: '%tag% <red>Use <aqua>/{_clan} {_rival}'
+      error: '%tag% <red>Error.'
+      success: '%tag% <green>Success.'
+    add:
+      aliases: add
+      show: <click:suggest_command:"/{_clan} {_rival} {_add} "><hover:show_text:'<green>Click to add a new rival.'> <aqua>/{_clan} {_rival} {_add} <red><tag> <gray>-<yellow> Add clan rival.</hover></click>
+      usage: '%tag% <red>Use <aqua>/{_clan} {_rival} {_add} <red><tag>'
+      error: '%tag% <red>An error occurred while adding the new rival.'
+      success: '%tag% <green>New rival successfully added'
+    remove:
+      aliases: remove
+      show: <click:suggest_command:"/{_clan} {_rival} {_remove} "><hover:show_text:'<green>Click to remove a rival.'> <aqua>/{_clan} {_rival} {_remove} <red><tag> <gray>-<yellow> Remove a rival.</hover></click>
+      usage: '%tag% <red>Use <aqua>/{_clan} {_rival} {_remove} <red><tag>'
+      error: '%tag% <red>Error removing rival clan.'
+      success: '%tag% <green>New rival clan successfully removed'
+    list:
+      aliases: list
+      show: <click:suggest_command:"/{_clan} {_rival} {_list} "><hover:show_text:'<green>Click to list clan rivalries.'> <aqua>/{_clan} {_rival} {_list} <light_purple>(tag) <light_purple>(-gui) <gray>-<yellow> List clan rivalries.</hover></click>
+      usage: '%tag% <red>Use <aqua>/{_clan} {_rival} {_list} <light_purple>(tag) <light_purple>(-gui)'
+      error: '%tag% <red>Error listing rivalries.'
+      success: '%tag% <green>Success'
+    deny:
+      aliases: deny
+      show: <click:suggest_command:"/{_clan} {_rival} {_deny} "><hover:show_text:'<green>Click to deny a rival.'> <aqua>/{_clan} {_rival} {_deny} <red><tag> <gray>-<yellow> Deny a rival.</hover></click>
+      usage: '%tag% <red>Use <aqua>/{_clan} {_rival} {_deny} <red><tag>'
+      error: '%tag% <red>Error deny rival clan.'
+      success: '%tag% <green>New rival clan successfully denied'
+    accept:
+      aliases: accept
+      show: <click:suggest_command:"/{_clan} {_rival} {_accept} "><hover:show_text:'<green>Click to accept a rival.'> <aqua>/{_clan} {_rival} {_accept} <red><tag> <gray>-<yellow> Accept a rival.</hover></click>
+      usage: '%tag% <red>Use <aqua>/{_clan} {_rival} {_accept} <red><tag>'
+      error: '%tag% <red>Error accept rival clan.'
+      success: '%tag% <green>New rival clan successfully accepted'
+   
+  # Clan alliances
+  ally:
+    permission: uclans.player.ally
+    # in seconds
+    cooldown: 0
+    subcommands:
+    - add
+    - remove
+    - list
+    - accept
+    - deny
+    help:
+      aliases: help
+      show: <click:run_command:"/{_clan} {_ally} "><hover:show_text:'<green>Click to expand ally commands.'> <aqua>/{_clan} {_ally} <gray>-<yellow> Clan Ally.</hover></click> <hover:show_text:'<green>With sub commands.'><green>[!]</hover>
+      usage: '%tag% <red>Use <aqua>/{_clan} {_ally}'
+      error: '%tag% <red>Error.'
+      success: '%tag% <green>Success.'
+    add:
+      aliases: add
+      show: <click:suggest_command:"/{_clan} {_ally} {_add} "><hover:show_text:'<green>Click to add new ally.'> <aqua>/{_clan} {_ally} {_add} <red><tag> <gray>-<yellow> Add new ally.</hover></click>
+      usage: '%tag% <red>Use <aqua>/{_clan} {_ally} {_add} <red><tag>'
+      error: '%tag% <red>Error sending invitation.'
+      success: '%tag% <green>New alliance invitation sent, please wait...'
+    remove:
+      aliases: remove
+      show: <click:suggest_command:"/{_clan} {_ally} {_remove} "><hover:show_text:'<green>Click to remove clan alliances.'> <aqua>/{_clan} {_ally} {_remove} <red><tag> <gray>-<yellow> Remove an alliance.</hover></click>
+      usage: '%tag% <red>Use <aqua>/{_clan} {_ally} {_remove} <red><tag>'
+      error: '%tag% <red>Error removing alliance.'
+      success: '%tag% <green>Alliance removed successfully.'
+    list:
+      aliases: list
+      show: <click:suggest_command:"/{_clan} {_ally} {_list} "><hover:show_text:'<green>Click to list clan alliances.'> <aqua>/{_clan} {_ally} {_list} <light_purple>(tag) <light_purple>(-gui) <gray>-<yellow> List clan alliances.</hover></click>
+      usage: '%tag% <red>Use <aqua>/{_clan} {_ally} {_list} <light_purple>(tag) <light_purple>(-gui)'
+      error: '%tag% <red>Error listing alliances.'
+      success: '%tag% <green>Success'
+    accept:
+      aliases: accept
+      show: <click:suggest_command:"/{_clan} {_ally} {_accept} "><hover:show_text:'<green>Click to accept clan alliances.'> <aqua>/{_clan} {_ally} {_accept} <red><tag> <gray>-<yellow> List clan alliances.</hover></click>
+      usage: '%tag% <red>Use <aqua>/{_clan} {_ally} {_accept} <red><tag>'
+      error: '%tag% <red>Error accepting alliance.'
+      success: '%tag% <green>New alliance successfully accepted'
+    deny:
+      aliases: deny
+      show: <click:suggest_command:"/{_clan} {_ally} {_deny} "><hover:show_text:'<green>Click to deny clan alliances.'> <aqua>/{_clan} {_ally} {_deny} <red><tag> <gray>-<yellow> Deny clan alliance.</hover></click>
+      usage: '%tag% <red>Use <aqua>/{_clan} {_ally} {_deny} <red><tag>'
+      error: '%tag% <red>Error when denying alliance.'
+      success: '%tag% <green>Alliance successfully denied'

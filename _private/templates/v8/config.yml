@@ -1,0 +1,472 @@
+Plugin:
+  check_for_updates: true
+ 
+Config:
+  tag: <#FFAA00><bold>U</bold><gradient:#0000AA:#5555FF><bold>Clans</bold></gradient> <gray>|
+  date_format: dd/MM/yyyy HH:mm
+  teleport_delay: 3
+  date_format_short: dd/MM/yyyy
+  # You can insert your own languages in the /language/ folder following the Lang_ID.yml pattern.
+  # Default languages:
+  # EN - English
+  # PL - Polish
+  # TR - Turkish
+  # RU - Russian
+  # ES - Spanish
+  # HU - Hungarian
+  # GE - German
+  # FR - French (Thanks to #fokstrotzero)
+  # BR - Português Brasileiro (Brasil acima de tudo, Deus acima de todos!)
+  language: EN
+  language_repo_V7: https://raw.githubusercontent.com/UlrichBR/UClansV7/main/language/
+  language_repo_V8: https://raw.githubusercontent.com/UlrichBR/UClans/refs/heads/main/language/
+  # New defaults can be added by following the list below
+  language_flags:
+    default: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjgwZDMyOTVkM2Q5YWJkNjI3NzZhYmNiOGRhNzU2ZjI5OGE1NDVmZWU5NDk4YzRmNjlhMWMyYzc4NTI0YzgyNCJ9fX0=
+    GE: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWU3ODk5YjQ4MDY4NTg2OTdlMjgzZjA4NGQ5MTczZmU0ODc4ODY0NTM3NzQ2MjZiMjRiZDhjZmVjYzc3YjNmIn19fQ==
+    HU: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmJjZjkyODUwODQyNzM5ZTA5YzJjYTkyOGY5MTJjNTJmM2VmYjkzY2QyNmU2YmUwZmU1MzI4MmMwMmJmNTc4MCJ9fX0=
+    ES: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzJkNzMwYjZkZGExNmI1ODQ3ODNiNjNkMDgyYTgwMDQ5YjVmYTcwMjI4YWJhNGFlODg0YzJjMWZjMGMzYThiYyJ9fX0=
+    RU: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTZlYWZlZjk4MGQ2MTE3ZGFiZTg5ODJhYzRiNDUwOTg4N2UyYzQ2MjFmNmE4ZmU1YzliNzM1YTgzZDc3NWFkIn19fQ==
+    PL: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZGVhY2M1MGIwM2Y3NmFiMWYwNDMwNTAxMTdiMjA5ZDFmOGI4N2Y3ZDIyNTI3MjFmM2ZlODc3YjRkYjc3Mzc0YSJ9fX0=
+    TR: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmJiZWFmNTJlMWM0YmZjZDhhMWY0YzY5MTMyMzRiODQwMjQxYWE0ODgyOWMxNWFiYzZmZjhmZGY5MmNkODllIn19fQ==
+    EN: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGNhYzk3NzRkYTEyMTcyNDg1MzJjZTE0N2Y3ODMxZjY3YTEyZmRjY2ExY2YwY2I0YjM4NDhkZTZiYzk0YjQifX19
+    BR: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWE0NjQ3NWQ1ZGNjODE1ZjZjNWYyODU5ZWRiYjEwNjExZjNlODYxYzBlYjE0ZjA4ODE2MWIzYzBjY2IyYjBkOSJ9fX0=
+    FR: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTEyNjlhMDY3ZWUzN2U2MzYzNWNhMWU3MjNiNjc2ZjFhMTBmY2E1YjJjYmE3NDIxODliMDkwM2JjYWRlNTI0NCJ9fX0=
+   
+  # When activating the BETA option, the features below may have errors.
+  beta:
+    features:
+      # Beta sync is coming to an end and will be marked as deprecated in V8
+      sync: false
+   
+  # Timezone is the definition of times by locations and countries. you can choose which timezone best fits your schedule
+  # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  timezone: America/Sao_Paulo
+   
+  # This sound system uses Sound events (namespace key), the same used in /playsound. the complete list can be obtained at https://minecraft.wiki/w/Sounds.json
+  # The sounds sent have the following format: sound_event:volume:pith:source
+  sound:
+    enabled: true
+    # only_legacy disables sounds in the new format and uses legacy formatting like BLOCK_SLIME_BLOCK_HIT
+    only_legacy: false
+    default_volume: 1.0
+    default_pitch: 1.0
+    # available: [MASTER, MUSIC, RECORD, WEATHER, BLOCK, HOSTILE, NEUTRAL, PLAYER, AMBIENT, VOICE, UI]
+    default_source: MASTER
+   
+  translate:
+    # only 1.13+
+    enabled: true
+    reference:
+      block: block.minecraft.{object}
+      entity: entity.minecraft.{object}
+      item: item.minecraft.{object}
+      biome: biome.minecraft.{object}
+      color: color.minecraft.{object}
+      enchantment: enchantment.minecraft.{object}
+      gameMode: gameMode.{object}
+   
+  regions: ''
+  map:
+    # This option will check regions for installed extensions such as Dynmap, BlueMap etc...
+    enabled: true
+   
+  gui:
+    # The gui menus work as of 1.8 but you can turn it off and just use text mode
+    enabled: true
+    # Open gui menu when commands have no arguments
+    open_gui_noargs: true
+    # Force open gui menus (if enabled) without using the -gui arg
+    forge_open-gui: true
+    # Add the -gui option to tabcomplete where possible
+    suggestion_in_tabcomplete: true
+    disband_confirm: true
+    use_player_gui_permission: uclans.player.use_gui
+    use_admin_gui_permission: uclans.admin.use_gui
+    titles:
+      # This is the character limiter for menu titles, by default minecraft supports 32 but this value can be exceeded with ProtocolLib
+      max_characters: 30
+      ellipsis: ..
+    # This option turns off the alert in the menu titles.
+    disable_title_alerts: false
+   
+  command:
+    sort_alphabetically: true
+    max_results_per_page: 8
+    disabled_worlds: [
+      ]
+    disabled_regions: [
+      ]
+   
+  scoreboard:
+    # This mode activates the legacy sidebar, which is sensitive to the number of characters and should only use common colors without hex and gradient in variables.
+    simple_mode: false
+   
+  special_permissions:
+    bypass_command_cooldown: uclans.bypass_command_cooldown
+    bypass_command_worlds: uclans.bypass_command_worlds
+    bypass_command_regions: uclans.bypass_region
+    bypass_teleport: uclans.bypass_teleport
+    bypass_leader: uclans.bypass_leader
+    bypass_home_regions: uclans.bypass_home_regions
+    bypass_home_worlds: uclans.bypass_home_worlds
+   
+  money:
+    currency: $
+    format: '#,##0'
+    #This field is intended for the %uclans_money_current...% placeholder, if there is a field this will be the name of the economy
+    name: ''
+   
+  player:
+    pvp:
+      damage_indicator:
+        enabled: true
+        #in ticks
+        timer: 30
+        #in seconds
+        delay: 1
+        # double
+        ajust_y: 1.5
+        #variables: {damage}, {attacker}, {victim} and all uclans placeholder (parsed as victim)
+        format:
+        - <red>-{damage}
+    #If this option is turned off, clans will not receive membtos message entering or disconnecting, the button to change this in settings will not appear either.
+    join_quit: true
+    nickname:
+      custom_char: <red>~
+      allowed_chars: '[0-9a-zA-Z_-]*'
+      max_size: 16
+    invites:
+      # by player
+      max_store: 9
+      # in minutes, 1440 minutes = 1 day
+      time_expires: 1440
+    # Turns pvp management between members on or off
+    ff:
+      enabled: true
+      # Turns off pvp between non-clan players.
+      disable_noclan_pvp: false
+      forced_worlds: [
+        ]
+      #need region implementation like worldguard extension
+      forced_regions: [
+        ]
+      disabled_worlds: [
+        ]
+      #need region implementation like worldguard extension
+      disabled_regions: [
+        ]
+      # Plugins added here have FF blocked inside terrain
+      #Avaliable addons: ClanLand, ClanNexus
+      disabled_ff_terrain: [
+        ]
+      # Plugins added here have FF forced inside terrain
+      #Avaliable addons: ClanLand, ClanNexus
+      forced_ff_terrain: [
+        ]
+     
+    # Turns kdr management between clans on or off.
+    kdr:
+      enabled: true
+      #Deaths by pvp when the player has no clan.
+      noclan_count: true
+      #Natural deaths, takedowns, mobs and other types.
+      nopvp_count: true
+      #points added to the clan and player KDR when the events below occur, (kills/deaths = ratio)
+      kills:
+        neutral: 1
+        ally: 1
+        rival: 1
+        noclan: 1
+        nopvp: 1
+      disabled_kdr_worlds:
+      - no_kdr_world
+      disabled_kdr_regions:
+      - no_kdr_region
+      # Plugins added here are blocked from receiving kdr if death happens within this terrain
+      #Avaliable addons: ClanLand, ClanNexus
+      disabled_kdr_terrain: [
+        ]
+     
+    # Turns souls management between clans on or off.
+    souls:
+      enabled: true
+      kill: 1
+      death: -1
+      disabled_souls_worlds:
+      - no_souls_world
+      disabled_souls_regions:
+      - no_souls_region
+      # Plugins added here are blocked from receiving souls if death happens within this terrain
+      #Avaliable addons: ClanLand, ClanNexus
+      disabled_souls_terrain: [
+        ]
+    # The Skin Cache option is experimental and intended to remove player headlist loading errors.
+    skin:
+      # If the skins preference is hooks the plugin will not make requests to mojang, thus using hooks by default.
+      prefer_to_hook: false
+      # Check the Mojang API?.
+      mojang: true
+      # This option can be used for servers in OFFLINE mode, Uses skins based on the players nickname
+      enable_offline: true
+      # This option caches player skins along with the player data in the clan.
+      store: true
+      # If the player cache is empty use this skin (Base64) by default
+      on_empty: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGRhODkzYzI2ZDQ4YmVmZDk4YWRmZmFkZDhjNDk2YmM1YWIyZjEyY2IzZDY3OGU4MTA4MGI5M2JjYTM4M2UifX19
+      # in seconds
+      custom_cooldown: 60
+      # If the server is in OFFLINE MODE the plugin will try to retrieve skins using the hooks below
+      hooks:
+        skinsrestorer:
+          enabled: false
+          # This placeholder option can be used for skins restorer in 'Standalone Mode' and NOT in Proxy mode.
+           
+          # For servers in offline mode and PROXY mode follow the steps below (these steps created by skinsrestorer)
+          # Set skinsrestorer to true.
+          # Install the latest DEV version https://ci.codemc.io/job/SkinsRestorer/job/SkinsRestorerX-DEV on your backend and proxy servers.
+          # You can enable the backend storage by create a file called enableSkinStorageAPI.txt in SkinsRestorer folder (backend server -> ./plugins/SkinsRestorer/enableSkinStorageAPI.txt)
+          # Enable Mysql mode in the SkinsRestorer configuration file in the backend and also in the proxy, the connections must point to the same database.
+          # Restart your entire network.
+          useplaceholder: '%skinsrestorer_texture_id_or_empty%'
+   
+  # Download the current version at: {THIS_REPO}/ExtensionName/ExtensionName-latest.version.jar
+  # Find the current version in: {THIS_REPO}/ExtensionName/{THIS_VERSION_FILE}.yml
+  extensions:
+    autodownload_enabled: false
+    repo_V7: https://raw.githubusercontent.com/UlrichBR/UClansV7/main/extensions/
+    repo_V8: https://raw.githubusercontent.com/UlrichBR/UClans/main/extensions/
+    list: extensions.yml
+    version_file: version.yml
+   
+  top:
+    realtime: false
+    # If realtime is true, this value is not used.
+    update_time: 180
+    # Days.
+    players_days_filter: 90
+ 
+Clan:
+   
+  home:
+    #If disabled this does not appear in the menu and the command is marked as disabled.
+    enabled: true
+    guiclick_teleport_as_command: false
+    allowed_chars: '[0-9a-zA-Z_-]*'
+    public: false
+    can_toggle_view: true
+    # wg region
+    disabled_regions: [
+      ]
+    disabled_worlds: [
+      ]
+    # This option allows you to enable or disable the creation of clan homes inside and outside land.
+    #Addons available: ClanLand, ClanNexus
+    #Plugins available: HuskClaims
+    # If you need more land implementations open a support ticket
+    terrain:
+      verify_enabled: true
+      # Plugins added here will be disabled from creating homes inside terrain
+      disabled_plugin: [
+        ]
+      # Plugins added here will be able to create home only inside the terrain
+      enabled_plugin: [
+        ]
+   
+  #Relationship between clans
+  relation:
+    ally:
+      color: <green>
+      text: '[Ally]'
+    rival:
+      color: <red>
+      text: '[Rival]'
+    neutral:
+      color: <yellow>
+      text: '[NR]'
+    sameclan:
+      color: <gold>
+      text: ''
+   
+  # This option will delete inactive clans for X days.
+  #CAUTION
+  #CAUTION
+  #CAUTION
+  #CAUTION: It is highly recommended to exclude for longer periods, such as 120 days and gradually decrease before short periods so as not to overload the CPU and memory..
+  #CAUTION
+  #CAUTION
+  #CAUTION
+  inactivity:
+    enabled: false
+    # double confirmation
+    confirm_deletion: false
+    # create log with activity
+    activity_log: false
+    # in days
+    delete_after: 150
+    # Will attempt to pass leadership to another member according to the highest role. If there are no new leaders the clan will be deleted
+    leader_another_member: true
+   
+  chat:
+    #Clan Chat listener priority.
+    #values (lowercase or UPPERCASE): LOWEST, LOW, NORMAL, HIGH, HIGHEST.
+    priority: LOWEST
+    format: '<hover:show_text:"<green>Clan %uclans_tag_color%<newline><newline><white> Leader: <aqua>%uclans_leader%<newline><white> Members: <aqua>%uclans_count_members%<newline><white> Level: <aqua>%uclans_level%">%uclans_tag_color% <light_purple>> <light_purple>%uclans_player_role_formated%<dark_purple>%player%<light_purple>: <light_purple>%chat_message%</hover>'
+    spy_tag: '<dark_gray>[SPY] '
+    enable_colors: false
+    # BOLD, ITALIC, UNDERLINED, STRIKETHROUGH, OBFUSCATED
+    disabled_decoration:
+    - OBFUSCATED
+    - BOLD
+    - ITALIC
+    - UNDERLINED
+    - STRIKETHROUGH
+    # This shortcut is used to send clan messages quickly using shortcuts. use empty to disable
+    shortcut: '@'
+    console_chat: true
+   
+  verify:
+    always_verified: true
+    list_unverified: true
+   
+  tag:
+    #You can enable colors, gradient and rainbow with user permissions, leave it blank so everyone can use colors!
+    color_permission: ''
+    min_chars: 2
+    max_chars: 4
+    allowed_chars: '[0-9a-zA-Z_-]*'
+    #Pre-installed fonts can be used here, as well as fonts from resource packs. For example: font: alt, font: uniform
+    font: ''
+    # BOLD, ITALIC, UNDERLINED, STRIKETHROUGH, OBFUSCATED
+    disabled_decoration:
+    - OBFUSCATED
+    - BOLD
+    - ITALIC
+    - UNDERLINED
+    - STRIKETHROUGH
+    default_color: <dark_gray>
+    start: <white>[
+    end: <white>]
+    noclan_formated: <dark_red>WITHOUT CLAN
+    # example, for russian character use 'CYRILLIC', all list in https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Character.UnicodeBlock.html
+    unicodeblock: ''
+    #This Tag cannot be used in Clans. Sensitive to upper and lower case, no color should be added.
+    blacklist:
+    - ADMIN
+    - admin
+    - MOD
+    - mod
+    - OWNER
+    - owner
+   
+  desc:
+    #You can enable colors, gradient and rainbow with user permissions, leave it blank so everyone can use colors!
+    color_permission: ''
+    min_chars: 2
+    max_chars: 32
+    allowed_chars: '[0-9a-zA-Z_ -]*'
+    # BOLD, ITALIC, UNDERLINED, STRIKETHROUGH, OBFUSCATED
+    disabled_decoration:
+    - OBFUSCATED
+    - BOLD
+    - ITALIC
+    - UNDERLINED
+    - STRIKETHROUGH
+    default_color: <dark_gray>
+    nodesc_formated: <dark_gray>WITHOUT DESC
+    # example, for russian character use 'CYRILLIC', all list in https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Character.UnicodeBlock.html
+    unicodeblock: ''
+   
+  command_actions:
+    enabled: true
+    # INSECONDS
+    execute_delay: 1
+    #example commands, Only %clantag% and %player% can be used here
+    create_clan_commands: [
+      ]
+    #example commands, Only %clantag% and %player% can be used here
+    delete_clan_commands: [
+      ]
+    #example commands, Only %clantag% and %player% can be used here
+    join_clan_commands: [
+      ]
+    #example commands, Only %clantag% and %player% can be used here
+    leave_clan_commands: [
+      ]
+    #example commands, Only %oldtag%, %newtag% and %player% can be used here
+    modtag_clan_commands: [
+      ]
+  regroup_invite:
+     # IN SECONDS
+    max_time_seconds: 60
+  rival_remove:
+    need_confirmation: true
+     # IN SECONDS
+    max_time_seconds: 60
+  ally_invite:
+    need_confirmation: true
+     # IN SECONDS
+    max_time_seconds: 60
+   
+  logger:
+    enabled: true
+    enable_colors: true
+    # in minutes, 2880 minutes = 2 days
+    time_expires: 2880
+    plugin_material: IRON_AXE
+    plugin_name: Clan
+     
+    discord:
+      # Send events to discord?
+      enabled: true
+      # in seconds
+      ping_cooldown: 300
+      regex: (https?:\/\/)?(www\.)?(discord\.(gg|io|me|li|com)|discordapp\.com\/api\/webhooks)\/.+[0-9a-zA-Z_-]
+      regex_short: webhooks\/([^\/]+)\/([^\/]+)
+      embed:
+        enabled: true
+        #only hex colors
+        color: '#5555FF'
+        #variables: %player_uuid%
+        avatar: https://crafatar.com/avatars/%player_uuid%.png
+    events:
+      ClanPlayerInviteReceive: true
+      ClanPlayerRoleChangeEvent: true
+      ClanPlayerJoinEvent: true
+      ClanPlayerLeaveEvent: true
+      ClanPlayerKickedEvent: true
+      ClanCreateEvent: true
+      ClanModTagEvent: true
+      ClanModDescEvent: true
+      ClanPointChangeEvent: false
+      ClanLevelEvent: true
+      ClanVerifyChangeEvent: true
+      ClanLeaderChangeEvent: true
+      ClanAllyAddEvent: true
+      ClanAllyRemoveEvent: true
+      ClanRivalRemoveEvent: true
+      ClanRivalAddEvent: true
+      ClanHomeCreateEvent: true
+      ClanHomeDeleteEvent: true
+      ClanBannerChangeEvent: true
+      ClanAllyInviteEvent: true
+      ClanRivalInviteEvent: true
+      ClanPlayerBanEvent: true
+      ClanPlayerUnbanEvent: true
+      ClanFFChangeEvent: true
+      ClanRegroupSendEvent: true
+      ClanRewardsEvent: true
+   
+  mail:
+    enabled: true
+    enable_colors: true
+    enabled_for_all_clans: false
+    # in minutes, 1440 minutes = 1 day
+    time_expires: 1440
+    max_storage: 70
+    max_unread: 14
+    max_chars: 50
+    min_chars: 1
+ 
+# DO NOT EDIT THIS MANUALLY!
+version:
+  generated: 8.21.0

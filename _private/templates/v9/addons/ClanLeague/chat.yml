@@ -1,0 +1,159 @@
+#
+#
+# Time: in seconds
+#
+# BossBar:
+# Colors: BLUE, GREEN, PINK, PURPLE, RED, WHITE, YELLOW
+# Styles: PROGRESS, NOTCHED_6, NOTCHED_10, NOTCHED_12, NOTCHED_20
+# Flags: DARKEN_SCREEN, PLAY_BOSS_MUSIC, CREATE_WORLD_FOG
+#
+#
+# All texts are located in the language files and accept all placeholders from UClans.
+Chat:
+   
+  commandunknownplayer:
+    enabled: true
+    time: 5
+    alert: true
+    sound:
+      enabled: true
+      display: BLOCK_ANVIL_USE
+    message:
+      enabled: true
+    bossbar:
+      enabled: true
+      color: YELLOW
+      style: PROGRESS
+      flags:
+      - DARKEN_SCREEN
+      animated: true
+    title:
+      enabled: true
+    actionbar:
+      enabled: true
+   
+  commandunknownadmin:
+    enabled: true
+    alert: true
+    time: 5
+    sound:
+      enabled: true
+      display: BLOCK_ANVIL_USE
+    message:
+      enabled: true
+    bossbar:
+      enabled: true
+      color: YELLOW
+      style: PROGRESS
+      flags:
+      - DARKEN_SCREEN
+      animated: true
+    title:
+      enabled: true
+    actionbar:
+      enabled: true
+   
+  leaguepointreceived:
+    enabled: true
+    alert: true
+    time: 5
+    sound:
+      enabled: true
+      display: BLOCK_ANVIL_USE
+    message:
+      enabled: true
+    bossbar:
+      enabled: true
+      color: YELLOW
+      style: PROGRESS
+      flags:
+      - DARKEN_SCREEN
+      animated: true
+    title:
+      enabled: true
+    actionbar:
+      enabled: true
+   
+  leagueclanwinner:
+    enabled: true
+    alert: true
+    time: 5
+    sound:
+      enabled: true
+      display: BLOCK_ANVIL_USE
+    message:
+      enabled: true
+    bossbar:
+      enabled: true
+      color: YELLOW
+      style: PROGRESS
+      flags:
+      - DARKEN_SCREEN
+      animated: true
+    title:
+      enabled: true
+    actionbar:
+      enabled: true
+   
+  leaguefinishwinner:
+    enabled: true
+    alert: true
+    time: 10
+    sound:
+      enabled: true
+      display: BLOCK_ANVIL_USE
+    message:
+      enabled: true
+    bossbar:
+      enabled: true
+      color: YELLOW
+      style: PROGRESS
+      flags:
+      - DARKEN_SCREEN
+      animated: true
+    title:
+      enabled: true
+    actionbar:
+      enabled: true
+   
+  leaguefinish_nowinner:
+    enabled: true
+    alert: true
+    time: 10
+    sound:
+      enabled: true
+      display: BLOCK_ANVIL_USE
+    message:
+      enabled: true
+    bossbar:
+      enabled: true
+      color: YELLOW
+      style: PROGRESS
+      flags:
+      - DARKEN_SCREEN
+      animated: true
+    title:
+      enabled: true
+    actionbar:
+      enabled: true
+   
+  leaguestarted:
+    enabled: true
+    alert: true
+    time: 10
+    sound:
+      enabled: true
+      display: BLOCK_ANVIL_USE
+    message:
+      enabled: true
+    bossbar:
+      enabled: true
+      color: YELLOW
+      style: PROGRESS
+      flags:
+      - DARKEN_SCREEN
+      animated: true
+    title:
+      enabled: true
+    actionbar:
+      enabled: true

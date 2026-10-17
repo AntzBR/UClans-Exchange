@@ -1,0 +1,37 @@
+ 
+#permissions and alias
+Commands:
+  player:
+     
+    # Clan Level
+    level:
+      permission: uclans.player.level
+      # Alias for command.
+      alias: levelup
+      # in seconds
+      cooldown: 0
+      # Value to use.
+      value: 0.0
+      disabled_worlds: [
+        ]
+      disabled_regions: [
+        ]
+  level:
+    help:
+      aliases: help
+      show: <click:run_command:"/{_clan} {_level} "><hover:show_text:'<green>Click to expand level commands.'> <aqua>/{_clan} {_level} <gray>-<yellow> Clan Level.</hover></click> <hover:show_text:'<green>With sub commands.'><green>[!]</hover>
+      usage: '%tag% <red>Use <aqua>/{_clan} {_level}'
+      error: '%tag% <red>Error.'
+      success: '%tag% <green>Success.'
+    view:
+      aliases: view
+      show: <click:suggest_command:"/{_clan} {_level} {_view} "><hover:show_text:'<green>Click to view clan level'> <aqua>/{_clan} {_level} {_view} <light_purple>(-gui) <gray>-<yellow> View clan level.</hover></click>
+      usage: '%tag% <red>Use <aqua>/{_clan} {_level} {_view} <light_purple>(-gui)'
+      error: '%tag% <red>You still have requirements to meet before leveling up.'
+      success: '%tag% <click:suggest_command:"/{_clan} {_level} {_up} "><hover:show_text:''<green>Click to levelup.''> <green>New Level up available <yellow>[CLick <aqua><bold>%uclans_level% -> %uclans_next_level%</bold></aqua><yellow>]</hover></click>'
+    up:
+      aliases: up
+      show: <click:suggest_command:"/{_clan} {_level} {_up} "><hover:show_text:'<green>Click to up clan level'> <aqua>/{_clan} {_level} {_up} <light_purple>(-gui) <gray>-<yellow> Up clan level.</hover></click>
+      usage: '%tag% <red>Use <aqua>/{_clan} {_level} {_up} <light_purple>(-gui)'
+      error: '%tag% <red>It was not possible to level up, see the requirements <click:suggest_command:"/{_clan} {_level} {_view} "><hover:show_text:''<green>Click to view.''><green><bold>[CLICKING HERE]</hover></click>'
+      success: '%tag% <green>You have successfully leveled up your clan. Congratulations!'

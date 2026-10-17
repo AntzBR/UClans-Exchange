@@ -1,0 +1,62 @@
+General:
+  #Clan levelup config
+  levelup_rewards:
+    opensound: block.slime_block.hit
+    rows: 4
+    pagesize: 27
+    items:
+      fill:
+        # Use ; "<ITEM>;<ITEM>;<ITEM>" to add more than one item to the fill.
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        # This option can be applied to all items.
+        enabled: true
+        # This option can be applied to all items.
+        slot: 27
+        # This option can be applied to all items.
+        mimeslots:
+        - 28
+        - 29
+        - 30
+        - 31
+        - 32
+        - 33
+        - 34
+        - 35
+        # Nbts can be applied to all items in all menus by following this example
+        nbt:
+          string: [
+            ]
+        # Used for CustomModelData options, just add the number. This option can be applied to all items.
+        model: 0
+      current:
+        clicksound: ''
+        material: PAPER
+        texture: ''
+        data: 0
+        amount: 1
+        glow: false
+      previous:
+        clicksound: ''
+        material: ARROW
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 29
+      next:
+        clicksound: ''
+        material: ARROW
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 33
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        texture: ''
+        data: 0
+        amount: 1
+        glow: true
+        # This option can be applied to all items.
+        slot: 31

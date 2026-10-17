@@ -1,0 +1,263 @@
+Config:
+  version: '1'
+  # available: [EN, BR, PL]
+  language: EN
+  date_format_short: dd/MM/yyyy HH:mm
+  money_format: '#,##0'
+  gui:
+    use-gui: true
+    force_open-gui: true
+   
+  Nexus:
+    enabled: true
+    name:
+      string: <red>%uclans_tag_color%'s <red>Nexus
+      #uncoloured
+      maxchars: 16
+     
+    bypass:
+      interact: clannexus.bypass.interact
+     
+    disable:
+      enabled: true
+      worlds:
+      - disabled_nexus_world
+      # need extension of regions.
+      regions: [
+        ]
+      # Disables in-terrain commands for non-members. also available for subcommands such as "/cmi home" or just "/cmi"
+      non_members_commands: [
+        ]
+      # Disables in-terrain commands for all members. also available for subcommands such as "/cmi home" or just "/cmi"
+      all_members_commands: [
+        ]
+     
+    power:
+      #KDR, LEVEL, ENTITY
+      # ! For entity mode, EntityWizard is required to be installed and enabled in UClans.
+      mode: KDR
+      # Ex: Power 10 receives 5 more chunks (10*0.5=5)
+      claim_gain_multiplier: 0.5
+      # Power <=VAL the terrain is vulnerable to attacks
+      unprotected: 0
+      #In entity mode this is the energy of nexus entity.
+      limit: 10.0
+      #The minimum number of players online for the nexus to be able to receive attacks. if it is 0 you can be attacked at any time.
+      min_members_online_attack: 1
+      # The extra power is added to the sum of the clans current power, thus avoiding claims without initial protections
+      extra_power: 1.0
+      entity:
+        name: <red>%uclans_tag_color%'s <red>Nexus <gray>(<aqua>%clannexus_land_nexus_power%<gray>/<aqua>%clannexus_land_nexus_power_total%<gray>)
+        name_shield: <red><bold>SHIELD ACTIVED!</bold> <gray>(<aqua>%clannexus_land_nexus_shield_time%<gray>/<aqua>%clannexus_land_nexus_shield_left%<gray>)
+        # blocks
+        view_distance: 32
+        regen: ''
+        # in seconds. the nexus life begins to regenerate after this time without receiving attacks
+        shield_after_no_attack: 300
+        regeneration_per_second: 0.05
+        # the shield will be reapplied if life has not fully regenerated.
+        self_renewal_shield: true
+        attack:
+          sound: entity.ender_dragon.hurt
+      without_pvp:
+        enabled: false
+        # in days. If no one from the clan participates in pvp for X amount of time, the clan starts to lose power.
+        members_time: 2
+        #If clan members spend (members_time) without pvp, the clan loses power.
+        lose_amount: 1
+     
+    values:
+      # PLAYER or BANK
+      charge: PLAYER
+      start_claim: 1000.0
+      grouping_claim: 2000.0
+      use_map: 10.0
+     
+    land:
+      # primed tnt, minecart etc..
+      enable_tnt_destruction: true
+      # creeper, enderman etc..
+      enable_explosion_destruction: true
+      enable_piston_inside: true
+      enable_piston_outside: true
+      enable_water_flow: true
+      enable_lava_flow: true
+      scoreboard_inside: true
+       
+      Map:
+        enabled: true
+        format: 'Clan: %uclans_tag_nocolor% | Size: %clannexus_land_chunks_amount%| Power: %clannexus_land_nexus_power%'
+        color:
+          fill_color: '#FF55FF'
+          fill_opacity: 0.3
+          border_color: '#AA00AA'
+          border_opacity: 0.2
+          border_size: 2
+    pvp:
+      # enable pvp between rivals?
+      rival_pvp: true
+      # enable pvp between allies?
+      ally_pvp: false
+      # enable pvp between neutral (no clan)?
+      neutral_pvp: false
+    interaction:
+      pickup:
+        default: true
+        changeable: true
+      drop:
+        default: true
+        changeable: true
+      entity_interact:
+        default: true
+        changeable: true
+      other_interact:
+        default: true
+        changeable: true
+      break:
+        default: true
+        changeable: true
+      place:
+        default: true
+        changeable: true
+      consume:
+        default: true
+        changeable: true
+     
+    collision:
+      enabled: true
+      # If this option is turned on, players will only be able to edit the world within their own land.
+      just_edit_inside: false
+      #This disables the message that you are building outside the terrain.
+      alert_outside: true
+      # the land needs at least 1 chunk of space between lands of other clans, 0 to disable
+      space: 1
+      # Collisions are linked to Terrain type extensions. If you need to check for collisions with other plugins, contact support to add
+      plugin_list:
+      - ClanLand, GriefPrevention
+      - GriefDefender
+      - ProtectionStones
+     
+    limit:
+      #If false, the clan can claim infinite land
+      enabled: true
+      # the clan can have additional chunks for each clan member. 0 to disable
+      adicional_by_member: 0
+       
+      # format: CLAN_CHUNKS/REQUIRED_LEVEL
+      # You can add multiple lands for various clan levels.
+      #example:
+      #    list:
+      #      '1': 1 #The clan can have 1 land if it is level 1
+      #      '5': 10 #The clan can have 5 lands if it is level 10
+      #      '10': 30 #The clan can have 10 lands if it is level 30
+      #
+      #Use '1': 0 to not need levels for 1 land
+      list:
+        '1': 0
+   
+  map:
+    # in seconds. the map is turned off if the player does not change chunks within X seconds
+    toggle_after: 30
+    chat:
+      enabled: true
+      width: 17
+      height: 3
+    scoreboard:
+      enabled: true
+      width: 8
+      height: 5
+    character_unclaimed: ▒
+    character_claimed: ▓
+    character_you: █
+    colors:
+      current: <blue>
+      current_claimed: <aqua>
+      claimed: <red>
+      unclaimed: <gray>
+      player: <green>
+    title: <red><bold>Neighborhood map <aqua>({north}N)
+    icon:
+      here: ↕
+      left: ←
+      right: →
+      up: ↑
+      down: ↓
+    legend:
+    - ''
+    - <aqua>({north}N) <gray>| {current_claimed_color}{character_you} {current_color}{character_you} You <gray>| {player_color}{character_claimed} Land
+    - '{claimed_color}{character_claimed} Claimed <gray>| {unclaimed_color}{character_unclaimed} Wilderness'
+   
+  Icon:
+    click_sound: ''
+    material: BEACON
+    name: <green>Nexus of Clan
+    lore:
+    - ''
+    - ' <red><bold>|</bold> <red>State:'
+    - ' %clannexus_land_nexus_state_formated%'
+    - ''
+    - ' <yellow>Click to open.'
+    glow: false
+    slot: 34
+    texture: ''
+    # avaliable: TOP, BOTTOM, BORDER, ALL or numeric list
+    mimeslots: [
+      ]
+    nbt:
+      string: [
+        ]
+    model: 0
+    left_click_action:
+    - /{_clan} {_nexus} {_view} -gui
+    right_click_action:
+    - /{_clan} {_nexus} {_view} -gui
+   
+  #Permissions are for advanced connoisseurs, be careful when editing this!
+  Permissions:
+    manager:
+      name: Nexus-Manager
+      default_value: true
+      applicable_roles:
+      - moderator
+      - admin
+    build:
+      name: Nexus-Build
+      default_value: true
+      applicable_roles:
+      - moderator
+      - admin
+    teleport:
+      name: Nexus-Teleport
+      default_value: true
+      applicable_roles:
+      - member
+      - moderator
+      - admin
+   
+  logger:
+    enable_colors: true
+    plugin_material: BEACON
+    plugin_name: Nexus
+    events:
+      ClanNexusClaimEvent: true
+      ClanNexusUnclaimEvent: true
+  Modules:
+    map: true
+ 
+# NEXUS STORAGE
+Storage:
+  #mysql/sqlite/yaml (It is highly recommended to use mysql for better performance!!!)
+  type: sqlite
+  mysql:
+    host: localhost
+    port: 3306
+    base: YOUR-BASE-PRE-CREATED
+    #SSL is only valid for MYSQL, most servers are not necessary to use it as true.
+    useSSL: false
+  # Used for Mysql mandatory and optional for H2 and Sqlite (default: root)
+  user: root
+  # Used for Mysql mandatory and optional for H2 and Sqlite (default is empty)
+  pass: ''
+  databases:
+    clan_nexus_table: uclans-nexus-clans
+    nexus_terrains_table: uclans-nexus-terrains

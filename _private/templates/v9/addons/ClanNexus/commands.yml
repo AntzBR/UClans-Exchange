@@ -1,0 +1,147 @@
+ 
+#permission
+Commands:
+   
+  admin:
+    # NOT RECOMMENDED: Use empty for don't need permissions
+    permission: clannexus.admin
+    # Alias for command.
+    alias: clannexus
+   
+  player:
+    # Use empty for don't need permissions
+    permission: uclans.player.nexus
+    # Alias for command.
+    alias: nexus
+    # In seconds, Command cooldown.
+    cooldown: 0
+    disabled_worlds: [
+      ]
+    disabled_regions: [
+      ]
+   
+  # player command
+  nexus:
+    help:
+      aliases: help
+      show: <click:run_command:"/{_clan} {_nexus} "><hover:show_text:'<green>Click to expand.'> <aqua>/{_clan} {_nexus} <gray>-<yellow> Expand nexus commands.</hover></click> <hover:show_text:'<green>With sub commands.'><green>[!]</hover>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_nexus} {_help}'
+      error: '%tag% <red>Error to use.'
+      success: '%tag% <green>Success to execute.'
+    claim:
+      aliases: claim
+      enabled: true
+      show: <click:suggest_command:"/{_clan} {_nexus} {_claim} "><hover:show_text:'<green>Click to start claim.'> <aqua>/{_clan} {_nexus} {_claim} <gray>-<yellow> Claim a chunk.</hover></click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_nexus} {_claim}'
+      error: '%tag% <red>An error occurred while claiming this piece of land!'
+      success: '%tag% <green>You have successfully claimed this piece for your clan!'
+    unclaim:
+      aliases: unclaim
+      show: <click:suggest_command:"/{_clan} {_nexus} {_unclaim} "><hover:show_text:'<green>Click to unclaim.'> <aqua>/{_clan} {_nexus} {_unclaim} <gray>-<yellow> Unclaim the nexus.</hover></click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_nexus} {_unclaim}'
+      error: '%tag% <red>An error occurred when unclaiming the land'
+      success: '%tag% <green>The land was successfully unclaimed.'
+    delete:
+      aliases: delete
+      show: <click:suggest_command:"/{_clan} {_nexus} {_delete} "><hover:show_text:'<green>Click to delete.'> <aqua>/{_clan} {_nexus} {_delete} <gray>-<yellow> Delete the nexus land.</hover></click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_nexus} {_delete}'
+      error: '%tag% <red>There was an error deleting the nexus'
+      success: '%tag% <green>The clan nexus has been successfully deleted.'
+    go:
+      aliases: go
+      show: <click:suggest_command:"/{_clan} {_nexus} {_go} "><hover:show_text:'<green>Click to go.'> <aqua>/{_clan} {_nexus} {_go} <light_purple>(tag|player) <gray>-<yellow> Teleport to clan nexus.</hover></click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_nexus} {_go} <light_purple>(tag|player)'
+      error: '%tag% <red>There was an error going to the nexus'
+      success: '%tag% <green>Teleport started...'
+    sethome:
+      aliases: sethome
+      show: <click:suggest_command:"/{_clan} {_nexus} {_sethome} "><hover:show_text:'<green>Click to sethome.'> <aqua>/{_clan} {_nexus} {_sethome} <gray>-<yellow> Set land home location.</hover></click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_nexus} {_sethome}'
+      error: '%tag% <red>Error when changing terrain spawn'
+      success: '%tag% <green>Terrain spawn successfully modified.'
+    info:
+      aliases: info
+      show: <click:suggest_command:"/{_clan} {_nexus} {_info} "><hover:show_text:'<green>Click to info.'> <aqua>/{_clan} {_nexus} {_info} <light_purple>(tag|player) (-gui) <gray>-<yellow> View clan nexus.</hover></click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_nexus} {_info} <light_purple>(tag|player) (-gui)'
+      error: '%tag% <red>Error'
+      success: '%tag% <green>Success.'
+    view:
+      aliases: view
+      show: <click:suggest_command:"/{_clan} {_nexus} {_view} "><hover:show_text:'<green>Click to view.'> <aqua>/{_clan} {_nexus} {_view} <light_purple>(-gui) <gray>-<yellow> View clan nexus.</hover></click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_nexus} {_view} <light_purple>(-gui)'
+      error: '%tag% <red>Error'
+      success: '%tag% <green>Success.'
+    power:
+      aliases: power
+      show: <click:suggest_command:"/{_clan} {_nexus} {_power} "><hover:show_text:'<green>Click to power.'> <aqua>/{_clan} {_nexus} {_power} <light_purple>(tag|player) (-gui) <gray>-<yellow> View clan nexus.</hover></click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_nexus} {_power} <light_purple>(tag|player) (-gui)'
+      error: '%tag% <red>Error'
+      success: '%tag% <green>Success.'
+    map:
+      aliases: map
+      show: <click:suggest_command:"/{_clan} {_nexus} {_map} "><hover:show_text:'<green>Click to map land.'> <aqua>/{_clan} {_nexus} {_map} <gray>-<yellow> Map lands.</hover></click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_nexus} {_map}'
+      error: '%tag% <red>An error occurred while sending the map of the region.'
+      success: '%tag% <green>Map of the surroundings has been sent.'
+    trust:
+      aliases: trust
+      show: <click:suggest_command:"/{_clan} {_nexus} {_trust} "><hover:show_text:'<green>Click to trust a member.'> <aqua>/{_clan} {_nexus} {_trust} <red><player> <gray>-<yellow> Trust a player.</hover></click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_nexus} {_trust} <red><player>'
+      error: '%tag% <red>An error occurred while adding the player to the trusted list.'
+      success: '%tag% <green>The player has been added to the trusted list.'
+    untrust:
+      aliases: untrust
+      show: <click:suggest_command:"/{_clan} {_nexus} {_untrust} "><hover:show_text:'<green>Click to untrust a member.'> <aqua>/{_clan} {_nexus} {_untrust} <red><player> <gray>-<yellow> UnTrust a player.</hover></click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_nexus} {_untrust} <red><player>'
+      error: '%tag% <red>An error occurred while removing the player from the trusted list.'
+      success: '%tag% <green>The player has been removed to the trusted list.'
+    trusted:
+      aliases: trusted
+      show: <click:suggest_command:"/{_clan} {_nexus} {_trusted} "><hover:show_text:'<green>Click to list trusted members.'> <aqua>/{_clan} {_nexus} {_trusted} <light_purple>(-gui) <gray>-<yellow> List trusted members.</hover></click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_nexus} {_trusted} <light_purple>(-gui)'
+      error: '%tag% <red>An error occurred while listing trusted members.'
+      success: '%tag% <green>Success.'
+    ban:
+      aliases: ban
+      show: <click:suggest_command:"/{_clan} {_nexus} {_ban} "><hover:show_text:'<green>Click to ban a member.'> <aqua>/{_clan} {_nexus} {_ban} <red><player> <gray>-<yellow> Ban a player.</hover></click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_nexus} {_ban} <red><player>'
+      error: '%tag% <red>An error occurred while adding the player to the baned list.'
+      success: '%tag% <green>The player has been added to the baned list.'
+    unban:
+      aliases: unban
+      show: <click:suggest_command:"/{_clan} {_nexus} {_unban} "><hover:show_text:'<green>Click to unban a member.'> <aqua>/{_clan} {_nexus} {_unban} <red><player> <gray>-<yellow> Unban a player.</hover></click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_nexus} {_unban} <red><player>'
+      error: '%tag% <red>An error occurred while removing the player from the banned list.'
+      success: '%tag% <green>The player has been removed to the banned list.'
+    banned:
+      aliases: banned
+      show: <click:suggest_command:"/{_clan} {_nexus} {_banned} "><hover:show_text:'<green>Click to list banned players.'> <aqua>/{_clan} {_nexus} {_banned} <light_purple>(-gui) <gray>-<yellow> List banned members.</hover></click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_nexus} {_banned} <light_purple>(-gui)'
+      error: '%tag% <red>An error occurred while listing banned members.'
+      success: '%tag% <green>Success.'
+    settings:
+      aliases: settings
+      show: <click:suggest_command:"/{_clan} {_nexus} {_settings} "><hover:show_text:'<green>Click to list settings players.'> <aqua>/{_clan} {_nexus} {_settings} <red><key> <value> <gray>-<yellow> Change nexus settings.</hover></click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_nexus} {_settings} <red><key> <value>'
+      error: '%tag% <red>An error occurred when changing the Nexus settings.'
+      success: '%tag% <green>Nexus settings have been changed successfully.'
+    show:
+      aliases: show
+      show: <click:suggest_command:"/{_clan} {_nexus} {_show} "><hover:show_text:'<green>Click to show land boundaries.'> <aqua>/{_clan} {_nexus} {_show} <gray>-<yellow> Show land boundaries.</hover></click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_nexus} {_show}'
+      error: '%tag% <red>An error occurred when viewing the terrain.'
+      success: '%tag% <green>Terrain view has been sent.'
+    setname:
+      aliases: setname
+      show: <click:suggest_command:"/{_clan} {_nexus} {_setname} "><hover:show_text:'<green>Click to list setname players.'> <aqua>/{_clan} {_nexus} {_setname} <red><name> <gray>-<yellow> Change nexus name.</hover></click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_nexus} {_setname} <red><name>'
+      error: '%tag% <red>An error occurred when changing the Nexus name.'
+      success: '%tag% <green>Nexus name have been changed successfully.'
+  clannexus:
+    help:
+      aliases:
+      - ajuda
+      show: ' <green>/clannexus help <gray>- <yellow>Show help menu.'
+      usage: '%tag% <red>Error, use: <green>/clannexus help'
+      error: '%tag% <red>Error to execute.'
+      success: '%tag% <green>Success to execute.'

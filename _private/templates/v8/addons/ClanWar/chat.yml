@@ -1,0 +1,201 @@
+#
+#
+# Time: in seconds
+#
+# BossBar:
+# Colors: BLUE, GREEN, PINK, PURPLE, RED, WHITE, YELLOW
+# Styles: SOLID, SEGMENTED_10, SEGMENTED_12, SEGMENTED_20, SEGMENTED_6
+# Flags: CREATE_FOG, DARKEN_SKY, PLAY_BOSS_MUSIC
+#
+#
+# All texts are located in the language files and accept all placeholders from UClans.
+Announce:
+   
+  invite_sended:
+    enabled: true
+    timer: 5
+    sound:
+      enabled: true
+      display: ''
+    message:
+      enabled: true
+      center: false
+    bossbar:
+      enabled: true
+      color: YELLOW
+      style: SOLID
+      flags: [
+        ]
+      animated: true
+    title:
+      enabled: false
+    actionbar:
+      enabled: true
+   
+  inwait_announce:
+    enabled: true
+    timer: 5
+    sound:
+      enabled: true
+      display: ''
+    message:
+      enabled: true
+      center: true
+    bossbar:
+      enabled: true
+      color: YELLOW
+      style: SOLID
+      flags: [
+        ]
+      animated: true
+    title:
+      enabled: true
+    actionbar:
+      enabled: true
+   
+  inlobby_announce:
+    enabled: true
+    timer: 5
+    sound:
+      enabled: true
+      display: ''
+    message:
+      enabled: true
+      center: true
+    bossbar:
+      enabled: true
+      color: YELLOW
+      style: SOLID
+      flags: [
+        ]
+      animated: true
+    title:
+      enabled: true
+    actionbar:
+      enabled: true
+   
+  instarted_announce:
+    enabled: true
+    timer: 5
+    sound:
+      enabled: true
+      display: ''
+    message:
+      enabled: true
+      center: true
+    bossbar:
+      enabled: true
+      color: YELLOW
+      style: SOLID
+      flags: [
+        ]
+      animated: true
+    title:
+      enabled: true
+    actionbar:
+      enabled: true
+   
+  inending_announce:
+    enabled: true
+    timer: 5
+    sound:
+      enabled: true
+      display: ''
+    message:
+      enabled: true
+      center: true
+    bossbar:
+      enabled: true
+      color: YELLOW
+      style: SOLID
+      flags: [
+        ]
+      animated: true
+    title:
+      enabled: true
+    actionbar:
+      enabled: true
+   
+  inending_announce2:
+    enabled: true
+    timer: 5
+    sound:
+      enabled: true
+      display: ''
+    message:
+      enabled: true
+      center: true
+    bossbar:
+      enabled: true
+      color: YELLOW
+      style: SOLID
+      flags: [
+        ]
+      animated: true
+    title:
+      enabled: true
+    actionbar:
+      enabled: true
+   
+  instoped_announce:
+    enabled: true
+    timer: 5
+    sound:
+      enabled: true
+      display: ''
+    message:
+      enabled: true
+      center: true
+    bossbar:
+      enabled: true
+      color: YELLOW
+      style: SOLID
+      flags: [
+        ]
+      animated: true
+    title:
+      enabled: false
+    actionbar:
+      enabled: false
+   
+  incanceled_announce:
+    enabled: true
+    timer: 5
+    sound:
+      enabled: true
+      display: ''
+    message:
+      enabled: true
+      center: true
+    bossbar:
+      enabled: true
+      color: YELLOW
+      style: SOLID
+      flags: [
+        ]
+      animated: true
+    title:
+      enabled: false
+    actionbar:
+      enabled: false
+   
+  receive:
+    enabled: true
+    timer: 60
+    sound:
+      enabled: true
+      display: ''
+    message:
+      enabled: true
+      center: true
+    bossbar:
+      enabled: true
+      color: YELLOW
+      style: SOLID
+      flags: [
+        ]
+      animated: true
+    title:
+      enabled: true
+    actionbar:
+      enabled: true

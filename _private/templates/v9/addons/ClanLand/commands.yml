@@ -1,0 +1,122 @@
+ 
+#permissions and alias
+Commands:
+   
+  player:
+    # Use empty for don't need permissions
+    permission: uclans.player.land
+    # Alias for command.
+    alias: land
+    # Command cooldown.
+    cooldown: 0
+    # Value to use.
+    value: 0.0
+    disabled_worlds: [
+      ]
+    disabled_regions: [
+      ]
+   
+  # player command
+  land:
+    help:
+      aliases: help
+      show: <click:run_command:"/{_clan} {_land} "><hover:show_text:'<green>Click to expand.'> <aqua>/{_clan} {_land} <gray>-<yellow> Clan Lands.</hover></click> <hover:show_text:'<green>With sub commands.'><green>[!]</hover>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_land} {_help}'
+      error: '%tag% <red>Error to use.'
+      success: '%tag% <green>Success to execute.'
+    claim:
+      aliases: claim
+      show: <click:suggest_command:"/{_clan} {_land} {_claim} "><hover:show_text:'<green>Click to start claim.'> <aqua>/{_clan} {_land} {_claim} <gray>-<yellow> Start claim process.</hover></click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_land} {_claim}'
+      error: '%tag% <red>There was an error getting the clan banner'
+      success: '%tag% <green>Clan banner successfully received. To start the claim click on the two points at the ends of the new land'
+    unclaim:
+      aliases: unclaim
+      show: <click:suggest_command:"/{_clan} {_land} {_unclaim} "><hover:show_text:'<green>Click to unclaim.'> <aqua>/{_clan} {_land} {_unclaim} <gray>-<yellow> Unclaim a land.</hover></click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_land} {_unclaim}'
+      error: '%tag% <red>There was an error unclaiming the land.'
+      success: '%tag% <green>The land has been successfully unclaimed.'
+    list:
+      aliases: list
+      show: <click:suggest_command:"/{_clan} {_land} {_list} "><hover:show_text:'<green>Click to list clan lands.'> <aqua>/{_clan} {_land} {_list} <light_purple>(-gui) <gray>-<yellow> List clan lands.</hover></click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_land} {_list} <light_purple>(-gui)'
+      error: '%tag% <red>An error occurred while listing the lands.'
+      success: '%tag% <green>Success.'
+    teleport:
+      aliases: teleport
+      show: <click:suggest_command:"/{_clan} {_land} {_teleport} "><hover:show_text:'<green>Click to teleport.'> <aqua>/{_clan} {_land} {_teleport} <red><id> <gray>-<yellow> Teleport to land.</hover></click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_land} {_teleport} <red><id>'
+      error: '%tag% <green>An error occurred when trying to teleport.'
+      success: '%tag% <green>Waiting for teleport.'
+    show:
+      aliases: show
+      show: <click:suggest_command:"/{_clan} {_land} {_show} "><hover:show_text:'<green>Click to show land limit.'> <aqua>/{_clan} {_land} {_show} <gray>-<yellow> Show land limits.</hover></click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_land} {_show}'
+      error: '%tag% <red>There was an error showing the land.'
+      success: '%tag% <green>Showing the land.'
+    ban:
+      aliases: ban
+      show: <click:suggest_command:"/{_clan} {_land} {_ban} "><hover:show_text:'<green>Click to ban a player.'> <aqua>/{_clan} {_land} {_ban} <red><player><gray>-<yellow> Ban a player.</hover></click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_land} {_ban} <red><player>'
+      error: '%tag% <red>There was an error baning the player.'
+      success: '%tag% <green>The player has been successfully baned.'
+    unban:
+      aliases: unban
+      show: <click:suggest_command:"/{_clan} {_land} {_unban} "><hover:show_text:'<green>Click to unban a player.'> <aqua>/{_clan} {_land} {_unban} <red><player> <gray>-<yellow> Unban a player.</hover></click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_land} {_unban} <red><player>'
+      error: '%tag% <red>There was an error unbaning the player.'
+      success: '%tag% <green>The player has been successfully unbaned.'
+    banned:
+      aliases: banned
+      show: <click:suggest_command:"/{_clan} {_land} {_banned} "><hover:show_text:'<green>Click to banned.'> <aqua>/{_clan} {_land} {_banned} <light_purple>(-gui) <gray>-<yellow> List banned players.</hover></click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_land} {_banned} <light_purple>(-gui)'
+      error: '%tag% <red>There was an error banneding the player.'
+      success: '%tag% <green>The player has been successfully banneded.'
+    trust:
+      aliases: trust
+      show: <click:suggest_command:"/{_clan} {_land} {_trust} "><hover:show_text:'<green>Click to trust a player.'> <aqua>/{_clan} {_land} {_trust} <red><player> <gray>-<yellow> Trust a player.</hover></click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_land} {_trust} <red><player>'
+      error: '%tag% <red>There was an error trusting the player.'
+      success: '%tag% <green>The player has been successfully trusted.'
+    untrust:
+      aliases: untrust
+      show: <click:suggest_command:"/{_clan} {_land} {_untrust} "><hover:show_text:'<green>Click to untrust a player.'> <aqua>/{_clan} {_land} {_untrust} <red><player> <gray>-<yellow> Untrust a player.</hover></click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_land} {_untrust} <red><player>'
+      error: '%tag% <red>There was an error untrusting the player.'
+      success: '%tag% <green>The player has been successfully untrusted.'
+    trusted:
+      aliases: trusted
+      show: <click:suggest_command:"/{_clan} {_land} {_trusted} "><hover:show_text:'<green>Click to list trusted.'> <aqua>/{_clan} {_land} {_trusted} <light_purple>(-gui) <gray>-<yellow> List trusted members.</hover></click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_land} {_trusted} <light_purple>(-gui)'
+      error: '%tag% <red>There was an error list.'
+      success: '%tag% <green>Success.'
+    rename:
+      aliases: rename
+      show: <click:suggest_command:"/{_clan} {_land} {_rename} "><hover:show_text:'<green>Click to rename.'> <aqua>/{_clan} {_land} {_rename} <gray>-<yellow> Rename the land.</hover></click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_land} {_rename}'
+      error: '%tag% <red>An error occurred while renaming.'
+      success: '%tag% <green>The land has been successfully renamed.'
+    setspawn:
+      aliases: setspawn
+      show: <click:suggest_command:"/{_clan} {_land} {_setspawn} "><hover:show_text:'<green>Click to setspawn.'> <aqua>/{_clan} {_land} {_setspawn} <gray>-<yellow> Set land spawn.</hover></click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_land} {_setspawn}'
+      error: '%tag% <red>There was an error adjusting spawn.'
+      success: '%tag% <green>Land Spawn has been successfully changed.'
+    view:
+      aliases: view
+      show: <click:suggest_command:"/{_clan} {_land} {_view} "><hover:show_text:'<green>Click to view.'> <aqua>/{_clan} {_land} {_view} <light_purple>(-gui) <gray>-<yellow> Show terrain info.</hover></click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_land} {_view} <light_purple>(-gui)'
+      error: '%tag% <red>This land seems to have no owner'
+      success: '%tag% <green>Success.'
+    settings:
+      aliases: settings
+      show: <click:suggest_command:"/{_clan} {_land} {_settings} "><hover:show_text:'<green>Click to settings.'> <aqua>/{_clan} {_land} {_settings} <light_purple>(-gui) <gray>-<yellow> Show land settings.</hover></click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_land} {_settings} <light_purple>(-gui)'
+      error: '%tag% <red>Error viewing settings.'
+      success: '%tag% <green>Success.'
+    flag:
+      aliases: flag
+      show: <click:suggest_command:"/{_clan} {_land} {_flag} "><hover:show_text:'<green>Click to flag.'> <aqua>/{_clan} {_land} {_flag} set <red><name> <value> <gray>-<yellow> Change land flag.</hover></click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_land} {_flag} set <red><name> <value>'
+      error: '%tag% <red>Error when changing the flag.'
+      success: '%tag% <green>Flag changed successfully.'

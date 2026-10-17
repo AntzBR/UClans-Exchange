@@ -1,0 +1,22 @@
+Chat:
+   
+  clanhomecreate:
+    enabled: true
+    time: 60
+    sound:
+      enabled: false
+      display: ''
+    message:
+      enabled: true
+      center: false
+    bossbar:
+      enabled: true
+      color: YELLOW
+      style: PROGRESS
+      flags: [
+        ]
+      animated: true
+    title:
+      enabled: true
+    actionbar:
+      enabled: true

@@ -1,0 +1,99 @@
+Config:
+  date_format_short: dd/MM/yyyy
+   
+  Mail:
+    enabled: true
+    enable_colors: true
+    enabled_for_all_clans: false
+    # in minutes, 1440 minutes = 1 day
+    time_expires: 1440
+    max_storage: 70
+    max_unread: 14
+    max_chars: 50
+    min_chars: 1
+   
+  Icon:
+    click_sound: ''
+    material: BOOKSHELF
+    name: <green>Clan mailbox.
+    texture: ''
+    lore:
+    - ' <yellow>Mail received'
+    - ' <gray>'
+    - ' <gray>Total: <green>%uclans_mail_amount%'
+    - ' <gray>Unread: <green>%uclans_mail_amount_unread%'
+    - ' '
+    - ' <yellow>Click to open.'
+    glow: false
+    slot: 2
+    # avaliable: TOP, BOTTOM, BORDER, ALL or numeric list
+    mimeslots: [
+      ]
+    nbt:
+      string: [
+        ]
+    model: 0
+    left_click_action:
+    - /{_clan} {_mail} {_read} -gui
+    right_click_action:
+    - /{_clan} {_mail} {_read} -gui
+   
+  #Permissions are for advanced connoisseurs, be careful when editing this!
+  Permissions:
+    read:
+      name: Mail-Read
+      default_value: true
+      applicable_roles:
+      - member
+      - moderator
+      - admin
+    send:
+      name: Mail-Send
+      default_value: true
+      applicable_roles:
+      - member
+      - moderator
+      - admin
+    clear:
+      name: Mail-Clear
+      default_value: false
+      applicable_roles:
+      - moderator
+      - admin
+    edit:
+      name: Mail-Edit
+      default_value: false
+      applicable_roles:
+      - moderator
+      - admin
+   
+  logger:
+    enable_colors: true
+    plugin_material: BOOKSHELF
+    plugin_name: Mail
+    events:
+      ClanBankAddEvent: true
+      ClanBankWithdrawEvent: true
+ 
+# MAIL STORAGE
+Storage:
+  #yaml/mysql/sqlite (It is highly recommended to use mysql for better performance!!!)
+  type: sqlite
+  mysql:
+    host: localhost
+    port: 3306
+    base: YOUR-BASE-PRE-CREATED
+    #SSL is only valid for MYSQL, most servers are not necessary to use it as true.
+    useSSL: false
+  # Used for Mysql mandatory and optional for H2 and Sqlite (default: root)
+  user: root
+  # Used for Mysql mandatory and optional for H2 and Sqlite (default is empty)
+  pass: ''
+  databases:
+    mail_table: uclans-mail
+  # https://github.com/brettwooldridge/HikariCP#popular-datasource-class-names
+  datasource:
+    mysql: jdbc:mysql://
+    mysql_class: ''
+    sqlite: 'jdbc:sqlite:'
+    sqlite_class: org.sqlite.JDBC

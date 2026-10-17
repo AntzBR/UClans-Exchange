@@ -1,0 +1,665 @@
+Settings:
+  icon_true: LIME_DYE
+  icon_true_model: 0
+  icon_false: GRAY_DYE
+  icon_false_model: 0
+ 
+Land:
+  home_noclaim:
+    opensound: block.slime_block.hit:1.0:1.0
+    rows: 4
+    items:
+      fill:
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+         # Nbts can be applied to all items in all menus by following this example
+        nbt:
+          string: [
+            ]
+        # Used for CustomModelData options, just add the number. This option can be applied to all items.
+        model: 0
+        # This option can be applied to all items.
+        slot: 0
+        # This option can be applied to all items.
+        mimeslots:
+        - ALL
+        # This option can be applied to all items.
+        enabled: true
+      fill2:
+        material: RED_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        slot: 0
+        # This option can be applied to all items.
+        mimeslots:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        - 6
+        - 7
+        - 8
+      start:
+        material: '%uclans_banner%'
+        amount: 1
+        glow: true
+        texture: ''
+        slot: 22
+      banner:
+        material: ARMOR_STAND
+        amount: 1
+        glow: false
+        texture: ''
+        slot: 22
+      nomod:
+        material: BARRIER
+        amount: 1
+        glow: false
+        texture: ''
+        slot: 22
+      back:
+        material: IRON_DOOR
+        amount: 1
+        glow: true
+        texture: ''
+        slot: 8
+  home_claim:
+    opensound: block.slime_block.hit
+    rows: 5
+    items:
+      fill:
+        material: GRAY_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+         # Nbts can be applied to all items in all menus by following this example
+        nbt:
+          string: [
+            ]
+        # Used for CustomModelData options, just add the number. This option can be applied to all items.
+        model: 0
+        # This option can be applied to all items.
+        slot: 0
+        # This option can be applied to all items.
+        mimeslots:
+        - ALL
+        # This option can be applied to all items.
+        enabled: true
+      fill2:
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        # This option can be applied to all items.
+        slot: 0
+        # This option can be applied to all items.
+        mimeslots:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        - 6
+        - 7
+        - 8
+        - 9
+        - 17
+        - 18
+        - 26
+        - 27
+        - 35
+        - 36
+        - 37
+        - 38
+        - 39
+        - 40
+        - 41
+        - 42
+        - 43
+        - 44
+      claim:
+        material: GRASS_BLOCK
+        amount: 1
+        glow: true
+        texture: ''
+        slot: 20
+      ajust:
+        material: '%uclans_banner%'
+        amount: 1
+        glow: false
+        texture: ''
+        slot: 22
+      deselect:
+        material: REDSTONE_BLOCK
+        amount: 1
+        glow: false
+        texture: ''
+        slot: 24
+      back:
+        material: IRON_DOOR
+        amount: 1
+        glow: true
+        texture: ''
+        slot: 40
+  land_info:
+    opensound: block.slime_block.hit
+    rows: 6
+    items:
+      fill:
+        material: GRAY_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+         # Nbts can be applied to all items in all menus by following this example
+        nbt:
+          string: [
+            ]
+        # Used for CustomModelData options, just add the number. This option can be applied to all items.
+        model: 0
+        # This option can be applied to all items.
+        slot: 0
+        # This option can be applied to all items.
+        mimeslots:
+        - ALL
+        # This option can be applied to all items.
+        enabled: true
+      fill2:
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        # This option can be applied to all items.
+        slot: 0
+        # This option can be applied to all items.
+        mimeslots:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        - 6
+        - 7
+        - 8
+        - 9
+        - 17
+        - 18
+        - 26
+        - 27
+        - 35
+        - 36
+        - 44
+        - 45
+        - 46
+        - 47
+        - 48
+        - 49
+        - 50
+        - 51
+        - 52
+        - 53
+      teleport:
+        material: IRON_BOOTS
+        amount: 1
+        glow: false
+        texture: ''
+        slot: 29
+      info:
+        material: GRASS_BLOCK
+        amount: 1
+        glow: true
+        texture: ''
+        slot: 20
+      members:
+        material: PLAYER_HEAD
+        amount: 1
+        glow: true
+        texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTY4NmRhYWE2ZGMzYWExY2NkODBhMWMzYjNlNGQ4NjM3MDY5NDY2MjJiNGU0MDZmZGE3ODM2YjlkNjQ0MDJiOCJ9fX0=
+        slot: 22
+      banned:
+        material: PLAYER_HEAD
+        amount: 1
+        glow: true
+        texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDBlZTI4YjNkZjBkMDI1MGUyNDE2ZTJhNjJkN2RkY2Y5ZjJjOWNjODIzNjkwNDQ2OWZhMWY5MWYyYTk1OTVmZiJ9fX0=
+        slot: 23
+      ajust:
+        material: COMPARATOR
+        amount: 1
+        glow: false
+        texture: ''
+        slot: 45
+      back:
+        material: IRON_DOOR
+        amount: 1
+        glow: false
+        texture: ''
+        slot: 53
+  land_banned:
+    opensound: block.slime_block.hit
+    rows: 6
+    pagesize: 28
+    items:
+      fill:
+        material: RED_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+         # Nbts can be applied to all items in all menus by following this example
+        nbt:
+          string: [
+            ]
+        # Used for CustomModelData options, just add the number. This option can be applied to all items.
+        model: 0
+        # This option can be applied to all items.
+        slot: 0
+        # This option can be applied to all items.
+        mimeslots:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        - 6
+        - 7
+        - 8
+        - 9
+        - 17
+        - 18
+        - 26
+        - 27
+        - 35
+        - 36
+        - 44
+        - 45
+        - 46
+        - 47
+        - 48
+        - 49
+        - 50
+        - 51
+        - 52
+        - 53
+        # This option can be applied to all items.
+        enabled: true
+      current:
+        material: '%uclans_player_head%'
+        amount: 1
+        glow: true
+        texture: ''
+      current_action:
+        material: '%uclans_player_head%'
+        amount: 1
+        glow: true
+        texture: ''
+        slot: 1
+      next:
+        material: ARROW
+        amount: 1
+        glow: false
+        texture: ''
+        slot: 51
+      prev:
+        material: ARROW
+        amount: 1
+        glow: false
+        texture: ''
+        slot: 47
+      new:
+        material: PLAYER_HEAD
+        amount: 1
+        glow: true
+        texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjlmZjk4ODQyY2I2NjQwNWQyMGE4ZTZiMmVmZmFjNDYwMTBiOGY1NjAyZWE3MzI2ZDRkMTg1YjliNWRjZTA2In19fQ==
+        slot: 53
+      back:
+        material: IRON_DOOR
+        amount: 1
+        glow: false
+        texture: ''
+        slot: 49
+  land_members:
+    opensound: block.slime_block.hit
+    rows: 6
+    pagesize: 28
+    items:
+      fill:
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+         # Nbts can be applied to all items in all menus by following this example
+        nbt:
+          string: [
+            ]
+        # Used for CustomModelData options, just add the number. This option can be applied to all items.
+        model: 0
+        # This option can be applied to all items.
+        slot: 0
+        # This option can be applied to all items.
+        mimeslots:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        - 6
+        - 7
+        - 8
+        - 9
+        - 17
+        - 18
+        - 26
+        - 27
+        - 35
+        - 36
+        - 44
+        - 45
+        - 46
+        - 47
+        - 48
+        - 49
+        - 50
+        - 51
+        - 52
+        - 53
+        # This option can be applied to all items.
+        enabled: true
+      current:
+        material: '%uclans_player_head%'
+        amount: 1
+        glow: true
+        texture: ''
+      current_action:
+        material: '%uclans_player_head%'
+        amount: 1
+        glow: true
+        texture: ''
+        slot: 1
+      next:
+        material: ARROW
+        amount: 1
+        glow: false
+        texture: ''
+        slot: 51
+      prev:
+        material: ARROW
+        amount: 1
+        glow: false
+        texture: ''
+        slot: 47
+      new:
+        material: NAME_TAG
+        amount: 1
+        glow: true
+        texture: ''
+        slot: 53
+      back:
+        material: IRON_DOOR
+        amount: 1
+        glow: false
+        texture: ''
+        slot: 49
+  confirm_unban:
+    opensound: block.slime_block.hit
+    rows: 3
+    items:
+      fill:
+        material: RED_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+         # Nbts can be applied to all items in all menus by following this example
+        nbt:
+          string: [
+            ]
+        # Used for CustomModelData options, just add the number. This option can be applied to all items.
+        model: 0
+        # This option can be applied to all items.
+        slot: 0
+        # This option can be applied to all items.
+        mimeslots:
+        - ALL
+        # This option can be applied to all items.
+        enabled: true
+      confirm:
+        material: DIAMOND_BLOCK
+        amount: 1
+        glow: true
+        texture: ''
+        slot: 10
+        mimeslots:
+        - 11
+        - 12
+      back:
+        material: REDSTONE_BLOCK
+        amount: 1
+        glow: true
+        texture: ''
+        slot: 14
+        mimeslots:
+        - 15
+        - 16
+  confirm_untrust:
+    opensound: block.slime_block.hit
+    rows: 3
+    items:
+      fill:
+        material: RED_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        nbt:
+          string: [
+            ]
+        model: 0
+        slot: 0
+        mimeslots:
+        - ALL
+        enabled: true
+      confirm:
+        material: DIAMOND_BLOCK
+        amount: 1
+        glow: true
+        texture: ''
+        slot: 10
+        mimeslots:
+        - 11
+        - 12
+      back:
+        material: REDSTONE_BLOCK
+        amount: 1
+        glow: true
+        texture: ''
+        slot: 14
+        mimeslots:
+        - 15
+        - 16
+  confirm_abandon:
+    opensound: block.slime_block.hit
+    rows: 3
+    items:
+      fill:
+        material: RED_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        nbt:
+          string: [
+            ]
+        model: 0
+        slot: 0
+        mimeslots:
+        - ALL
+        enabled: true
+      confirm:
+        material: DIAMOND_BLOCK
+        amount: 1
+        glow: true
+        texture: ''
+        slot: 10
+        mimeslots:
+        - 11
+        - 12
+      back:
+        material: REDSTONE_BLOCK
+        amount: 1
+        glow: true
+        texture: ''
+        slot: 14
+        mimeslots:
+        - 15
+        - 16
+  home_land:
+    opensound: block.slime_block.hit
+    rows: 5
+    pagesize: 36
+    items:
+      fill:
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        nbt:
+          string: [
+            ]
+        model: 0
+        slot: 36
+        mimeslots:
+        - 37
+        - 38
+        - 39
+        - 40
+        - 41
+        - 42
+        - 43
+        - 44
+        enabled: true
+      current:
+        material: GRASS_BLOCK
+        amount: 1
+        glow: true
+        texture: ''
+      next:
+        material: ARROW
+        amount: 1
+        glow: false
+        texture: ''
+        slot: 42
+      prev:
+        material: ARROW
+        amount: 1
+        glow: false
+        texture: ''
+        slot: 38
+      back:
+        material: IRON_DOOR
+        amount: 1
+        glow: false
+        texture: ''
+        slot: 40
+  land_ajust:
+    opensound: block.slime_block.hit
+    rows: 4
+    items:
+      fill:
+        material: RED_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        nbt:
+          string: [
+            ]
+        model: 0
+        slot: 0
+        mimeslots:
+        - ALL
+        enabled: true
+      rename:
+        material: PAPER
+        amount: 1
+        glow: true
+        texture: ''
+        slot: 10
+      setspawn:
+        material: IRON_BOOTS
+        amount: 1
+        glow: true
+        texture: ''
+        slot: 11
+      abandon:
+        material: REDSTONE_BLOCK
+        amount: 1
+        glow: true
+        texture: ''
+        slot: 27
+      back:
+        material: IRON_DOOR
+        amount: 1
+        glow: false
+        texture: ''
+        slot: 35
+      flags:
+        material: COMPARATOR
+        amount: 1
+        glow: false
+        texture: ''
+        slot: 13
+  land_flags:
+    opensound: block.slime_block.hit
+    rows: 6
+    items:
+      fill:
+        material: RED_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        nbt:
+          string: [
+            ]
+        model: 0
+        slot: 0
+        mimeslots:
+        - ALL
+        enabled: true
+      monster_spawn:
+        material: LIME_DYE
+        amount: 1
+        glow: true
+        texture: ''
+        slot: 10
+      animal_spawn:
+        material: LIME_DYE
+        amount: 1
+        glow: true
+        texture: ''
+        slot: 11
+      leaf_decay:
+        material: LIME_DYE
+        amount: 1
+        glow: true
+        texture: ''
+        slot: 12
+      pvp:
+        material: LIME_DYE
+        amount: 1
+        glow: true
+        texture: ''
+        slot: 13
+      water_flow:
+        material: LIME_DYE
+        amount: 1
+        glow: true
+        texture: ''
+        slot: 14
+      lava_flow:
+        material: LIME_DYE
+        amount: 1
+        glow: true
+        texture: ''
+        slot: 15
+      tnt:
+        material: LIME_DYE
+        amount: 1
+        glow: true
+        texture: ''
+        slot: 16
+      mob_grief:
+        material: LIME_DYE
+        amount: 1
+        glow: true
+        texture: ''
+        slot: 19
+      back:
+        material: IRON_DOOR
+        amount: 1
+        glow: false
+        texture: ''
+        slot: 49

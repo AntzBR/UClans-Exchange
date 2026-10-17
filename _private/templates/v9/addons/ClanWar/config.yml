@@ -1,0 +1,148 @@
+Config:
+  date_format: dd/MM/yyyy
+   
+  War:
+    forge_open-gui: true
+    times:
+      # This is the waiting time in lobby waiting for players
+      inwait: 60
+      #This is the waiting time in lobby before teleporting to the arena or turning on PvP
+      inlobby: 30
+      #This is the finishing time when all opponents are defeated
+      started: 60
+    # Both participating clans need this clan level to participate in wars.
+    min_level_wars: 0
+    # If TRUE, the war only starts if the 2 clans have the same amount of players in the arena
+    just_start_equal_amounts: false
+    # If TRUE, only clans with moderator or admin will be shown in the wars menu.
+    just_show_clans_online: true
+    # If TRUE, only clans with minimum level will be shown in the wars menu.
+    just_show_clans_has_level: false
+    # If FALSE, war is sent directly after arena selection
+    enable_kits: true
+    default_kit_icon: DIAMOND_SWORD
+    # If FALSE, choosing a kit will be mandatory.
+    inventory_items: true
+    # If TRUE, and the war is fought using Kits, the survivors' inventories will be cleared at the end
+    clear_inv_on_use_kit: false
+    # If TRUE, this will clear dropped items, mobs and entities within the arena region.
+    clear_arena_end: true
+    # If TRUE, this will check within the markings if the players have not somehow left the arena.
+    check_players_region: false
+    teleport:
+      # If FALSE the player will not be teleported to the exit when disconnecting, they will just exit the event..
+      exit_teleport_on_quit: true
+      # If FALSE the player will not be teleported to the exit when death, they will just exit the event..
+      exit_teleport_on_death: true
+    # IN SECONDS
+    cooldown_all_clanwar: 60
+    show_clans_cooldown: true
+    amount_format: 1|2|3|5|10|64
+    allowed_commands:
+    - /clan
+    - /uclan
+    - /.
+    - /clanchat
+    # CommandPreprocess listener priority.
+    #values (lowercase or UPPERCASE): LOWEST, LOW, NORMAL, HIGH, HIGHEST.
+    allowed_commands_priority: NORMAL
+    # Use new location encryption system? TRUE is recommended.
+    new_local_encryption: true
+    # Commands sent to Rewards Center, placeholders: %player%, %winning_clan%, %losing_clan% and all clan placeholders.
+    rewards:
+    - /eco give %player% 1000000
+    # These commands will be executed on all players participating in the war, at the start or end/exit of the war. The available variable is %player%
+    commands:
+      player:
+        warstart: [
+          ]
+        warend: [
+          ]
+      server:
+        warstart: [
+          ]
+        warend_nokit: [
+          ]
+        warend_kit: [
+          ]
+    # Force the gamemode when the player goes to war.
+    force_gamemode:
+      enabled: true
+      change: SURVIVAL
+      spectator: SPECTATOR
+      # in ticks
+      delay: 5
+    # Clears all player effects before entering the arena..
+    clear_effects:
+      enabled: true
+    # This option toggles placing and breaking blocks inside the selected cuboid of the arena.
+    manage_blocks:
+      # Use empty to disable
+      permission_bypass: uclans.player.war.bypass
+      break: true
+      place: true
+      ffa_blocktime: 3
+    # Turn off and on the exp drop when dying in war
+    drop_exp:
+      on_kit: false
+      on_inventory: true
+    tasks:
+      update_invite:
+        start: 5
+        next: 2
+    allies_can_war: true
+    war_invite:
+       # IN SECONDS
+      max_time_seconds: 60
+   
+  Icon:
+    click_sound: ''
+    material: DIAMOND_SWORD
+    name: <green>Clan War
+    lore:
+    - ''
+    - ' <yellow>Click to open.'
+    glow: true
+    slot: 37
+    page: clan_home
+    texture: ''
+    # avaliable: TOP, BOTTOM, BORDER, ALL or numeric list
+    mimeslots: [
+      ]
+    nbt:
+      string: [
+        ]
+    model: 0
+    left_click_action:
+    - /{_clan} {_war} {_view} -gui
+    right_click_action:
+    - /{_clan} {_war} {_view} -gui
+   
+  #Permissions are for advanced connoisseurs, be careful when editing this!
+  Permissions:
+    manager:
+      name: War-Manager
+      default_value: true
+      applicable_roles:
+      - moderator
+      - admin
+    participate:
+      name: War-Participate
+      default_value: true
+      applicable_roles:
+      - member
+      - moderator
+      - admin
+   
+  logger:
+    enable_colors: true
+    plugin_material: DIAMOND_SWORD
+    plugin_name: War
+    events:
+      ClanWarWinEvent: true
+      ClanWarLoseEvent: true
+   
+  league:
+    dispatch_points: true
+    plugin_name: ClanWar Win
+    win_points_amount: 10.0

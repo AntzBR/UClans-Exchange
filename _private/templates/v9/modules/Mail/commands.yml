@@ -1,0 +1,44 @@
+ 
+#permissions and alias
+Commands:
+   
+  player:
+    # Use empty for don't need permissions
+    permission: uclans.player.mail
+    # Alias for command.
+    alias: mail
+    # Command cooldown.
+    cooldown: 0
+    # Value to use.
+    value: 0.0
+    disabled_worlds: [
+      ]
+    disabled_regions: [
+      ]
+   
+  # mail command
+  mail:
+    help:
+      aliases: help
+      show: <click:run_command:"/{_clan} {_mail} "><hover:show_text:'<green>Click to expand mail commands.'> <aqua>/{_clan} {_mail} <gray>-<yellow> Clan Mail.</hover></click> <hover:show_text:'<green>With sub commands.'><green>[!]</hover>
+      usage: '%tag% <red>Use <aqua>/{_clan} {_mail}'
+      error: '%tag% <red>Error.'
+      success: '%tag% <green>Success.'
+    clear:
+      aliases: clear
+      show: <click:suggest_command:"/{_clan} {_mail} {_clear} "><hover:show_text:'<green>Click to clean clan mail'> <aqua>/{_clan} {_mail} {_clear} <gray>-<yellow> Clear clan mail box.</hover></click>
+      usage: '%tag% <red>Use <aqua>/{_clan} {_mail} {_clear}'
+      error: '%tag% <red>There was an error clearing the clan mail box.'
+      success: '%tag% <green>The clan mail box has been successfully cleared.'
+    read:
+      aliases: read
+      show: <click:suggest_command:"/{_clan} {_mail} {_read} "><hover:show_text:'<green>Click to read clan mail'> <aqua>/{_clan} {_mail} {_read} <light_purple>(time) <light_purple>(page) <light_purple>(-gui) <gray>-<yellow> View clan mail.</hover></click>
+      usage: '%tag% <red>Use <aqua>/{_clan} {_mail} {_read} <light_purple>(time) <light_purple>(page) <light_purple>(-gui)'
+      error: '%tag% <red>Error'
+      success: '%tag% <green>Success'
+    send:
+      aliases: send
+      show: <click:suggest_command:"/{_clan} {_mail} {_send} "><hover:show_text:'<green>Click to send clan mail'> <aqua>/{_clan} {_mail} {_send} <red><to> <red><text> <gray>-<yellow> Send a Mail.</hover></click>
+      usage: '%tag% <red>Use <aqua>/{_clan} {_mail} {_send} <red><to> <red><text>'
+      error: '%tag% <red>An error occurred while sending the mail.'
+      success: '%tag% <green>Mail sent successfully.'

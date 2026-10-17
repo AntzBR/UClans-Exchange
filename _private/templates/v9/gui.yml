@@ -1,0 +1,1946 @@
+Settings:
+  icon_true: LIME_DYE
+  icon_true_model: 0
+  icon_false: GRAY_DYE
+  icon_false_model: 0
+  icon_disabed: BARRIER
+  icon_disabed_model: 0
+ 
+# INSERTION GUI
+ 
+# New Item Example: (The item will be inserted in the menu "General.clan_home" )
+# It is not possible to add multiple fill items.
+# All clan placeholders can be used here and will be parsed for anyone who clicks.
+# To close a menu use {close_gui}.
+# MAIN PLUGIN EXAMPLE
+#Insertion:
+#  General:
+#   clan_home:
+#      items:
+#        newitem:
+#          clicksound: ''
+#          material: 'STONE'
+#          texture: ''
+#          data: 0
+#          model: 0
+#          amount: 1
+#          slot: 9
+#          mimeslots: []
+#          glow: true
+#          name: '<green>Item inserted'
+#          lore:
+#          - ''
+#          - ' <yellow>Inserted Item'
+#          - ''
+#          click_action:
+#          - '/clan list'
+#          - '/eco give %uclans_player_realname% 1'
+#          - '{close_gui}'
+# ADDON EXAMPLE
+#  Quest:
+#   home_quest:
+#      items:
+#        newitem:
+#          clicksound: ''
+#          material: 'STONE'
+#          texture: ''
+#          data: 0
+#          model: 0
+#          amount: 1
+#          slot: 22
+#          mimeslots: []
+#          glow: true
+#          name: '<green>Item inserted'
+#          lore:
+#          - ''
+#          - ' <yellow>Inserted Item'
+#          - ''
+#          click_action:
+#          - '/clan quest abandon'
+#          - '/eco give %uclans_player_realname% 1'
+#          - '{close_gui}'
+Insertion: [
+  ]
+ 
+General:
+  noclan_home:
+    opensound: block.slime_block.hit
+    rows: 5
+    items:
+      fill:
+        material: GRAY_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        mimeslots:
+        - ALL
+         # Nbts can be applied to all items in all menus by following this example
+        # With support for ItemsAdder you can add nbt ex 'ItemsAdder:item_name', CraftEngine with 'CraftEngine:tribe:sword', Nexo with 'Nexo:item_name' to add custom items to gui menus
+        nbt:
+          string:
+          - example:example_nbt_string
+          - HideTooltip
+        model: 0
+      fill2:
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        mimeslots:
+        - BORDER
+      create:
+        clicksound: ''
+        material: PLAYER_HEAD
+        glow: true
+        texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTNlMWNiYjFmNDNmYTUxMzA4Yzg0Y2E1ZjNhNTUwMTc4ODE1ODFkZGI5NWZkM2M2OGE5ZGRhMjA5ZDA0NTVhYiJ9fX0=
+        amount: 1
+        slot: 20
+      profile:
+        clicksound: ''
+        material: PLAYER_HEAD
+        glow: true
+        texture: '%uclans_player_head%'
+        amount: 1
+        slot: 24
+      clans:
+        clicksound: ''
+        material: PLAYER_HEAD
+        glow: false
+        texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDM4Y2YzZjhlNTRhZmMzYjNmOTFkMjBhNDlmMzI0ZGNhMTQ4NjAwN2ZlNTQ1Mzk5MDU1NTI0YzE3OTQxZjRkYyJ9fX0=
+        amount: 1
+        slot: 22
+      commands:
+        clicksound: ''
+        material: PAPER
+        glow: true
+        texture: ''
+        amount: 1
+        slot: 40
+  clan_home:
+    opensound: block.slime_block.hit
+    rows: 6
+    pagesize: 45
+    items:
+      fill:
+        material: GRAY_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        mimeslots:
+        - ALL
+      fill2:
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        mimeslots:
+        - 9
+        - 10
+        - 11
+        - 12
+        - 13
+        - 14
+        - 15
+        - 16
+        - 17
+      info:
+        clicksound: ''
+        material: PLAYER_HEAD
+        glow: false
+        texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDAxYWZlOTczYzU0ODJmZGM3MWU2YWExMDY5ODgzM2M3OWM0MzdmMjEzMDhlYTlhMWEwOTU3NDZlYzI3NGEwZiJ9fX0=
+        amount: 1
+        slot: 3
+      members:
+        clicksound: ''
+        material: PLAYER_HEAD
+        glow: false
+        texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTQxZmFjNmIyYTgyODg1ODk1YzVhN2I2OTc2OWE4NWFmOTBhZmRkOGMzZDNhYjUxOTRjYzU3ODU5MTBiZDM0NSJ9fX0=
+        amount: 1
+        slot: 30
+      settings:
+        clicksound: ''
+        material: COMPARATOR
+        glow: true
+        texture: ''
+        amount: 1
+        slot: 0
+      profile:
+        clicksound: ''
+        material: PLAYER_HEAD
+        glow: true
+        texture: '%uclans_player_head%'
+        amount: 1
+        slot: 0
+      commands:
+        clicksound: ''
+        material: PAPER
+        glow: false
+        texture: ''
+        amount: 1
+        slot: 8
+      clans:
+        clicksound: ''
+        material: PLAYER_HEAD
+        glow: false
+        texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDM4Y2YzZjhlNTRhZmMzYjNmOTFkMjBhNDlmMzI0ZGNhMTQ4NjAwN2ZlNTQ1Mzk5MDU1NTI0YzE3OTQxZjRkYyJ9fX0=
+        amount: 1
+        slot: 6
+      players:
+        clicksound: ''
+        material: PLAYER_HEAD
+        glow: false
+        texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODE3YzFmMjIwYjQ0NjViZTc5NGMyMjhhMTg2MGY0OGNhN2M0ODFiOTJjMmQyNjgxMTc5NTBhNGQ5ODllMzVhOSJ9fX0=
+        amount: 1
+        slot: 7
+  player_profile:
+    opensound: block.slime_block.hit
+    rows: 4
+    items:
+      fill:
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        mimeslots:
+        - ALL
+      head:
+        clicksound: ''
+        material: PLAYER_HEAD
+        glow: false
+        texture: '%uclans_player_head%'
+        amount: 1
+        slot: 10
+      settings:
+        clicksound: ''
+        material: COMPARATOR
+        glow: true
+        texture: ''
+        amount: 1
+        slot: 16
+      invites:
+        clicksound: ''
+        material: PAPER
+        glow: true
+        texture: ''
+        amount: 1
+        slot: 15
+      languages:
+        clicksound: ''
+        material: PLAYER_HEAD
+        glow: true
+        texture: '%uclans_current_player_lang_head%'
+        amount: 1
+        slot: 14
+      permissions:
+        clicksound: ''
+        material: LIME_DYE
+        glow: true
+        texture: ''
+        amount: 1
+        slot: 13
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        glow: false
+        texture: ''
+        amount: 1
+        slot: 31
+  player_settings:
+    opensound: block.slime_block.hit
+    rows: 4
+    items:
+      fill:
+        material: GRAY_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        mimeslots:
+        - ALL
+      fill2:
+        material: RED_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        mimeslots:
+        - BOTTOM
+      nickname:
+        clicksound: ''
+        material: MAP
+        glow: false
+        texture: ''
+        amount: 1
+        slot: 10
+      skin:
+        clicksound: ''
+        material: PLAYER_HEAD
+        glow: false
+        texture: '%uclans_player_head%'
+        amount: 1
+        slot: 35
+      skin_cooldown:
+        clicksound: ''
+        material: PLAYER_HEAD
+        glow: false
+        texture: '%uclans_player_head%'
+        amount: 1
+        slot: 35
+      invite:
+        clicksound: ''
+        material: PAPER
+        glow: true
+        texture: ''
+        amount: 1
+        slot: 14
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        glow: false
+        texture: ''
+        amount: 1
+        slot: 31
+  clan_stats:
+    opensound: block.slime_block.hit
+    rows: 5
+    items:
+      fill:
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        mimeslots:
+        - ALL
+      foundation:
+        clicksound: ''
+        material: PLAYER_HEAD
+        glow: false
+        texture: '%uclans_leader_head%'
+        amount: 1
+        slot: 10
+      banner:
+        clicksound: ''
+        material: ''
+        texture: '%uclans_banner%'
+        glow: false
+        amount: 1
+        slot: 21
+      kdr:
+        clicksound: ''
+        material: DIAMOND_SWORD
+        glow: false
+        texture: ''
+        amount: 1
+        slot: 12
+      war:
+        clicksound: ''
+        material: IRON_SWORD
+        glow: false
+        texture: ''
+        amount: 1
+        slot: 13
+      disputes:
+        clicksound: ''
+        material: IRON_AXE
+        glow: true
+        texture: ''
+        amount: 1
+        slot: 13
+      members:
+        clicksound: ''
+        material: OAK_SIGN
+        glow: true
+        texture: ''
+        amount: 1
+        slot: 19
+      status:
+        clicksound: ''
+        material: SUNFLOWER
+        glow: false
+        texture: ''
+        amount: 1
+        slot: 14
+      others:
+        clicksound: ''
+        material: ITEM_FRAME
+        glow: false
+        texture: ''
+        amount: 1
+        slot: 15
+      member_rival_ally:
+        clicksound: ''
+        material: GOLDEN_CHESTPLATE
+        glow: false
+        texture: ''
+        amount: 1
+        slot: 16
+      limits:
+        clicksound: ''
+        material: HOPPER
+        glow: false
+        texture: ''
+        amount: 1
+        slot: 22
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        glow: false
+        texture: ''
+        amount: 1
+        slot: 40
+      join:
+        clicksound: ''
+        material: PLAYER_HEAD
+        glow: false
+        texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTQxZmFjNmIyYTgyODg1ODk1YzVhN2I2OTc2OWE4NWFmOTBhZmRkOGMzZDNhYjUxOTRjYzU3ODU5MTBiZDM0NSJ9fX0=
+        amount: 1
+        slot: 37
+  clan_settings:
+    opensound: block.slime_block.hit
+    rows: 5
+    items:
+      fill:
+        material: GRAY_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        mimeslots:
+        - ALL
+      fill2:
+        material: RED_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        mimeslots:
+        - BOTTOM
+      clan_roles:
+        clicksound: ''
+        material: ITEM_FRAME
+        glow: true
+        texture: ''
+        amount: 1
+        slot: 11
+      member_ban:
+        clicksound: ''
+        material: PLAYER_HEAD
+        glow: false
+        texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDBlZTI4YjNkZjBkMDI1MGUyNDE2ZTJhNjJkN2RkY2Y5ZjJjOWNjODIzNjkwNDQ2OWZhMWY5MWYyYTk1OTVmZiJ9fX0=
+        amount: 1
+        slot: 16
+      clan_edit:
+        clicksound: ''
+        material: BOOK
+        glow: true
+        texture: ''
+        amount: 1
+        slot: 10
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        glow: false
+        texture: ''
+        amount: 1
+        slot: 40
+  clan_roles:
+    opensound: block.slime_block.hit
+    rows: 6
+    items:
+      fill:
+        material: RED_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        mimeslots:
+        - BOTTOM
+      fill2:
+        material: GRAY_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        mimeslots:
+        - ALL
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        glow: false
+        texture: ''
+        amount: 1
+        slot: 49
+      update:
+        clicksound: ''
+        material: LEVER
+        glow: true
+        texture: ''
+        amount: 1
+        slot: 53
+      blocked:
+        clicksound: ''
+        material: BARRIER
+        glow: false
+        texture: ''
+        amount: 1
+  clan_roles_editor:
+    opensound: block.slime_block.hit
+    rows: 4
+    pagesize: 14
+    items:
+      fill:
+        material: RED_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        mimeslots:
+        - BORDER
+      previous:
+        clicksound: ''
+        material: ARROW
+        glow: false
+        texture: ''
+        amount: 1
+        slot: 29
+      next:
+        clicksound: ''
+        material: ARROW
+        glow: false
+        texture: ''
+        amount: 1
+        slot: 33
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        glow: false
+        texture: ''
+        amount: 1
+        slot: 31
+      current:
+        clicksound: ''
+        material: PAPER
+        glow: false
+        texture: ''
+        amount: 1
+  banned_members:
+    opensound: block.slime_block.hit
+    rows: 6
+    pagesize: 45
+    items:
+      fill:
+        material: RED_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        mimeslots:
+        - TOP
+      current:
+        clicksound: ''
+        material: PLAYER_HEAD
+        glow: false
+        texture: '%uclans_player_head%'
+        amount: 1
+      previous:
+        clicksound: ''
+        material: ARROW
+        glow: false
+        texture: ''
+        amount: 1
+        slot: 2
+      next:
+        clicksound: ''
+        material: ARROW
+        glow: false
+        texture: ''
+        amount: 1
+        slot: 6
+      add:
+        clicksound: ''
+        material: PLAYER_HEAD
+        glow: false
+        texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjlmZjk4ODQyY2I2NjQwNWQyMGE4ZTZiMmVmZmFjNDYwMTBiOGY1NjAyZWE3MzI2ZDRkMTg1YjliNWRjZTA2In19fQ==
+        amount: 1
+        slot: 8
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        glow: false
+        texture: ''
+        amount: 1
+        slot: 4
+  clan_actions:
+    opensound: block.slime_block.hit
+    rows: 6
+    items:
+      fill:
+        material: GRAY_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        mimeslots:
+        - ALL
+      fill2:
+        material: RED_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        mimeslots:
+        - BOTTOM
+      modtag:
+        clicksound: ''
+        material: MAP
+        glow: false
+        texture: ''
+        amount: 1
+        slot: 10
+      desc:
+        clicksound: ''
+        material: MAP
+        glow: false
+        texture: ''
+        amount: 1
+        slot: 11
+      warinvite:
+        clicksound: ''
+        material: PAPER
+        glow: false
+        texture: ''
+        amount: 1
+        slot: 14
+      allysharedchat:
+        clicksound: ''
+        material: PAPER
+        glow: false
+        texture: ''
+        amount: 1
+        slot: 15
+      allysharedhome:
+        clicksound: ''
+        material: PAPER
+        glow: false
+        texture: ''
+        amount: 1
+        slot: 16
+      ff:
+        clicksound: ''
+        material: PAPER
+        glow: false
+        texture: ''
+        amount: 1
+        slot: 23
+      join_leave:
+        clicksound: ''
+        material: PAPER
+        glow: false
+        texture: ''
+        amount: 1
+        slot: 24
+      opened:
+        clicksound: ''
+        material: PAPER
+        glow: false
+        texture: ''
+        amount: 1
+        slot: 25
+      publichomes:
+        clicksound: ''
+        material: PAPER
+        glow: false
+        texture: ''
+        amount: 1
+        slot: 32
+      receivemailallies:
+        clicksound: ''
+        material: PAPER
+        glow: false
+        texture: ''
+        amount: 1
+        slot: 33
+      receivemailall:
+        clicksound: ''
+        material: PAPER
+        glow: false
+        texture: ''
+        amount: 1
+        slot: 33
+      allypvp:
+        clicksound: ''
+        material: PAPER
+        glow: false
+        texture: ''
+        amount: 1
+        slot: 34
+      delete:
+        clicksound: ''
+        material: BARRIER
+        glow: true
+        texture: ''
+        amount: 1
+        slot: 28
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        glow: false
+        texture: ''
+        amount: 1
+        slot: 49
+  clan_top:
+    opensound: block.slime_block.hit
+    rows: 6
+    pagesize: 27
+    items:
+      fill:
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        mimeslots:
+        - TOP
+      fill2:
+        # Use ; "<ITEM>;<ITEM>;<ITEM>" to add more than one item to the fill2.
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        mimeslots:
+        - 9
+        - 10
+        - 11
+        - 12
+        - 13
+        - 14
+        - 15
+        - 16
+        - 17
+      fill3:
+        # Use ; "<ITEM>;<ITEM>;<ITEM>" to add more than one item to the fill3.
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        mimeslots:
+        - BOTTOM
+      active:
+        # Use ; "<ITEM>;<ITEM>;<ITEM>" to add more than one item to the active.
+        material: RED_STAINED_GLASS_PANE
+        amount: 1
+        glow: true
+        slot: 1
+      all:
+        clicksound: ''
+        material: PLAYER_HEAD
+        glow: false
+        texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGMxMWU0OWE2NDk3ZTc3YjViNDFkN2JiMzRlNTY3MzU5YWEzMjIyNTY5Y2ViOGM1MGU2M2YxYTVhZjdiZjUyOCJ9fX0=
+        amount: 1
+        slot: 0
+      kdr:
+        clicksound: ''
+        material: PLAYER_HEAD
+        glow: false
+        texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGMxMWU0OWE2NDk3ZTc3YjViNDFkN2JiMzRlNTY3MzU5YWEzMjIyNTY5Y2ViOGM1MGU2M2YxYTVhZjdiZjUyOCJ9fX0=
+        amount: 1
+        slot: 2
+      bank:
+        clicksound: ''
+        material: PLAYER_HEAD
+        glow: false
+        texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2I4NDAwN2IyMDQ5Y2Q5Y2VkNDExN2QxMDc5M2IwNzZiYTUwZWJmNDQwNWU2Zjk2ZjU5ZjY3NTliYWJkMzE4NiJ9fX0=
+        amount: 1
+        slot: 3
+      war:
+        clicksound: ''
+        material: PLAYER_HEAD
+        glow: false
+        texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTNlMWNiYjFmNDNmYTUxMzA4Yzg0Y2E1ZjNhNTUwMTc4ODE1ODFkZGI5NWZkM2M2OGE5ZGRhMjA5ZDA0NTVhYiJ9fX0=
+        amount: 1
+        slot: 4
+      level:
+        clicksound: ''
+        material: PLAYER_HEAD
+        glow: false
+        texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTJmZTVkOTE4YTM2NDhmMjM3OTk0MjQ0NzI0MGE0NzI1ZWQxOTY5NjhmZTI3M2QzNGJiZGNkZWQwNzJjMSJ9fX0
+        amount: 1
+        slot: 6
+        enabled: false
+      point:
+        clicksound: ''
+        material: PLAYER_HEAD
+        glow: false
+        texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTJmZTVkOTE4YTM2NDhmMjM3OTk0MjQ0NzI0MGE0NzI1ZWQxOTY5NjhmZTI3M2QzNGJiZGNkZWQwNzJjMSJ9fX0
+        amount: 1
+        slot: 7
+        enabled: false
+      member:
+        clicksound: ''
+        material: PLAYER_HEAD
+        glow: false
+        texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2UxZTFlODJiZjQzNzhhN2IxMzkyMjliNTYxYzhmMDExOWJmNTY1NTEyODAxNGQzYzU0MzlkODk4MzAzZjFiMCJ9fX0=
+        amount: 1
+        slot: 8
+        enabled: false
+      patent:
+        clicksound: ''
+        material: PLAYER_HEAD
+        glow: false
+        texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzUwZWNhZWZkOTE0YmYzNzczNzg3YTA5MzBiYzk3MDEwOTNiNTA3MTE0ZTk0ZTRkYTJjOGE5OGUxMjIzNmZjNiJ9fX0=
+        amount: 1
+        slot: 5
+      souls:
+        clicksound: ''
+        material: PLAYER_HEAD
+        glow: false
+        texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTg3ODJkMzcyNGFiZTJlMWE2M2NmZDJjOGUwZWExOWQwNTNlNjUwYmEwNGQ1YTZiZWE4Mjg4ODRjNjM4NWU1NCJ9fX0=
+        amount: 1
+        slot: 6
+      current:
+        clicksound: ''
+        material: ''
+        texture: '%uclans_banner%'
+        amount: 1
+        glow: false
+      current_level:
+        clicksound: ''
+        material: ''
+        texture: '%uclans_banner%'
+        amount: 1
+        glow: false
+      current_kdr:
+        clicksound: ''
+        material: ''
+        texture: '%uclans_banner%'
+        amount: 1
+        glow: false
+      current_bank:
+        clicksound: ''
+        material: ''
+        texture: '%uclans_banner%'
+        amount: 1
+        glow: false
+      current_war:
+        clicksound: ''
+        material: ''
+        texture: '%uclans_banner%'
+        amount: 1
+        glow: false
+      current_all:
+        clicksound: ''
+        material: ''
+        texture: '%uclans_banner%'
+        amount: 1
+        glow: false
+      current_point:
+        clicksound: ''
+        material: ''
+        texture: '%uclans_banner%'
+        amount: 1
+        glow: false
+      current_member:
+        clicksound: ''
+        material: ''
+        texture: '%uclans_banner%'
+        amount: 1
+        glow: false
+      current_patent:
+        clicksound: ''
+        material: ''
+        texture: '%uclans_banner%'
+        amount: 1
+        glow: false
+      current_souls:
+        clicksound: ''
+        material: ''
+        texture: '%uclans_banner%'
+        amount: 1
+        glow: false
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        glow: false
+        texture: ''
+        amount: 1
+        slot: 49
+      previous:
+        clicksound: ''
+        material: ARROW
+        glow: false
+        texture: ''
+        amount: 1
+        slot: 47
+      next:
+        clicksound: ''
+        material: ARROW
+        glow: false
+        texture: ''
+        amount: 1
+        slot: 51
+      only_open:
+        clicksound: ''
+        material: SPYGLASS
+        glow: false
+        texture: ''
+        amount: 1
+        slot: 45
+  clan_members_invite:
+    opensound: block.slime_block.hit
+    rows: 6
+    pagesize: 28
+    items:
+      fill:
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        mimeslots:
+        - BORDER
+      current:
+        clicksound: ''
+        material: PLAYER_HEAD
+        glow: false
+        texture: '%uclans_player_head%'
+        amount: 1
+        slot: 1
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        glow: false
+        texture: ''
+        amount: 1
+        slot: 49
+      search:
+        clicksound: ''
+        material: OAK_SIGN
+        glow: true
+        texture: ''
+        amount: 1
+        slot: 51
+  clan_search_members_invite:
+    opensound: block.slime_block.hit
+    rows: 6
+    pagesize: 28
+    items:
+      fill:
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        mimeslots:
+        - BORDER
+      current:
+        clicksound: ''
+        material: PLAYER_HEAD
+        glow: false
+        texture: '%uclans_player_head%'
+        amount: 1
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        glow: false
+        texture: ''
+        amount: 1
+        slot: 49
+  members:
+    opensound: block.slime_block.hit
+    rows: 6
+    pagesize: 28
+    items:
+      fill:
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        mimeslots:
+        - BORDER
+      current:
+        clicksound: ''
+        material: PLAYER_HEAD
+        texture: '%uclans_player_head%'
+        amount: 1
+        glow: false
+      previous:
+        clicksound: ''
+        material: ARROW
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 47
+      next:
+        clicksound: ''
+        material: ARROW
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 51
+      invite:
+        clicksound: ''
+        material: MAP
+        glow: false
+        texture: ''
+        amount: 1
+        slot: 53
+      onlines:
+        clicksound: ''
+        material: SLIME_BALL
+        glow: false
+        texture: ''
+        amount: 1
+        slot: 45
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 49
+  invites:
+    opensound: block.slime_block.hit
+    rows: 6
+    pagesize: 45
+    items:
+      fill:
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        mimeslots:
+        - BOTTOM
+      current:
+        clicksound: ''
+        material: PAPER
+        texture: ''
+        amount: 1
+        glow: true
+      previous:
+        clicksound: ''
+        material: ARROW
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 47
+      next:
+        clicksound: ''
+        material: ARROW
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 51
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 49
+  #ANVIL CLANCREATE
+  anvil_clancreate:
+    # This sound system uses Sound events (namespace key), the same used in /playsound. the complete list can be obtained at https://minecraft.wiki/w/Sounds.json
+    # The sounds sent have the following format: sound_event:volume:pith:source
+    opensound: block.slime_block.hit
+    items:
+      left:
+        clicksound: ''
+        material: PAPER
+        texture: ''
+        amount: 1
+        glow: true
+      right:
+        clicksound: ''
+        material: IRON_DOOR
+        texture: ''
+        amount: 1
+        glow: true
+      output:
+        clicksound: ''
+        material: ARMOR_STAND
+        texture: ''
+        amount: 1
+        glow: true
+  #ANVIL membersearch
+  anvil_membersearch:
+    # This sound system uses Sound events (namespace key), the same used in /playsound. the complete list can be obtained at https://minecraft.wiki/w/Sounds.json
+    # The sounds sent have the following format: sound_event:volume:pith:source
+    opensound: block.slime_block.hit
+    items:
+      left:
+        clicksound: ''
+        material: PAPER
+        texture: ''
+        amount: 1
+        glow: true
+      right:
+        clicksound: ''
+        material: IRON_DOOR
+        texture: ''
+        amount: 1
+        glow: true
+      output:
+        clicksound: ''
+        material: ARMOR_STAND
+        texture: ''
+        amount: 1
+        glow: true
+  #ANVIL CHANGENICKNAME
+  anvil_changenickname:
+    opensound: block.slime_block.hit
+    items:
+      left:
+        clicksound: ''
+        material: PAPER
+        texture: ''
+        amount: 1
+        glow: true
+      right:
+        clicksound: ''
+        material: IRON_DOOR
+        texture: ''
+        amount: 1
+        glow: true
+      output:
+        clicksound: ''
+        material: ''
+        texture: '%uclans_player_head%'
+        amount: 1
+        glow: true
+  #ANVIL CLANDISCORDCREATEWEBHOOK
+  anvil_clandiscordcreatewebhook:
+    opensound: block.slime_block.hit
+    items:
+      left:
+        clicksound: ''
+        material: PAPER
+        texture: ''
+        amount: 1
+        glow: true
+      right:
+        clicksound: ''
+        material: IRON_DOOR
+        texture: ''
+        amount: 1
+        glow: true
+      output:
+        clicksound: ''
+        material: ''
+        texture: '%uclans_banner%'
+        amount: 1
+        glow: true
+  #ANVIL CLANMODTAG
+  anvil_clanmodtag:
+    opensound: block.slime_block.hit
+    items:
+      left:
+        clicksound: ''
+        material: PAPER
+        texture: ''
+        amount: 1
+        glow: true
+      right:
+        clicksound: ''
+        material: IRON_DOOR
+        texture: ''
+        amount: 1
+        glow: true
+      output:
+        clicksound: ''
+        material: ''
+        texture: '%uclans_banner%'
+        amount: 1
+        glow: true
+  #ANVIL CLANDESC
+  anvil_clandesc:
+    opensound: block.slime_block.hit
+    items:
+      left:
+        clicksound: ''
+        material: PAPER
+        texture: ''
+        amount: 1
+        glow: true
+      right:
+        clicksound: ''
+        material: IRON_DOOR
+        texture: ''
+        amount: 1
+        glow: true
+      output:
+        clicksound: ''
+        material: ''
+        texture: '%uclans_banner%'
+        amount: 1
+        glow: true
+  admin_home:
+    opensound: block.slime_block.hit
+    rows: 6
+    items:
+      fill:
+        material: GRAY_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        enabled: true
+        slot: 0
+        mimeslots:
+        - ALL
+        nbt:
+          string: [
+            ]
+        model: 0
+      fill2:
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        enabled: true
+        slot: 0
+        mimeslots:
+        - 0
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        - 6
+        - 7
+        - 8
+        - 9
+        - 17
+        - 18
+        - 26
+        - 27
+        - 35
+        - 36
+        - 44
+        - 45
+        - 46
+        - 47
+        - 48
+        - 49
+        - 50
+        - 51
+        - 52
+        - 53
+      extensions:
+        clicksound: ''
+        material: RAIL
+        texture: ''
+        data: 0
+        amount: 1
+        glow: true
+        slot: 22
+      addons:
+        clicksound: ''
+        material: HOPPER
+        texture: ''
+        data: 0
+        amount: 1
+        glow: true
+        slot: 31
+      languages:
+        clicksound: ''
+        material: PLAYER_HEAD
+        texture: '%uclans_current_lang_head%'
+        data: 0
+        amount: 1
+        glow: false
+        slot: 23
+      wizard:
+        clicksound: ''
+        material: PLAYER_HEAD
+        texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDQ3NmNiMzY1NTk5MWUzYjU5YmJlYTUwYzk0NDQwNWY3NTgxNDExNzFhMGUxODAxYmUyNGE5YjM4MWY4MTIzYSJ9fX0=
+        data: 0
+        amount: 1
+        glow: false
+        slot: 24
+      reload:
+        clicksound: ''
+        material: REDSTONE_BLOCK
+        texture: ''
+        data: 0
+        amount: 1
+        glow: true
+        slot: 47
+      clans:
+        clicksound: ''
+        material: PLAYER_HEAD
+        texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDM4Y2YzZjhlNTRhZmMzYjNmOTFkMjBhNDlmMzI0ZGNhMTQ4NjAwN2ZlNTQ1Mzk5MDU1NTI0YzE3OTQxZjRkYyJ9fX0=
+        data: 0
+        amount: 1
+        glow: true
+        slot: 20
+      players:
+        clicksound: ''
+        material: PLAYER_HEAD
+        texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTQxZmFjNmIyYTgyODg1ODk1YzVhN2I2OTc2OWE4NWFmOTBhZmRkOGMzZDNhYjUxOTRjYzU3ODU5MTBiZDM0NSJ9fX0=
+        data: 0
+        amount: 1
+        glow: true
+        slot: 29
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        texture: ''
+        data: 0
+        amount: 1
+        glow: false
+        slot: 53
+      help:
+        clicksound: ''
+        material: PAPER
+        glow: true
+        texture: ''
+        amount: 1
+        slot: 49
+  admin_languages:
+    opensound: block.slime_block.hit
+    rows: 4
+    pagesize: 27
+    items:
+      fill:
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        enabled: true
+        slot: 27
+        mimeslots:
+        - 28
+        - 29
+        - 30
+        - 31
+        - 32
+        - 33
+        - 34
+        - 35
+      current:
+        clicksound: ''
+        material: PLAYER_HEAD
+        texture: '%uclans_lang_head:{id}%'
+        amount: 1
+        glow: false
+      language:
+        clicksound: ''
+        material: PLAYER_HEAD
+        texture: '%uclans_current_lang_head%'
+        amount: 1
+        glow: false
+        slot: 31
+      previous:
+        clicksound: ''
+        material: ARROW
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 29
+      next:
+        clicksound: ''
+        material: ARROW
+        texture: ''
+        data: 8
+        amount: 1
+        glow: false
+        slot: 33
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        texture: ''
+        data: 0
+        amount: 1
+        glow: false
+        slot: 35
+  admin_clans_home:
+    opensound: block.slime_block.hit
+    rows: 6
+    pagesize: 45
+    items:
+      fill:
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        enabled: true
+        slot: 45
+        mimeslots:
+        - 46
+        - 47
+        - 48
+        - 49
+        - 50
+        - 51
+        - 52
+        - 53
+      current:
+        clicksound: ''
+        material: PLAYER_HEAD
+        texture: '%uclans_banner%'
+        amount: 1
+        glow: false
+      previous:
+        clicksound: ''
+        material: ARROW
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 47
+      next:
+        clicksound: ''
+        material: ARROW
+        texture: ''
+        data: 8
+        amount: 1
+        glow: false
+        slot: 51
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        texture: ''
+        data: 0
+        amount: 1
+        glow: false
+        slot: 53
+  admin_clan_edit:
+    opensound: block.slime_block.hit
+    rows: 5
+    items:
+      fill:
+        material: GRAY_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        enabled: true
+        slot: 0
+        mimeslots:
+        - ALL
+      fill2:
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        enabled: true
+        slot: 36
+        mimeslots:
+        - 36
+        - 37
+        - 38
+        - 39
+        - 40
+        - 41
+        - 42
+        - 43
+        - 44
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        texture: ''
+        data: 0
+        amount: 1
+        glow: false
+        slot: 44
+  admin_players_home:
+    opensound: block.slime_block.hit
+    rows: 6
+    pagesize: 45
+    items:
+      fill:
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        enabled: true
+        slot: 45
+        mimeslots:
+        - 46
+        - 47
+        - 48
+        - 49
+        - 50
+        - 51
+        - 52
+        - 53
+      current:
+        clicksound: ''
+        material: PLAYER_HEAD
+        texture: '%uclans_player_head%'
+        amount: 1
+        glow: false
+      previous:
+        clicksound: ''
+        material: ARROW
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 47
+      next:
+        clicksound: ''
+        material: ARROW
+        texture: ''
+        data: 8
+        amount: 1
+        glow: false
+        slot: 51
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        texture: ''
+        data: 0
+        amount: 1
+        glow: false
+        slot: 53
+  admin_player_edit:
+    opensound: block.slime_block.hit
+    rows: 5
+    items:
+      fill:
+        material: GRAY_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        enabled: true
+        slot: 0
+        mimeslots:
+        - ALL
+      fill2:
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        enabled: true
+        slot: 36
+        mimeslots:
+        - 36
+        - 37
+        - 38
+        - 39
+        - 40
+        - 41
+        - 42
+        - 43
+        - 44
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        texture: ''
+        data: 0
+        amount: 1
+        glow: false
+        slot: 44
+  admin_extension:
+    opensound: ''
+    rows: 4
+    pagesize: 0
+    items:
+      fill:
+        material: GRAY_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        slot: 0
+        mimeslots:
+        - ALL
+      fill2:
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        slot: 27
+        mimeslots:
+        - 28
+        - 29
+        - 30
+        - 31
+        - 32
+        - 33
+        - 34
+        - 35
+      all:
+        clicksound: ''
+        material: DETECTOR_RAIL
+        glow: true
+        texture: ''
+        amount: 1
+        slot: 11
+      instaled:
+        clicksound: ''
+        material: POWERED_RAIL
+        glow: true
+        texture: ''
+        amount: 1
+        slot: 13
+      reload:
+        clicksound: ''
+        material: REDSTONE_BLOCK
+        glow: true
+        texture: ''
+        amount: 1
+        slot: 16
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        glow: true
+        texture: ''
+        amount: 1
+        slot: 35
+  admin_extension_list:
+    opensound: ''
+    rows: 6
+    pagesize: 45
+    items:
+      fill:
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        slot: 45
+        mimeslots:
+        - 46
+        - 47
+        - 48
+        - 49
+        - 50
+        - 51
+        - 52
+        - 53
+        nbt:
+        - ExampleNbt:String
+        model: 0
+      current_all:
+        clicksound: ''
+        material: RAIL
+        glow: true
+        texture: ''
+        amount: 1
+      current_instaled:
+        clicksound: ''
+        material: RAIL
+        glow: true
+        texture: ''
+        amount: 1
+      next:
+        clicksound: ''
+        material: ARROW
+        glow: true
+        texture: ''
+        amount: 1
+        slot: 51
+      prev:
+        clicksound: ''
+        material: ARROW
+        glow: true
+        texture: ''
+        amount: 1
+        slot: 47
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        glow: true
+        texture: ''
+        amount: 1
+        slot: 53
+  admin_addons_home:
+    opensound: block.slime_block.hit
+    rows: 5
+    pagesize: 36
+    items:
+      fill:
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        enabled: true
+        slot: 36
+        mimeslots:
+        - 36
+        - 37
+        - 38
+        - 39
+        - 43
+        - 41
+        - 42
+        - 43
+        - 44
+      current:
+        clicksound: ''
+        material: PAPER
+        texture: ''
+        amount: 1
+        glow: false
+      current_instaled:
+        clicksound: ''
+        material: PAPER
+        texture: ''
+        amount: 1
+        glow: false
+      more:
+        clicksound: ''
+        material: PLAYER_HEAD
+        texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDZjNDQ1YTZlOGNkOTRjZDUyYjQwOTllOTVhNTA2ODg1MWJmNTkzMDY4MTAwMzkwNDY0ODFlM2U1YTI5MzdmNiJ9fX0=
+        amount: 1
+        glow: false
+        slot: 40
+      previous:
+        clicksound: ''
+        material: ARROW
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 38
+      next:
+        clicksound: ''
+        material: ARROW
+        texture: ''
+        data: 8
+        amount: 1
+        glow: false
+        slot: 42
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        texture: ''
+        data: 0
+        amount: 1
+        glow: false
+        slot: 44
+  #Clan General config
+  disband_confirm:
+    opensound: block.slime_block.hit
+    rows: 3
+    items:
+      fill:
+        material: RED_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        mimeslots:
+        - ALL
+      confirm:
+        clicksound: ''
+        material: DIAMOND_BLOCK
+        texture: ''
+        data: 0
+        amount: 1
+        glow: true
+        slot: 10
+        mimeslots:
+        - 11
+        - 12
+      cancel:
+        clicksound: ''
+        material: REDSTONE_BLOCK
+        texture: ''
+        data: 0
+        amount: 1
+        glow: true
+        slot: 14
+        mimeslots:
+        - 15
+        - 16
+  #Clan General config
+  changeleader_confirm:
+    opensound: block.slime_block.hit
+    rows: 3
+    items:
+      fill:
+        material: RED_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        mimeslots:
+        - ALL
+      confirm:
+        clicksound: ''
+        material: DIAMOND_BLOCK
+        texture: ''
+        data: 0
+        amount: 1
+        glow: true
+        slot: 10
+        mimeslots:
+        - 11
+        - 12
+      cancel:
+        clicksound: ''
+        material: REDSTONE_BLOCK
+        texture: ''
+        data: 0
+        amount: 1
+        glow: true
+        slot: 14
+        mimeslots:
+        - 15
+        - 16
+  player_top:
+    opensound: block.slime_block.hit
+    rows: 6
+    pagesize: 27
+    items:
+      fill:
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        mimeslots:
+        - TOP
+      fill2:
+        # Use ; "<ITEM>;<ITEM>;<ITEM>" to add more than one item to the fill2.
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        mimeslots:
+        - 9
+        - 10
+        - 11
+        - 12
+        - 13
+        - 14
+        - 15
+        - 16
+        - 17
+      fill3:
+        # Use ; "<ITEM>;<ITEM>;<ITEM>" to add more than one item to the fill3.
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        mimeslots:
+        - BOTTOM
+      active:
+        # Use ; "<ITEM>;<ITEM>;<ITEM>" to add more than one item to the active.
+        material: RED_STAINED_GLASS_PANE
+        amount: 1
+        glow: true
+        slot: 1
+      all:
+        clicksound: ''
+        material: PLAYER_HEAD
+        glow: false
+        texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODE3YzFmMjIwYjQ0NjViZTc5NGMyMjhhMTg2MGY0OGNhN2M0ODFiOTJjMmQyNjgxMTc5NTBhNGQ5ODllMzVhOSJ9fX0=
+        amount: 1
+        slot: 0
+      kdr:
+        clicksound: ''
+        material: DIAMOND_SWORD
+        glow: true
+        texture: ''
+        amount: 1
+        slot: 2
+      souls:
+        clicksound: ''
+        material: NETHER_STAR
+        glow: true
+        texture: ''
+        amount: 1
+        slot: 3
+      current_all:
+        clicksound: ''
+        material: PLAYER_HEAD
+        texture: '%uclans_player_head%'
+        amount: 1
+        glow: false
+      current_kdr:
+        clicksound: ''
+        material: PLAYER_HEAD
+        texture: '%uclans_player_head%'
+        amount: 1
+        glow: false
+      current_souls:
+        clicksound: ''
+        material: PLAYER_HEAD
+        texture: '%uclans_player_head%'
+        amount: 1
+        glow: false
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        glow: false
+        texture: ''
+        amount: 1
+        slot: 49
+      previous:
+        clicksound: ''
+        material: ARROW
+        glow: false
+        texture: ''
+        amount: 1
+        slot: 47
+      next:
+        clicksound: ''
+        material: ARROW
+        glow: false
+        texture: ''
+        amount: 1
+        slot: 51
+      online:
+        clicksound: ''
+        material: DIAMOND_HELMET
+        glow: false
+        texture: ''
+        amount: 1
+        slot: 45
+      whitout_clan:
+        clicksound: ''
+        material: GREEN_BANNER
+        glow: false
+        texture: ''
+        amount: 1
+        slot: 46
+  #Clan levelup confirm
+  player_languages:
+    opensound: block.slime_block.hit
+    rows: 4
+    pagesize: 27
+    items:
+      fill:
+        # Use ; "<ITEM>;<ITEM>;<ITEM>" to add more than one item to the fill.
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        # This option can be applied to all items.
+        enabled: true
+        # This option can be applied to all items.
+        slot: 27
+        # This option can be applied to all items.
+        mimeslots:
+        - 28
+        - 29
+        - 30
+        - 31
+        - 32
+        - 33
+        - 34
+        - 35
+      current:
+        clicksound: ''
+        material: PLAYER_HEAD
+        texture: '%uclans_lang_head:{id}%'
+        amount: 1
+        glow: false
+      language:
+        clicksound: ''
+        material: PLAYER_HEAD
+        texture: '%uclans_current_player_lang_head%'
+        amount: 1
+        glow: false
+        slot: 31
+      previous:
+        clicksound: ''
+        material: ARROW
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 29
+      next:
+        clicksound: ''
+        material: ARROW
+        texture: ''
+        data: 8
+        amount: 1
+        glow: false
+        slot: 33
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        texture: ''
+        data: 0
+        amount: 1
+        glow: false
+        # This option can be applied to all items.
+        slot: 35
+  #Clan levelup confirm
+  player_permissions:
+    opensound: block.slime_block.hit
+    rows: 4
+    pagesize: 27
+    items:
+      fill:
+        # Use ; "<ITEM>;<ITEM>;<ITEM>" to add more than one item to the fill.
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        # This option can be applied to all items.
+        enabled: true
+        # This option can be applied to all items.
+        slot: 0
+        # This option can be applied to all items.
+        mimeslots:
+        - BORDER
+      current:
+        clicksound: ''
+        material: GRAY_DYE
+        texture: ''
+        amount: 1
+        glow: false
+      previous:
+        clicksound: ''
+        material: ARROW
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 29
+      next:
+        clicksound: ''
+        material: ARROW
+        texture: ''
+        data: 8
+        amount: 1
+        glow: false
+        slot: 33
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        texture: ''
+        data: 0
+        amount: 1
+        glow: false
+        # This option can be applied to all items.
+        slot: 35

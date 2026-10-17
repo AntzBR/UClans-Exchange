@@ -1,0 +1,395 @@
+ 
+# Permissions, aliases and command messages.
+Commands:
+  admin:
+    permission: clangladiator.admin
+    alias: clangladiator
+    value: 0.0
+    cooldown: 0
+  player:
+    permission: clangladiator.player
+    alias: gladiator
+    value: 0.0
+    cooldown: 0
+  permissions:
+    join: clangladiator.join
+    bypass-limit: clangladiator.bypass.limit
+    bypass-inventory: clangladiator.bypass.inventory
+   
+  # Administrative command tree.
+  clangladiator:
+    help:
+      aliases:
+      - ajuda
+      - '?'
+      show: ' <click:run_command:"/clanglad help"><hover:show_text:"<red>Click to execute.</red>"><red>/clanglad help</red> <dark_gray>-</dark_gray> <gray>Show the administrative help.</gray></hover></click>'
+      usage: '%tag% <red>Error, use: <white>/clanglad help</white></red>'
+      error: '%tag% <red>The command could not be completed.</red>'
+      success: '%tag% <green>Command completed successfully.</green>'
+    admin:
+      aliases:
+      - gui
+      - menu
+      show: ' <red>/clanglad admin [arena]</red> <dark_gray>-</dark_gray> <gray>Open the administrative control center.</gray>'
+      usage: '%tag% <red>Error, use: <white>/clanglad admin [arena]</white></red>'
+      error: '%tag% <red>The command could not be completed.</red>'
+      success: '%tag% <green>Command completed successfully.</green>'
+    wand:
+      aliases:
+      - tool
+      show: ' <click:run_command:"/clanglad wand"><hover:show_text:"<red>Click to execute.</red>"><red>/clanglad wand</red> <dark_gray>-</dark_gray> <gray>Receive the arena selection wand.</gray></hover></click>'
+      usage: '%tag% <red>Error, use: <white>/clanglad wand</white></red>'
+      error: '%tag% <red>The command could not be completed.</red>'
+      success: '%tag% <green>Command completed successfully.</green>'
+    arena:
+      aliases:
+      - arenas
+      show: ' <click:run_command:"/clanglad arena help"><hover:show_text:"<red>Click to execute.</red>"><red>/clanglad arena help</red> <dark_gray>-</dark_gray> <gray>Show arena administration commands.</gray></hover></click>'
+      usage: '%tag% <red>Error, use: <white>/clanglad arena help</white></red>'
+      error: '%tag% <red>The command could not be completed.</red>'
+      success: '%tag% <green>Command completed successfully.</green>'
+      help:
+        aliases:
+        - ajuda
+        - '?'
+        show: ' <click:run_command:"/clanglad arena help"><hover:show_text:"<red>Click to execute.</red>"><red>/clanglad arena help</red> <dark_gray>-</dark_gray> <gray>Show arena commands.</gray></hover></click>'
+        usage: '%tag% <red>Error, use: <white>/clanglad arena help</white></red>'
+        error: '%tag% <red>The command could not be completed.</red>'
+        success: '%tag% <green>Command completed successfully.</green>'
+      create:
+        aliases:
+        - new
+        show: ' <red>/clanglad arena create <arena></red> <dark_gray>-</dark_gray> <gray>Create an arena from the wand selection.</gray>'
+        usage: '%tag% <red>Error, use: <white>/clanglad arena create <arena></white></red>'
+        error: '%tag% <red>The command could not be completed.</red>'
+        success: '%tag% <green>Command completed successfully.</green>'
+      delete:
+        aliases:
+        - remove
+        show: ' <red>/clanglad arena delete <arena></red> <dark_gray>-</dark_gray> <gray>Delete an arena.</gray>'
+        usage: '%tag% <red>Error, use: <white>/clanglad arena delete <arena></white></red>'
+        error: '%tag% <red>The command could not be completed.</red>'
+        success: '%tag% <green>Command completed successfully.</green>'
+      list:
+        aliases:
+        - all
+        show: ' <click:run_command:"/clanglad arena list"><hover:show_text:"<red>Click to execute.</red>"><red>/clanglad arena list</red> <dark_gray>-</dark_gray> <gray>List configured arenas.</gray></hover></click>'
+        usage: '%tag% <red>Error, use: <white>/clanglad arena list</white></red>'
+        error: '%tag% <red>The command could not be completed.</red>'
+        success: '%tag% <green>Command completed successfully.</green>'
+      info:
+        aliases:
+        - view
+        show: ' <red>/clanglad arena info <arena></red> <dark_gray>-</dark_gray> <gray>Show setup and validation details.</gray>'
+        usage: '%tag% <red>Error, use: <white>/clanglad arena info <arena></white></red>'
+        error: '%tag% <red>The command could not be completed.</red>'
+        success: '%tag% <green>Command completed successfully.</green>'
+      setlobby:
+        aliases:
+        - lobby
+        show: ' <red>/clanglad arena setlobby <arena></red> <dark_gray>-</dark_gray> <gray>Set the waiting lobby here.</gray>'
+        usage: '%tag% <red>Error, use: <white>/clanglad arena setlobby <arena></white></red>'
+        error: '%tag% <red>The command could not be completed.</red>'
+        success: '%tag% <green>Command completed successfully.</green>'
+      setexit:
+        aliases:
+        - exit
+        show: ' <red>/clanglad arena setexit <arena></red> <dark_gray>-</dark_gray> <gray>Set the event exit here.</gray>'
+        usage: '%tag% <red>Error, use: <white>/clanglad arena setexit <arena></white></red>'
+        error: '%tag% <red>The command could not be completed.</red>'
+        success: '%tag% <green>Command completed successfully.</green>'
+      addspawn:
+        aliases:
+        - spawn
+        show: ' <red>/clanglad arena addspawn <arena></red> <dark_gray>-</dark_gray> <gray>Add a clan combat spawn here.</gray>'
+        usage: '%tag% <red>Error, use: <white>/clanglad arena addspawn <arena></white></red>'
+        error: '%tag% <red>The command could not be completed.</red>'
+        success: '%tag% <green>Command completed successfully.</green>'
+      clearspawns:
+        aliases:
+        - resetspawns
+        show: ' <red>/clanglad arena clearspawns <arena></red> <dark_gray>-</dark_gray> <gray>Remove every clan spawn.</gray>'
+        usage: '%tag% <red>Error, use: <white>/clanglad arena clearspawns <arena></white></red>'
+        error: '%tag% <red>The command could not be completed.</red>'
+        success: '%tag% <green>Command completed successfully.</green>'
+      enable:
+        aliases:
+        - enabled
+        show: ' <red>/clanglad arena enable <arena> <true|false></red> <dark_gray>-</dark_gray> <gray>Enable or disable an arena.</gray>'
+        usage: '%tag% <red>Error, use: <white>/clanglad arena enable <arena> <true|false></white></red>'
+        error: '%tag% <red>The command could not be completed.</red>'
+        success: '%tag% <green>Command completed successfully.</green>'
+      setmode:
+        aliases:
+        - mode
+        show: ' <red>/clanglad arena setmode <arena> <serverkit|ownitems></red> <dark_gray>-</dark_gray> <gray>Set the inventory mode.</gray>'
+        usage: '%tag% <red>Error, use: <white>/clanglad arena setmode <arena> <serverkit|ownitems></white></red>'
+        error: '%tag% <red>The command could not be completed.</red>'
+        success: '%tag% <green>Command completed successfully.</green>'
+      setkit:
+        aliases:
+        - kit
+        show: ' <red>/clanglad arena setkit <arena> <kit></red> <dark_gray>-</dark_gray> <gray>Select the server kit.</gray>'
+        usage: '%tag% <red>Error, use: <white>/clanglad arena setkit <arena> <kit></white></red>'
+        error: '%tag% <red>The command could not be completed.</red>'
+        success: '%tag% <green>Command completed successfully.</green>'
+      setlimit:
+        aliases:
+        - limit
+        show: ' <red>/clanglad arena setlimit <arena> <minclans|maxclans|maxplayers> <amount></red> <dark_gray>-</dark_gray> <gray>Set participation limits.</gray>'
+        usage: '%tag% <red>Error, use: <white>/clanglad arena setlimit <arena> <minclans|maxclans|maxplayers> <amount></white></red>'
+        error: '%tag% <red>The command could not be completed.</red>'
+        success: '%tag% <green>Command completed successfully.</green>'
+      settime:
+        aliases:
+        - time
+        show: ' <red>/clanglad arena settime <arena> <recruitment|countdown|max|shrink|finishing> <seconds></red> <dark_gray>-</dark_gray> <gray>Set an event phase time.</gray>'
+        usage: '%tag% <red>Error, use: <white>/clanglad arena settime <arena> <recruitment|countdown|max|shrink|finishing> <seconds></white></red>'
+        error: '%tag% <red>The command could not be completed.</red>'
+        success: '%tag% <green>Command completed successfully.</green>'
+      setborder:
+        aliases:
+        - border
+        show: ' <red>/clanglad arena setborder <arena> <final-size></red> <dark_gray>-</dark_gray> <gray>Set the final optional border size.</gray>'
+        usage: '%tag% <red>Error, use: <white>/clanglad arena setborder <arena> <final-size></white></red>'
+        error: '%tag% <red>The command could not be completed.</red>'
+        success: '%tag% <green>Command completed successfully.</green>'
+      settimeout:
+        aliases:
+        - timeout
+        show: ' <red>/clanglad arena settimeout <arena> <resolution></red> <dark_gray>-</dark_gray> <gray>Set the maximum-time tiebreaker.</gray>'
+        usage: '%tag% <red>Error, use: <white>/clanglad arena settimeout <arena> <MOST_PLAYERS_THEN_KILLS|MOST_KILLS_THEN_PLAYERS|DRAW></white></red>'
+        error: '%tag% <red>The command could not be completed.</red>'
+        success: '%tag% <green>Command completed successfully.</green>'
+      setprotection:
+        aliases:
+        - protection
+        show: ' <red>/clanglad arena setprotection <arena> <normal|indestructible|regenerate></red> <dark_gray>-</dark_gray> <gray>Set block protection or rollback.</gray>'
+        usage: '%tag% <red>Error, use: <white>/clanglad arena setprotection <arena> <normal|indestructible|regenerate></white></red>'
+        error: '%tag% <red>The command could not be completed.</red>'
+        success: '%tag% <green>Command completed successfully.</green>'
+      setdisplay:
+        aliases:
+        - display
+        show: ' <red>/clanglad arena setdisplay <arena> <name></red> <dark_gray>-</dark_gray> <gray>Set the arena display name.</gray>'
+        usage: '%tag% <red>Error, use: <white>/clanglad arena setdisplay <arena> <name></white></red>'
+        error: '%tag% <red>The command could not be completed.</red>'
+        success: '%tag% <green>Command completed successfully.</green>'
+      seticon:
+        aliases:
+        - icon
+        show: ' <red>/clanglad arena seticon <arena> <material></red> <dark_gray>-</dark_gray> <gray>Set the menu icon.</gray>'
+        usage: '%tag% <red>Error, use: <white>/clanglad arena seticon <arena> <material></white></red>'
+        error: '%tag% <red>The command could not be completed.</red>'
+        success: '%tag% <green>Command completed successfully.</green>'
+      reward:
+        aliases:
+        - rewards
+        show: ' <click:run_command:"/clanglad arena reward help"><hover:show_text:"<red>Click to execute.</red>"><red>/clanglad arena reward help</red> <dark_gray>-</dark_gray> <gray>Show arena reward commands.</gray></hover></click>'
+        usage: '%tag% <red>Error, use: <white>/clanglad arena reward help</white></red>'
+        error: '%tag% <red>The command could not be completed.</red>'
+        success: '%tag% <green>Command completed successfully.</green>'
+        help:
+          aliases:
+          - ajuda
+          - '?'
+          show: ' <click:run_command:"/clanglad arena reward help"><hover:show_text:"<red>Click to execute.</red>"><red>/clanglad arena reward help</red> <dark_gray>-</dark_gray> <gray>Show reward commands.</gray></hover></click>'
+          usage: '%tag% <red>Error, use: <white>/clanglad arena reward help</white></red>'
+          error: '%tag% <red>The command could not be completed.</red>'
+          success: '%tag% <green>Command completed successfully.</green>'
+        addcommand:
+          aliases:
+          - command
+          show: ' <red>/clanglad arena reward addcommand <arena> <command></red> <dark_gray>-</dark_gray> <gray>Add a winner console command.</gray>'
+          usage: '%tag% <red>Error, use: <white>/clanglad arena reward addcommand <arena> <command></white></red>'
+          error: '%tag% <red>The command could not be completed.</red>'
+          success: '%tag% <green>Command completed successfully.</green>'
+        additem:
+          aliases:
+          - item
+          show: ' <red>/clanglad arena reward additem <arena></red> <dark_gray>-</dark_gray> <gray>Add the held item as a winner reward.</gray>'
+          usage: '%tag% <red>Error, use: <white>/clanglad arena reward additem <arena></white></red>'
+          error: '%tag% <red>The command could not be completed.</red>'
+          success: '%tag% <green>Command completed successfully.</green>'
+        clear:
+          aliases:
+          - reset
+          show: ' <red>/clanglad arena reward clear <arena></red> <dark_gray>-</dark_gray> <gray>Clear every reward.</gray>'
+          usage: '%tag% <red>Error, use: <white>/clanglad arena reward clear <arena></white></red>'
+          error: '%tag% <red>The command could not be completed.</red>'
+          success: '%tag% <green>Command completed successfully.</green>'
+    kit:
+      aliases:
+      - kits
+      show: ' <click:run_command:"/clanglad kit help"><hover:show_text:"<red>Click to execute.</red>"><red>/clanglad kit help</red> <dark_gray>-</dark_gray> <gray>Show kit administration commands.</gray></hover></click>'
+      usage: '%tag% <red>Error, use: <white>/clanglad kit help</white></red>'
+      error: '%tag% <red>The command could not be completed.</red>'
+      success: '%tag% <green>Command completed successfully.</green>'
+      help:
+        aliases:
+        - ajuda
+        - '?'
+        show: ' <click:run_command:"/clanglad kit help"><hover:show_text:"<red>Click to execute.</red>"><red>/clanglad kit help</red> <dark_gray>-</dark_gray> <gray>Show kit commands.</gray></hover></click>'
+        usage: '%tag% <red>Error, use: <white>/clanglad kit help</white></red>'
+        error: '%tag% <red>The command could not be completed.</red>'
+        success: '%tag% <green>Command completed successfully.</green>'
+      create:
+        aliases:
+        - save
+        show: ' <red>/clanglad kit create <kit></red> <dark_gray>-</dark_gray> <gray>Save your current inventory as a kit.</gray>'
+        usage: '%tag% <red>Error, use: <white>/clanglad kit create <kit></white></red>'
+        error: '%tag% <red>The command could not be completed.</red>'
+        success: '%tag% <green>Command completed successfully.</green>'
+      delete:
+        aliases:
+        - remove
+        show: ' <red>/clanglad kit delete <kit></red> <dark_gray>-</dark_gray> <gray>Delete a server kit.</gray>'
+        usage: '%tag% <red>Error, use: <white>/clanglad kit delete <kit></white></red>'
+        error: '%tag% <red>The command could not be completed.</red>'
+        success: '%tag% <green>Command completed successfully.</green>'
+      list:
+        aliases:
+        - all
+        show: ' <click:run_command:"/clanglad kit list"><hover:show_text:"<red>Click to execute.</red>"><red>/clanglad kit list</red> <dark_gray>-</dark_gray> <gray>List server kits.</gray></hover></click>'
+        usage: '%tag% <red>Error, use: <white>/clanglad kit list</white></red>'
+        error: '%tag% <red>The command could not be completed.</red>'
+        success: '%tag% <green>Command completed successfully.</green>'
+    schedule:
+      aliases:
+      - scheduler
+      show: ' <click:run_command:"/clanglad schedule help"><hover:show_text:"<red>Click to execute.</red>"><red>/clanglad schedule help</red> <dark_gray>-</dark_gray> <gray>Show scheduler commands.</gray></hover></click>'
+      usage: '%tag% <red>Error, use: <white>/clanglad schedule help</white></red>'
+      error: '%tag% <red>The command could not be completed.</red>'
+      success: '%tag% <green>Command completed successfully.</green>'
+      help:
+        aliases:
+        - ajuda
+        - '?'
+        show: ' <click:run_command:"/clanglad schedule help"><hover:show_text:"<red>Click to execute.</red>"><red>/clanglad schedule help</red> <dark_gray>-</dark_gray> <gray>Show scheduler commands.</gray></hover></click>'
+        usage: '%tag% <red>Error, use: <white>/clanglad schedule help</white></red>'
+        error: '%tag% <red>The command could not be completed.</red>'
+        success: '%tag% <green>Command completed successfully.</green>'
+      add:
+        aliases:
+        - create
+        show: ' <red>/clanglad schedule add <id> <arena> <HH:mm> <DAILY|days></red> <dark_gray>-</dark_gray> <gray>Create an automatic start schedule.</gray>'
+        usage: '%tag% <red>Error, use: <white>/clanglad schedule add <id> <arena> <HH:mm> <DAILY|MONDAY,WEDNESDAY></white></red>'
+        error: '%tag% <red>The command could not be completed.</red>'
+        success: '%tag% <green>Command completed successfully.</green>'
+      enable:
+        aliases:
+        - enabled
+        show: ' <red>/clanglad schedule enable <id> <true|false></red> <dark_gray>-</dark_gray> <gray>Enable or disable a schedule.</gray>'
+        usage: '%tag% <red>Error, use: <white>/clanglad schedule enable <id> <true|false></white></red>'
+        error: '%tag% <red>The command could not be completed.</red>'
+        success: '%tag% <green>Command completed successfully.</green>'
+      remove:
+        aliases:
+        - delete
+        show: ' <red>/clanglad schedule remove <id></red> <dark_gray>-</dark_gray> <gray>Delete a schedule.</gray>'
+        usage: '%tag% <red>Error, use: <white>/clanglad schedule remove <id></white></red>'
+        error: '%tag% <red>The command could not be completed.</red>'
+        success: '%tag% <green>Command completed successfully.</green>'
+      list:
+        aliases:
+        - all
+        show: ' <click:run_command:"/clanglad schedule list"><hover:show_text:"<red>Click to execute.</red>"><red>/clanglad schedule list</red> <dark_gray>-</dark_gray> <gray>List automatic schedules.</gray></hover></click>'
+        usage: '%tag% <red>Error, use: <white>/clanglad schedule list</white></red>'
+        error: '%tag% <red>The command could not be completed.</red>'
+        success: '%tag% <green>Command completed successfully.</green>'
+    start:
+      aliases:
+      - open
+      show: ' <red>/clanglad start <arena> [serverkit|ownitems] [kit]</red> <dark_gray>-</dark_gray> <gray>Open event recruitment.</gray>'
+      usage: '%tag% <red>Error, use: <white>/clanglad start <arena> [serverkit|ownitems] [kit]</white></red>'
+      error: '%tag% <red>The command could not be completed.</red>'
+      success: '%tag% <green>Command completed successfully.</green>'
+    forcestart:
+      aliases:
+      - force
+      show: ' <red>/clanglad forcestart <arena></red> <dark_gray>-</dark_gray> <gray>Start combat immediately.</gray>'
+      usage: '%tag% <red>Error, use: <white>/clanglad forcestart <arena></white></red>'
+      error: '%tag% <red>The command could not be completed.</red>'
+      success: '%tag% <green>Command completed successfully.</green>'
+    stop:
+      aliases:
+      - cancel
+      show: ' <red>/clanglad stop <arena></red> <dark_gray>-</dark_gray> <gray>Stop an active event.</gray>'
+      usage: '%tag% <red>Error, use: <white>/clanglad stop <arena></white></red>'
+      error: '%tag% <red>The command could not be completed.</red>'
+      success: '%tag% <green>Command completed successfully.</green>'
+    reload:
+      aliases:
+      - recarregar
+      show: ' <red>/clanglad reload</red> <dark_gray>-</dark_gray> <gray>Reload settings and translations.</gray>'
+      usage: '%tag% <red>Error, use: <white>/clanglad reload</white></red>'
+      error: '%tag% <red>The command could not be completed.</red>'
+      success: '%tag% <green>Command completed successfully.</green>'
+   
+  # Player command tree.
+  gladiator:
+    main:
+      aliases:
+      - menu
+      - open
+      show: ' <click:run_command:"/glad"><hover:show_text:"<red>Click to execute.</red>"><red>/glad</red> <dark_gray>-</dark_gray> <gray>Open the event menu.</gray></hover></click>'
+      usage: '%tag% <red>Error, use: <white>/glad</white></red>'
+      error: '%tag% <red>The command could not be completed.</red>'
+      success: '%tag% <green>Command completed successfully.</green>'
+    join:
+      aliases:
+      - enter
+      show: ' <red>/glad join <arena></red> <dark_gray>-</dark_gray> <gray>Join an open event.</gray>'
+      usage: '%tag% <red>Error, use: <white>/glad join <arena></white></red>'
+      error: '%tag% <red>The command could not be completed.</red>'
+      success: '%tag% <green>Command completed successfully.</green>'
+    leave:
+      aliases:
+      - exit
+      show: ' <click:run_command:"/glad leave"><hover:show_text:"<red>Click to execute.</red>"><red>/glad leave</red> <dark_gray>-</dark_gray> <gray>Leave before combat begins.</gray></hover></click>'
+      usage: '%tag% <red>Error, use: <white>/glad leave</white></red>'
+      error: '%tag% <red>The command could not be completed.</red>'
+      success: '%tag% <green>Command completed successfully.</green>'
+    confirm:
+      aliases:
+      - lineup
+      show: ' <red>/glad confirm <arena></red> <dark_gray>-</dark_gray> <gray>Confirm your clan lineup as its leader.</gray>'
+      usage: '%tag% <red>Error, use: <white>/glad confirm <arena></white></red>'
+      error: '%tag% <red>The command could not be completed.</red>'
+      success: '%tag% <green>Command completed successfully.</green>'
+    spectate:
+      aliases:
+      - spec
+      show: ' <red>/glad spectate <arena></red> <dark_gray>-</dark_gray> <gray>Watch an active event.</gray>'
+      usage: '%tag% <red>Error, use: <white>/glad spectate <arena></white></red>'
+      error: '%tag% <red>The command could not be completed.</red>'
+      success: '%tag% <green>Command completed successfully.</green>'
+    unspectate:
+      aliases:
+      - unspec
+      show: ' <click:run_command:"/glad unspectate"><hover:show_text:"<red>Click to execute.</red>"><red>/glad unspectate</red> <dark_gray>-</dark_gray> <gray>Leave spectator mode.</gray></hover></click>'
+      usage: '%tag% <red>Error, use: <white>/glad unspectate</white></red>'
+      error: '%tag% <red>The command could not be completed.</red>'
+      success: '%tag% <green>Command completed successfully.</green>'
+    history:
+      aliases:
+      - matches
+      show: ' <click:run_command:"/glad history"><hover:show_text:"<red>Click to execute.</red>"><red>/glad history</red> <dark_gray>-</dark_gray> <gray>Show recent Gladiator events.</gray></hover></click>'
+      usage: '%tag% <red>Error, use: <white>/glad history</white></red>'
+      error: '%tag% <red>The command could not be completed.</red>'
+      success: '%tag% <green>Command completed successfully.</green>'
+    stats:
+      aliases:
+      - statistics
+      show: ' <click:run_command:"/glad stats"><hover:show_text:"<red>Click to execute.</red>"><red>/glad stats</red> <dark_gray>-</dark_gray> <gray>Show your clan Gladiator statistics.</gray></hover></click>'
+      usage: '%tag% <red>Error, use: <white>/glad stats</white></red>'
+      error: '%tag% <red>The command could not be completed.</red>'
+      success: '%tag% <green>Command completed successfully.</green>'
+    help:
+      aliases:
+      - ajuda
+      - '?'
+      show: ' <click:run_command:"/glad help"><hover:show_text:"<red>Click to execute.</red>"><red>/glad help</red> <dark_gray>-</dark_gray> <gray>Show player commands.</gray></hover></click>'
+      usage: '%tag% <red>Error, use: <white>/glad help</white></red>'
+      error: '%tag% <red>The command could not be completed.</red>'
+      success: '%tag% <green>Command completed successfully.</green>'

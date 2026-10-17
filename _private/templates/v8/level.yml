@@ -1,0 +1,287 @@
+# Level configurations
+# Configure the amount of points required according to the points set in the created quests, create a balance according to your server
+Level:
+  points:
+    # The basis is calculated according to the formula.
+    # default: '({CLAN_LEVEL}*{BASE})*{EXPONENT}'
+    # Variables: {CLAN_LEVEL} = current clan level, {BASE} = base value, {EXPONENT} = exponent value
+    # FOR THE OLD METHOD USE '{BASE}+({BASE}*Math.pow({CLAN_LEVEL},{EXPONENT}))'.
+    formula: ({CLAN_LEVEL}*{BASE})*{EXPONENT}
+    #Required points are the basis for scoring points for levels.
+    base: 50
+    # This is the multiplier to be applied in each formula
+    exponent: 1.0
+    # Start level.
+    start_level: 1
+    # The maximum level a clan can reach.
+    max_level: 20
+    # When enabling this option, the clan does not drop in level when losing points.
+    block_level_decay: false
+  patent:
+    #Use this formatting as an example or uncomment the lines:
+    #    list:
+    #      beginner:
+    #        name: '<gray>Beginner'
+    #        required_level: 0
+    #        rewards: []
+    #        rewards_only_once: true
+    #        rewards_disabled_world: []
+    list:
+      beginner:
+        # Name that will appear in menus, texts and placeholders
+        name: <gray>Beginner
+        # How many levels are required
+        required_level: 0
+        # Commands triggered when reaching the level
+        # The variable for player's nickname is %player%
+        # ex: 'eco give %player% 5000'
+        rewards: [
+          ]
+        # The reward is sent only the first time the clan reaches this level
+        rewards_only_once: true
+        # Worlds where you cannot receive command rewards
+        rewards_disabled_world: [
+          ]
+   
+   
+  # Pattern limits for empty unlocker.
+  default:
+    homes: 3
+    ally: 3
+    rival: 3
+    slots: 10
+   
+  #The actions give points to the clan according to the development
+  #The actions are under development.
+  #If you don't want to use this, use values 0 "zero"
+  actions:
+    CREATE: 100
+    NEWMEMBER: 20
+    REMOVEMEMBER: -20
+    WARWIN: 150
+    WARLOSE: -150
+    NEWALLIANCE: 10
+    REMOVEALLIANCE: -10
+    NEWRIVAL: 10
+    REMOVERIVAL: -10
+    PROMOTEMEMBER: 30
+    DEMOTEMEMBER: -30
+    DEATHMEMBER: -2
+    KILLMEMBER: 2
+    CLANVERIFY: 150
+   
+  #These are the requirements for actions to be triggered
+  action_requirements:
+    KILLMEMBER:
+      #Use 0 to disable
+      oponent_min_points: 2
+   
+  #Unlocking allows clans to use resources only if the clan is at a specific level
+  #Unlocking is under development.
+  #If you don't want to use this, use values 0 "zero"
+  unlocker:
+     
+     
+    # format: CLAN_HOMES/REQUIRED_LEVEL
+    #You can add multiple homes for various clan levels.
+    #example:
+    #    home:
+    #      - '1:1' #The clan can have 1 home if it is level 1
+    #      - '5:10' #The clan can have 5 homes if it is level 10
+    #      - '10:20' #The clan can have 10 homes if it is level 20
+    home:
+    - '1:1'
+    - '5:10'
+    - '10:20'
+     
+     
+    # format: CLAN_ALLIED/REQUIRED_LEVEL
+    #You can add multiple allies for various clan levels.
+    #example:
+    #    ally:
+    #      - '1:1' #The clan can have 1 ally if it is level 1
+    #      - '5:10' #The clan can have 5 allies if it is level 10
+    #      - '10:20' #The clan can have 10 allies if it is level 20
+    ally:
+    - '1:1'
+    - '5:10'
+    - '10:20'
+     
+     
+    # format: CLAN_RIVALRIES/REQUIRED_LEVEL
+    #You can add multiple rivals for various clan levels.
+    #example:
+    #    rival:
+    #      - '1:1' #The clan can have 1 rival if it is level 1
+    #      - '5:10' #The clan can have 5 rivals if it is level 10
+    #      - '10:20' #The clan can have 10 rivals if it is level 20
+    rival:
+    - '1:1'
+    - '5:10'
+    - '10:20'
+     
+     
+    # format: CLAN_SLOTS/REQUIRED_LEVEL
+    #You can add multiple slots for various clan levels.
+    #example:
+    #    slots:
+    #      - '10:0' #The clan can have 10 slots if it is level 0
+    #      - '15:10' #The clan can have 15 slots if it is level 10
+    #      - '20:20' #The clan can have 20 slots if it is level 20
+    slots:
+    - '10:0'
+    - '15:10'
+    - '20:20'
+     
+     
+    # format: BANNER_GROUP/REQUIRED_LEVEL
+    #You can add multiple slots for various clan levels.
+    #example:
+    #    banner:
+    #      - 'GROUP_1:0' # Clan can use these groups if it is level 0
+    #      - 'GROUP_1,HEAD_GROUP_1:10' # Clan can use these groups if it is level 10
+    #      - 'GROUP_1,HEAD_GROUP_1,BANNER_GROUP_1:20' # Clan can use these groups if it is level 20
+    banner:
+    - GROUP_1:0
+    - HEAD_GROUP_1:10
+    - BANNER_GROUP_1:20
+     
+    # Minimum level to change desc, use 0 "zero" to not need levels.
+    desc: 1
+    # Minimum level to change tag, use 0 "zero" to not need levels.
+    modtag: 1
+    # Minimum level to invite members, use 0 "zero" to not need levels.
+    invite_members: 0
+    # Minimum level to remove members, use 0 "zero" to not need levels.
+    remove_members: 1
+    # Minimum level to send war challenges, use 0 "zero" to not need levels.
+    invite_war: 1
+    # Minimum level to accept war challenges, use 0 "zero" to not need levels.
+    accept_war: 1
+    # Minimum level to send regroup, use 0 "zero" to not need levels.
+    regroup: 1
+    # Minimum level to promote members, use 0 "zero" to not need levels.
+    promote: 1
+    # Minimum level to demote members, use 0 "zero" to not need levels.
+    demote: 1
+    # Minimum level to upload banners, use 0 "zero" to not need levels.
+    banner_upload: 3
+  # If the list of requirements is smaller than Level.points.max_level, standard items will be created only with POINTS requirements
+  requeriments:
+    # If this is false, the clan only needs to reach the indicated XP to level up automatically.
+    enabled: true
+    # If this is false, this will hide the rewards.
+    show_command_rewards: true
+    # If TRUE, the clan will not receive the same reward when passing the same level twice.
+    rewards_only_once: true
+    icon: PAPER
+    list:
+      one:
+        # !important! Requirement level
+        #Any placeholder can be used here, internal or external.
+        #Valid operators for placeholders: ==, !=, >=, <=, <, >
+        level: 1
+        # Rewards will be stored for each player to claim, if they are in the clan at the time of the levelup.
+        rewards:
+        - eco give %player% 100
+        # Rewards will be stored for each player to claim, if they are in the clan at the time of the levelup.
+        surprise:
+        - eco give %player% 100
+        # Level.points.formula
+        # extra placeholders linked to requirements, empty to disable
+        points: '{FORMULA}'
+        requires:
+        - '%uclans_hasbanner%==true;false= <white>Clan Banner: <red><bold>NO</bold> <gray>(need %value%);true= <white>Clan Banner: <green><bold>OK</bold> <gray>(%value%)'
+        - '%uclans_count_members%>=2;false= <white>Clan Members: <red><bold>NO</bold> <gray>(need %value% member(s));true= <white>Clan Members: <green><bold>OK</bold> <gray>(%value% members)'
+        - '%uclans_creation_hours%>=1;false= <white>Clan Creation: <red><bold>NO</bold> <gray>(need %value% hour(s));true= <white>Clan Creation: <green><bold>OK</bold> <gray>(%value% hours)'
+        #variables: bank=AMOUNT, money=AMOUNT, exp=AMOUNT, item=ITEM:AMOUNT
+        cost: [
+          ]
+      five:
+        # !important! Requirement level
+        #Any placeholder can be used here, internal or external.
+        #Valid operators for placeholders: ==, !=, >=, <=, <, >
+        level: 5
+        # Rewards will be stored for each player to claim, if they are in the clan at the time of the levelup.
+        rewards:
+        - eco give %player% 500
+        # Rewards will be stored for each player to claim, if they are in the clan at the time of the levelup.
+        surprise:
+        - eco give %player% 1000
+        # Level.points.formula
+        points: '{FORMULA}'
+        description:
+        - ' <gray>- Money: $500'
+        # extra plugins linked to requirements, empty to disable
+        requires:
+        - '%uclans_hasbanner%==true;false= <white>Clan Banner: <red><bold>NO</bold> <gray>(need %value%);true= <white>Clan Banner: <green><bold>OK</bold> <gray>(%value%)'
+        - '%uclans_count_members%>=5;false= <white>Clan Members: <red><bold>NO</bold> <gray>(need %value% member(s));true= <white>Clan Members: <green><bold>OK</bold> <gray>(%value% members)'
+        - '%uclans_creation_hours%>=24;false= <white>Clan Creation: <red><bold>NO</bold> <gray>(need %value% hour(s));true= <white>Clan Creation: <green><bold>OK</bold> <gray>(%value% hours)'
+        - '%uclans_bank_balance%>=1.000;false= <white>Clan Bank: <red><bold>NO</bold> <gray>(need %value% money);true= <white>Clan Bank: <green><bold>OK</bold> <gray>(%value% money)'
+        - '%uclans_clan_kdr%>=2.0;false= <white>Clan KDR: <red><bold>NO</bold> <gray>(need %value% kdr);true= <white>Clan KDR: <green><bold>OK</bold> <gray>(%value% kdr)'
+        - '%uclans_clan_war_win%>=1;false= <white>Clan War: <red><bold>NO</bold> <gray>(need %value% war);true= <white>Clan War: <green><bold>OK</bold> <gray>(%value% war)'
+        cost:
+        - bank=1.000
+      ten:
+        level: 10
+        rewards:
+        - eco give %player% 1000
+        surprise:
+        - eco give %player% 5000
+        points: '{FORMULA}'
+        description: [
+          ]
+        requires:
+        - '%uclans_hasbanner%==true;false= <white>Clan Banner: <red><bold>NO</bold> <gray>(need %value%);true= <white>Clan Banner: <green><bold>OK</bold> <gray>(%value%)'
+        - '%uclans_count_members%>=10;false= <white>Clan Members: <red><bold>NO</bold> <gray>(need %value% member(s));true= <white>Clan Members: <green><bold>OK</bold> <gray>(%value% members)'
+        - '%uclans_creation_hours%>=48;false= <white>Clan Creation: <red><bold>NO</bold> <gray>(need %value% hour(s));true= <white>Clan Creation: <green><bold>OK</bold> <gray>(%value% hours)'
+        - '%uclans_bank_balance%>=10.000;false= <white>Clan Bank: <red><bold>NO</bold> <gray>(need %value% money);true= <white>Clan Bank: <green><bold>OK</bold> <gray>(%value% money)'
+        - '%uclans_clan_kdr%>=3.0;false= <white>Clan KDR: <red><bold>NO</bold> <gray>(need %value% kdr);true= <white>Clan KDR: <green><bold>OK</bold> <gray>(%value% kdr)'
+        - '%uclans_clan_war_win%>=5;false= <white>Clan War: <red><bold>NO</bold> <gray>(need %value% war);true= <white>Clan War: <green><bold>OK</bold> <gray>(%value% war)'
+        - 'CHECKITEM:[iron_ingot:10];false= <white>View Items: <red><bold>NO</bold> <gray>(need: %value%);true= <white>View Items: <green><bold>OK</bold> <gray>(%value%)'
+        cost:
+        - bank=10.000
+        - item=iron_ingot:10
+      fifteen:
+        level: 15
+        rewards:
+        - eco give %player% 1000
+        surprise:
+        - eco give %player% 5000
+        points: '{FORMULA}'
+        description: [
+          ]
+        requires:
+        - '%uclans_hasbanner%==true;false= <white>Clan Banner: <red><bold>NO</bold> <gray>(need %value%);true= <white>Clan Banner: <green><bold>OK</bold> <gray>(%value%)'
+        - '%uclans_count_members%>=10;false= <white>Clan Members: <red><bold>NO</bold> <gray>(need %value% member(s));true= <white>Clan Members: <green><bold>OK</bold> <gray>(%value% members)'
+        - '%uclans_creation_hours%>=72;false= <white>Clan Creation: <red><bold>NO</bold> <gray>(need %value% hour(s));true= <white>Clan Creation: <green><bold>OK</bold> <gray>(%value% hours)'
+        - '%uclans_bank_balance%>=50.000;false= <white>Clan Bank: <red><bold>NO</bold> <gray>(need %value% money);true= <white>Clan Bank: <green><bold>OK</bold> <gray>(%value% money)'
+        - '%uclans_clan_kdr%>=4.0;false= <white>Clan KDR: <red><bold>NO</bold> <gray>(need %value% kdr);true= <white>Clan KDR: <green><bold>OK</bold> <gray>(%value% kdr)'
+        - '%uclans_clan_war_win%>=10;false= <white>Clan War: <red><bold>NO</bold> <gray>(need %value% war);true= <white>Clan War: <green><bold>OK</bold> <gray>(%value% war)'
+        - 'CHECKITEM:[diamond:5];false= <white>View Items: <red><bold>NO</bold> <gray>(need: %value%);true= <white>View Items: <green><bold>OK</bold> <gray>(%value%)'
+        - '%clannexus_hasland%==true;false= <white>Nexus Land: <red><bold>NO</bold> <gray>(need: %value%);true= <white>Nexus Land: <green><bold>OK</bold> <gray>(%value%)'
+        - '%land_nexus_power%>1;false= <white>Nexus Power: <red><bold>NO</bold> <gray>(need: %value%);true= <white>Nexus Power: <green><bold>OK</bold> <gray>(%value%)'
+        cost:
+        - bank=10.000
+        - item=diamond:5
+      twenty:
+        level: 20
+        rewards:
+        - eco give %player% 2000
+        surprise:
+        - eco give %player% 10000
+        points: '{FORMULA}'
+        description: [
+          ]
+        requires:
+        - '%uclans_count_members%>=15;false= <white>Clan Members: <red><bold>NO</bold> <gray>(need %value% member(s));true= <white>Clan Members: <green><bold>OK</bold> <gray>(%value% members)'
+        - '%uclans_bank_balance%>=100.000;false= <white>Clan Bank: <red><bold>NO</bold> <gray>(need %value% money);true= <white>Clan Bank: <green><bold>OK</bold> <gray>(%value% money)'
+        - '%uclans_clan_kdr%>=4.0;false= <white>Clan KDR: <red><bold>NO</bold> <gray>(need %value% kdr);true= <white>Clan KDR: <green><bold>OK</bold> <gray>(%value% kdr)'
+        - '%uclans_clan_war_win%>=10;false= <white>Clan War: <red><bold>NO</bold> <gray>(need %value% war);true= <white>Clan War: <green><bold>OK</bold> <gray>(%value% war)'
+        - 'CHECKITEM:[emerald:10];false= <white>View Items: <red><bold>NO</bold> <gray>(need: %value%);true= <white>View Items: <green><bold>OK</bold> <gray>(%value%)'
+        - '%clannexus_hasland%==true;false= <white>Nexus Land: <red><bold>NO</bold> <gray>(need: %value%);true= <white>Nexus Land: <green><bold>OK</bold> <gray>(%value%)'
+        - '%land_nexus_power%>2;false= <white>Nexus Power: <red><bold>NO</bold> <gray>(need: %value%);true= <white>Nexus Power: <green><bold>OK</bold> <gray>(%value%)'
+        - '%clannexus_land_chunks_amount%>2;false= <white>Nexus Chunks: <red><bold>NO</bold> <gray>(need: %value%);true= <white>Nexus Chunks: <green><bold>OK</bold> <gray>(%value%)'
+        cost:
+        - bank=100.000
+        - item=emerald:10

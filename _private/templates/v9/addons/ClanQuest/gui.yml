@@ -1,0 +1,105 @@
+ 
+ 
+ 
+# QUEST GUI
+ 
+ 
+ 
+Quest:
+  #
+  home_quest:
+    opensound: block.slime_block.hit
+    rows: 5
+    items:
+      fill:
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+         # Nbts can be applied to all items in all menus by following this example
+        nbt:
+          string: [
+            ]
+        # Used for CustomModelData options, just add the number. This option can be applied to all items.
+        model: 0
+        # This option can be applied to all items. values: BORDER, TOP, BOTTOM, ALL or numeric values.
+        mimeslots:
+        - BORDER
+      fill2:
+        material: GRAY_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        mimeslots:
+        - ALL
+      daily:
+        material: DIAMOND_SWORD
+        amount: 1
+        glow: true
+        texture: ''
+        slot: 20
+      once:
+        material: CLOCK
+        amount: 1
+        glow: true
+        texture: ''
+        slot: 24
+      back:
+        material: IRON_DOOR
+        amount: 1
+        glow: false
+        texture: ''
+        slot: 44
+  #
+  home_list:
+    opensound: block.slime_block.hit
+    rows: 6
+    pagesize: 45
+    items:
+      fill:
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+         # Nbts can be applied to all items in all menus by following this example
+        nbt:
+          string: [
+            ]
+        # Used for CustomModelData options, just add the number. This option can be applied to all items.
+        model: 0
+        # This option can be applied to all items. values: BORDER, TOP, BOTTOM, ALL or numeric values.
+        mimeslots:
+        - BOTTOM
+      course:
+        material: CLOCK
+        amount: 1
+        glow: true
+        texture: ''
+        slot: 49
+      course_other:
+        material: BARRIER
+        amount: 1
+        glow: true
+        texture: ''
+        slot: 49
+      finished:
+        material: BARRIER
+        amount: 1
+        glow: true
+        texture: ''
+        slot: 0
+      back:
+        material: IRON_DOOR
+        amount: 1
+        glow: false
+        texture: ''
+        slot: 53
+      next:
+        material: ARROW
+        amount: 1
+        glow: false
+        texture: ''
+        slot: 51
+      previous:
+        material: ARROW
+        amount: 1
+        glow: false
+        texture: ''
+        slot: 47

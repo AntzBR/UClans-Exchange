@@ -1,0 +1,20 @@
+Clan:
+   
+  chat:
+    #Clan Chat listener priority.
+    #values (lowercase or UPPERCASE): LOWEST, LOW, NORMAL, HIGH, HIGHEST.
+    priority: LOWEST
+    format: '<hover:show_text:"<green>Clan %uclans_tag_color%<newline><newline><white> Leader: <aqua>%uclans_leader%<newline><white> Members: <aqua>%uclans_count_members%<newline><white> Level: <aqua>%uclans_level%">%uclans_tag_color% <light_purple>> <light_purple>%uclans_player_role_formated%<dark_purple>%player%<light_purple>: <light_purple>%chat_message%</hover>'
+    spy_tag: '<dark_gray>[SPY] '
+    enable_colors: false
+    # BOLD, ITALIC, UNDERLINED, STRIKETHROUGH, OBFUSCATED
+    disabled_decoration:
+    - OBFUSCATED
+    - BOLD
+    - ITALIC
+    - UNDERLINED
+    - STRIKETHROUGH
+    # This shortcut is used to send clan messages quickly using shortcuts. use empty to disable
+    shortcut: '@'
+    console_chat: true
+  player donthave clan: '%tag% <red>This player does not have a clan.'

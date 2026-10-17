@@ -1,0 +1,177 @@
+General:
+  rival:
+    opensound: block.slime_block.hit
+    rows: 6
+    pagesize: 28
+    items:
+      fill:
+        material: RED_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        mimeslots:
+        - BORDER
+      current:
+        clicksound: ''
+        material: ''
+        texture: '%uclans_banner%'
+        data: 0
+        amount: 1
+        glow: true
+      previous:
+        clicksound: ''
+        material: ARROW
+        texture: ''
+        data: 8
+        amount: 1
+        glow: false
+        slot: 47
+      next:
+        clicksound: ''
+        material: ARROW
+        texture: ''
+        data: 8
+        amount: 1
+        glow: false
+        slot: 51
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        texture: ''
+        data: 0
+        amount: 1
+        glow: false
+        slot: 49
+      add:
+        clicksound: ''
+        material: GOLDEN_SWORD
+        texture: ''
+        data: 0
+        amount: 1
+        glow: false
+        slot: 53
+  ally:
+    opensound: block.slime_block.hit
+    rows: 6
+    pagesize: 28
+    items:
+      fill:
+        material: LIME_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        mimeslots:
+        - BORDER
+      current:
+        clicksound: ''
+        material: ''
+        texture: '%uclans_banner%'
+        amount: 1
+        glow: true
+        slot: 1
+      previous:
+        clicksound: ''
+        material: ARROW
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 47
+      next:
+        clicksound: ''
+        material: ARROW
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 51
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 49
+      add:
+        clicksound: ''
+        material: DIAMOND_SWORD
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 53
+  #Clan rival search
+  clan_rival_search:
+    opensound: block.slime_block.hit
+    rows: 6
+    pagesize: 45
+    items:
+      fill:
+        material: RED_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        mimeslots:
+        - BOTTOM
+      current:
+        clicksound: ''
+        material: ''
+        texture: '%uclans_banner%'
+        amount: 1
+        glow: true
+        slot: 1
+      previous:
+        clicksound: ''
+        material: ARROW
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 47
+      next:
+        clicksound: ''
+        material: ARROW
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 51
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 49
+  #Clan rival search
+  clan_ally_search:
+    opensound: block.slime_block.hit
+    rows: 6
+    pagesize: 45
+    items:
+      fill:
+        material: GREEN_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        mimeslots:
+        - BOTTOM
+      current:
+        clicksound: ''
+        material: ''
+        texture: '%uclans_banner%'
+        amount: 1
+        glow: true
+        slot: 1
+      previous:
+        clicksound: ''
+        material: ARROW
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 47
+      next:
+        clicksound: ''
+        material: ARROW
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 51
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 49

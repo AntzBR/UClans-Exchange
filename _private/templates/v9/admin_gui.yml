@@ -1,0 +1,1222 @@
+General:
+  #Clan levelup confirm
+  admin_home:
+    opensound: block.slime_block.hit
+    rows: 6
+    items:
+      fill:
+        # Use ; "<ITEM>;<ITEM>;<ITEM>" to add more than one item to the fill.
+        material: GRAY_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        # This option can be applied to all items.
+        enabled: true
+        # This option can be applied to all items.
+        slot: 0
+        # This option can be applied to all items.
+        mimeslots:
+        - ALL
+        # Nbts can be applied to all items in all menus by following this example
+        nbt:
+          string: [
+            ]
+        # Used for CustomModelData options, just add the number. This option can be applied to all items.
+        model: 0
+      fill2:
+        # Use ; "<ITEM>;<ITEM>;<ITEM>" to add more than one item to the fill2.
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        # This option can be applied to all items.
+        enabled: true
+        # This option can be applied to all items.
+        slot: 0
+        # This option can be applied to all items.
+        mimeslots:
+        - 0
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        - 6
+        - 7
+        - 8
+        - 9
+        - 17
+        - 18
+        - 26
+        - 27
+        - 35
+        - 36
+        - 44
+        - 45
+        - 46
+        - 47
+        - 48
+        - 49
+        - 50
+        - 51
+        - 52
+        - 53
+      extensions:
+        clicksound: ''
+        material: RAIL
+        texture: ''
+        data: 0
+        amount: 1
+        glow: true
+        slot: 22
+      addons:
+        clicksound: ''
+        material: HOPPER
+        texture: ''
+        data: 0
+        amount: 1
+        glow: true
+        slot: 31
+      languages:
+        clicksound: ''
+        material: PLAYER_HEAD
+        texture: '%uclans_current_lang_head%'
+        data: 0
+        amount: 1
+        glow: false
+        slot: 23
+      wizard:
+        clicksound: ''
+        material: PLAYER_HEAD
+        texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDQ3NmNiMzY1NTk5MWUzYjU5YmJlYTUwYzk0NDQwNWY3NTgxNDExNzFhMGUxODAxYmUyNGE5YjM4MWY4MTIzYSJ9fX0=
+        data: 0
+        amount: 1
+        glow: false
+        slot: 24
+      reload:
+        clicksound: ''
+        material: REDSTONE_BLOCK
+        texture: ''
+        data: 0
+        amount: 1
+        glow: true
+        slot: 47
+      clans:
+        clicksound: ''
+        material: PLAYER_HEAD
+        texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDM4Y2YzZjhlNTRhZmMzYjNmOTFkMjBhNDlmMzI0ZGNhMTQ4NjAwN2ZlNTQ1Mzk5MDU1NTI0YzE3OTQxZjRkYyJ9fX0=
+        data: 0
+        amount: 1
+        glow: true
+        slot: 20
+      players:
+        clicksound: ''
+        material: PLAYER_HEAD
+        texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTQxZmFjNmIyYTgyODg1ODk1YzVhN2I2OTc2OWE4NWFmOTBhZmRkOGMzZDNhYjUxOTRjYzU3ODU5MTBiZDM0NSJ9fX0=
+        data: 0
+        amount: 1
+        glow: true
+        slot: 29
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        texture: ''
+        data: 0
+        amount: 1
+        glow: false
+        # This option can be applied to all items.
+        slot: 53
+      help:
+        clicksound: ''
+        material: PAPER
+        glow: true
+        texture: ''
+        amount: 1
+        slot: 49
+      modules:
+        clicksound: ''
+        material: COMPARATOR
+        texture: ''
+        amount: 1
+        glow: true
+        slot: 30
+      globalff:
+        clicksound: ''
+        material: DIAMOND_SWORD
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 32
+      chatspy:
+        clicksound: ''
+        material: ENDER_EYE
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 33
+      server:
+        material: BOOK
+        amount: 1
+        slot: 25
+      storage:
+        material: CHEST
+        amount: 1
+        slot: 28
+      diagnostics:
+        material: COMPASS
+        amount: 1
+        slot: 34
+      settings:
+        material: REDSTONE
+        amount: 1
+        slot: 38
+      maintenance:
+        material: ANVIL
+        amount: 1
+        slot: 42
+  #Clan levelup confirm
+  admin_languages:
+    opensound: block.slime_block.hit
+    rows: 4
+    pagesize: 27
+    items:
+      fill:
+        # Use ; "<ITEM>;<ITEM>;<ITEM>" to add more than one item to the fill.
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        # This option can be applied to all items.
+        enabled: true
+        # This option can be applied to all items.
+        slot: 27
+        # This option can be applied to all items.
+        mimeslots:
+        - 28
+        - 29
+        - 30
+        - 31
+        - 32
+        - 33
+        - 34
+        - 35
+      current:
+        clicksound: ''
+        material: PLAYER_HEAD
+        texture: '%uclans_lang_head:{id}%'
+        amount: 1
+        glow: false
+      language:
+        clicksound: ''
+        material: PLAYER_HEAD
+        texture: '%uclans_current_lang_head%'
+        amount: 1
+        glow: false
+        slot: 31
+      previous:
+        clicksound: ''
+        material: ARROW
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 29
+      next:
+        clicksound: ''
+        material: ARROW
+        texture: ''
+        data: 8
+        amount: 1
+        glow: false
+        slot: 33
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        texture: ''
+        data: 0
+        amount: 1
+        glow: false
+        # This option can be applied to all items.
+        slot: 35
+  #Clan levelup confirm
+  admin_clans_home:
+    opensound: block.slime_block.hit
+    rows: 6
+    pagesize: 45
+    items:
+      fill:
+        # Use ; "<ITEM>;<ITEM>;<ITEM>" to add more than one item to the fill.
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        # This option can be applied to all items.
+        enabled: true
+        # This option can be applied to all items.
+        slot: 45
+        # This option can be applied to all items.
+        mimeslots:
+        - 46
+        - 47
+        - 48
+        - 49
+        - 50
+        - 51
+        - 52
+        - 53
+      current:
+        clicksound: ''
+        material: PLAYER_HEAD
+        texture: '%uclans_banner%'
+        amount: 1
+        glow: false
+      previous:
+        clicksound: ''
+        material: ARROW
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 47
+      next:
+        clicksound: ''
+        material: ARROW
+        texture: ''
+        data: 8
+        amount: 1
+        glow: false
+        slot: 51
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        texture: ''
+        data: 0
+        amount: 1
+        glow: false
+        # This option can be applied to all items.
+        slot: 53
+      search:
+        clicksound: ''
+        material: COMPASS
+        texture: ''
+        amount: 1
+        glow: true
+        slot: 49
+  #Clan levelup confirm
+  admin_clan_edit:
+    opensound: block.slime_block.hit
+    rows: 5
+    items:
+      fill:
+        # Use ; "<ITEM>;<ITEM>;<ITEM>" to add more than one item to the fill.
+        material: GRAY_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        # This option can be applied to all items.
+        enabled: true
+        # This option can be applied to all items.
+        slot: 0
+        # This option can be applied to all items.
+        mimeslots:
+        - ALL
+      fill2:
+        # Use ; "<ITEM>;<ITEM>;<ITEM>" to add more than one item to the fill2.
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        # This option can be applied to all items.
+        enabled: true
+        # This option can be applied to all items.
+        slot: 36
+        # This option can be applied to all items.
+        mimeslots:
+        - 36
+        - 37
+        - 38
+        - 39
+        - 40
+        - 41
+        - 42
+        - 43
+        - 44
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        texture: ''
+        data: 0
+        amount: 1
+        glow: false
+        # This option can be applied to all items.
+        slot: 44
+      info:
+        clicksound: ''
+        material: BOOK
+        texture: ''
+        amount: 1
+        glow: true
+        slot: 4
+      changetag:
+        clicksound: ''
+        material: NAME_TAG
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 10
+      verify:
+        clicksound: ''
+        material: EMERALD
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 11
+      setleader:
+        clicksound: ''
+        material: GOLDEN_HELMET
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 12
+      addpoints:
+        clicksound: ''
+        material: EXPERIENCE_BOTTLE
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 14
+      setpoints:
+        clicksound: ''
+        material: EXPERIENCE_BOTTLE
+        texture: ''
+        amount: 1
+        glow: true
+        slot: 15
+      removepoints:
+        clicksound: ''
+        material: EXPERIENCE_BOTTLE
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 16
+      addslot:
+        clicksound: ''
+        material: CHEST
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 19
+      setslot:
+        clicksound: ''
+        material: CHEST
+        texture: ''
+        amount: 1
+        glow: true
+        slot: 20
+      removeslot:
+        clicksound: ''
+        material: CHEST
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 21
+      bank_view:
+        clicksound: ''
+        material: GOLD_INGOT
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 23
+      bank_add:
+        clicksound: ''
+        material: GOLD_INGOT
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 24
+      bank_set:
+        clicksound: ''
+        material: GOLD_BLOCK
+        texture: ''
+        amount: 1
+        glow: true
+        slot: 25
+      bank_remove:
+        clicksound: ''
+        material: GOLD_INGOT
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 26
+      resetkdr:
+        clicksound: ''
+        material: IRON_SWORD
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 29
+      kick:
+        clicksound: ''
+        material: IRON_BOOTS
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 30
+      delete:
+        clicksound: ''
+        material: TNT
+        texture: ''
+        amount: 1
+        glow: true
+        slot: 34
+      members:
+        material: PLAYER_HEAD
+        amount: 1
+        slot: 31
+      allies:
+        material: EMERALD
+        amount: 1
+        slot: 32
+      rivals:
+        material: REDSTONE
+        amount: 1
+        slot: 33
+  #Clan levelup confirm
+  admin_players_home:
+    opensound: block.slime_block.hit
+    rows: 6
+    pagesize: 45
+    items:
+      fill:
+        # Use ; "<ITEM>;<ITEM>;<ITEM>" to add more than one item to the fill.
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        # This option can be applied to all items.
+        enabled: true
+        # This option can be applied to all items.
+        slot: 45
+        # This option can be applied to all items.
+        mimeslots:
+        - 46
+        - 47
+        - 48
+        - 49
+        - 50
+        - 51
+        - 52
+        - 53
+      current:
+        clicksound: ''
+        material: PLAYER_HEAD
+        texture: '%uclans_player_head%'
+        amount: 1
+        glow: false
+      previous:
+        clicksound: ''
+        material: ARROW
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 47
+      next:
+        clicksound: ''
+        material: ARROW
+        texture: ''
+        data: 8
+        amount: 1
+        glow: false
+        slot: 51
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        texture: ''
+        data: 0
+        amount: 1
+        glow: false
+        # This option can be applied to all items.
+        slot: 53
+      search:
+        clicksound: ''
+        material: COMPASS
+        texture: ''
+        amount: 1
+        glow: true
+        slot: 49
+  #Clan levelup confirm
+  admin_player_edit:
+    opensound: block.slime_block.hit
+    rows: 5
+    items:
+      fill:
+        # Use ; "<ITEM>;<ITEM>;<ITEM>" to add more than one item to the fill.
+        material: GRAY_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        # This option can be applied to all items.
+        enabled: true
+        # This option can be applied to all items.
+        slot: 0
+        # This option can be applied to all items.
+        mimeslots:
+        - ALL
+      fill2:
+        # Use ; "<ITEM>;<ITEM>;<ITEM>" to add more than one item to the fill2.
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        # This option can be applied to all items.
+        enabled: true
+        # This option can be applied to all items.
+        slot: 36
+        # This option can be applied to all items.
+        mimeslots:
+        - 36
+        - 37
+        - 38
+        - 39
+        - 40
+        - 41
+        - 42
+        - 43
+        - 44
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        texture: ''
+        data: 0
+        amount: 1
+        glow: false
+        # This option can be applied to all items.
+        slot: 44
+      info:
+        clicksound: ''
+        material: BOOK
+        texture: ''
+        amount: 1
+        glow: true
+        slot: 4
+      profile:
+        clicksound: ''
+        material: PLAYER_HEAD
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 10
+      permissions:
+        clicksound: ''
+        material: WRITABLE_BOOK
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 11
+      resetkdr:
+        clicksound: ''
+        material: IRON_SWORD
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 13
+      forcejoin:
+        clicksound: ''
+        material: ENDER_PEARL
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 15
+      kick:
+        clicksound: ''
+        material: IRON_BOOTS
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 16
+      setleader:
+        clicksound: ''
+        material: GOLDEN_HELMET
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 22
+      clan:
+        clicksound: ''
+        material: WHITE_BANNER
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 24
+  admin_confirm:
+    opensound: block.slime_block.hit
+    rows: 3
+    items:
+      fill:
+        material: GRAY_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        mimeslots:
+        - ALL
+      confirm:
+        clicksound: ''
+        material: LIME_WOOL
+        texture: ''
+        amount: 1
+        glow: true
+        slot: 11
+      cancel:
+        clicksound: ''
+        material: RED_WOOL
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 15
+  admin_module:
+    opensound: ''
+    # Make sure the item slot does not exceed the number of slots
+    rows: 4
+    # This option is only used for list menus with pagination
+    pagesize: 0
+    items:
+      fill:
+        material: GRAY_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        slot: 0
+        # This option can be applied to all items
+        # This option will add the same item to multiple slots.
+        mimeslots:
+        - ALL
+      fill2:
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        slot: 27
+        # This option can be applied to all items
+        # This option will add the same item to multiple slots.
+        mimeslots:
+        - 28
+        - 29
+        - 30
+        - 31
+        - 32
+        - 33
+        - 34
+        - 35
+      all:
+        clicksound: ''
+        material: DETECTOR_RAIL
+        glow: true
+        texture: ''
+        amount: 1
+        slot: 11
+      instaled:
+        clicksound: ''
+        material: POWERED_RAIL
+        glow: true
+        texture: ''
+        amount: 1
+        slot: 13
+      reload:
+        clicksound: ''
+        material: REDSTONE_BLOCK
+        glow: true
+        texture: ''
+        amount: 1
+        slot: 16
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        glow: true
+        texture: ''
+        amount: 1
+        slot: 35
+  admin_module_list:
+    opensound: ''
+    # Make sure the item slot does not exceed the number of slots
+    rows: 6
+    # This option is only used for list menus with pagination
+    pagesize: 45
+    items:
+      fill:
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        slot: 45
+        # This option can be applied to all items
+        # This option will add the same item to multiple slots.
+        mimeslots:
+        - 46
+        - 47
+        - 48
+        - 49
+        - 50
+        - 51
+        - 52
+        - 53
+        # This option can be applied to all items
+        # Add custom nbts
+        nbt:
+        - ExampleNbt:String
+        # This option can be applied to all items
+        # Add CustomModelData value.
+        model: 0
+      current_all:
+        clicksound: ''
+        material: RAIL
+        glow: true
+        texture: ''
+        amount: 1
+      current_instaled:
+        clicksound: ''
+        material: RAIL
+        glow: true
+        texture: ''
+        amount: 1
+      next:
+        clicksound: ''
+        material: ARROW
+        glow: true
+        texture: ''
+        amount: 1
+        slot: 51
+      prev:
+        clicksound: ''
+        material: ARROW
+        glow: true
+        texture: ''
+        amount: 1
+        slot: 47
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        glow: true
+        texture: ''
+        amount: 1
+        slot: 53
+  admin_extension:
+    opensound: ''
+    # Make sure the item slot does not exceed the number of slots
+    rows: 4
+    # This option is only used for list menus with pagination
+    pagesize: 0
+    items:
+      fill:
+        material: GRAY_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        slot: 0
+        # This option can be applied to all items
+        # This option will add the same item to multiple slots.
+        mimeslots:
+        - ALL
+      fill2:
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        slot: 27
+        # This option can be applied to all items
+        # This option will add the same item to multiple slots.
+        mimeslots:
+        - 28
+        - 29
+        - 30
+        - 31
+        - 32
+        - 33
+        - 34
+        - 35
+      all:
+        clicksound: ''
+        material: DETECTOR_RAIL
+        glow: true
+        texture: ''
+        amount: 1
+        slot: 11
+      instaled:
+        clicksound: ''
+        material: POWERED_RAIL
+        glow: true
+        texture: ''
+        amount: 1
+        slot: 13
+      reload:
+        clicksound: ''
+        material: REDSTONE_BLOCK
+        glow: true
+        texture: ''
+        amount: 1
+        slot: 16
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        glow: true
+        texture: ''
+        amount: 1
+        slot: 35
+  admin_extension_list:
+    opensound: ''
+    # Make sure the item slot does not exceed the number of slots
+    rows: 6
+    # This option is only used for list menus with pagination
+    pagesize: 45
+    items:
+      fill:
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        slot: 45
+        # This option can be applied to all items
+        # This option will add the same item to multiple slots.
+        mimeslots:
+        - 46
+        - 47
+        - 48
+        - 49
+        - 50
+        - 51
+        - 52
+        - 53
+        # This option can be applied to all items
+        # Add custom nbts
+        nbt:
+        - ExampleNbt:String
+        # This option can be applied to all items
+        # Add CustomModelData value.
+        model: 0
+      current_all:
+        clicksound: ''
+        material: RAIL
+        glow: true
+        texture: ''
+        amount: 1
+      current_instaled:
+        clicksound: ''
+        material: RAIL
+        glow: true
+        texture: ''
+        amount: 1
+      next:
+        clicksound: ''
+        material: ARROW
+        glow: true
+        texture: ''
+        amount: 1
+        slot: 51
+      prev:
+        clicksound: ''
+        material: ARROW
+        glow: true
+        texture: ''
+        amount: 1
+        slot: 47
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        glow: true
+        texture: ''
+        amount: 1
+        slot: 53
+  #Clan levelup confirm
+  admin_addons_home:
+    opensound: block.slime_block.hit
+    rows: 5
+    pagesize: 36
+    items:
+      fill:
+        # Use ; "<ITEM>;<ITEM>;<ITEM>" to add more than one item to the fill.
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        # This option can be applied to all items.
+        enabled: true
+        # This option can be applied to all items.
+        slot: 36
+        # This option can be applied to all items.
+        mimeslots:
+        - 36
+        - 37
+        - 38
+        - 39
+        - 43
+        - 41
+        - 42
+        - 43
+        - 44
+      current:
+        clicksound: ''
+        material: PAPER
+        texture: ''
+        amount: 1
+        glow: false
+      current_instaled:
+        clicksound: ''
+        material: PAPER
+        texture: ''
+        amount: 1
+        glow: false
+      more:
+        clicksound: ''
+        material: PLAYER_HEAD
+        texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDZjNDQ1YTZlOGNkOTRjZDUyYjQwOTllOTVhNTA2ODg1MWJmNTkzMDY4MTAwMzkwNDY0ODFlM2U1YTI5MzdmNiJ9fX0=
+        amount: 1
+        glow: false
+        slot: 40
+      previous:
+        clicksound: ''
+        material: ARROW
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 38
+      next:
+        clicksound: ''
+        material: ARROW
+        texture: ''
+        data: 8
+        amount: 1
+        glow: false
+        slot: 42
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        texture: ''
+        data: 0
+        amount: 1
+        glow: false
+        # This option can be applied to all items.
+        slot: 44
+      reload:
+        clicksound: ''
+        material: REDSTONE_TORCH
+        texture: ''
+        amount: 1
+        glow: true
+        slot: 41
+  admin_server:
+    rows: 4
+    opensound: block.slime_block.hit
+    items:
+      fill:
+        material: GRAY_STAINED_GLASS_PANE
+        amount: 1
+        mimeslots:
+        - ALL
+      core:
+        material: NETHER_STAR
+        amount: 1
+        slot: 10
+      runtime:
+        material: BOOK
+        amount: 1
+        slot: 12
+      data:
+        material: PAPER
+        amount: 1
+        slot: 14
+      components:
+        material: HOPPER
+        amount: 1
+        slot: 16
+      multiserver:
+        material: ENDER_CHEST
+        amount: 1
+        slot: 22
+      back:
+        material: IRON_DOOR
+        amount: 1
+        slot: 31
+  admin_storage:
+    rows: 4
+    opensound: block.slime_block.hit
+    items:
+      fill:
+        material: GRAY_STAINED_GLASS_PANE
+        amount: 1
+        mimeslots:
+        - ALL
+      overview:
+        material: CHEST
+        amount: 1
+        slot: 11
+      test:
+        material: EMERALD
+        amount: 1
+        slot: 13
+      multiserver:
+        material: ENDER_CHEST
+        amount: 1
+        slot: 15
+      channels:
+        material: PAPER
+        amount: 1
+        slot: 22
+      back:
+        material: IRON_DOOR
+        amount: 1
+        slot: 31
+  admin_diagnostics:
+    rows: 4
+    opensound: block.slime_block.hit
+    items:
+      fill:
+        material: GRAY_STAINED_GLASS_PANE
+        amount: 1
+        mimeslots:
+        - ALL
+      summary:
+        material: COMPASS
+        amount: 1
+        slot: 10
+      hooks:
+        material: HOPPER
+        amount: 1
+        slot: 12
+      storage:
+        material: CHEST
+        amount: 1
+        slot: 14
+      components:
+        material: REDSTONE
+        amount: 1
+        slot: 16
+      refresh:
+        material: EMERALD
+        amount: 1
+        slot: 22
+      back:
+        material: IRON_DOOR
+        amount: 1
+        slot: 31
+  admin_diagnostics_hooks:
+    rows: 6
+    pagesize: 45
+    opensound: block.slime_block.hit
+    items:
+      current:
+        material: PAPER
+        amount: 1
+      previous:
+        material: ARROW
+        amount: 1
+        slot: 47
+      next:
+        material: ARROW
+        amount: 1
+        slot: 51
+      back:
+        material: IRON_DOOR
+        amount: 1
+        slot: 53
+  admin_settings:
+    rows: 5
+    opensound: block.slime_block.hit
+    items:
+      fill:
+        material: GRAY_STAINED_GLASS_PANE
+        amount: 1
+        mimeslots:
+        - ALL
+      updatechecker:
+        material: BOOK
+        amount: 1
+        slot: 10
+      ff:
+        material: DIAMOND_SWORD
+        amount: 1
+        slot: 12
+      kdr:
+        material: IRON_SWORD
+        amount: 1
+        slot: 14
+      souls:
+        material: GHAST_TEAR
+        amount: 1
+        slot: 16
+      joinquit:
+        material: IRON_DOOR
+        amount: 1
+        slot: 20
+      toprealtime:
+        material: CLOCK
+        amount: 1
+        slot: 22
+      globalff:
+        material: GOLDEN_SWORD
+        amount: 1
+        slot: 24
+      chatspy:
+        material: ENDER_EYE
+        amount: 1
+        slot: 30
+      back:
+        material: IRON_DOOR
+        amount: 1
+        slot: 44
+  admin_maintenance:
+    rows: 4
+    opensound: block.slime_block.hit
+    items:
+      fill:
+        material: GRAY_STAINED_GLASS_PANE
+        amount: 1
+        mimeslots:
+        - ALL
+      configurations:
+        material: BOOK
+        amount: 1
+        slot: 10
+      addons:
+        material: CHEST
+        amount: 1
+        slot: 12
+      modules:
+        material: HOPPER
+        amount: 1
+        slot: 14
+      extensions:
+        material: RAIL
+        amount: 1
+        slot: 16
+      gui:
+        material: MAP
+        amount: 1
+        slot: 21
+      plugin:
+        material: ANVIL
+        amount: 1
+        slot: 23
+      back:
+        material: IRON_DOOR
+        amount: 1
+        slot: 31
+  admin_clan_members:
+    rows: 6
+    pagesize: 45
+    opensound: block.slime_block.hit
+    items:
+      current:
+        material: PLAYER_HEAD
+        amount: 1
+      previous:
+        material: ARROW
+        amount: 1
+        slot: 47
+      next:
+        material: ARROW
+        amount: 1
+        slot: 51
+      back:
+        material: IRON_DOOR
+        amount: 1
+        slot: 53
+  admin_clan_relations:
+    rows: 6
+    pagesize: 45
+    opensound: block.slime_block.hit
+    items:
+      current:
+        material: PAPER
+        amount: 1
+      previous:
+        material: ARROW
+        amount: 1
+        slot: 47
+      next:
+        material: ARROW
+        amount: 1
+        slot: 51
+      back:
+        material: IRON_DOOR
+        amount: 1
+        slot: 53

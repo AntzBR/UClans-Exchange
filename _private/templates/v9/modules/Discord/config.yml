@@ -1,0 +1,39 @@
+Config:
+  date_format_short: dd/MM/yyyy
+   
+  Discord:
+    message_format: '<hover:show_text:"<green>Origin: <aqua>Discord<newline><newline><white> Sender: <aqua>{player} <newline><white> Discord user ID: <aqua>{uuid}"><green>[Discord] <light_purple>> <dark_purple>{player}<light_purple>: <light_purple>{message}</hover>'
+   
+  Icon:
+    click_sound: ''
+    material: PLAYER_HEAD
+    name: <green>Discord webhook.
+    texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzYyYTFiNDczYmEzYzI1ZTZlYjE0NThkZmM5NTM5MjFmNWQ5MTQ3OGFmOWQ2ZGRhMDdjMDMyZjkyOGMifX19
+    lore:
+    - ''
+    - ' <white>Is Connected: <aqua>%uclans_is_connected_formated%'
+    - ''
+    - ' <yellow>CLICK to view.'
+    glow: false
+    slot: 15
+    page: clan_settings
+    # avaliable: TOP, BOTTOM, BORDER, ALL or numeric list
+    mimeslots: [
+      ]
+    nbt:
+      string: [
+        ]
+    model: 0
+    left_click_action:
+    - /{_clan} {_discord}
+    right_click_action:
+    - /{_clan} {_discord}
+   
+  #Permissions are for advanced connoisseurs, be careful when editing this!
+  Permissions:
+    edit:
+      name: Discord-Edit
+      default_value: true
+      applicable_roles:
+      - moderator
+      - admin

@@ -1,0 +1,1494 @@
+ 
+
+ 
+ 
+# QUEST MISSIONS
+ 
+ 
+ 
+ 
+Quest:
+  walker:
+    status: true
+    # ONCE or DAILY
+    type: DAILY
+    # Days of the week to display this quest, empty for all days.
+    week_days:
+    - Sunday
+    - Monday
+    - Tuesday
+    - Wednesday
+    - Thursday
+    - Friday
+    - Saturday
+    item:
+      click_sound: 'block.enchantment_table.use'
+      material: DIAMOND_BOOTS
+      name: '<aqua>Tired of walking?'
+      glow: true
+      amount: 1
+      texture: ''
+      lore:
+      - ''
+      - ' <green>Walk blocks'
+      - ' '
+      - ' <white>Id: <green>{QUEST}'
+      - ' <white>Type: <aqua>%clanquest_type_formated:{QUEST}%'
+      - ' <white>Name: <aqua>%clanquest_name:{QUEST}%'
+      - ' <white>Total: <aqua>%clanquest_mission_total:{QUEST}%'
+      - ' <white>Mission: <aqua>%clanquest_missions:{QUEST}%'
+      - ' <white>Whitelist: <aqua>%clanquest_whitelist:{QUEST}%'
+      - ''
+      - ' <yellow>Rewards:'
+      - ' <white>Points: <aqua>%clanquest_reward_points:{QUEST}%'
+      - ' <white>Exp: <aqua>%clanquest_reward_exp:{QUEST}%'
+      - ' <white>League points: <green>%clanquest_reward_league:{QUEST}%'
+      - ''
+      - ' <yellow>Click to start!'
+      nbt:
+        string: 'example:nbt'
+        integer: 'example:100'
+    missions:
+      EXPLORE:
+        amount: 300
+        whitelist:
+        - world:survival
+        - biome:plains
+    rewards:
+      commands: []
+      points: 300
+      exp: 50
+      league: 10
+    messages:
+      - ''
+      - '%tag% <green>Congratulations, You completed the quest!'
+  koth:
+    status: true
+    # ONCE or DAILY
+    type: DAILY
+    # Days of the week to display this quest, empty for all days.
+    week_days:
+    - Sunday
+    - Monday
+    - Tuesday
+    - Wednesday
+    - Thursday
+    - Friday
+    - Saturday
+    item:
+      click_sound: 'block.enchantment_table.use'
+      material: TOTEM_OF_UNDYING
+      name: '<aqua>King of capture?'
+      glow: true
+      amount: 1
+      texture: ''
+      lore:
+      - ''
+      - ' <green>Koth capture'
+      - ' '
+      - ' <white>Id: <green>{QUEST}'
+      - ' <white>Type: <aqua>%clanquest_type_formated:{QUEST}%'
+      - ' <white>Name: <aqua>%clanquest_name:{QUEST}%'
+      - ' <white>Total: <aqua>%clanquest_mission_total:{QUEST}%'
+      - ' <white>Mission: <aqua>%clanquest_missions:{QUEST}%'
+      - ' <white>Whitelist: <aqua>%clanquest_whitelist:{QUEST}%'
+      - ''
+      - ' <yellow>Rewards:'
+      - ' <white>Points: <aqua>%clanquest_reward_points:{QUEST}%'
+      - ' <white>Exp: <aqua>%clanquest_reward_exp:{QUEST}%'
+      - ' <white>League points: <green>%clanquest_reward_league:{QUEST}%'
+      - ''
+      - ' <yellow>Click to start!'
+      nbt:
+        string: 'example:nbt'
+        integer: 'example:100'
+    missions:
+      KOTH:
+        amount: 1
+        whitelist:
+        - KyKothName
+    rewards:
+      commands: []
+      points: 300
+      exp: 50
+      league: 10
+    messages:
+      - ''
+      - '%tag% <green>Congratulations, You completed the quest!'
+  outpost:
+    status: true
+    # ONCE or DAILY
+    type: DAILY
+    # Days of the week to display this quest, empty for all days.
+    week_days:
+    - Sunday
+    - Monday
+    - Tuesday
+    - Wednesday
+    - Thursday
+    - Friday
+    - Saturday
+    item:
+      click_sound: 'block.enchantment_table.use'
+      material: RECOVERY_COMPASS
+      name: '<aqua>King of Outpost?'
+      glow: true
+      amount: 1
+      texture: ''
+      lore:
+      - ''
+      - ' <green>Outpost capture'
+      - ' '
+      - ' <white>Id: <green>{QUEST}'
+      - ' <white>Type: <aqua>%clanquest_type_formated:{QUEST}%'
+      - ' <white>Name: <aqua>%clanquest_name:{QUEST}%'
+      - ' <white>Total: <aqua>%clanquest_mission_total:{QUEST}%'
+      - ' <white>Mission: <aqua>%clanquest_missions:{QUEST}%'
+      - ' <white>Whitelist: <aqua>%clanquest_whitelist:{QUEST}%'
+      - ''
+      - ' <yellow>Rewards:'
+      - ' <white>Points: <aqua>%clanquest_reward_points:{QUEST}%'
+      - ' <white>Exp: <aqua>%clanquest_reward_exp:{QUEST}%'
+      - ' <white>League points: <green>%clanquest_reward_league:{QUEST}%'
+      - ''
+      - ' <yellow>Click to start!'
+      nbt:
+        string: 'example:nbt'
+        integer: 'example:100'
+    missions:
+      KOTH:
+        amount: 1
+        whitelist:
+        - KyOutpostName
+    rewards:
+      commands: []
+      points: 300
+      exp: 50
+      league: 10
+    messages:
+      - ''
+      - '%tag% <green>Congratulations, You completed the quest!'
+  diamond_breaker:
+    status: true
+    # ONCE or DAILY
+    type: DAILY
+    # Days of the week to display this quest, empty for all days.
+    week_days:
+    - Sunday
+    - Monday
+    - Tuesday
+    - Wednesday
+    - Thursday
+    - Friday
+    - Saturday
+    item:
+      click_sound: 'block.enchantment_table.use'
+      material: DIAMOND_BLOCK
+      name: '<aqua>Diamond Breaker'
+      glow: true
+      amount: 1
+      texture: ''
+      lore:
+      - ''
+      - ' <green>Break Diamond blocks'
+      - ' '
+      - ' <white>Id: <green>{QUEST}'
+      - ' <white>Type: <aqua>%clanquest_type_formated:{QUEST}%'
+      - ' <white>Name: <aqua>%clanquest_name:{QUEST}%'
+      - ' <white>Total: <aqua>%clanquest_mission_total:{QUEST}%'
+      - ' <white>Mission: <aqua>%clanquest_missions:{QUEST}%'
+      - ' <white>Whitelist: <aqua>%clanquest_whitelist:{QUEST}%'
+      - ''
+      - ' <yellow>Rewards:'
+      - ' <white>Points: <aqua>%clanquest_reward_points:{QUEST}%'
+      - ' <white>Exp: <aqua>%clanquest_reward_exp:{QUEST}%'
+      - ' <white>League points: <green>%clanquest_reward_league:{QUEST}%'
+      - ''
+      - ' <yellow>Click to start!'
+      nbt:
+        string: 'example:nbt'
+        integer: 'example:100'
+    missions:
+      BREAK:
+        amount: 3
+        whitelist:
+        - DIAMOND_BLOCK
+        - DIAMOND_ORE
+    rewards:
+      commands: []
+      points: 300
+      exp: 50
+      league: 10
+    messages:
+      - ''
+      - '%tag% <green>Congratulations, You completed the quest!'
+  pickup:
+    status: true
+    # ONCE or DAILY
+    type: DAILY
+    # Days of the week to display this quest, empty for all days.
+    week_days:
+    - Sunday
+    - Monday
+    - Tuesday
+    - Wednesday
+    - Thursday
+    - Friday
+    - Saturday
+    item:
+      click_sound: 'block.enchantment_table.use'
+      material: DIAMOND
+      name: '<gold>Diamond Pickuper'
+      glow: true
+      amount: 1
+      texture: ''
+      lore:
+      - ''
+      - ' <green>Collect Diamonds.'
+      - ' '
+      - ' <white>Id: <green>{QUEST}'
+      - ' <white>Type: <aqua>%clanquest_type_formated:{QUEST}%'
+      - ' <white>Name: <aqua>%clanquest_name:{QUEST}%'
+      - ' <white>Total: <aqua>%clanquest_mission_total:{QUEST}%'
+      - ' <white>Mission: <aqua>%clanquest_missions:{QUEST}%'
+      - ' <white>Whitelist: <aqua>%clanquest_whitelist:{QUEST}%'
+      - ''
+      - ' <yellow>Rewards:'
+      - ' <white>Points: <aqua>%clanquest_reward_points:{QUEST}%'
+      - ' <white>Exp: <aqua>%clanquest_reward_exp:{QUEST}%'
+      - ' <white>League points: <green>%clanquest_reward_league:{QUEST}%'
+      - ''
+      - ' <yellow>Click to start!'
+    missions:
+      PICKUP:
+        amount: 16
+        whitelist:
+        - DIAMOND
+    rewards:
+      commands: []
+      points: 300
+      exp: 50
+      league: 10
+    messages:
+      - ''
+      - '%tag% <green>Congratulations, You completed the quest!'
+  minerator:
+    status: true
+    # ONCE or DAILY
+    type: DAILY
+    # Days of the week to display this quest, empty for all days.
+    week_days:
+    - Sunday
+    - Monday
+    - Tuesday
+    - Wednesday
+    - Thursday
+    - Friday
+    - Saturday
+    item:
+      click_sound: 'block.enchantment_table.use'
+      material: 'DIAMOND_PICKAXE'
+      name: '<aqua>Minerator'
+      glow: true
+      amount: 1
+      texture: ''
+      lore:
+      - ''
+      - ' <green>Show your mining skills.'
+      - ' '
+      - ' <white>Id: <green>{QUEST}'
+      - ' <white>Type: <aqua>%clanquest_type_formated:{QUEST}%'
+      - ' <white>Name: <aqua>%clanquest_name:{QUEST}%'
+      - ' <white>Total: <aqua>%clanquest_mission_total:{QUEST}%'
+      - ' <white>Mission: <aqua>%clanquest_missions:{QUEST}%'
+      - ' <white>Whitelist: <aqua>%clanquest_whitelist:{QUEST}%'
+      - ''
+      - ' <yellow>Rewards:'
+      - ' <white>Points: <aqua>%clanquest_reward_points:{QUEST}%'
+      - ' <white>Exp: <aqua>%clanquest_reward_exp:{QUEST}%'
+      - ' <white>League points: <green>%clanquest_reward_league:{QUEST}%'
+      - ''
+      - ' <yellow>Click to start!'
+    missions:
+      BREAK:
+        amount: 16
+    rewards:
+      commands: []
+      points: 300
+      exp: 50
+      league: 10
+    messages:
+      - ''
+      - '%tag% <green>Congratulations, You completed the quest!'
+  fisher:
+    status: true
+    # ONCE or DAILY
+    type: DAILY
+    # Days of the week to display this quest, empty for all days.
+    week_days:
+    - Sunday
+    - Monday
+    - Tuesday
+    - Wednesday
+    - Thursday
+    - Friday
+    - Saturday
+    item:
+      click_sound: 'block.enchantment_table.use'
+      material: 'FISHING_ROD'
+      name: '<gold>Fisherman'
+      glow: true
+      amount: 1
+      texture: ''
+      lore:
+      - ''
+      - ' <green>Caught Fish.'
+      - ' '
+      - ' <white>Id: <green>{QUEST}'
+      - ' <white>Type: <aqua>%clanquest_type_formated:{QUEST}%'
+      - ' <white>Name: <aqua>%clanquest_name:{QUEST}%'
+      - ' <white>Total: <aqua>%clanquest_mission_total:{QUEST}%'
+      - ' <white>Mission: <aqua>%clanquest_missions:{QUEST}%'
+      - ' <white>Whitelist: <aqua>%clanquest_whitelist:{QUEST}%'
+      - ''
+      - ' <yellow>Rewards:'
+      - ' <white>Points: <aqua>%clanquest_reward_points:{QUEST}%'
+      - ' <white>Exp: <aqua>%clanquest_reward_exp:{QUEST}%'
+      - ' <white>League points: <green>%clanquest_reward_league:{QUEST}%'
+      - ''
+      - ' <yellow>Click to start!'
+    missions:
+      FISHING:
+        amount: 16
+    rewards:
+      commands: []
+      points: 300
+      exp: 50
+      league: 10
+    messages:
+      - ''
+      - '%tag% <green>Congratulations, You completed the quest!'
+  beacon_placer:
+    status: true
+    # ONCE or DAILY
+    type: ONCE
+    item:
+      click_sound: 'block.enchantment_table.use'
+      material: 'BEACON'
+      name: '<gold>Beacon Placer'
+      glow: true
+      amount: 1
+      texture: ''
+      lore:
+      - ''
+      - ' <green>Beacon Placer'
+      - ' '
+      - ' <white>Id: <green>{QUEST}'
+      - ' <white>Type: <aqua>%clanquest_type_formated:{QUEST}%'
+      - ' <white>Name: <aqua>%clanquest_name:{QUEST}%'
+      - ' <white>Total: <aqua>%clanquest_mission_total:{QUEST}%'
+      - ' <white>Mission: <aqua>%clanquest_missions:{QUEST}%'
+      - ' <white>Whitelist: <aqua>%clanquest_whitelist:{QUEST}%'
+      - ''
+      - ' <yellow>Rewards:'
+      - ' <white>Points: <aqua>%clanquest_reward_points:{QUEST}%'
+      - ' <white>Exp: <aqua>%clanquest_reward_exp:{QUEST}%'
+      - ' <white>League points: <green>%clanquest_reward_league:{QUEST}%'
+      - ''
+      - ' <yellow>Click to start!'
+    missions:
+      PLACE:
+        amount: 2
+        whitelist:
+        - BEACON
+    rewards:
+      commands: []
+      points: 300
+      exp: 50
+      league: 10
+    messages:
+      - ''
+      - '%tag% <green>Congratulations, You completed the quest!'
+  smelt:
+    status: true
+    # ONCE or DAILY
+    type: ONCE
+    item:
+      click_sound: 'block.enchantment_table.use'
+      material: 'IRON_INGOT'
+      name: '<gold>Smelter'
+      glow: true
+      amount: 1
+      texture: ''
+      lore:
+      - ''
+      - ' <green>Smelt materials'
+      - ' '
+      - ' <white>Id: <green>{QUEST}'
+      - ' <white>Type: <aqua>%clanquest_type_formated:{QUEST}%'
+      - ' <white>Name: <aqua>%clanquest_name:{QUEST}%'
+      - ' <white>Total: <aqua>%clanquest_mission_total:{QUEST}%'
+      - ' <white>Mission: <aqua>%clanquest_missions:{QUEST}%'
+      - ' <white>Whitelist: <aqua>%clanquest_whitelist:{QUEST}%'
+      - ''
+      - ' <yellow>Rewards:'
+      - ' <white>Points: <aqua>%clanquest_reward_points:{QUEST}%'
+      - ' <white>Exp: <aqua>%clanquest_reward_exp:{QUEST}%'
+      - ' <white>League points: <green>%clanquest_reward_league:{QUEST}%'
+      - ''
+      - ' <yellow>Click to start!'
+    missions:
+      SMELT:
+        amount: 16
+        whitelist:
+        - IRON_INGOT
+    rewards:
+      commands: []
+      points: 300
+      exp: 50
+      league: 10
+    messages:
+      - ''
+      - '%tag% <green>Congratulations, You completed the quest!'
+  repairman:
+    status: true
+    # ONCE or DAILY
+    type: ONCE
+    item:
+      click_sound: 'block.enchantment_table.use'
+      material: 'ANVIL'
+      name: '<gold>Repairman'
+      glow: true
+      amount: 1
+      texture: ''
+      lore:
+      - ''
+      - ' <green>Repair items'
+      - ' '
+      - ' <white>Id: <green>{QUEST}'
+      - ' <white>Type: <aqua>%clanquest_type_formated:{QUEST}%'
+      - ' <white>Name: <aqua>%clanquest_name:{QUEST}%'
+      - ' <white>Total: <aqua>%clanquest_mission_total:{QUEST}%'
+      - ' <white>Mission: <aqua>%clanquest_missions:{QUEST}%'
+      - ' <white>Whitelist: <aqua>%clanquest_whitelist:{QUEST}%'
+      - ''
+      - ' <yellow>Rewards:'
+      - ' <white>Points: <aqua>%clanquest_reward_points:{QUEST}%'
+      - ' <white>Exp: <aqua>%clanquest_reward_exp:{QUEST}%'
+      - ' <white>League points: <green>%clanquest_reward_league:{QUEST}%'
+      - ''
+      - ' <yellow>Click to start!'
+    missions:
+      REPAIR:
+        amount: 16
+        whitelist:
+        - STONE_PICKAXE
+    rewards:
+      commands: []
+      points: 300
+      exp: 50
+      league: 10
+    messages:
+      - ''
+      - '%tag% <green>Congratulations, You completed the quest!'
+  enchanter:
+    status: true
+    # ONCE or DAILY
+    type: ONCE
+    item:
+      click_sound: 'block.enchantment_table.use'
+      material: 'ENCHANTED_BOOK'
+      name: '<gold>Enchanter'
+      glow: true
+      amount: 1
+      texture: ''
+      lore:
+      - ''
+      - ' <green>Enchant items.'
+      - ' '
+      - ' <white>Id: <green>{QUEST}'
+      - ' <white>Type: <aqua>%clanquest_type_formated:{QUEST}%'
+      - ' <white>Name: <aqua>%clanquest_name:{QUEST}%'
+      - ' <white>Total: <aqua>%clanquest_mission_total:{QUEST}%'
+      - ' <white>Mission: <aqua>%clanquest_missions:{QUEST}%'
+      - ' <white>Whitelist: <aqua>%clanquest_whitelist:{QUEST}%'
+      - ''
+      - ' <yellow>Rewards:'
+      - ' <white>Points: <aqua>%clanquest_reward_points:{QUEST}%'
+      - ' <white>Exp: <aqua>%clanquest_reward_exp:{QUEST}%'
+      - ' <white>League points: <green>%clanquest_reward_league:{QUEST}%'
+      - ''
+      - ' <yellow>Click to start!'
+    missions:
+      ENCHANTING:
+        amount: 16
+        whitelist:
+        - BOOK
+        - DIAMOND_PICKAXE
+    rewards:
+      commands: []
+      points: 300
+      exp: 50
+      league: 10
+    messages:
+      - ''
+      - '%tag% <green>Congratulations, You completed the quest!'
+  eater:
+    status: true
+    # ONCE or DAILY
+    type: ONCE
+    item:
+      click_sound: 'block.enchantment_table.use'
+      material: 'BREAD'
+      name: '<gold>Eater'
+      glow: true
+      amount: 1
+      texture: ''
+      lore:
+      - ''
+      - ' <green>Show that you eat a lot'
+      - ' '
+      - ' <white>Id: <green>{QUEST}'
+      - ' <white>Type: <aqua>%clanquest_type_formated:{QUEST}%'
+      - ' <white>Name: <aqua>%clanquest_name:{QUEST}%'
+      - ' <white>Total: <aqua>%clanquest_mission_total:{QUEST}%'
+      - ' <white>Mission: <aqua>%clanquest_missions:{QUEST}%'
+      - ' <white>Whitelist: <aqua>%clanquest_whitelist:{QUEST}%'
+      - ''
+      - ' <yellow>Rewards:'
+      - ' <white>Points: <aqua>%clanquest_reward_points:{QUEST}%'
+      - ' <white>Exp: <aqua>%clanquest_reward_exp:{QUEST}%'
+      - ' <white>League points: <green>%clanquest_reward_league:{QUEST}%'
+      - ''
+      - ' <yellow>Click to start!'
+    missions:
+      EAT:
+        amount: 16
+        whitelist:
+        - APPLE
+        - ENCHANTED_GOLDEN_APPLE
+    rewards:
+      commands: []
+      points: 300
+      exp: 50
+      league: 10
+    messages:
+      - ''
+      - '%tag% <green>Congratulations, You completed the quest!'
+  killer:
+    status: true
+    # ONCE or DAILY
+    type: ONCE
+    item:
+      click_sound: 'block.enchantment_table.use'
+      material: 'GOLDEN_SWORD'
+      name: '<gold>Killer'
+      glow: true
+      amount: 1
+      texture: ''
+      lore:
+      - ''
+      - ' <green>Kill players'
+      - ' '
+      - ' <white>Id: <green>{QUEST}'
+      - ' <white>Type: <aqua>%clanquest_type_formated:{QUEST}%'
+      - ' <white>Name: <aqua>%clanquest_name:{QUEST}%'
+      - ' <white>Total: <aqua>%clanquest_mission_total:{QUEST}%'
+      - ' <white>Mission: <aqua>%clanquest_missions:{QUEST}%'
+      - ' <white>Whitelist: <aqua>%clanquest_whitelist:{QUEST}%'
+      - ''
+      - ' <yellow>Rewards:'
+      - ' <white>Points: <aqua>%clanquest_reward_points:{QUEST}%'
+      - ' <white>Exp: <aqua>%clanquest_reward_exp:{QUEST}%'
+      - ' <white>League points: <green>%clanquest_reward_league:{QUEST}%'
+      - ''
+      - ' <yellow>Click to start!'
+    missions:
+      KILL:
+        amount: 16
+    rewards:
+      commands: []
+      points: 300
+      exp: 50
+      league: 10
+    messages:
+      - ''
+      - '%tag% <green>Congratulations, You completed the quest!'
+  hunter:
+    status: true
+    # ONCE or DAILY
+    type: ONCE
+    item:
+      click_sound: 'block.enchantment_table.use'
+      material: 'STONE_SWORD'
+      name: '<gold>Hunter'
+      glow: true
+      amount: 1
+      texture: ''
+      lore:
+      - ''
+      - ' <green>Kill mobs and animals.'
+      - ' '
+      - ' <white>Id: <green>{QUEST}'
+      - ' <white>Type: <aqua>%clanquest_type_formated:{QUEST}%'
+      - ' <white>Name: <aqua>%clanquest_name:{QUEST}%'
+      - ' <white>Total: <aqua>%clanquest_mission_total:{QUEST}%'
+      - ' <white>Mission: <aqua>%clanquest_missions:{QUEST}%'
+      - ' <white>Whitelist: <aqua>%clanquest_whitelist:{QUEST}%'
+      - ''
+      - ' <yellow>Rewards:'
+      - ' <white>Points: <aqua>%clanquest_reward_points:{QUEST}%'
+      - ' <white>Exp: <aqua>%clanquest_reward_exp:{QUEST}%'
+      - ' <white>League points: <green>%clanquest_reward_league:{QUEST}%'
+      - ''
+      - ' <yellow>Click to start!'
+    missions:
+      KILL_ENTITY:
+        amount: 16
+        whitelist:
+        - COW
+        - ENDERMAN
+    rewards:
+      commands: []
+      points: 300
+      exp: 50
+      league: 10
+    messages:
+      - ''
+      - '%tag% <green>Congratulations, You completed the quest!'
+  levelled:
+    status: true
+    # ONCE or DAILY
+    type: ONCE
+    item:
+      click_sound: 'block.enchantment_table.use'
+      material: 'STONE_SWORD'
+      name: '<gold>Levelled Hunter'
+      glow: true
+      amount: 1
+      texture: ''
+      lore:
+      - ''
+      - ' <green>Kill Levelled mobs and animals.'
+      - ' '
+      - ' <white>Id: <green>{QUEST}'
+      - ' <white>Type: <aqua>%clanquest_type_formated:{QUEST}%'
+      - ' <white>Name: <aqua>%clanquest_name:{QUEST}%'
+      - ' <white>Total: <aqua>%clanquest_mission_total:{QUEST}%'
+      - ' <white>Mission: <aqua>%clanquest_missions:{QUEST}%'
+      - ' <white>Whitelist: <aqua>%clanquest_whitelist:{QUEST}%'
+      - ''
+      - ' <yellow>Rewards:'
+      - ' <white>Points: <aqua>%clanquest_reward_points:{QUEST}%'
+      - ' <white>Exp: <aqua>%clanquest_reward_exp:{QUEST}%'
+      - ' <white>League points: <green>%clanquest_reward_league:{QUEST}%'
+      - ''
+      - ' <yellow>Click to start!'
+    missions:
+      LEVELLED:
+        amount: 16
+        whitelist:
+        - COW
+        - ENDERMAN
+    rewards:
+      commands: []
+      points: 300
+      exp: 50
+      league: 10
+    messages:
+      - ''
+      - '%tag% <green>Congratulations, You completed the quest!'
+  groomer:
+    status: true
+    # ONCE or DAILY
+    type: ONCE
+    item:
+      click_sound: 'block.enchantment_table.use'
+      material: 'STONE_SWORD'
+      name: '<gold>Groomer'
+      glow: true
+      amount: 1
+      texture: ''
+      lore:
+      - ''
+      - ' <green>Its shearing time'
+      - ' '
+      - ' <white>Id: <green>{QUEST}'
+      - ' <white>Type: <aqua>%clanquest_type_formated:{QUEST}%'
+      - ' <white>Name: <aqua>%clanquest_name:{QUEST}%'
+      - ' <white>Total: <aqua>%clanquest_mission_total:{QUEST}%'
+      - ' <white>Mission: <aqua>%clanquest_missions:{QUEST}%'
+      - ' <white>Whitelist: <aqua>%clanquest_whitelist:{QUEST}%'
+      - ''
+      - ' <yellow>Rewards:'
+      - ' <white>Points: <aqua>%clanquest_reward_points:{QUEST}%'
+      - ' <white>Exp: <aqua>%clanquest_reward_exp:{QUEST}%'
+      - ' <white>League points: <green>%clanquest_reward_league:{QUEST}%'
+      - ''
+      - ' <yellow>Click to start!'
+    missions:
+      SHEAR:
+        amount: 16
+    rewards:
+      commands: []
+      points: 300
+      exp: 50
+      league: 10
+    messages:
+      - ''
+      - '%tag% <green>Congratulations, You completed the quest!'
+  crafter:
+    status: true
+    # ONCE or DAILY
+    type: ONCE
+    item:
+      click_sound: 'block.enchantment_table.use'
+      material: 'CRAFTING_TABLE'
+      name: '<gold>Crafter'
+      glow: true
+      amount: 1
+      texture: ''
+      lore:
+      - ''
+      - ' <green>Create new items'
+      - ' '
+      - ' <white>Id: <green>{QUEST}'
+      - ' <white>Type: <aqua>%clanquest_type_formated:{QUEST}%'
+      - ' <white>Name: <aqua>%clanquest_name:{QUEST}%'
+      - ' <white>Total: <aqua>%clanquest_mission_total:{QUEST}%'
+      - ' <white>Mission: <aqua>%clanquest_missions:{QUEST}%'
+      - ' <white>Whitelist: <aqua>%clanquest_whitelist:{QUEST}%'
+      - ''
+      - ' <yellow>Rewards:'
+      - ' <white>Points: <aqua>%clanquest_reward_points:{QUEST}%'
+      - ' <white>Exp: <aqua>%clanquest_reward_exp:{QUEST}%'
+      - ' <white>League points: <green>%clanquest_reward_league:{QUEST}%'
+      - ''
+      - ' <yellow>Click to start!'
+    missions:
+      CRAFTING:
+        amount: 16
+        whitelist:
+        - STICK
+    rewards:
+      commands: []
+      points: 300
+      exp: 50
+      league: 10
+    messages:
+      - ''
+      - '%tag% <green>Congratulations, You completed the quest!'
+  tamer:
+    status: true
+    # ONCE or DAILY
+    type: ONCE
+    item:
+      click_sound: 'block.enchantment_table.use'
+      material: 'LEAD'
+      name: '<gold>Tamer'
+      glow: true
+      amount: 1
+      texture: ''
+      lore:
+      - ''
+      - ' <green>Show that you are a tamer'
+      - ' '
+      - ' <white>Id: <green>{QUEST}'
+      - ' <white>Type: <aqua>%clanquest_type_formated:{QUEST}%'
+      - ' <white>Name: <aqua>%clanquest_name:{QUEST}%'
+      - ' <white>Total: <aqua>%clanquest_mission_total:{QUEST}%'
+      - ' <white>Mission: <aqua>%clanquest_missions:{QUEST}%'
+      - ' <white>Whitelist: <aqua>%clanquest_whitelist:{QUEST}%'
+      - ''
+      - ' <yellow>Rewards:'
+      - ' <white>Points: <aqua>%clanquest_reward_points:{QUEST}%'
+      - ' <white>Exp: <aqua>%clanquest_reward_exp:{QUEST}%'
+      - ' <white>League points: <green>%clanquest_reward_league:{QUEST}%'
+      - ''
+      - ' <yellow>Click to start!'
+    missions:
+      TAME:
+        amount: 8
+        whitelist:
+        - HORSE
+        - WOLF
+    rewards:
+      commands: []
+      points: 300
+      exp: 50
+      league: 10
+    messages:
+      - ''
+      - '%tag% <green>Congratulations, You completed the quest!'
+  pig_breeder:
+    status: true
+    # ONCE or DAILY
+    type: ONCE
+    item:
+      click_sound: 'block.enchantment_table.use'
+      material: 'CARROT'
+      name: '<gold>Pig Breeder'
+      glow: true
+      amount: 1
+      texture: ''
+      lore:
+      - ''
+      - ' <green>Are you a pig farmer?'
+      - ' '
+      - ' <white>Id: <green>{QUEST}'
+      - ' <white>Type: <aqua>%clanquest_type_formated:{QUEST}%'
+      - ' <white>Name: <aqua>%clanquest_name:{QUEST}%'
+      - ' <white>Total: <aqua>%clanquest_mission_total:{QUEST}%'
+      - ' <white>Mission: <aqua>%clanquest_missions:{QUEST}%'
+      - ' <white>Whitelist: <aqua>%clanquest_whitelist:{QUEST}%'
+      - ''
+      - ' <yellow>Rewards:'
+      - ' <white>Points: <aqua>%clanquest_reward_points:{QUEST}%'
+      - ' <white>Exp: <aqua>%clanquest_reward_exp:{QUEST}%'
+      - ' <white>League points: <green>%clanquest_reward_league:{QUEST}%'
+      - ''
+      - ' <yellow>Click to start!'
+    missions:
+      BREED:
+        amount: 16
+        whitelist:
+        - PIG
+    rewards:
+      commands: []
+      points: 300
+      exp: 50
+      league: 10
+    messages:
+      - ''
+      - '%tag% <green>Congratulations, You completed the quest!'
+  trader:
+    status: true
+    # ONCE or DAILY
+    type: ONCE
+    item:
+      click_sound: 'block.enchantment_table.use'
+      material: 'PUMPKIN_PIE'
+      name: '<gold>Trader'
+      glow: true
+      amount: 1
+      texture: ''
+      lore:
+      - ''
+      - ' <green>Make villagers happy'
+      - ' '
+      - ' <white>Id: <green>{QUEST}'
+      - ' <white>Type: <aqua>%clanquest_type_formated:{QUEST}%'
+      - ' <white>Name: <aqua>%clanquest_name:{QUEST}%'
+      - ' <white>Total: <aqua>%clanquest_mission_total:{QUEST}%'
+      - ' <white>Mission: <aqua>%clanquest_missions:{QUEST}%'
+      - ' <white>Whitelist: <aqua>%clanquest_whitelist:{QUEST}%'
+      - ''
+      - ' <yellow>Rewards:'
+      - ' <white>Points: <aqua>%clanquest_reward_points:{QUEST}%'
+      - ' <white>Exp: <aqua>%clanquest_reward_exp:{QUEST}%'
+      - ' <white>League points: <green>%clanquest_reward_league:{QUEST}%'
+      - ''
+      - ' <yellow>Click to start!'
+    missions:
+      VTRADE2:
+        amount: 16
+        whitelist:
+        - PUMPKIN_PIE
+    rewards:
+      commands: []
+      points: 300
+      exp: 50
+      league: 10
+    messages:
+      - ''
+      - '%tag% <green>Congratulations, You completed the quest!'
+  peeler:
+    status: true
+    # ONCE or DAILY
+    type: ONCE
+    item:
+      click_sound: 'block.enchantment_table.use'
+      material: 'STONE_AXE'
+      name: '<gold>Peeler'
+      glow: true
+      amount: 1
+      texture: ''
+      lore:
+      - ''
+      - ' <green>Professional peeler'
+      - ' '
+      - ' <white>Id: <green>{QUEST}'
+      - ' <white>Type: <aqua>%clanquest_type_formated:{QUEST}%'
+      - ' <white>Name: <aqua>%clanquest_name:{QUEST}%'
+      - ' <white>Total: <aqua>%clanquest_mission_total:{QUEST}%'
+      - ' <white>Mission: <aqua>%clanquest_missions:{QUEST}%'
+      - ' <white>Whitelist: <aqua>%clanquest_whitelist:{QUEST}%'
+      - ''
+      - ' <yellow>Rewards:'
+      - ' <white>Points: <aqua>%clanquest_reward_points:{QUEST}%'
+      - ' <white>Exp: <aqua>%clanquest_reward_exp:{QUEST}%'
+      - ' <white>League points: <green>%clanquest_reward_league:{QUEST}%'
+      - ''
+      - ' <yellow>Click to start!'
+    missions:
+      STRIPLOGS:
+        amount: 16
+        whitelist:
+        - OAK_LOG
+    rewards:
+      commands: []
+      points: 300
+      exp: 50
+      league: 10
+    messages:
+      - ''
+      - '%tag% <green>Congratulations, You completed the quest!'
+  milkman:
+    status: true
+    # ONCE or DAILY
+    type: ONCE
+    item:
+      click_sound: 'block.enchantment_table.use'
+      material: 'MILK_BUCKET'
+      name: '<gold>Milkman'
+      glow: true
+      amount: 1
+      texture: ''
+      lore:
+      - ''
+      - ' <green>Its milking time'
+      - ' '
+      - ' <white>Id: <green>{QUEST}'
+      - ' <white>Type: <aqua>%clanquest_type_formated:{QUEST}%'
+      - ' <white>Name: <aqua>%clanquest_name:{QUEST}%'
+      - ' <white>Total: <aqua>%clanquest_mission_total:{QUEST}%'
+      - ' <white>Mission: <aqua>%clanquest_missions:{QUEST}%'
+      - ' <white>Whitelist: <aqua>%clanquest_whitelist:{QUEST}%'
+      - ''
+      - ' <yellow>Rewards:'
+      - ' <white>Points: <aqua>%clanquest_reward_points:{QUEST}%'
+      - ' <white>Exp: <aqua>%clanquest_reward_exp:{QUEST}%'
+      - ' <white>League points: <green>%clanquest_reward_league:{QUEST}%'
+      - ''
+      - ' <yellow>Click to start!'
+    missions:
+      COLLECT:
+        amount: 16
+        whitelist:
+        - 'MILK_BUCKET'
+    rewards:
+      commands: []
+      points: 300
+      exp: 50
+      league: 10
+    messages:
+      - ''
+      - '%tag% <green>Congratulations, You completed the quest!'
+  collector:
+    status: true
+    # ONCE or DAILY
+    type: ONCE
+    item:
+      click_sound: 'block.enchantment_table.use'
+      material: 'BONE_MEAL'
+      name: '<gold>Collector'
+      glow: true
+      amount: 1
+      texture: ''
+      lore:
+      - ''
+      - ' <green>Recycling time'
+      - ' '
+      - ' <white>Id: <green>{QUEST}'
+      - ' <white>Type: <aqua>%clanquest_type_formated:{QUEST}%'
+      - ' <white>Name: <aqua>%clanquest_name:{QUEST}%'
+      - ' <white>Total: <aqua>%clanquest_mission_total:{QUEST}%'
+      - ' <white>Mission: <aqua>%clanquest_missions:{QUEST}%'
+      - ' <white>Whitelist: <aqua>%clanquest_whitelist:{QUEST}%'
+      - ''
+      - ' <yellow>Rewards:'
+      - ' <white>Points: <aqua>%clanquest_reward_points:{QUEST}%'
+      - ' <white>Exp: <aqua>%clanquest_reward_exp:{QUEST}%'
+      - ' <white>League points: <green>%clanquest_reward_league:{QUEST}%'
+      - ''
+      - ' <yellow>Click to start!'
+    missions:
+      COLLECT:
+        amount: 16
+        whitelist:
+        - COMPOSTER
+        - GLASS_BOTTLE
+        - TALL_GRASS
+        - SHEARS
+        - HONEYCOMB
+        - SWEET_BERRY_BUSH
+        - MILK_BUCKET
+        - WATER_BUCKET
+        - LAVA_BUCKET
+    rewards:
+      commands: []
+      points: 300
+      exp: 50
+      league: 10
+    messages:
+      - ''
+      - '%tag% <green>Congratulations, You completed the quest!'
+  bake:
+    status: true
+    # ONCE or DAILY
+    type: ONCE
+    item:
+      click_sound: 'block.enchantment_table.use'
+      material: 'BONE_MEAL'
+      name: '<gold>Bake'
+      glow: true
+      amount: 1
+      texture: ''
+      lore:
+      - ''
+      - ' <green>Professional barbecue'
+      - ' '
+      - ' <white>Id: <green>{QUEST}'
+      - ' <white>Type: <aqua>%clanquest_type_formated:{QUEST}%'
+      - ' <white>Name: <aqua>%clanquest_name:{QUEST}%'
+      - ' <white>Total: <aqua>%clanquest_mission_total:{QUEST}%'
+      - ' <white>Mission: <aqua>%clanquest_missions:{QUEST}%'
+      - ' <white>Whitelist: <aqua>%clanquest_whitelist:{QUEST}%'
+      - ''
+      - ' <yellow>Rewards:'
+      - ' <white>Points: <aqua>%clanquest_reward_points:{QUEST}%'
+      - ' <white>Exp: <aqua>%clanquest_reward_exp:{QUEST}%'
+      - ' <white>League points: <green>%clanquest_reward_league:{QUEST}%'
+      - ''
+      - ' <yellow>Click to start!'
+    missions:
+      BAKE:
+        amount: 16
+        whitelist:
+        - COOKED_BEEF
+        - IRON_NUGGET
+    rewards:
+      commands: []
+      points: 300
+      exp: 50
+      league: 10
+    messages:
+      - ''
+      - '%tag% <green>Congratulations, You completed the quest!'
+  tnt:
+    status: true
+    # ONCE or DAILY
+    type: ONCE
+    item:
+      click_sound: 'block.enchantment_table.use'
+      material: 'TNT'
+      name: '<gold>Explode'
+      glow: true
+      amount: 1
+      texture: ''
+      lore:
+      - ''
+      - ' <green>Time to detonate'
+      - ' '
+      - ' <white>Id: <green>{QUEST}'
+      - ' <white>Type: <aqua>%clanquest_type_formated:{QUEST}%'
+      - ' <white>Name: <aqua>%clanquest_name:{QUEST}%'
+      - ' <white>Total: <aqua>%clanquest_mission_total:{QUEST}%'
+      - ' <white>Mission: <aqua>%clanquest_missions:{QUEST}%'
+      - ' <white>Whitelist: <aqua>%clanquest_whitelist:{QUEST}%'
+      - ''
+      - ' <yellow>Rewards:'
+      - ' <white>Points: <aqua>%clanquest_reward_points:{QUEST}%'
+      - ' <white>Exp: <aqua>%clanquest_reward_exp:{QUEST}%'
+      - ' <white>League points: <green>%clanquest_reward_league:{QUEST}%'
+      - ''
+      - ' <yellow>Click to start!'
+    missions:
+      EXPLODE:
+        amount: 16
+        whitelist:
+        - TNT
+        - CREEPER
+        - END_CRYSTAL
+    rewards:
+      commands: []
+      points: 300
+      exp: 50
+      league: 10
+    messages:
+      - ''
+      - '%tag% <green>Congratulations, You completed the quest!'
+  exp:
+    status: true
+    # ONCE or DAILY
+    type: ONCE
+    item:
+      click_sound: 'block.enchantment_table.use'
+      material: 'EXPERIENCE_BOTTLE'
+      name: '<gold>Gaining level.'
+      glow: true
+      amount: 1
+      texture: ''
+      lore:
+      - ''
+      - ' <green>Time to level up.'
+      - ' '
+      - ' <white>Id: <green>{QUEST}'
+      - ' <white>Type: <aqua>%clanquest_type_formated:{QUEST}%'
+      - ' <white>Name: <aqua>%clanquest_name:{QUEST}%'
+      - ' <white>Total: <aqua>%clanquest_mission_total:{QUEST}%'
+      - ' <white>Mission: <aqua>%clanquest_missions:{QUEST}%'
+      - ' <white>Whitelist: <aqua>%clanquest_whitelist:{QUEST}%'
+      - ''
+      - ' <yellow>Rewards:'
+      - ' <white>Points: <aqua>%clanquest_reward_points:{QUEST}%'
+      - ' <white>Exp: <aqua>%clanquest_reward_exp:{QUEST}%'
+      - ' <white>League points: <green>%clanquest_reward_league:{QUEST}%'
+      - ''
+      - ' <yellow>Click to start!'
+    missions:
+      EXP:
+        amount: 5
+    rewards:
+      commands: []
+      points: 300
+      exp: 50
+      league: 10
+    messages:
+      - ''
+      - '%tag% <green>Congratulations, You completed the quest!'
+  mythic:
+    status: true
+    # ONCE or DAILY
+    type: ONCE
+    item:
+      click_sound: 'block.enchantment_table.use'
+      material: 'DIAMOND_AXE'
+      name: '<gold>Mythic kill.'
+      glow: true
+      amount: 1
+      texture: ''
+      lore:
+      - ''
+      - ' <green>kill time.'
+      - ' '
+      - ' <white>Id: <green>{QUEST}'
+      - ' <white>Type: <aqua>%clanquest_type_formated:{QUEST}%'
+      - ' <white>Name: <aqua>%clanquest_name:{QUEST}%'
+      - ' <white>Total: <aqua>%clanquest_mission_total:{QUEST}%'
+      - ' <white>Mission: <aqua>%clanquest_missions:{QUEST}%'
+      - ' <white>Whitelist: <aqua>%clanquest_whitelist:{QUEST}%'
+      - ''
+      - ' <yellow>Rewards:'
+      - ' <white>Points: <aqua>%clanquest_reward_points:{QUEST}%'
+      - ' <white>Exp: <aqua>%clanquest_reward_exp:{QUEST}%'
+      - ' <white>League points: <green>%clanquest_reward_league:{QUEST}%'
+      - ''
+      - ' <yellow>Click to start!'
+    missions:
+      MYTHIC:
+        amount: 5
+        whitelist:
+        - SkeletalKnight
+    rewards:
+      commands: []
+      points: 300
+      exp: 50
+      league: 10
+    messages:
+      - ''
+      - '%tag% <green>Congratulations, You completed the quest!'
+  ecobosses:
+    status: true
+    # ONCE or DAILY
+    type: ONCE
+    item:
+      click_sound: 'block.enchantment_table.use'
+      material: 'DIAMOND_AXE'
+      name: '<gold>Eco kill.'
+      glow: true
+      amount: 1
+      texture: ''
+      lore:
+      - ''
+      - ' <green>kill time.'
+      - ' '
+      - ' <white>Id: <green>{QUEST}'
+      - ' <white>Type: <aqua>%clanquest_type_formated:{QUEST}%'
+      - ' <white>Name: <aqua>%clanquest_name:{QUEST}%'
+      - ' <white>Total: <aqua>%clanquest_mission_total:{QUEST}%'
+      - ' <white>Mission: <aqua>%clanquest_missions:{QUEST}%'
+      - ' <white>Whitelist: <aqua>%clanquest_whitelist:{QUEST}%'
+      - ''
+      - ' <yellow>Rewards:'
+      - ' <white>Points: <aqua>%clanquest_reward_points:{QUEST}%'
+      - ' <white>Exp: <aqua>%clanquest_reward_exp:{QUEST}%'
+      - ' <white>League points: <green>%clanquest_reward_league:{QUEST}%'
+      - ''
+      - ' <yellow>Click to start!'
+    missions:
+      ECOBOSSES:
+        amount: 1
+        whitelist:
+        - example
+    rewards:
+      commands: []
+      points: 300
+      exp: 50
+      league: 10
+    messages:
+      - ''
+      - '%tag% <green>Congratulations, You completed the quest!'
+  teleport:
+    status: true
+    # ONCE or DAILY
+    type: ONCE
+    item:
+      click_sound: 'block.enchantment_table.use'
+      material: 'ENDER_PEARL'
+      name: '<gold>Fast teleport.'
+      glow: true
+      amount: 1
+      texture: ''
+      lore:
+      - ''
+      - ' <green>Following the enderman.'
+      - ' '
+      - ' <white>Id: <green>{QUEST}'
+      - ' <white>Type: <aqua>%clanquest_type_formated:{QUEST}%'
+      - ' <white>Name: <aqua>%clanquest_name:{QUEST}%'
+      - ' <white>Total: <aqua>%clanquest_mission_total:{QUEST}%'
+      - ' <white>Mission: <aqua>%clanquest_missions:{QUEST}%'
+      - ' <white>Whitelist: <aqua>%clanquest_whitelist:{QUEST}%'
+      - ''
+      - ' <yellow>Rewards:'
+      - ' <white>Points: <aqua>%clanquest_reward_points:{QUEST}%'
+      - ' <white>Exp: <aqua>%clanquest_reward_exp:{QUEST}%'
+      - ' <white>League points: <green>%clanquest_reward_league:{QUEST}%'
+      - ''
+      - ' <yellow>Click to start!'
+    missions:
+      TELEPORT:
+        amount: 5
+        whitelist:
+        - ENDER_PEARL
+        - NETHER_PORTAL
+        - END_PORTAL
+        - END_GATEWAY
+        - CHORUS_FRUIT
+    rewards:
+      commands: []
+      points: 300
+      exp: 50
+      league: 10
+    messages:
+      - ''
+      - '%tag% <green>Congratulations, You completed the quest!'
+  thrown:
+    status: true
+    # ONCE or DAILY
+    type: ONCE
+    item:
+      click_sound: 'block.enchantment_table.use'
+      material: 'EGG'
+      name: '<gold>Playing eggs.'
+      glow: true
+      amount: 1
+      texture: ''
+      lore:
+      - ''
+      - ' <green>Playing in the eggs.'
+      - ' '
+      - ' <white>Id: <green>{QUEST}'
+      - ' <white>Type: <aqua>%clanquest_type_formated:{QUEST}%'
+      - ' <white>Name: <aqua>%clanquest_name:{QUEST}%'
+      - ' <white>Total: <aqua>%clanquest_mission_total:{QUEST}%'
+      - ' <white>Mission: <aqua>%clanquest_missions:{QUEST}%'
+      - ' <white>Whitelist: <aqua>%clanquest_whitelist:{QUEST}%'
+      - ''
+      - ' <yellow>Rewards:'
+      - ' <white>Points: <aqua>%clanquest_reward_points:{QUEST}%'
+      - ' <white>Exp: <aqua>%clanquest_reward_exp:{QUEST}%'
+      - ' <white>League points: <green>%clanquest_reward_league:{QUEST}%'
+      - ''
+      - ' <yellow>Click to start!'
+    missions:
+      THROWN:
+        amount: 5
+        whitelist:
+        - EGG
+    rewards:
+      commands: []
+      points: 300
+      exp: 50
+      league: 10
+    messages:
+      - ''
+      - '%tag% <green>Congratulations, You completed the quest!'
+  thrown2:
+    status: true
+    # ONCE or DAILY
+    type: ONCE
+    item:
+      click_sound: 'block.enchantment_table.use'
+      material: 'SNOWBALL'
+      name: '<gold>Playing snow.'
+      glow: true
+      amount: 1
+      texture: ''
+      lore:
+      - ''
+      - ' <green>Playing in the snow.'
+      - ' '
+      - ' <white>Id: <green>{QUEST}'
+      - ' <white>Type: <aqua>%clanquest_type_formated:{QUEST}%'
+      - ' <white>Name: <aqua>%clanquest_name:{QUEST}%'
+      - ' <white>Total: <aqua>%clanquest_mission_total:{QUEST}%'
+      - ' <white>Mission: <aqua>%clanquest_missions:{QUEST}%'
+      - ' <white>Whitelist: <aqua>%clanquest_whitelist:{QUEST}%'
+      - ''
+      - ' <yellow>Rewards:'
+      - ' <white>Points: <aqua>%clanquest_reward_points:{QUEST}%'
+      - ' <white>Exp: <aqua>%clanquest_reward_exp:{QUEST}%'
+      - ' <white>League points: <green>%clanquest_reward_league:{QUEST}%'
+      - ''
+      - ' <yellow>Click to start!'
+    missions:
+      THROWN:
+        amount: 5
+        whitelist:
+        - SNOWBALL
+    rewards:
+      commands: []
+      points: 300
+      exp: 50
+      league: 10
+    messages:
+      - ''
+      - '%tag% <green>Congratulations, You completed the quest!'
+  thrown3:
+    status: true
+    # ONCE or DAILY
+    type: ONCE
+    item:
+      click_sound: 'block.enchantment_table.use'
+      material: 'FIREWORK_ROCKET'
+      name: '<gold>Fireworks.'
+      glow: true
+      amount: 1
+      texture: ''
+      lore:
+      - ''
+      - ' <green>Lets party.'
+      - ' '
+      - ' <white>Id: <green>{QUEST}'
+      - ' <white>Type: <aqua>%clanquest_type_formated:{QUEST}%'
+      - ' <white>Name: <aqua>%clanquest_name:{QUEST}%'
+      - ' <white>Total: <aqua>%clanquest_mission_total:{QUEST}%'
+      - ' <white>Mission: <aqua>%clanquest_missions:{QUEST}%'
+      - ' <white>Whitelist: <aqua>%clanquest_whitelist:{QUEST}%'
+      - ''
+      - ' <yellow>Rewards:'
+      - ' <white>Points: <aqua>%clanquest_reward_points:{QUEST}%'
+      - ' <white>Exp: <aqua>%clanquest_reward_exp:{QUEST}%'
+      - ' <white>League points: <green>%clanquest_reward_league:{QUEST}%'
+      - ''
+      - ' <yellow>Click to start!'
+    missions:
+      THROWN:
+        amount: 5
+        whitelist:
+        - FIREWORK
+    rewards:
+      commands: []
+      points: 300
+      exp: 50
+      league: 10
+    messages:
+      - ''
+      - '%tag% <green>Congratulations, You completed the quest!'
+  elytra:
+    status: true
+    # ONCE or DAILY
+    type: ONCE
+    item:
+      click_sound: 'block.enchantment_table.use'
+      material: 'ELYTRA'
+      name: '<gold>Flying.'
+      glow: true
+      amount: 1
+      texture: ''
+      lore:
+      - ''
+      - ' <green>To infinity and beyond.'
+      - ' '
+      - ' <white>Id: <green>{QUEST}'
+      - ' <white>Type: <aqua>%clanquest_type_formated:{QUEST}%'
+      - ' <white>Name: <aqua>%clanquest_name:{QUEST}%'
+      - ' <white>Total: <aqua>%clanquest_mission_total:{QUEST}%'
+      - ' <white>Mission: <aqua>%clanquest_missions:{QUEST}%'
+      - ' <white>Whitelist: <aqua>%clanquest_whitelist:{QUEST}%'
+      - ''
+      - ' <yellow>Rewards:'
+      - ' <white>Points: <aqua>%clanquest_reward_points:{QUEST}%'
+      - ' <white>Exp: <aqua>%clanquest_reward_exp:{QUEST}%'
+      - ' <white>League points: <green>%clanquest_reward_league:{QUEST}%'
+      - ''
+      - ' <yellow>Click to start!'
+    missions:
+      ELYTRA:
+        amount: 200
+    rewards:
+      commands: []
+      points: 300
+      exp: 50
+      league: 10
+    messages:
+      - ''
+      - '%tag% <green>Congratulations, You completed the quest!'
+  dye:
+    status: true
+    # ONCE or DAILY
+    type: ONCE
+    item:
+      click_sound: 'block.enchantment_table.use'
+      material: 'YELLOW_DYE'
+      name: '<gold>Painting the clothes'
+      glow: true
+      amount: 1
+      texture: ''
+      lore:
+      - ''
+      - ' <green>Clown?'
+      - ' '
+      - ' <white>Id: <green>{QUEST}'
+      - ' <white>Type: <aqua>%clanquest_type_formated:{QUEST}%'
+      - ' <white>Name: <aqua>%clanquest_name:{QUEST}%'
+      - ' <white>Total: <aqua>%clanquest_mission_total:{QUEST}%'
+      - ' <white>Mission: <aqua>%clanquest_missions:{QUEST}%'
+      - ' <white>Whitelist: <aqua>%clanquest_whitelist:{QUEST}%'
+      - ''
+      - ' <yellow>Rewards:'
+      - ' <white>Points: <aqua>%clanquest_reward_points:{QUEST}%'
+      - ' <white>Exp: <aqua>%clanquest_reward_exp:{QUEST}%'
+      - ' <white>League points: <green>%clanquest_reward_league:{QUEST}%'
+      - ''
+      - ' <yellow>Click to start!'
+    missions:
+      DYE:
+        amount: 5
+        whitelist:
+        - LEATHER_CHESTPLATE
+        - FIREWORK_STAR
+        - WHITE_STAINED_GLASS_PANE
+        - WHITE_WOOL
+        - WHITE_BED
+        - WHITE_BANNER
+    rewards:
+      commands: []
+      points: 300
+      exp: 50
+      league: 10
+    messages:
+      - ''
+      - '%tag% <green>Congratulations, You completed the quest!'

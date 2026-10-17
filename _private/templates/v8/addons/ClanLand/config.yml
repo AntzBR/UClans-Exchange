@@ -1,0 +1,250 @@
+Config:
+  version: '1'
+  # available: [EN, ES, PL, TR]
+  language: EN
+   
+  Land:
+    enabled: true
+    forge_open-gui: true
+    disabled_land_worlds:
+    - disabled_worlds
+    # WorldGuard Regions
+    disabled_land_regions:
+    - no_land_region
+    # IN SECONDS
+    teleport_delay: 3
+    date_format_short: dd/MM/yyyy
+    edit_bypass: uclans.bypass.lands.edit_bypass
+    wilderness: <red>Wilderness!
+    block_interaction_not_enabled: true
+     
+    claim:
+      # mode:
+      # avaliable: CHUNK (Claim chunk with one click), SELECT (Launch the Claim editor) and CUBOID (Claims the maximum space around the click)
+      mode: SELECT
+      # selection_sky: 
+      # TRUE:
+      #  - With this mode on enables claim from sky to bedrock
+      #  - Block calculation is based on (width * width) for the claim rate
+      # FALSE
+      #  - If turned off, claim creates a cube only at selected points and above or below are not protected
+      #  - The calculation of blocks is based on the cube (height * width * depth) = volume.
+      selection_sky: false
+      edit_only_lands: false
+      alert_outside_land: false
+      default_name: <gold>%uclans_tag_color%<gold>' Land.
+      min_chars_name: 6
+      max_chars_name: 64
+      # In seconds.
+      time: 60
+      # In seconds.
+      claimed: 10
+      # In seconds.
+      cancel: 5
+      # In seconds.
+      view: 5
+      mark: GLOWSTONE
+      box: GLASS
+      # volume 6 = min*(min*min) = 216 blocks
+      min: 6
+      # volume 20 = max*(max*max) = 8.000 blocks
+      max: 20
+      # volume 20 = upgrade*(upgrade*upgrade) = 262.144 blocks
+      # This is also the distance between the lands
+      upgrade: 64
+      # Claim Limits
+      limits:
+        #Use unique terrain?
+        unique: true
+         
+        # format: CLAN_LANDS/REQUIRED_LEVEL
+        #You can add multiple lands for various clan levels.
+        #example:
+        #    list:
+        #      '1': 1 #The clan can have 1 land if it is level 1
+        #      '5': 10 #The clan can have 5 lands if it is level 10
+        #      '10': 30 #The clan can have 10 lands if it is level 30
+        #
+        #Use '1': 0 to not need levels for 1 land
+        list:
+          '1': 0
+      # Use economy as claim and upgrade
+      economy:
+        enabled: true
+        # BANK or CLANBASE (default: BANK)
+        use: CLANBASE
+        # multiplier * volume (default ex 8.000 blocks * 50.0 = $400.000)
+        multiplier_volume: 50.0
+      hologram:
+        enabled: true
+        click_enabled: true
+        banner_icon: true
+        ajust-y: 3.0
+        #POSSIBLES: SW, NE, CENTER
+        orientation: SW
+        lines:
+        - <green>%uclans_tag_color%<gold>' Land
+        - '<white>Size: <aqua>%size%'
+        - '<white>Level: <aqua>%level%'
+     
+    collision:
+      enabled: true
+      # Collisions are linked to Terrain and Regions type extensions. If you need to check for collisions with other plugins, contact support to add
+      plugin_list:
+      - ClanNexus
+      - GriefPrevention
+      - GriefDefender
+      - ProtectionStones
+      - WorldGuard
+     
+    destruction:
+      tnt: true
+      other_explosions: true
+      mob_grief: true
+      leaf_decay: true
+     
+    liquid:
+      lava_flow: false
+      water_flow: false
+     
+    piston:
+      inside: false
+      # It is not recommended to switch the OUTSIDE value to TRUE as other players may push blocks from the outside to the inside.
+      outside: false
+     
+    Map:
+      enabled: true
+      format: 'Clan: %uclans_tag_nocolor% | Size: %clanland_size%| Land Level: %clanland_level%'
+      color:
+        fill_color: '#FF55FF'
+        fill_opacity: 0.3
+        border_color: '#AA00AA'
+        border_opacity: 0.2
+        border_size: 2
+   
+  Banner:
+    name: <green>%uclans_tag_color% <aqua>Clan Land Banner
+    lore:
+    - ''
+    - <yellow>This is the clan banner, used to protect land
+    - <yellow>Place the Banner on the ground.
+    icon:
+      clan_banner: false
+      material: ENDER_EYE
+   
+  Tasks:
+    # IN SECONDS 
+    holo: 10
+    # IN SECONDS 
+    claim: 1
+   
+  Icon:
+    click_sound: ''
+    material: GRASS_BLOCK
+    name: <green>Land of Clan.
+    lore:
+    - ''
+    - <yellow>Click to open.
+    glow: true
+    slot: 43
+    texture: ''
+    # avaliable: TOP, BOTTOM, BORDER, ALL or numeric list
+    mimeslots: [
+      ]
+    nbt:
+      string: [
+        ]
+    model: 0
+    left_click_action:
+    - /{_clan} {_land} {_list} -gui
+    right_click_action:
+    - /{_clan} {_land} {_list} -gui
+   
+  #Permissions are for advanced connoisseurs, be careful when editing this!
+  Permissions:
+    claim:
+      name: Land-Claim
+      default_value: false
+      applicable_roles:
+      - member
+      - moderator
+      - admin
+    unclaim:
+      name: Land-Unclaim
+      default_value: false
+      applicable_roles:
+      - moderator
+      - admin
+    settings:
+      name: Land-Settings
+      default_value: true
+      applicable_roles:
+      - moderator
+      - admin
+    trust:
+      name: Land-Trust
+      default_value: true
+      applicable_roles:
+      - moderator
+      - admin
+    untrust:
+      name: Land-Untrust
+      default_value: true
+      applicable_roles:
+      - moderator
+      - admin
+    unban:
+      name: Land-Unban
+      default_value: true
+      applicable_roles:
+      - moderator
+      - admin
+    ban:
+      name: Land-Ban
+      default_value: true
+      applicable_roles:
+      - moderator
+      - admin
+    build:
+      name: Land-Build
+      default_value: true
+      applicable_roles:
+      - member
+      - moderator
+      - admin
+   
+  logger:
+    enable_colors: true
+    plugin_material: GRASS_BLOCK
+    plugin_name: Lands
+    events:
+      ClanLandClaimEvent: true
+      ClanLandUnclaimEvent: true
+   
+  # LAND STORAGE
+  Storage:
+    #mysql/sqlite/yaml (It is highly recommended to use mysql for better performance!!!)
+    type: sqlite
+    mysql:
+      host: localhost
+      port: 3306
+      base: YOUR-BASE-PRE-CREATED
+      #SSL is only valid for MYSQL, most servers are not necessary to use it as true.
+      useSSL: false
+    # Used for Mysql mandatory and optional for H2 and Sqlite (default: root)
+    user: root
+    # Used for Mysql mandatory and optional for H2 and Sqlite (default is empty)
+    pass: ''
+    databases:
+      lands_table: uclans-land
+    # https://github.com/brettwooldridge/HikariCP#popular-datasource-class-names
+    datasource:
+      mysql: jdbc:mysql://
+      mysql_class: ''
+      sqlite: 'jdbc:sqlite:'
+      sqlite_class: org.sqlite.JDBC
+  Modules:
+    protocollib: true
+    griefprevention: true
+    placeholderapi: true
+    map: true

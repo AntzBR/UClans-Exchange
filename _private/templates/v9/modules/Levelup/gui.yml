@@ -1,0 +1,167 @@
+General:
+  #Clan levelup config
+  levelup_home:
+    opensound: block.slime_block.hit
+    rows: 6
+    pagesize: 24
+    items:
+      fill:
+        # Use ; "<ITEM>;<ITEM>;<ITEM>" to add more than one item to the fill.
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        # This option can be applied to all items.
+        enabled: true
+        # This option can be applied to all items.
+        slot: 36
+        # This option can be applied to all items.
+        mimeslots:
+        - 37
+        - 38
+        - 39
+        - 40
+        - 41
+        - 42
+        - 43
+        - 44
+        # Nbts can be applied to all items in all menus by following this example
+        nbt:
+          string: [
+            ]
+        # Used for CustomModelData options, just add the number. This option can be applied to all items.
+        model: 0
+      fill2:
+        # Use ; "<ITEM>;<ITEM>;<ITEM>" to add more than one item to the fill2.
+        material: GRAY_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        # This option can be applied to all items.
+        enabled: true
+        # This option can be applied to all items.
+        slot: 0
+        # This option can be applied to all items.
+        mimeslots:
+        - ALL
+        # Nbts can be applied to all items in all menus by following this example
+        nbt:
+          string: [
+            ]
+        # Used for CustomModelData options, just add the number. This option can be applied to all items.
+        model: 0
+      current:
+        clicksound: ''
+        material: ENDER_PEARL
+        texture: ''
+        data: 0
+        amount: 1
+        glow: false
+        slot: 0
+        mimeslots:
+        - 9
+        - 18
+        - 27
+        - 28
+        - 29
+        - 20
+        - 11
+        - 2
+        - 3
+        - 4
+        - 13
+        - 22
+        - 31
+        - 32
+        - 33
+        - 24
+        - 15
+        - 6
+        - 7
+        - 8
+        - 17
+        - 26
+        - 35
+      levelup:
+        clicksound: ''
+        material: ENDER_EYE
+        texture: ''
+        data: 0
+        amount: 1
+        glow: true
+      surprise:
+        clicksound: ''
+        material: CHEST_MINECART
+        texture: ''
+        amount: 1
+        glow: true
+      surprise_collected:
+        clicksound: ''
+        material: HOPPER_MINECART
+        texture: ''
+        amount: 1
+        glow: true
+      previous:
+        clicksound: ''
+        material: ARROW
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 47
+      finallist:
+        clicksound: ''
+        material: BARRIER
+        texture: ''
+        amount: 1
+        glow: true
+      next:
+        clicksound: ''
+        material: ARROW
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 51
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        texture: ''
+        data: 0
+        amount: 1
+        glow: true
+        slot: 49
+  levelup_confirm:
+    opensound: block.slime_block.hit
+    rows: 3
+    items:
+      fill:
+        material: RED_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        enabled: true
+        slot: 0
+        mimeslots:
+        - ALL
+        nbt:
+          string: [
+            ]
+        model: 0
+      confirm:
+        clicksound: ''
+        material: DIAMOND_BLOCK
+        texture: ''
+        data: 0
+        amount: 1
+        glow: true
+        slot: 10
+        mimeslots:
+        - 11
+        - 12
+      cancel:
+        clicksound: ''
+        material: REDSTONE_BLOCK
+        texture: ''
+        data: 0
+        amount: 1
+        glow: true
+        slot: 14
+        mimeslots:
+        - 15
+        - 16

@@ -1,0 +1,104 @@
+Config:
+  date_format_short: dd/MM/yyyy
+   
+  # Timezone is the definition of times by locations and countries. you can choose which timezone best fits your schedule
+  # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  timezone: America/Sao_Paulo
+   
+  Logger:
+    enable_colors: true
+    # in minutes, 2880 minutes = 2 days
+    time_expires: 2880
+    plugin_material: IRON_AXE
+    plugin_name: Clan
+    events:
+      ClanPlayerInviteReceive: true
+      ClanPlayerRoleChangeEvent: true
+      ClanPlayerJoinEvent: true
+      ClanPlayerLeaveEvent: true
+      ClanPlayerKickedEvent: true
+      ClanCreateEvent: true
+      ClanModTagEvent: true
+      ClanModDescEvent: true
+      ClanPointChangeEvent: false
+      ClanLevelEvent: true
+      ClanVerifyChangeEvent: true
+      ClanLeaderChangeEvent: true
+      ClanAllyAddEvent: true
+      ClanAllyRemoveEvent: true
+      ClanRivalRemoveEvent: true
+      ClanRivalAddEvent: true
+      ClanHomeCreateEvent: true
+      ClanHomeDeleteEvent: true
+      ClanBannerChangeEvent: true
+      ClanAllyInviteEvent: true
+      ClanRivalInviteEvent: true
+      ClanPlayerBanEvent: true
+      ClanPlayerUnbanEvent: true
+      ClanFFChangeEvent: true
+      ClanRegroupSendEvent: true
+      ClanRewardsEvent: true
+   
+  Icon:
+    click_sound: ''
+    material: CLOCK
+    name: <green>Clan Logger.
+    texture: ''
+    lore:
+    - ' <yellow>Clan happenings'
+    - ' <gray>'
+    - ' <gray>Amount: <green>%uclans_logger_amount%'
+    - ' '
+    - ' <yellow>Click to open.'
+    glow: false
+    slot: 1
+    # avaliable: TOP, BOTTOM, BORDER, ALL or numeric list
+    mimeslots: [
+      ]
+    nbt:
+      string: [
+        ]
+    model: 0
+    left_click_action:
+    - /{_clan} {_logger} {_view} -gui
+    right_click_action:
+    - /{_clan} {_logger} {_view} -gui
+   
+  #Permissions are for advanced connoisseurs, be careful when editing this!
+  Permissions:
+    edit:
+      name: Mail-Edit
+      default_value: true
+      applicable_roles:
+      - moderator
+      - admin
+    view:
+      name: Mail-View
+      default_value: true
+      applicable_roles:
+      - member
+      - moderator
+      - admin
+ 
+# MAIL STORAGE
+Storage:
+  #yaml/mysql/sqlite (It is highly recommended to use mysql for better performance!!!)
+  type: sqlite
+  mysql:
+    host: localhost
+    port: 3306
+    base: YOUR-BASE-PRE-CREATED
+    #SSL is only valid for MYSQL, most servers are not necessary to use it as true.
+    useSSL: false
+  # Used for Mysql mandatory and optional for H2 and Sqlite (default: root)
+  user: root
+  # Used for Mysql mandatory and optional for H2 and Sqlite (default is empty)
+  pass: ''
+  databases:
+    logger_table: uclans-logger
+  # https://github.com/brettwooldridge/HikariCP#popular-datasource-class-names
+  datasource:
+    mysql: jdbc:mysql://
+    mysql_class: ''
+    sqlite: 'jdbc:sqlite:'
+    sqlite_class: org.sqlite.JDBC

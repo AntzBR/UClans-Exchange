@@ -1,0 +1,201 @@
+ 
+#permissions and alias
+Commands:
+   
+  admin:
+    # NOT RECOMMENDED: Use empty for don't need permissions
+    permission: clanwar.admin
+    # Alias for command.
+    alias: clanwar
+   
+  player:
+    # Use empty for don't need permissions
+    permission: uclans.player.war
+    # Alias for command.
+    alias: war
+    # Command cooldown.
+    cooldown: 0
+    # Value to use.
+    value: 0.0
+    disabled_worlds: [
+      ]
+    disabled_regions: [
+      ]
+   
+  # player command
+  war:
+    help:
+      aliases: help
+      show: <click:run_command:"/{_clan} {_war} "><hover:show_text:'<green>Click to expand.'> <aqua>/{_clan} {_war} <gray>-<yellow> Clan Wars.</hover></click> <hover:show_text:'<green>With sub commands.'><green>[!]</hover>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_war} {_help}'
+      error: '%tag% <red>Error to use.'
+      success: '%tag% <green>Success to execute.'
+    challenge:
+      aliases: challenge
+      show: <click:suggest_command:"/{_clan} {_war} {_challenge} "><hover:show_text:'<green>Click to start challenge.'> <aqua>/{_clan} {_war} {_challenge} <light_purple>(-gui) <gray>/ <light_purple><clan> <arena> <amount> <kit> <gray>-<yellow> Start challenge process.</hover></click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_war} {_challenge} <light_purple>(-gui) <gray>/ <light_purple><clan> <arena> <amount> <kit>'
+      error: '%tag% <red>There was an error challengeing the challenge'
+      success: '%tag% <green>Challenge sent, wait for the clan to accept or deny.'
+    accept:
+      aliases: accept
+      show: <click:suggest_command:"/{_clan} {_war} {_accept} "><hover:show_text:'<green>Click to accept.'> <aqua>/{_clan} {_war} {_accept} <gray>-<yellow> Accept a challenge.</hover></click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_war} {_accept}'
+      error: '%tag% <red>There was an error accepting the challenge'
+      success: '%tag% <green>You accepted the challenge and now your clan is at war!'
+    deny:
+      aliases: deny
+      show: <click:suggest_command:"/{_clan} {_war} {_deny} "><hover:show_text:'<green>Click to deny.'> <aqua>/{_clan} {_war} {_deny} <gray>-<yellow> Deny a challenge.</hover></click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_war} {_deny}'
+      error: '%tag% <red>There was an error denying the challenge'
+      success: '%tag% <green>The challenge was successfully denied.'
+    cancel:
+      aliases: cancel
+      show: <click:suggest_command:"/{_clan} {_war} {_cancel} "><hover:show_text:'<green>Click to cancel a challenge.'> <aqua>/{_clan} {_war} {_cancel} <gray>-<yellow> Cancel a challenge.</hover></click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_war} {_cancel}'
+      error: '%tag% <red>There was an error canceling the challenge'
+      success: '%tag% <green>The challenge was successfully canceled'
+    view:
+      aliases: view
+      show: <click:suggest_command:"/{_clan} {_war} {_view} "><hover:show_text:'<green>Click to view.'> <aqua>/{_clan} {_war} {_view} <light_purple>(-gui) <gray>-<yellow> View active wars.</hover></click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_war} {_view} <light_purple>(-gui)'
+      error: '%tag% <red>Error'
+      success: '%tag% <green>Success'
+    spectate:
+      aliases: spectate
+      show: <click:suggest_command:"/{_clan} {_war} {_spectate} "><hover:show_text:'<green>Click to spectate.'> <aqua>/{_clan} {_war} {_spectate} <red><arena> <gray>-<yellow> Spectate a war.</hover></click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_war} {_spectate} <red><arena>'
+      error: '%tag% <red>There was an error spectating the war'
+      success: '%tag% <green>You are now spectating the war.'
+    join:
+      aliases: join
+      show: <click:suggest_command:"/{_clan} {_war} {_join} "><hover:show_text:'<green>Click to join.'> <aqua>/{_clan} {_war} {_join} <gray>-<yellow> Go to war.</hover></click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_war} {_join}'
+      error: '%tag% <red>There was an error entering the challenge, maybe the time has run out!'
+      success: '%tag% <green>You joined the clan wars.'
+    kits:
+      aliases: kits
+      show: <click:suggest_command:"/{_clan} {_war} {_kits} "><hover:show_text:'<green>Click to kits.'> <aqua>/{_clan} {_war} {_kits} <light_purple>(-gui) <gray>-<yellow> List kits.</hover></click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_war} {_kits} <light_purple>(-gui)'
+      error: '%tag% <red>Error'
+      success: '%tag% <green>Success.'
+  #command
+  clanwar:
+    help:
+      aliases:
+      - help
+      show: ' <click:run_command:"/clanwar help"><hover:show_text:"<green>Click to show."><green>/clanwar help <gray>- <yellow>Show help menu.</hover></click>'
+      usage: '%tag% <red>Error, use: <green>/clanwar help'
+      error: '%tag% <red>Error to execute.'
+      success: '%tag% <green>Success to execute.'
+    reload:
+      aliases:
+      - recarregar
+      show: ' <green>/clanwar reload <gray>- <yellow>Reload settings.'
+      usage: '%tag% <red>Error, use: <green>/clanwar reload'
+      error: '%tag% <red>An error occurred while reloading.'
+      success: '%tag% <green>Plugin reloaded successfully.'
+    wand:
+      aliases:
+      - wand
+      show: ' <green>/clanwar wand <gray>- <yellow>Gives a wand.'
+      usage: '%tag% <red>Error, use: <green>/clanwar wand'
+      error: '%tag% <red>There was an error receiving the wand.'
+      success: '%tag% <green>Successfully received the wand!'
+    createarena:
+      aliases:
+      - criararena
+      show: ' <green>/clanwar arena create <name> <gray>- <yellow>Add an arena.'
+      usage: '%tag% <red>Error, use: <green>/clanwar arena create <name>'
+      error: '%tag% <red>An error occurred while creating.'
+      success: '%tag% <green>Arena was successfully created, use <aqua>/clanwar arena point <arena> <point> <green>to set the arena points.'
+    deletearena:
+      aliases:
+      - deletararena
+      show: ' <green>/clanwar arena delete <name> <gray>- <yellow>Delete an arena.'
+      usage: '%tag% <red>Error, use: <green>/clanwar arena delete <name>'
+      error: '%tag% <red>There was an error remove the arena.'
+      success: '%tag% <green>Arena successfully removed!.'
+    listarenas:
+      aliases:
+      - listararenas
+      show: ' <green>/clanwar arena list <gray>- <yellow>List arenas.'
+      usage: '%tag% <red>Error, use: <green>/clanwar arena list'
+      error: '%tag% <red>An error occurred while listing arenas'
+      success: '%tag% <green>Success!'
+    pointarena:
+      aliases:
+      - pointarena
+      show: ' <green>/clanwar arena point <arena> <SPAWN1|SPAWN2|EXIT|LOBBY> <gray>- <yellow>Set the arena points.'
+      usage: '%tag% <red>Error, use: <green>/clanwar arena point <arena> <SPAWN1|SPAWN2|EXIT|LOBBY>'
+      error: '%tag% <red>An error occurred while save point.'
+      success: '%tag% <green>The point <aqua>%point% <green>of the arena <aqua>%arena_name% <green>has been successfully saved to your location.'
+    togglearena:
+      aliases:
+      - togglearena
+      show: ' <green>/clanwar arena toggle <name> <gray>- <yellow>Toggle the arena.'
+      usage: '%tag% <red>Error, use: <green>/clanwar arena toggle <name>'
+      error: '%tag% <red>The arena cannot be changed, check the points using <aqua>/clanwar arena point %arena_name% <point>'
+      success: '%tag% <yellow>The arena is now %arena_enabled%'
+    arena_seticon:
+      aliases:
+      - arena_seticon
+      show: ' <green>/clanwar arena seticon <arena> <material> <gray>- <yellow>Change the arena icon.'
+      usage: '%tag% <red>Error, use: <green>/clanwar arena seticon <arena> <material>'
+      error: '%tag% <red>There was an error changing the icon.'
+      success: '%tag% <green>Arena icon has been updated successfully.'
+    arena_desc:
+      aliases:
+      - desc
+      show: ' <green>/clanwar arena desc <arena> <desc> <gray>- <yellow>Set the arena description.'
+      usage: '%tag% <red>Error, use: <green>/clanwar arena desc <arena> <desc>'
+      error: '%tag% <red>There was an error updating the description.'
+      success: '%tag% <green>The arena description has been successfully changed.'
+    arena_setspectator:
+      aliases:
+      - spectador
+      show: ' <green>/clanwar arena setspectator <arena> <gray>- <yellow>Set the arena spectator location.'
+      usage: '%tag% <red>Error, use: <green>/clanwar arena setspectator <arena>'
+      error: '%tag% <red>There was an error setting the spectator location.'
+      success: '%tag% <green>You have set the spectator location of the event.'
+    arena_setmode:
+      aliases:
+      - modo
+      show: ' <green>/clanwar arena setmode <arena> <mode> <gray>- <yellow>Select arena mode.'
+      usage: '%tag% <red>Error, use: <green>/clanwar arena setmode <arena> <mode>'
+      error: '%tag% <red>An error occurred while changing the arena mode.'
+      success: '%tag% <green>Arena game mode has been successfully changed.'
+    createkit:
+      aliases:
+      - createkit
+      show: ' <green>/clanwar kit create <name> <desc> <gray>- <yellow>Create a new kit.'
+      usage: '%tag% <red>Error, use: <green>/clanwar kit create <name> <desc>'
+      error: '%tag% <red>There was an error create the kit.'
+      success: '%tag% <yellow>The <aqua>%name%<yellow> kit has been created.'
+    deletekit:
+      aliases:
+      - deletekit
+      show: ' <green>/clanwar kit delete <name> <gray>- <yellow>Delete a kit.'
+      usage: '%tag% <red>Error, use: <green>/clanwar kit delete <name>'
+      error: '%tag% <red>There was an error delete the kit.'
+      success: '%tag% <yellow>The <aqua>%name%<yellow> kit has been deleled.'
+    listkits:
+      aliases:
+      - listkits
+      show: ' <green>/clanwar kit list <gray>- <yellow>List all kits.'
+      usage: '%tag% <red>Error, use: <green>/clanwar kit list'
+      error: '%tag% <red>There was an error listing the kits'
+      success: '%tag% <green>Success!'
+    givekit:
+      aliases:
+      - givekit
+      show: ' <green>/clanwar kit give <name> <gray>- <yellow>Give a kit.'
+      usage: '%tag% <red>Error, use: <green>/clanwar kit give <name>'
+      error: '%tag% <red>There was an error receiving the item'
+      success: '%tag% <green>Kit successfully received!'
+    seticon:
+      aliases:
+      - seticon
+      show: ' <green>/clanwar kit seticon <name> <material> <gray>- <yellow>Set a kit icon.'
+      usage: '%tag% <red>Error, use: <green>/clanwar kit seticon <name> <material>'
+      error: '%tag% <red>An error occurred while changing the kit icon.'
+      success: '%tag% <green>The kit icon has been successfully changed!'

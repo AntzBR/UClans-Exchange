@@ -1,0 +1,159 @@
+Config:
+  date_format: dd/MM/yyyy HH:mm
+  # Timezone is the definition of times by locations and countries. you can choose which timezone best fits your schedule
+  # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  timezone: America/Sao_Paulo
+  # This option can disable sync (multiserver mode - if enabled) if you prefer individual quests per server.
+  sync_if_enabled: true
+  translate:
+    # This option translates names of blocks, animals, items using user translation. !experimental feature!
+    enabled: true
+    mission_blacklist: [
+      ]
+   
+  Quest:
+     
+    # If this is enabled, items dropped or placed on the ground that are part of the quests will be ignored. 
+    # NOTE: This is not persistent on server reload or plugin reload.
+    # Some of these 'Follow player' options may not work on legacy versions
+    follow_player: true
+    # If this option is turned on together with 'follow_player' it will store a tag on all dropped items and no one from the same clan will do quests with these items
+    # Some of these 'Follow player' options may not work on legacy versions
+    follow_block_pickup_sameclan: true
+    # If this option is turned on together with 'follow_player' it will store a tag on all dropped items and no quests will be done with these items
+    # Some of these 'Follow player' options may not work on legacy versions
+    follow_block_pickup_all: false
+    # If this option is turned on together with 'follow_player' it will store a tag on all dropped items and no quests will be done with these items
+    # Some of these 'Follow player' options may not work on legacy versions
+    follow_additional_block:
+    - REDSTONE_WIRE
+    - REDSTONE_LAMP
+    - SWEET_BERRY_BUSH
+     
+    animated_gui: true
+     
+    forge_open-gui: true
+     
+    # CLAN or PLAYER
+    # With the CLAN option, missions are grouped.
+    # With the PLAYER option each player does the missions separately.
+    # If this option has a different value, CLAN will be used by default
+    mode: CLAN
+     # max_time in minutes (only ONCE missions).
+    max_time: 60
+     # How many blocks should the Explore quest show alerts? (use 1+)
+    explore_count: 10
+     # in seconds. use 0 to disable.
+    queue_to_save: 300
+    shift_enabled: false
+    warnings:
+      expired:
+        sound: entity.villager.hurt
+      earned:
+        sound: entity.villager.celebrate
+      finished:
+        sound: entity.villager.trade
+    disabled_quest_worlds:
+    - disabled_world
+    disabled_rewards_worlds:
+    - disabled_world
+   
+  Icon:
+    click_sound: ''
+    material: PLAYER_HEAD
+    name: <green>Clan Quest
+    lore:
+    - ' '
+    - ' <gray>Completed Quests: <green>%uclans_quest_finished%'
+    - ' <gray>Clan Level: <green>%uclans_level%'
+    - ' '
+    - ' <yellow>Click to open quest menu'
+    glow: false
+    slot: 28
+    page: clan_home
+    texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTQxOWMzNTA0ZjY2ODRiMGE1NWZkMDY5Y2NhZGUyZWI2NTk3MjRjYThiYjEwYzIwZjJkZTUwNWFhNGMyZGVmYiJ9fX0=
+    # avaliable: TOP, BOTTOM, BORDER, ALL or numeric list
+    mimeslots: [
+      ]
+    nbt:
+      string: [
+        ]
+    model: 0
+    left_click_action:
+    - /{_clan} {_quest} {_list} -gui
+    right_click_action:
+    - /{_clan} {_quest} {_list} -gui
+   
+  #Permissions are for advanced connoisseurs, be careful when editing this!
+  Permissions:
+    status:
+      name: Quest-Status
+      default_value: true
+      applicable_roles:
+      - member
+      - moderator
+      - admin
+    listdaily:
+      name: Quest-List-Daily
+      default_value: true
+      applicable_roles:
+      - member
+      - moderator
+      - admin
+    listonce:
+      name: Quest-List-Once
+      default_value: true
+      applicable_roles:
+      - member
+      - moderator
+      - admin
+    startonce:
+      name: Quest-Start-Once
+      default_value: true
+      applicable_roles:
+      - member
+      - moderator
+      - admin
+    startdaily:
+      name: Quest-Start-Daily
+      default_value: true
+      applicable_roles:
+      - member
+      - moderator
+      - admin
+    abandon:
+      name: Quest-Abandon
+      default_value: true
+      applicable_roles:
+      - member
+      - moderator
+      - admin
+   
+  logger:
+    enable_colors: true
+    plugin_material: ANVIL
+    plugin_name: Quest
+    events:
+      ClanQuestAbandonEvent: true
+      ClanQuestStartEvent: true
+      ClanQuestFinishEvent: true
+   
+  league:
+    plugin_name: Quest Finish
+ 
+# QUEST STORAGE
+Storage:
+  #mysql/sqlite/yaml (It is highly recommended to use mysql for better performance!!!)
+  type: sqlite
+  mysql:
+    host: localhost
+    port: 3306
+    base: YOUR-BASE-PRE-CREATED
+    #SSL is only valid for MYSQL, most servers are not necessary to use it as true.
+    useSSL: false
+  # Used for Mysql mandatory and optional for H2 and Sqlite (default: root)
+  user: root
+  # Used for Mysql mandatory and optional for H2 and Sqlite (default is empty)
+  pass: ''
+  databases:
+    quest_table: uclans-quest

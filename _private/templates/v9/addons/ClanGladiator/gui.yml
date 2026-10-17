@@ -1,0 +1,517 @@
+ 
+# Player event browser.
+Gui:
+  rows: 6
+  event-slots:
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16
+  - 19
+  - 20
+  - 21
+  - 22
+  - 23
+  - 24
+  - 25
+  - 28
+  - 29
+  - 30
+  - 31
+  - 32
+  - 33
+  - 34
+  filler:
+    material: BLACK_STAINED_GLASS_PANE
+    name: ' '
+  event:
+    server-kit-material: DIAMOND_SWORD
+    own-items-material: NETHERITE_SWORD
+  leave:
+    slot: 49
+    material: BARRIER
+  info:
+    slot: 4
+    material: BOOK
+   
+  # Return to the UClans clan-home GUI.
+  back:
+    slot: 48
+    material: RED_BED
+    glow: false
+  previous:
+    slot: 45
+    material: ARROW
+  next:
+    slot: 53
+    material: ARROW
+ 
+Admin:
+  common:
+    fill:
+      material: RED_STAINED_GLASS_PANE
+  home:
+    rows: 5
+    items:
+      arenas:
+        material: DIAMOND_SWORD
+        slot: 10
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      kits:
+        material: CHEST
+        slot: 12
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      schedules:
+        material: CLOCK
+        slot: 14
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      settings:
+        material: COMPARATOR
+        slot: 16
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      history:
+        material: WRITABLE_BOOK
+        slot: 20
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      reload:
+        material: REDSTONE
+        slot: 22
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      back:
+        material: IRON_DOOR
+        slot: 40
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+  arenas:
+    rows: 6
+    items:
+      create:
+        material: ANVIL
+        slot: 49
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      previous:
+        material: ARROW
+        slot: 45
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      next:
+        material: ARROW
+        slot: 53
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      back:
+        material: ARROW
+        slot: 48
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+  arena:
+    rows: 6
+    items:
+      enabled:
+        material: LEVER
+        slot: 10
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      identity:
+        material: NAME_TAG
+        slot: 12
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      locations:
+        material: COMPASS
+        slot: 14
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      limits:
+        material: PLAYER_HEAD
+        slot: 16
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      times:
+        material: CLOCK
+        slot: 19
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      rules:
+        material: SHIELD
+        slot: 21
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      rewards:
+        material: CHEST
+        slot: 23
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      start:
+        material: LIME_DYE
+        slot: 28
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      stop:
+        material: RED_DYE
+        slot: 28
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      force:
+        material: BLAZE_POWDER
+        slot: 30
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      validate:
+        material: KNOWLEDGE_BOOK
+        slot: 32
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      delete:
+        material: BARRIER
+        slot: 34
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      back:
+        material: ARROW
+        slot: 49
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+  identity:
+    rows: 4
+    items:
+      display:
+        material: NAME_TAG
+        slot: 10
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      icon:
+        material: ITEM_FRAME
+        slot: 12
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      mode:
+        material: CHEST
+        slot: 14
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      kit:
+        material: DIAMOND_CHESTPLATE
+        slot: 16
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      back:
+        material: ARROW
+        slot: 31
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+  locations:
+    rows: 5
+    items:
+      point-one:
+        material: GOLDEN_AXE
+        slot: 10
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      point-two:
+        material: GOLDEN_AXE
+        slot: 12
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      lobby:
+        material: CAMPFIRE
+        slot: 14
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      exit:
+        material: IRON_DOOR
+        slot: 16
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      add-spawn:
+        material: ARMOR_STAND
+        slot: 28
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      clear-spawns:
+        material: BARRIER
+        slot: 30
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      teleport:
+        material: ENDER_PEARL
+        slot: 32
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      back:
+        material: ARROW
+        slot: 40
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+  limits:
+    rows: 3
+    items:
+      min-clans:
+        material: RED_BANNER
+        slot: 10
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      max-clans:
+        material: RED_BANNER
+        slot: 13
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      max-players:
+        material: PLAYER_HEAD
+        slot: 16
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      back:
+        material: ARROW
+        slot: 22
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+  times:
+    rows: 4
+    items:
+      recruitment:
+        material: CLOCK
+        slot: 10
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      countdown:
+        material: REPEATER
+        slot: 12
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      maximum:
+        material: CLOCK
+        slot: 14
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      shrink:
+        material: REDSTONE_TORCH
+        slot: 16
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      finishing:
+        material: HOPPER
+        slot: 22
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      back:
+        material: ARROW
+        slot: 31
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+  rules:
+    rows: 4
+    items:
+      protection:
+        material: SHIELD
+        slot: 10
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      timeout:
+        material: CLOCK
+        slot: 13
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      border:
+        material: RED_STAINED_GLASS
+        slot: 16
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      back:
+        material: ARROW
+        slot: 31
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+  rewards:
+    rows: 6
+    items:
+      previous:
+        material: ARROW
+        slot: 45
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      next:
+        material: ARROW
+        slot: 46
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      add-item:
+        material: EMERALD
+        slot: 47
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      add-command:
+        material: COMMAND_BLOCK
+        slot: 49
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      clear:
+        material: BARRIER
+        slot: 51
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      back:
+        material: ARROW
+        slot: 53
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+  kits:
+    rows: 6
+    items:
+      create:
+        material: ANVIL
+        slot: 49
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      previous:
+        material: ARROW
+        slot: 45
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      next:
+        material: ARROW
+        slot: 53
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      back:
+        material: ARROW
+        slot: 48
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+  kit:
+    rows: 3
+    items:
+      apply:
+        material: CHEST
+        slot: 10
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      update:
+        material: ANVIL
+        slot: 13
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      delete:
+        material: BARRIER
+        slot: 16
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      back:
+        material: ARROW
+        slot: 22
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+  schedules:
+    rows: 6
+    items:
+      create:
+        material: CLOCK
+        slot: 49
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      previous:
+        material: ARROW
+        slot: 45
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      next:
+        material: ARROW
+        slot: 53
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      back:
+        material: ARROW
+        slot: 48
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+  schedule:
+    rows: 4
+    items:
+      enabled:
+        material: LEVER
+        slot: 10
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      arena:
+        material: DIAMOND_SWORD
+        slot: 12
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      time:
+        material: CLOCK
+        slot: 14
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      days:
+        material: PAPER
+        slot: 16
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      delete:
+        material: BARRIER
+        slot: 22
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      back:
+        material: ARROW
+        slot: 31
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+  settings:
+    rows: 6
+    items:
+      previous:
+        material: ARROW
+        slot: 45
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      next:
+        material: ARROW
+        slot: 53
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      back:
+        material: ARROW
+        slot: 49
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+  history:
+    rows: 6
+    items:
+      current:
+        material: WRITABLE_BOOK
+      previous:
+        material: ARROW
+        slot: 45
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      next:
+        material: ARROW
+        slot: 53
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      info:
+        material: WRITABLE_BOOK
+        slot: 47
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      clear:
+        material: BARRIER
+        slot: 51
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0
+      back:
+        material: ARROW
+        slot: 49
+        glow: false
+        clicksound: UI_BUTTON_CLICK:1.0:1.0

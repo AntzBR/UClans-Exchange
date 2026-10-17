@@ -1,0 +1,211 @@
+General:
+  #Lock Home config
+  clan_delhome_confirm:
+    opensound: block.slime_block.hit
+    rows: 3
+    items:
+      fill:
+        material: RED_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        mimeslots:
+        - ALL
+      confirm:
+        clicksound: ''
+        material: DIAMOND_BLOCK
+        amount: 1
+        glow: true
+        slot: 10
+        mimeslots:
+        - 11
+        - 12
+      cancel:
+        clicksound: ''
+        material: REDSTONE_BLOCK
+        amount: 1
+        glow: true
+        # %player%, nicknames or base64Textures
+        texture: ''
+        slot: 14
+        mimeslots:
+        - 15
+        - 16
+  #Clan Home config
+  clan_allyhome:
+    opensound: block.slime_block.hit
+    rows: 6
+    pagesize: 45
+    items:
+      fill:
+        material: LIME_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        mimeslots:
+        - BOTTOM
+      current:
+        clicksound: ''
+        material: ''
+        texture: '%uclans_banner%'
+        data: 0
+        amount: 1
+        glow: false
+      previous:
+        clicksound: ''
+        material: ARROW
+        texture: ''
+        data: 8
+        amount: 1
+        glow: false
+        slot: 47
+      next:
+        clicksound: ''
+        material: ARROW
+        texture: ''
+        data: 8
+        amount: 1
+        glow: false
+        slot: 51
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        texture: ''
+        data: 0
+        amount: 1
+        glow: false
+        slot: 49
+  clan_homes:
+    # This sound system uses Sound events (namespace key), the same used in /playsound. the complete list can be obtained at https://minecraft.wiki/w/Sounds.json
+    # The sounds sent have the following format: sound_event:volume:pith:source
+    opensound: block.slime_block.hit
+    rows: 6
+    items:
+      fill:
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        # You can add this to all menu items and remove items from menus.
+        enabled: true
+         # Nbts can be applied to all items in all menus by following this example
+        # With support for ItemsAdder you can add nbt ex 'ItemsAdder:item_name' or 'HideTooltip:true' to add custom items to gui menus
+        nbt:
+          string:
+          - example:example_nbt_string
+          - HideTooltip
+        model: 0
+        mimeslots:
+        - BOTTOM
+      current:
+        clicksound: ''
+        material: BOW
+        texture: ''
+        data: 0
+        amount: 1
+        glow: false
+      current_visit:
+        clicksound: ''
+        material: BOW
+        texture: ''
+        data: 0
+        amount: 1
+        glow: false
+      previous:
+        clicksound: ''
+        material: ARROW
+        texture: ''
+        data: 8
+        amount: 1
+        glow: false
+        slot: 47
+      next:
+        clicksound: ''
+        material: ARROW
+        texture: ''
+        data: 8
+        amount: 1
+        glow: false
+        slot: 51
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        texture: ''
+        data: 0
+        amount: 1
+        glow: false
+        slot: 49
+      create:
+        clicksound: ''
+        material: NAME_TAG
+        texture: ''
+        data: 0
+        amount: 1
+        glow: true
+        slot: 53
+      ally_homes:
+        clicksound: ''
+        material: DIAMOND_HELMET
+        texture: ''
+        data: 0
+        amount: 1
+        glow: true
+        slot: 45
+  listhomes:
+    opensound: block.slime_block.hit
+    rows: 6
+    pagesize: 28
+    items:
+      fill:
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        mimeslots:
+        - BORDER
+      current:
+        clicksound: ''
+        material: BOW
+        texture: ''
+        amount: 1
+        glow: true
+        slot: 1
+      previous:
+        clicksound: ''
+        material: ARROW
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 47
+      next:
+        clicksound: ''
+        material: ARROW
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 51
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 49
+  #ANVIL
+  anvil_home_create:
+    opensound: block.slime_block.hit
+    items:
+      left:
+        clicksound: ''
+        material: PAPER
+        texture: ''
+        amount: 1
+        glow: true
+      right:
+        clicksound: ''
+        material: IRON_DOOR
+        texture: ''
+        amount: 1
+        glow: true
+      output:
+        clicksound: ''
+        material: ''
+        texture: '%uclans_banner%'
+        amount: 1
+        glow: true

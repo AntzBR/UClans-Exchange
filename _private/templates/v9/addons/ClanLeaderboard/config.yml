@@ -1,0 +1,114 @@
+Config:
+  date_format_short: dd/MM/yyyy
+   
+  Leaderboard:
+     
+    # Update manager
+    update:
+      timed:
+        #Then FALSE, the addon waits for updates from the main plugin to update the boards.
+        enabled: true
+        #in seconds, WARNING: Recommended 180+ (3 minutes +) to avoid overload!
+        timer: 300
+        #in seconds, WARNING: Recommended 10+!
+        start: 10
+      #Only if timed enabled is set to FALSE can you choose which clan events update boards.
+      events:
+        # Used for boards: **
+        ClanDeleteEvent: true
+        # Used for boards: **
+        ClanCreateEvent: true
+        # Used for boards: POINT, LEVEL
+        ClanPointChangeEvent: true
+        # Used for boards: BANK
+        ClanBankChangeEvent: true
+        # Used for boards: WAR
+        ClanWarWinEvent: true
+        # Used for boards: ALL
+        ClanVerifyChangeEvent: true
+        # Used for boards: KILL, DEATH, KDR
+        ClanPlayerKDRChangeEvent: true
+        # Used for boards: MEMBER
+        ClanPlayerLeaveEvent: true
+        # Used for boards: MEMBER
+        ClanPlayerJoinEvent: true
+     
+    #general formatation
+    format:
+      stand:
+        # Empty to disable
+        name: ''
+        # 1.18+ has automatic -1.0 adjustment
+        ajust_y: 1.0
+      sign:
+        lines:
+        - <blue>----- <yellow>#{num} <blue>-----
+        - <yellow>{name}
+        - <green>{amount} <aqua>{type}
+        - <blue>----------
+      holo:
+        enabled: true
+        # 1.18+ has automatic -1.0 adjustment
+        stand_ajust_y: 3.1
+        skull_ajust_y: 1.5
+        # in ms
+        spawn_later: 3
+        lines:
+        - <yellow>#{num}
+        - <yellow>{name}
+        - <green>{amount} <aqua>{type}
+     
+    # You can disable click actions to open gui menu or show in chat.
+    #action values: GUI, CHAT
+    actions:
+      #Click heads action
+      skull_click: true
+      skull_action: GUI
+      #Click stands action
+      stand_click: true
+      stand_action: GUI
+      #Click signs action
+      sign_click: true
+      sign_action: GUI
+     
+    #Stand equipment depending on the board position.
+    equip:
+      empty_head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzA3ZjQ3OTU4NGZjY2FlNjg2MDAzYTYwODAwZGRmZWU3MmFmZmUxMGU0YmIyNmE3ZDRhMDBjY2I5OTc5N2QyIn19fQ==
+       
+      #This is standard equipment for not listed below by position
+      default:
+        chestplate: LEATHER_CHESTPLATE
+        leggings: LEATHER_LEGGINGS
+        boots: LEATHER_BOOTS
+      
+      #Other numbers can be added here following the same numbering pattern
+      position:
+        '1':
+          chestplate: DIAMOND_CHESTPLATE
+          leggings: DIAMOND_LEGGINGS
+          boots: DIAMOND_BOOTS
+        '2':
+          chestplate: GOLDEN_CHESTPLATE
+          leggings: GOLDEN_LEGGINGS
+          boots: GOLDEN_BOOTS
+        '3':
+          chestplate: IRON_CHESTPLATE
+          leggings: IRON_LEGGINGS
+          boots: IRON_BOOTS
+   
+  # BOARD STORAGE
+  Storage:
+    #mysql/sqlite/yaml (It is highly recommended to use mysql for better performance!!!)
+    type: sqlite
+    mysql:
+      host: localhost
+      port: 3306
+      base: YOUR-BASE-PRE-CREATED
+      #SSL is only valid for MYSQL, most servers are not necessary to use it as true.
+      useSSL: false
+    # Used for Mysql mandatory and optional for H2 and Sqlite (default: root)
+    user: root
+    # Used for Mysql mandatory and optional for H2 and Sqlite (default is empty)
+    pass: ''
+    databases:
+      leaderboard_loc: uclans-leaderboard_loc

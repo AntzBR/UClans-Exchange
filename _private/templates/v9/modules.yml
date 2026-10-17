@@ -1,0 +1,88 @@
+Config:
+  extensions:
+    auto_download: true
+   
+  modules:
+    auto_update: false
+    list:
+      anvil_26:
+        enabled: true
+      anvil_1_21:
+        enabled: true
+      anvil_1_20:
+        enabled: true
+      anvil_1_19:
+        enabled: true
+      anvil_1_18:
+        enabled: true
+      banner:
+        enabled: true
+      chat:
+        enabled: true
+      discord:
+        enabled: true
+      home:
+        enabled: true
+      levelup:
+        enabled: true
+      logger:
+        enabled: true
+      mail:
+        enabled: true
+      multiserver:
+        enabled: true
+      rewards:
+        enabled: true
+      rivalally:
+        enabled: true
+    # PREFERENCES: 
+    # - Preferences preferably use the top of the list, if there is no implementation of the item, it searches for the next one, if none of the items in the list exist, it searches for the first one added.
+    preferences:
+      # Extensions with HOLOGRAM category
+      holograms:
+      - DECENTHOLOGRAMS
+      - HOLOGRAMS
+      - HOLOGRAPHICDISPLAYS
+      - CMI
+      - FANCYHOLOGRAMS
+      # Extensions with REGION category
+      regions:
+      - WORLDGUARD
+      - ULTRAREGIONS
+      # Extensions with MONEY category.
+      money:
+      - VAULT
+      - TOKENENCHANT
+      # Extensions with MAP category.
+      map:
+      - DYNMAP
+      - BLUEMAP
+      # Extensions with SCOREBOARD category.
+      scoreboard:
+      - TAB
+      - CMI
+      - FEATHERBOARD
+      - STERNALBOARD
+      - SIMPLESCORE
+      # Extensions with CLAIM category.
+      claim: [
+        ]
+      # Extensions with EVENT category.
+      event: [
+        ]
+      # Extensions with ITEM category.
+      item:
+      - NEXO
+      - ITEMSADDER
+   
+  hooks:
+    duels: true
+    supervanish: true
+    premiumvanish: true
+    pvpmanager: true
+    cmi: true
+    deluxecombat: false
+    itemsadder: true
+    nbtapi: true
+    essentials: true
+    redischat: true

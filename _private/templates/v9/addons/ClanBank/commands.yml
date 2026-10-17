@@ -1,0 +1,90 @@
+ 
+# permissions and aliases
+Commands:
+   
+  player:
+    # Use empty for no Bukkit permission.
+    permission: uclans.player.bank
+    # Alias for command.
+    alias: bank
+    cooldown: 0
+    value: 0.0
+    disabled_worlds: [
+      ]
+    disabled_regions: [
+      ]
+   
+  # player command
+  bank:
+    help:
+      aliases: help
+      show: <click:suggest_command:"/{_clan} {_bank} "><hover:show_text:'<green>Click to expand.'> <aqua>/{_clan} {_bank} <gray>-<yellow> Expand bank commands.</hover></click> <hover:show_text:'<green>With sub commands.'><green>[!]</hover>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_bank} {_help}'
+      error: '%tag% <red>Error to use.'
+      success: '%tag% <green>Success to execute.'
+    add:
+      aliases: add
+      show: <click:suggest_command:"/{_clan} {_bank} {_add} "><hover:show_text:'<green>Click to add.'> <aqua>/{_clan} {_bank} {_add} <red><value> <gray>-<yellow> Deposit money into the clan bank.</hover></click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_bank} {_add} <red><value>'
+      error: '%tag% <red>Error depositing money.'
+      success: '%tag% <green>Money deposited successfully.'
+    withdraw:
+      aliases: withdraw
+      show: <click:suggest_command:"/{_clan} {_bank} {_withdraw} "><hover:show_text:'<green>Click to withdraw.'> <aqua>/{_clan} {_bank} {_withdraw} <red><value> <gray>-<yellow> Withdraw money from the clan bank.</hover></click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_bank} {_withdraw} <red><value>'
+      error: '%tag% <red>Error withdrawing money.'
+      success: '%tag% <green>Money withdrawn successfully.'
+    view:
+      aliases: view
+      show: <click:suggest_command:"/{_clan} {_bank} {_view} "><hover:show_text:'<green>Click to view.'> <aqua>/{_clan} {_bank} {_view} <light_purple>(-gui) <gray>-<yellow> View the clan bank.</hover></click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_bank} {_view} <light_purple>(-gui)'
+      error: '%tag% <red>Error.'
+      success: '%tag% <green>Success.'
+    history:
+      aliases: history
+      show: <click:run_command:"/{_clan} {_bank} history"> <aqua>/{_clan} {_bank} history <gray>-<yellow> View the bank statement.</click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_bank} history'
+      error: '%tag% <red>Could not open bank history.'
+      success: '%tag% <green>Bank history opened.'
+    stats:
+      aliases: stats
+      show: <click:run_command:"/{_clan} {_bank} stats"> <aqua>/{_clan} {_bank} stats <gray>-<yellow> View bank statistics.</click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_bank} stats'
+      error: '%tag% <red>Could not open bank statistics.'
+      success: '%tag% <green>Bank statistics opened.'
+    contributions:
+      aliases: contributions
+      show: <click:run_command:"/{_clan} {_bank} contributions"> <aqua>/{_clan} {_bank} contributions <gray>-<yellow> View member contributions.</click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_bank} contributions'
+      error: '%tag% <red>Could not open contributions.'
+      success: '%tag% <green>Contributions opened.'
+    request:
+      aliases: request
+      show: <click:suggest_command:"/{_clan} {_bank} request "> <aqua>/{_clan} {_bank} request <gray>-<yellow> Create/manage withdrawal requests.</click>
+      usage: '%tag% <red>Use: <aqua>/{_clan} {_bank} request <amount> [reason] <gray>| <aqua>request list/approve/deny/claim'
+      error: '%tag% <red>Could not process the request.'
+      success: '%tag% <green>Request processed.'
+    vault:
+      aliases: vault
+      show: <click:suggest_command:"/{_clan} {_bank} vault "> <aqua>/{_clan} {_bank} vault <gray>-<yellow> Manage clan vaults.</click>
+      usage: '%tag% <red>Use: <aqua>/{_clan} {_bank} vault <list|create|delete|deposit|withdraw> ...'
+      error: '%tag% <red>Could not process the vault operation.'
+      success: '%tag% <green>Vault operation completed.'
+    reserve:
+      aliases: reserve
+      show: <click:suggest_command:"/{_clan} {_bank} reserve "> <aqua>/{_clan} {_bank} reserve <red><amount> <gray>-<yellow> Set the protected reserve.</click>
+      usage: '%tag% <red>Use: <aqua>/{_clan} {_bank} reserve <amount>'
+      error: '%tag% <red>Could not change protected reserve.'
+      success: '%tag% <green>Protected reserve updated.'
+    goal:
+      aliases: goal
+      show: <click:suggest_command:"/{_clan} {_bank} goal "> <aqua>/{_clan} {_bank} goal <gray>-<yellow> View/manage the clan bank goal.</click>
+      usage: '%tag% <red>Use: <aqua>/{_clan} {_bank} goal <view|set|clear> ...'
+      error: '%tag% <red>Could not process the bank goal.'
+      success: '%tag% <green>Bank goal updated.'
+    transfer:
+      aliases: transfer
+      show: <click:suggest_command:"/{_clan} {_bank} transfer "> <aqua>/{_clan} {_bank} transfer <red><clan> <amount> <gray>-<yellow> Transfer money to another clan.</click>
+      usage: '%tag% <red>Use: <aqua>/{_clan} {_bank} transfer <clan> <amount>'
+      error: '%tag% <red>Could not transfer clan money.'
+      success: '%tag% <green>Clan transfer completed.'

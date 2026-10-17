@@ -1,0 +1,108 @@
+Config:
+  date_format_short: dd/MM/yyyy
+  
+  Rival:
+    remove:
+      need_confirmation: true
+       # IN SECONDS
+      max_time_seconds: 60
+    default_limit: 3
+     
+    Icon:
+      click_sound: ''
+      material: GOLDEN_HELMET
+      name: <green>Rivalries.
+      texture: ''
+      lore:
+      - ' '
+      - ' <gray>Rivals: <aqua>%uclans_clan_count_rival%'
+      - ' '
+      - ' <yellow>Click to open the rivalries menu.'
+      glow: false
+      slot: 31
+      page: clan_home
+      # avaliable: TOP, BOTTOM, BORDER, ALL or numeric list
+      mimeslots: [
+        ]
+      nbt:
+        string: [
+          ]
+      model: 0
+      left_click_action:
+      - /{_clan} {_rival} {_list} -gui
+      right_click_action:
+      - /{_clan} {_rival} {_list} -gui
+  
+  Ally:
+    invite:
+      need_confirmation: true
+       # IN SECONDS
+      max_time_seconds: 60
+    default_limit: 3
+     
+    Icon:
+      click_sound: ''
+      material: DIAMOND_HELMET
+      name: <green>Alliances.
+      texture: ''
+      lore:
+      - ' '
+      - ' <gray>Allies: <aqua>%uclans_clan_count_ally%'
+      - ' '
+      - ' <yellow>Click to open the alliances menu.'
+      glow: false
+      slot: 32
+      page: clan_home
+      # avaliable: TOP, BOTTOM, BORDER, ALL or numeric list
+      mimeslots: [
+        ]
+      nbt:
+        string: [
+          ]
+      model: 0
+      left_click_action:
+      - /{_clan} {_ally} {_list} -gui
+      right_click_action:
+      - /{_clan} {_ally} {_list} -gui
+   
+  #Permissions are for advanced connoisseurs, be careful when editing this!
+  Permissions:
+    ally-manager:
+      name: Ally-Manager
+      default_value: true
+      applicable_roles:
+      - moderator
+      - admin
+    rival-manager:
+      name: Rival-Manager
+      default_value: true
+      applicable_roles:
+      - moderator
+      - admin
+  unlocker:
+     
+     
+    # format: CLAN_ALLIED/REQUIRED_LEVEL
+    #You can add multiple allys for various clan levels.
+    #example:
+    #    ally:
+    #      - '1:1' #The clan can have 1 ally if it is level 1
+    #      - '5:10' #The clan can have 5 ally if it is level 10
+    #      - '10:20' #The clan can have 10 ally if it is level 20
+    ally:
+    - '1:1'
+    - '5:10'
+    - '10:20'
+     
+     
+    # format: CLAN_RIVALRIES/REQUIRED_LEVEL
+    #You can add multiple rivals for various clan levels.
+    #example:
+    #    rival:
+    #      - '1:1' #The clan can have 1 rival if it is level 1
+    #      - '5:10' #The clan can have 5 rival if it is level 10
+    #      - '10:20' #The clan can have 10 rival if it is level 20
+    rival:
+    - '1:1'
+    - '5:10'
+    - '10:20'

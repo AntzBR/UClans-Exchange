@@ -1,0 +1,59 @@
+ 
+#permissions and alias
+Commands:
+   
+  admin:
+    # NOT RECOMMENDED: Use empty for don't need permissions
+    permission: uclans.discord_register.admin
+    # Alias for command.
+    alias: discord_register
+  discord_register:
+    help:
+      aliases:
+      - ajuda
+      show: ' <click:run_command:"/discord_register help"><hover:show_text:"<green>Click to show."><green>/discord_register help <gray>- <yellow>Show help menu.</hover></click>'
+      usage: '%tag% <red>Error, use: <green>/discord_register help'
+      error: '%tag% <red>Error to execute.'
+      success: '%tag% <green>Success to execute.'
+    client:
+      aliases:
+      - client
+      show: <click:suggest_command:"/discord_register client <red><discord_id>"><hover:show_text:'<green>Click to register client the clan'> <aqua>/discord_register client <red><discord_id> <gray>-<yellow> Register client clan discord.</hover></click>
+      usage: '%tag% <red>Use <aqua>/discord_register client <red><discord_id>'
+      error: '%tag% <red>An error occurred while register client the clan.'
+      success: '%tag% <green>Client request successfully submitted; please wait...'
+   
+  player:
+    # Use empty for don't need permissions
+    permission: uclans.player.discord
+    # Alias for command.
+    alias: discord
+    # Command cooldown.
+    cooldown: 0
+    # Value to use.
+    value: 0.0
+    disabled_worlds: [
+      ]
+    disabled_regions: [
+      ]
+   
+  # Discord command
+  discord:
+    help:
+      aliases: discord
+      show: <click:run_command:"/{_clan} {_discord} "><hover:show_text:'<green>Click to expand discord commands.'> <aqua>/{_clan} {_discord} <gray>-<yellow> Clan Discord.</hover></click> <hover:show_text:'<green>With sub commands.'><green>[!]</hover>
+      usage: '%tag% <red>Use <aqua>/{_clan} {_discord}'
+      error: '%tag% <red>Error.'
+      success: '%tag% <green>Success.'
+    register:
+      aliases: register
+      show: <click:suggest_command:"/{_clan} {_discord} {_register} "><hover:show_text:'<green>Click to register the clan'> <aqua>/{_clan} {_discord} {_register} <gray>-<yellow> Register clan discord.</hover></click>
+      usage: '%tag% <red>Use <aqua>/{_clan} {_discord} {_register}'
+      error: '%tag% <red>An error occurred while registering the clan.'
+      success: '%tag% <green>Pre-registration request successfully submitted; please wait...'
+    unregister:
+      aliases: unregister
+      show: <click:suggest_command:"/{_clan} {_discord} {_unregister} "><hover:show_text:'<green>Click to unregister the clan'> <aqua>/{_clan} {_discord} {_unregister} <gray>-<yellow> Unregister clan discord.</hover></click>
+      usage: '%tag% <red>Use <aqua>/{_clan} {_discord} {_unregister}'
+      error: '%tag% <red>An error occurred while unregistering the clan.'
+      success: '%tag% <green>An unregister request was sent.'

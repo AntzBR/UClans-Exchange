@@ -1,0 +1,78 @@
+Config:
+  date_format_short: dd/MM/yyyy
+   
+  Home:
+    default_amount: 3
+    #If disabled this does not appear in the menu and the command is marked as disabled.
+    enabled: true
+    guiclick_teleport_as_command: false
+    allowed_chars: '[0-9a-zA-Z_-]*'
+    public: false
+    can_toggle_view: true
+    # wg region
+    disabled_regions: [
+      ]
+    disabled_worlds: [
+      ]
+    # This option allows you to enable or disable the creation of clan homes inside and outside land.
+    #Addons available: ClanLand, ClanNexus
+    #Plugins available: HuskClaims
+    # If you need more land implementations open a support ticket
+    terrain:
+      verify_enabled: true
+      # Plugins added here will be disabled from creating homes inside terrain
+      disabled_plugin: [
+        ]
+      # Plugins added here will be able to create home only inside the terrain
+      enabled_plugin: [
+        ]
+  special_permissions:
+    bypass_home_regions: uclans.bypass_home_regions
+    bypass_home_worlds: uclans.bypass_home_worlds
+   
+  Icon:
+    click_sound: ''
+    material: BOW
+    name: <green>Clan Home.
+    texture: ''
+    lore:
+    - ' '
+    - ' <gray>Homes: <aqua>%uclans_homes_amount%'
+    - ' '
+    - ' <yellow>Click to open home menu.'
+    glow: false
+    slot: 39
+    # avaliable: TOP, BOTTOM, BORDER, ALL or numeric list
+    mimeslots: [
+      ]
+    nbt:
+      string: [
+        ]
+    model: 0
+    left_click_action:
+    - /{_clan} {_home} {_list} -gui
+    right_click_action:
+    - /{_clan} {_home} {_list} -gui
+   
+  #Permissions are for advanced connoisseurs, be careful when editing this!
+  Permissions:
+    manager:
+      name: Home-manager
+      default_value: true
+      applicable_roles:
+      - moderator
+      - admin
+  Unlocker:
+     
+     
+    # format: CLAN_HOMES/REQUIRED_LEVEL
+    #You can add multiple homes for various clan levels.
+    #example:
+    #    home:
+    #      - '1:1' #The clan can have 1 home if it is level 1
+    #      - '5:10' #The clan can have 5 home if it is level 10
+    #      - '10:20' #The clan can have 10 home if it is level 30
+    home:
+    - '1:1'
+    - '5:10'
+    - '10:20'

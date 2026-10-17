@@ -1,0 +1,55 @@
+#
+#
+# Time: in seconds
+#
+# BossBar:
+# Colors: BLUE, GREEN, PINK, PURPLE, RED, WHITE, YELLOW
+# Styles: PROGRESS, NOTCHED_6, NOTCHED_10, NOTCHED_12, NOTCHED_20
+# Flags: DARKEN_SCREEN, PLAY_BOSS_MUSIC, CREATE_WORLD_FOG
+#
+#
+# All texts are located in the language files and accept all placeholders from UClans.
+Bossbar:
+  enabled: true
+  teleport:
+    color: RED
+    style: PROGRESS
+    animate: false
+    flags: [
+      ]
+    message: <red><bold>Land claim canceled!
+  start:
+    color: YELLOW
+    style: PROGRESS
+    animate: true
+    flags:
+    - DARKEN_SKY
+    message: <gold><bold>Claim started, choose the other point! <red>({time})
+  finish:
+    color: BLUE
+    style: PROGRESS
+    animate: true
+    flags: [
+      ]
+    message: <blue><bold>Done! Click inside the box to continue! <red>({time})
+  canceled:
+    color: RED
+    style: PROGRESS
+    animate: false
+    flags: [
+      ]
+    message: <red><bold>Land claim canceled!
+  claimed:
+    color: GREEN
+    style: PROGRESS
+    animate: true
+    flags: [
+      ]
+    message: <green><bold>Clan land claimed successfully!
+  view:
+    color: WHITE
+    style: PROGRESS
+    animate: true
+    flags: [
+      ]
+    message: <white><bold>View land limits!

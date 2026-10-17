@@ -1,0 +1,244 @@
+ 
+ 
+# CHEST GUI
+ 
+ 
+Chest:
+  #Lod Chest config
+  load_chest:
+    opensound: block.slime_block.hit:1.0:1.0
+    rows: 3
+    items:
+      fill:
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        nbt:
+          string:
+          - example:example_nbt_string
+        # This option can be applied to all items.
+        enabled: true
+        # This option can be applied to all items.
+        mimeslots:
+        - ALL
+        # Used for CustomModelData options, just add the number. This option can be applied to all items.
+        model: 0
+      fill2:
+        clicksound: ''
+        material: CHEST
+        amount: 1
+        glow: false
+        # %player%, nicknames or base64Textures
+        texture: ''
+        slot: 10
+        mimeslots:
+        - 11
+        - 12
+        - 13
+        - 14
+        - 15
+        - 16
+  #Lock Chest config
+  buy_chest:
+    opensound: block.slime_block.hit
+    rows: 3
+    items:
+      fill:
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        # This option can be applied to all items.
+        enabled: true
+        # This option can be applied to all items.
+        mimeslots:
+        - ALL
+        # Used for CustomModelData options, just add the number. This option can be applied to all items.
+        model: 0
+      confirm:
+        clicksound: ''
+        material: DIAMOND_BLOCK
+        amount: 1
+        glow: true
+        # %player%, nicknames or base64Textures
+        texture: ''
+        slot: 10
+        mimeslots:
+        - 11
+        - 12
+      cancel:
+        clicksound: ''
+        material: REDSTONE_BLOCK
+        amount: 1
+        glow: true
+        # %player%, nicknames or base64Textures
+        texture: ''
+        slot: 14
+        mimeslots:
+        - 15
+        - 16
+  #Chest config
+  chest:
+    opensound: block.slime_block.hit
+    rows: -1
+    items:
+      fill:
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        # This option can be applied to all items.
+        enabled: true
+        nbt:
+          string:
+          - example:example_nbt_string
+        # This option can be applied to all items.
+        mimeslots:
+        - TOP
+        # Used for CustomModelData options, just add the number. This option can be applied to all items.
+        model: 0
+      # Used automatically by NORMAL pages when cosmetic: AUTO.
+      fill_normal:
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        enabled: true
+        mimeslots:
+        - TOP
+        model: 0
+      # Used automatically by LOCKED pages when cosmetic: AUTO.
+      fill_locked:
+        material: RED_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        enabled: true
+        mimeslots:
+        - TOP
+        model: 0
+      # Used automatically by DEPOSIT_ONLY pages when cosmetic: AUTO.
+      fill_deposit:
+        material: LIGHT_BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        enabled: true
+        mimeslots:
+        - TOP
+        model: 0
+      # Used automatically by CATEGORY pages when cosmetic: AUTO.
+      fill_category:
+        material: LIME_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        enabled: true
+        mimeslots:
+        - TOP
+        model: 0
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        amount: 1
+        glow: false
+        # %player%, nicknames or base64Textures
+        texture: ''
+        slot: 2
+      pages:
+        clicksound: ''
+        material: BOOK
+        amount: 1
+        glow: false
+        # %player%, nicknames or base64Textures
+        texture: ''
+        slot: 4
+      sort:
+        clicksound: ''
+        material: HOPPER
+        amount: 1
+        glow: true
+        # %player%, nicknames or base64Textures
+        texture: ''
+        slot: 5
+      previous:
+        clicksound: ''
+        material: ARROW
+        amount: 1
+        glow: false
+        # %player%, nicknames or base64Textures
+        texture: ''
+        slot: 0
+      next:
+        clicksound: ''
+        material: ARROW
+        amount: 1
+        glow: false
+        # %player%, nicknames or base64Textures
+        texture: ''
+        slot: 8
+      buy:
+        clicksound: ''
+        material: SLIME_BALL
+        amount: 1
+        glow: true
+        # %player%, nicknames or base64Textures
+        texture: ''
+        slot: 6
+  # Page selector GUI
+  page_selector:
+    opensound: block.chest.open:1.0:1.0
+    rows: 6
+    page_slots:
+    - 10
+    - 11
+    - 12
+    - 13
+    - 14
+    - 15
+    - 16
+    - 19
+    - 20
+    - 21
+    - 22
+    - 23
+    - 24
+    - 25
+    - 28
+    - 29
+    - 30
+    - 31
+    - 32
+    - 33
+    - 34
+    - 37
+    - 38
+    - 39
+    - 40
+    - 41
+    - 42
+    - 43
+    items:
+      fill:
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        enabled: true
+        mimeslots:
+        - ALL
+        model: 0
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        amount: 1
+        glow: false
+        texture: ''
+        slot: 49
+      previous:
+        clicksound: ''
+        material: ARROW
+        amount: 1
+        glow: false
+        texture: ''
+        slot: 45
+      next:
+        clicksound: ''
+        material: ARROW
+        amount: 1
+        glow: false
+        texture: ''
+        slot: 53

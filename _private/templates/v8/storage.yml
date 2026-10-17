@@ -1,0 +1,34 @@
+Storage:
+  # sqlite/mysql/yaml
+  # For better performance it is recommended to use MYSQL as storage.
+  type: sqlite
+  mysql:
+    # Only mysql
+    host: localhost
+    # Only mysql
+    port: 3306
+    # Only mysql
+    base: YOUR-BASE-PRE-CREATED
+    #SSL is only valid for MYSQL, most servers are not necessary to use it as true.
+    useSSL: false
+    args: ?useUnicode=true&characterEncoding=UTF-8
+    # maximum size that the (mysql) pool is allowed to reach. (https://github.com/brettwooldridge/HikariCP/wiki/About-Pool-Sizing)
+    maximumPoolSize: 10
+  # Used for Mysql mandatory and optional for H2 and Sqlite (default: root)
+  user: root
+  # Used for Mysql mandatory and optional for H2 and Sqlite (default is empty)
+  pass: ''
+  databases:
+    clan_table: uclans-clans
+    player_table: uclans-players
+    invite_table: uclans-invite
+    moderation_table: uclans-moderation
+    logger_table: uclans-logger
+    mail_table: uclans-mail
+    rewards_table: uclans-rewards
+  # https://github.com/brettwooldridge/HikariCP#popular-datasource-class-names
+  datasource:
+    mysql: jdbc:mysql://
+    mysql_class: ''
+    sqlite: 'jdbc:sqlite:'
+    sqlite_class: org.sqlite.JDBC

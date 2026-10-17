@@ -1,0 +1,47 @@
+ 
+#permissions and alias
+Commands:
+   
+  player:
+    # Use empty for don't need permissions
+    permission: uclans.player.banner
+    # Alias for command.
+    alias: banner
+    # Command cooldown.
+    cooldown: 0
+    # Value to use.
+    value: 0.0
+    disabled_worlds: [
+      ]
+    disabled_regions: [
+      ]
+   
+  # Banner command
+  banner:
+    permission: uclans.player.banner
+    # in seconds
+    cooldown: 0
+    help:
+      aliases: banner
+      show: <click:run_command:"/{_clan} {_banner} "><hover:show_text:'<green>Click to expand banner commands.'> <aqua>/{_clan} {_banner} <gray>-<yellow> Change clan banner.</hover></click> <hover:show_text:'<green>With sub commands.'><green>[!]</hover>
+      usage: '%tag% <red>Use <aqua>/{_clan} {_banner}'
+      error: '%tag% <red>An error occurred while changing clan banner.'
+      success: '%tag% <green>Success'
+    upload:
+      aliases: upload
+      show: <click:suggest_command:"/{_clan} {_banner} {_upload} "><hover:show_text:'<green>Click to upload a banner.'> <aqua>/{_clan} {_banner} {_upload} <light_purple>(-gui) <gray>-<yellow> Upload a clan banner.</hover></click>
+      usage: '%tag% <red>Use <aqua>/{_clan} {_banner} {_upload} <light_purple>(-gui)'
+      error: '%tag% <red>An error occurred while uploading banner.'
+      success: '%tag% <green>New clan banner successfully saved.'
+    delete:
+      aliases: delete
+      show: <click:suggest_command:"/{_clan} {_banner} {_delete} "><hover:show_text:'<green>Click to delete the banner.'> <aqua>/{_clan} {_banner} {_delete} <gray>-<yellow> Delete the clan banner.</hover></click>
+      usage: '%tag% <red>Use <aqua>/{_clan} {_banner} {_delete}'
+      error: '%tag% <red>There was an error deleting the clan banner.'
+      success: '%tag% <green>The banner has been successfully deleted.'
+    view:
+      aliases: view
+      show: <click:suggest_command:"/{_clan} {_banner} {_view} "><hover:show_text:'<green>Click to view banner information.'> <aqua>/{_clan} {_banner} {_view} <light_purple>(-gui) <gray>-<yellow> View banner information.</hover></click>
+      usage: '%tag% <red>Use <aqua>/{_clan} {_banner} {_view} <light_purple>(-gui)'
+      error: '%tag% <red>An error occurred while viewing clan banner.'
+      success: '%tag% <green>Success.'

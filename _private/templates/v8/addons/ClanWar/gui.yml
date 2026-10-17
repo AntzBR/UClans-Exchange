@@ -1,0 +1,474 @@
+Config:
+  version: '1'
+ 
+ 
+ 
+ 
+# WAR GUI
+ 
+ 
+ 
+ 
+War:
+  #War config
+  war_amount:
+    opensound: block.slime_block.hit:1.0:1.0
+    rows: 0
+    items:
+      fill:
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        nbt:
+          string:
+          - example:example_nbt_string
+        # Used for CustomModelData options, just add the number. This option can be applied to all items.
+        model: 0
+        # This option can be applied to all items.
+        enabled: false
+        # This option can be applied to all items.
+        slot: 0
+        # This option can be applied to all items.
+        mimeslots:
+        - ALL
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        amount: 1
+        glow: false
+        # %player%, nicknames or base64Textures
+        texture: ''
+        slot: 9
+      select:
+        clicksound: ''
+        material: PLAYER_HEAD
+        amount: 1
+        glow: false
+        # %player%, nicknames or base64Textures
+        texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTBlZTY4NjJmNDE4ZDY2YTViZGIwMzk2YTQyZDdjZTNlNGIyZTgxZGMzMDA2ZWIzNWI2NDRjOTNkZjQ4ZGZiMSJ9fX0=
+  #War config
+  war_select_clan:
+    opensound: block.slime_block.hit
+    rows: 6
+    pagesize: 45
+    items:
+      fill:
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        nbt:
+          string:
+          - example:example_nbt_string
+        # Used for CustomModelData options, just add the number. This option can be applied to all items.
+        model: 0
+        # This option can be applied to all items.
+        enabled: true
+        # This option can be applied to all items.
+        mimeslots:
+        - BOTTOM
+      previous:
+        clicksound: ''
+        material: ARROW
+        amount: 1
+        glow: false
+        slot: 47
+      next:
+        clicksound: ''
+        material: ARROW
+        amount: 1
+        glow: false
+        # %player%, nicknames or base64Textures
+        texture: ''
+        slot: 51
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        amount: 1
+        glow: false
+        # %player%, nicknames or base64Textures
+        texture: ''
+        slot: 49
+      select:
+        clicksound: ''
+        material: ''
+        amount: 1
+        glow: false
+        # %player%, nicknames or base64Textures
+        texture: '%uclans_banner%'
+      wait:
+        clicksound: ''
+        material: RED_STAINED_GLASS_PANE
+        amount: 1
+        glow: true
+        # %player%, nicknames or base64Textures
+        texture: ''
+        slot: 0
+  #War config
+  war_select_arena:
+    opensound: block.slime_block.hit
+    rows: 6
+    pagesize: 45
+    items:
+      fill:
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        nbt:
+          string:
+          - example:example_nbt_string
+        # Used for CustomModelData options, just add the number. This option can be applied to all items.
+        model: 0
+        # This option can be applied to all items.
+        enabled: true
+        # This option can be applied to all items.
+        mimeslots:
+        - BOTTOM
+      previous:
+        clicksound: ''
+        material: ARROW
+        amount: 1
+        glow: false
+        # %player%, nicknames or base64Textures
+        texture: ''
+        slot: 47
+      next:
+        clicksound: ''
+        material: ARROW
+        amount: 1
+        glow: false
+        # %player%, nicknames or base64Textures
+        texture: ''
+        slot: 51
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        amount: 1
+        glow: false
+        # %player%, nicknames or base64Textures
+        texture: ''
+        slot: 49
+      select:
+        clicksound: ''
+        material: DIAMOND_SWORD
+        amount: 1
+        glow: true
+        # %player%, nicknames or base64Textures
+        texture: ''
+  #War config
+  war_select_kit:
+    opensound: block.slime_block.hit
+    rows: 1
+    items:
+      fill:
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        nbt:
+          string:
+          - example:example_nbt_string
+        # Used for CustomModelData options, just add the number. This option can be applied to all items.
+        model: 0
+        # This option can be applied to all items.
+        enabled: true
+        # This option can be applied to all items.
+        slot: 0
+        # This option can be applied to all items.
+        mimeslots:
+        - ALL
+      previous:
+        clicksound: ''
+        material: ARROW
+        amount: 1
+        glow: false
+        # %player%, nicknames or base64Textures
+        texture: ''
+      next:
+        clicksound: ''
+        material: ARROW
+        amount: 1
+        glow: false
+        # %player%, nicknames or base64Textures
+        texture: ''
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        amount: 1
+        glow: false
+        # %player%, nicknames or base64Textures
+        texture: ''
+        slot: 8
+      nokit:
+        clicksound: ''
+        material: BARRIER
+        amount: 1
+        glow: false
+        # %player%, nicknames or base64Textures
+        texture: ''
+        slot: 1
+      yeskit:
+        clicksound: ''
+        material: CHEST
+        amount: 1
+        glow: true
+        # %player%, nicknames or base64Textures
+        texture: ''
+        slot: 5
+  #War config
+  war_select_kit_list:
+    opensound: block.slime_block.hit
+    rows: 6
+    pagesize: 45
+    items:
+      fill:
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        nbt:
+          string:
+          - example:example_nbt_string
+        # Used for CustomModelData options, just add the number. This option can be applied to all items.
+        model: 0
+        # This option can be applied to all items.
+        enabled: true
+        # This option can be applied to all items.
+        mimeslots:
+        - BOTTOM
+      previous:
+        clicksound: ''
+        material: ARROW
+        amount: 1
+        glow: false
+        # %player%, nicknames or base64Textures
+        texture: ''
+        slot: 47
+      next:
+        clicksound: ''
+        material: ARROW
+        amount: 1
+        glow: false
+        # %player%, nicknames or base64Textures
+        texture: ''
+        slot: 51
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        amount: 1
+        glow: false
+        # %player%, nicknames or base64Textures
+        texture: ''
+        slot: 49
+      select:
+        clicksound: ''
+        material: IRON_SWORD
+        amount: 1
+        glow: true
+        # %player%, nicknames or base64Textures
+        texture: ''
+  #War config
+  war_arenas:
+    opensound: block.slime_block.hit
+    rows: 6
+    pagesize: 45
+    items:
+      fill:
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        nbt:
+          string:
+          - example:example_nbt_string
+        # Used for CustomModelData options, just add the number. This option can be applied to all items.
+        model: 0
+        # This option can be applied to all items.
+        enabled: true
+        # This option can be applied to all items.
+        mimeslots:
+        - BOTTOM
+      previous:
+        clicksound: ''
+        material: ARROW
+        amount: 1
+        glow: false
+        # %player%, nicknames or base64Textures
+        texture: ''
+        slot: 47
+      next:
+        clicksound: ''
+        material: ARROW
+        amount: 1
+        glow: false
+        # %player%, nicknames or base64Textures
+        texture: ''
+        slot: 51
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        amount: 1
+        glow: false
+        # %player%, nicknames or base64Textures
+        texture: ''
+        slot: 49
+      current:
+        clicksound: ''
+        material: DIAMOND_SWORD
+        amount: 1
+        glow: true
+        # %player%, nicknames or base64Textures
+        texture: ''
+        slot: 0
+      current_inactive:
+        clicksound: ''
+        material: LADDER
+        amount: 1
+        glow: true
+        # %player%, nicknames or base64Textures
+        texture: ''
+        slot: 0
+  #War config
+  war_home:
+    opensound: block.slime_block.hit
+    rows: 4
+    items:
+      fill:
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        nbt:
+          string:
+          - example:example_nbt_string
+        # Used for CustomModelData options, just add the number. This option can be applied to all items.
+        model: 0
+        # This option can be applied to all items.
+        enabled: true
+        # This option can be applied to all items.
+        slot: 0
+        # This option can be applied to all items.
+        mimeslots:
+        - ALL
+      challenge:
+        clicksound: ''
+        material: DIAMOND_SWORD
+        amount: 1
+        glow: true
+        # %player%, nicknames or base64Textures
+        texture: ''
+        slot: 11
+      arenas:
+        clicksound: ''
+        material: LADDER
+        amount: 1
+        glow: false
+        # %player%, nicknames or base64Textures
+        texture: ''
+        slot: 13
+      kits:
+        clicksound: ''
+        material: CHEST
+        amount: 1
+        glow: false
+        # %player%, nicknames or base64Textures
+        texture: ''
+        slot: 15
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        amount: 1
+        glow: false
+        # %player%, nicknames or base64Textures
+        texture: ''
+        slot: 31
+  #War config
+  war_kits:
+    opensound: block.slime_block.hit
+    rows: 6
+    pagesize: 45
+    items:
+      fill:
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        nbt:
+          string:
+          - example:example_nbt_string
+        # Used for CustomModelData options, just add the number. This option can be applied to all items.
+        model: 0
+        # This option can be applied to all items.
+        enabled: true
+        # This option can be applied to all items.
+        mimeslots:
+        - BOTTOM
+      previous:
+        clicksound: ''
+        material: ARROW
+        amount: 1
+        glow: false
+        # %player%, nicknames or base64Textures
+        texture: ''
+        slot: 47
+      next:
+        clicksound: ''
+        material: ARROW
+        amount: 1
+        glow: false
+        # %player%, nicknames or base64Textures
+        texture: ''
+        slot: 51
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        amount: 1
+        glow: false
+        # %player%, nicknames or base64Textures
+        texture: ''
+        slot: 49
+      current:
+        clicksound: ''
+        material: DIAMOND_SWORD
+        amount: 1
+        glow: true
+        # %player%, nicknames or base64Textures
+        texture: ''
+        slot: 0
+  #War config
+  war_kits_preview:
+    opensound: block.slime_block.hit
+    rows: 6
+    items:
+      fill:
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        nbt:
+          string:
+          - example:example_nbt_string
+        # Used for CustomModelData options, just add the number. This option can be applied to all items.
+        model: 0
+        # This option can be applied to all items.
+        enabled: true
+        # This option can be applied to all items.
+        mimeslots:
+        - BOTTOM
+      previous:
+        clicksound: ''
+        material: ARROW
+        amount: 1
+        glow: false
+        # %player%, nicknames or base64Textures
+        texture: ''
+        slot: 47
+      next:
+        clicksound: ''
+        material: ARROW
+        amount: 1
+        glow: false
+        # %player%, nicknames or base64Textures
+        texture: ''
+        slot: 51
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        amount: 1
+        glow: false
+        # %player%, nicknames or base64Textures
+        texture: ''
+        slot: 49

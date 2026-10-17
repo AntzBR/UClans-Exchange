@@ -1,0 +1,37 @@
+ 
+#permissions and alias
+Commands:
+  player:
+     
+    # Clan rewards
+    rewards:
+      permission: uclans.player.rewards
+      # Alias for command.
+      alias: rewards
+      # in seconds
+      cooldown: 0
+      # Value to use.
+      value: 0.0
+      disabled_worlds: [
+        ]
+      disabled_regions: [
+        ]
+  rewards:
+    help:
+      aliases: help
+      show: <click:run_command:"/{_clan} {_rewards} "><hover:show_text:'<green>Click to expand rewards commands.'> <aqua>/{_clan} {_rewards} <gray>-<yellow> Player rewards.</hover></click> <hover:show_text:'<green>With sub commands.'><green>[!]</hover>
+      usage: '%tag% <red>Use <aqua>/{_clan} {_rewards}'
+      error: '%tag% <red>Error.'
+      success: '%tag% <green>Success.'
+    list:
+      aliases: list
+      show: <click:suggest_command:"/{_clan} {_rewards} {_list} "><hover:show_text:'<green>Click to list rewards'> <aqua>/{_clan} {_rewards} {_list} <light_purple>(page/-gui) <gray>-<yellow> List rewards.</hover></click>
+      usage: '%tag% <red>Use <aqua>/{_clan} {_rewards} {_list} <light_purple>(page/-gui)'
+      error: '%tag% <red>There was an error listing your rewards.'
+      success: '%tag% Success'
+    collect:
+      aliases: collect
+      show: <click:suggest_command:"/{_clan} {_rewards} {_collect} "><hover:show_text:'<green>Click to collect rewards'> <aqua>/{_clan} {_rewards} {_collect} <light_purple>(id/-gui) <gray>-<yellow> Collect rewards.</hover></click>
+      usage: '%tag% <red>Use <aqua>/{_clan} {_rewards} {_collect} <light_purple>(id/-gui)'
+      error: '%tag% <red>An error occurred while collecting the reward'
+      success: '%tag% <green>You have successfully collected the reward.'

@@ -1,0 +1,336 @@
+Coins:
+  # You can create new coins following the example of the common item.
+  list:
+    MyCustomCoin:
+      name: <green>Comum
+      # if a permission is added only members with this permission have a chance to receive
+      permission: ''
+      # type of coin, values: POINT, MONEYBANK, LEAGUEPOINT
+      type: POINT
+      # values: VIRTUAL or PHYSICAL
+      coin: PHYSICAL
+      # in percent, use 0 or -1 to disable.
+      chance: 15.0
+      min_value: 1
+      max_value: 5
+      drop_sound: 'entity.armadillo.scute_drop'
+      # format: REQUIRED_LEVEL/CHANCE
+      # You can add multiple chances for various clan levels.
+      #example:
+      #    chance_per_level:
+      #      '1': 15.0 #The clan may have a 15.0 chance if it is level 1
+      #      '10': 20.0 #The clan may have a 20.0 chance if it is level 10
+      #      '20': 25.0 #The clan may have a 25.0 chance if it is level 30
+      #
+      # Use empty to use default chance
+      chance_per_level: {}
+      # format: MEMBER_ROLE/CHANCE
+      # You can add multiple chances for various member role.
+      #example:
+      #    chance_per_role:
+      #      'member': 15.0 #The clan may have a 15.0 chance if member is role member
+      #      'admin': 20.0 #The clan may have a 20.0 chance if member is role admin
+      #      'leader': 25.0 #The clan may have a 25.0 chance if member is role leader
+      #
+      # Use empty to use default chance
+      chance_per_role: {}
+      # If there are regions in this list this coin will only work in the marked region.
+      # Leave blank for all regions.
+      enabled_regions: {}
+      # If there are worlds in this list this coin will only work in the marked world.
+      # Leave blank for all worlds.
+      enabled_worlds: {}
+      # mobs on the whitelist, allowed: all mobs
+      mobs:
+      - COW
+      - CHICKEN
+      - PIG
+      # blocks on the whitelist, allowed: all minerable blocks, croops and timber
+      miner:
+      - IRON_ORE
+      - COAL_ORE
+      # fish on the whitelist, allowed: all fishing
+      fishing:
+      - COD
+      # allowed: MEMBER, RIVAL, ALLY, NEUTRAL
+      players:
+      - RIVAL
+      #Shoot league points
+      league: false
+      icon:
+        material: GOLD_NUGGET
+        name: <gold><bold>Clan Points <gray>| {rarity}
+        lore:
+        - ''
+        - ' <white>Value: <green>{amount} {type}.'
+        - ' <white>Rarity: <aqua>{rarity}'
+        - ' <yellow>Click to save.'
+        nbts: {}
+        model: 0
+    rare:
+      name: <blue>Rare
+      # if a permission is added only members with this permission have a chance to receive
+      permission: ''
+      # type of coin, values: POINT, MONEYBANK, LEAGUEPOINT
+      type: POINT
+      # values: VIRTUAL or PHYSICAL
+      coin: VIRTUAL
+      # in percent, use 0 or -1 to disable.
+      chance: 5.0
+      min_value: 10
+      max_value: 50
+      drop_sound: 'entity.armadillo.scute_drop'
+      # format: REQUIRED_LEVEL/CHANCE
+      # You can add multiple chances for various clan levels.
+      #example:
+      #    chance_per_level:
+      #      '1': 15.0 #The clan may have a 15.0 chance if it is level 1
+      #      '10': 20.0 #The clan may have a 20.0 chance if it is level 10
+      #      '20': 25.0 #The clan may have a 25.0 chance if it is level 30
+      #
+      # Use empty to use default chance
+      chance_per_level: {}
+      # format: MEMBER_ROLE/CHANCE
+      # You can add multiple chances for various member role.
+      #example:
+      #    chance_per_role:
+      #      'member': 15.0 #The clan may have a 15.0 chance if member is role member
+      #      'admin': 20.0 #The clan may have a 20.0 chance if member is role admin
+      #      'leader': 25.0 #The clan may have a 25.0 chance if member is role leader
+      #
+      # Use empty to use default chance
+      chance_per_role: {}
+      # If there are regions in this list this coin will only work in the marked region.
+      # Leave blank for all regions.
+      enabled_regions: {}
+      # If there are worlds in this list this coin will only work in the marked world.
+      # Leave blank for all worlds.
+      enabled_worlds: {}
+      # mobs on the whitelist, allowed: all mobs
+      mobs:
+      - COW
+      - CHICKEN
+      - PIG
+      # blocks on the whitelist, allowed: all minerable blocks, croops and timber
+      miner:
+      - IRON_ORE
+      - COAL_ORE
+      - DIAMOND_ORE
+      - EMERALD_ORE
+      # fish on the whitelist, allowed: all fishing
+      fishing:
+      - COD
+      # allowed: MEMBER, RIVAL, ALLY, NEUTRAL
+      players:
+      - ALLY
+      - RIVAL
+      - NEUTRAL
+      #Shoot league points
+      league: false
+      icon:
+        material: GOLD_NUGGET
+        name: <gold><bold>Clan Points <gray>| {rarity}
+        lore:
+        - ''
+        - ' <white>Value: <green>{amount} {type}.'
+        - ' <white>Rarity: <aqua>{rarity}'
+        - ' <yellow>Click to save.'
+        nbts: {}
+        model: 0
+    legendary:
+      name: <gold>Legendary
+      # if a permission is added only members with this permission have a chance to receive
+      permission: ''
+      # type of coin, values: POINT, MONEYBANK, LEAGUEPOINT
+      type: POINT
+      # values: VIRTUAL or PHYSICAL
+      coin: PHYSICAL
+      # in percent, use 0 or -1 to disable.
+      chance: 1.5
+      min_value: 100
+      max_value: 200
+      drop_sound: 'entity.armadillo.scute_drop'
+      # format: REQUIRED_LEVEL/CHANCE
+      # You can add multiple chances for various clan levels.
+      #example:
+      #    chance_per_level:
+      #      '1': 15.0 #The clan may have a 15.0 chance if it is level 1
+      #      '10': 20.0 #The clan may have a 20.0 chance if it is level 10
+      #      '20': 25.0 #The clan may have a 25.0 chance if it is level 30
+      #
+      # Use empty to use default chance
+      chance_per_level: {}
+      # format: MEMBER_ROLE/CHANCE
+      # You can add multiple chances for various member role.
+      #example:
+      #    chance_per_role:
+      #      'member': 15.0 #The clan may have a 15.0 chance if member is role member
+      #      'admin': 20.0 #The clan may have a 20.0 chance if member is role admin
+      #      'leader': 25.0 #The clan may have a 25.0 chance if member is role leader
+      #
+      # Use empty to use default chance
+      chance_per_role: {}
+      # If there are regions in this list this coin will only work in the marked region.
+      # Leave blank for all regions.
+      enabled_regions: {}
+      # If there are worlds in this list this coin will only work in the marked world.
+      # Leave blank for all worlds.
+      enabled_worlds: {}
+      # mobs on the whitelist, allowed: all mobs
+      mobs:
+      - COW
+      - CHICKEN
+      - PIG
+      # blocks on the whitelist, allowed: all minerable blocks, croops and timber
+      miner:
+      - IRON_ORE
+      - COAL_ORE
+      # fish on the whitelist, allowed: all fishing
+      fishing:
+      - COD
+      # allowed: MEMBER, RIVAL, ALLY, NEUTRAL
+      players:
+      - MEMBER
+      - ALLY
+      - RIVAL
+      - NEUTRAL
+      #Shoot league points
+      league: false
+      icon:
+        material: GOLD_NUGGET
+        name: <gold><bold>Clan Points <gray>| {rarity}
+        lore:
+        - ''
+        - ' <white>Value: <green>{amount} {type}.'
+        - ' <white>Rarity: <aqua>{rarity}'
+        - ' <yellow>Click to save.'
+        nbts: {}
+        model: 0
+    money:
+      name: <gold>+Money
+      # if a permission is added only members with this permission have a chance to receive
+      permission: ''
+      # type of coin, values: POINT, MONEYBANK, LEAGUEPOINT
+      type: MONEYBANK
+      # values: VIRTUAL or PHYSICAL
+      coin: PHYSICAL
+      # in percent, use 0 or -1 to disable.
+      chance: 5.0
+      min_value: 100
+      max_value: 200
+      drop_sound: 'entity.armadillo.scute_drop'
+      # format: REQUIRED_LEVEL/CHANCE
+      # You can add multiple chances for various clan levels.
+      #example:
+      #    chance_per_level:
+      #      '1': 15.0 #The clan may have a 15.0 chance if it is level 1
+      #      '10': 20.0 #The clan may have a 20.0 chance if it is level 10
+      #      '20': 25.0 #The clan may have a 25.0 chance if it is level 30
+      #
+      # Use empty to use default chance
+      chance_per_level: {}
+      # format: MEMBER_ROLE/CHANCE
+      # You can add multiple chances for various member role.
+      #example:
+      #    chance_per_role:
+      #      'member': 15.0 #The clan may have a 15.0 chance if member is role member
+      #      'admin': 20.0 #The clan may have a 20.0 chance if member is role admin
+      #      'leader': 25.0 #The clan may have a 25.0 chance if member is role leader
+      #
+      # Use empty to use default chance
+      chance_per_role: {}
+      # If there are regions in this list this coin will only work in the marked region.
+      # Leave blank for all regions.
+      enabled_regions: {}
+      # If there are worlds in this list this coin will only work in the marked world.
+      # Leave blank for all worlds.
+      enabled_worlds: {}
+      # mobs on the whitelist, allowed: all mobs
+      mobs:
+      - COW
+      - CHICKEN
+      - PIG
+      # blocks on the whitelist, allowed: all minerable blocks, croops and timber
+      miner:
+      - IRON_ORE
+      - COAL_ORE
+      # fish on the whitelist, allowed: all fishing
+      fishing:
+      - COD
+      # allowed: MEMBER, RIVAL, ALLY, NEUTRAL
+      players:
+      - MEMBER
+      - ALLY
+      - RIVAL
+      - NEUTRAL
+      #Shoot league points
+      league: false
+      icon:
+        material: SUNFLOWER
+        name: <gold><bold>Clan Bank <gray>| {rarity}
+        lore:
+        - ''
+        - ' <white>Value: <green>{amount} {type}.'
+        - ' <white>Rarity: <aqua>{rarity}'
+        - ' <yellow>Click to save.'
+        nbts: {}
+        model: 0
+    league:
+      name: <aqua><aqua>Secret+
+      # if a permission is added only members with this permission have a chance to receive
+      permission: ''
+      # type of coin, values: POINT, MONEYBANK, LEAGUEPOINT
+      type: LEAGUEPOINT
+      # values: VIRTUAL or PHYSICAL
+      coin: PHYSICAL
+      # in percent, use 0 or -1 to disable.
+      chance: 1.0
+      min_value: 1
+      max_value: 10
+      drop_sound: 'entity.armadillo.scute_drop'
+      # format: REQUIRED_LEVEL/CHANCE
+      # You can add multiple chances for various clan levels.
+      #example:
+      #    chance_per_level:
+      #      '1': 15.0 #The clan may have a 15.0 chance if it is level 1
+      #      '10': 20.0 #The clan may have a 20.0 chance if it is level 10
+      #      '20': 25.0 #The clan may have a 25.0 chance if it is level 30
+      #
+      # Use empty to use default chance
+      chance_per_level: {}
+      # format: MEMBER_ROLE/CHANCE
+      # You can add multiple chances for various member role.
+      #example:
+      #    chance_per_role:
+      #      'member': 15.0 #The clan may have a 15.0 chance if member is role member
+      #      'admin': 20.0 #The clan may have a 20.0 chance if member is role admin
+      #      'leader': 25.0 #The clan may have a 25.0 chance if member is role leader
+      #
+      # Use empty to use default chance
+      chance_per_role: {}
+      # If there are regions in this list this coin will only work in the marked region.
+      # Leave blank for all regions.
+      enabled_regions: {}
+      # If there are worlds in this list this coin will only work in the marked world.
+      # Leave blank for all worlds.
+      enabled_worlds: {}
+      # mobs on the whitelist, allowed: all mobs
+      mobs: {} 
+      # blocks on the whitelist, allowed: all minerable blocks, croops and timber
+      miner: {}
+      # fish on the whitelist, allowed: all fishing
+      fishing: {}
+      # allowed: MEMBER, RIVAL, ALLY, NEUTRAL
+      players: {}
+      #Shoot league points
+      league: true
+      icon:
+        material: PAPER
+        name: <gold><bold>Clan League Point <gray>| {rarity}
+        lore:
+        - ''
+        - ' <white>Value: <green>{amount} {type}.'
+        - ' <white>Rarity: <aqua>{rarity}'
+        - ' <yellow>Click to save.'
+        nbts: {}
+        model: 0

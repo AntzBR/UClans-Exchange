@@ -1,0 +1,60 @@
+ 
+#permissions and alias
+Commands:
+   
+  admin:
+    # NOT RECOMMENDED: Use empty for don't need permissions
+    permission: clanleaderboard.admin
+    # Alias for command.
+    alias: clanboard
+  #admin command
+  clanleaderboard:
+    help:
+      aliases:
+      - ajuda
+      show: ' <click:run_command:"/clanleaderboard help"><hover:show_text:"<green>Click to show."><green>/clanleaderboard help <gray>- <yellow>Show help menu.</hover></click>'
+      usage: '%tag% <red>Error, use: <green>/clanleaderboard help'
+      error: '%tag% <red>Error to execute.'
+      success: '%tag% <green>Success to execute.'
+    reload:
+      aliases:
+      - recarregar
+      show: ' <green>/clanleaderboard reload <gray>- <yellow>Reload settings.'
+      usage: '%tag% <red>Error, use: <green>/clanleaderboard reload'
+      error: '%tag% <red>An error occurred while reloading.'
+      success: '%tag% <green>Plugin reloaded successfully.'
+    create:
+      aliases:
+      - create
+      show: ' <green>/clanleaderboard create <red><statistic> <rank> <gray>- <yellow>Create a leaderboard.'
+      usage: '%tag% <red>Error, use: <green>/clanleaderboard create <red><statistic> <rank>'
+      error: '%tag% <red>An error occurred while creating the leaderboard.'
+      success: '%tag% <green>The new leaderboard has been successfully created!'
+    editmode:
+      aliases:
+      - editmode
+      show: ' <green>/clanleaderboard editmode <gray>- <yellow>Enter edit mode.'
+      usage: '%tag% <red>Error, use: <green>/clanleaderboard editmode'
+      error: '%tag% <red>An error occurred when entering edit mode.'
+      success: '%tag% <green>You changed the edit mode to <bold>{mode}'
+    update:
+      aliases:
+      - update
+      show: ' <green>/clanleaderboard update <red><id> <gray>- <yellow>Update a board.'
+      usage: '%tag% <red>Error, use: <green>/clanleaderboard update <red><id>'
+      error: '%tag% <red>Error when updating.'
+      success: '%tag% <green>Successfully updated'
+    delete:
+      aliases:
+      - delete
+      show: ' <green>/clanleaderboard delete <red><id> <gray>- <yellow>Delete a board.'
+      usage: '%tag% <red>Error, use: <green>/clanleaderboard delete <red><id>'
+      error: '%tag% <red>Error when delete.'
+      success: '%tag% <green>Successfully deleted '
+    tp:
+      aliases:
+      - tp
+      show: ' <green>/clanleaderboard tp <red><id> <gray>- <yellow>Update a board.'
+      usage: '%tag% <red>Error, use: <green>/clanleaderboard tp <red><id>'
+      error: '%tag% <red>Error when teleporting.'
+      success: '%tag% <green>Successfully teleported to the leaderboard'

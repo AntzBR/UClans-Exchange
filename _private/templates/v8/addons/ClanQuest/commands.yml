@@ -1,0 +1,79 @@
+ 
+#permissions and alias
+Commands:
+   
+  admin:
+    # NOT RECOMMENDED: Use empty for don't need permissions
+    permission: clanquest.admin
+    # Alias for command.
+    alias: clanquest
+   
+  player:
+    # Use empty for don't need permissions
+    permission: uclans.player.quest
+    # Alias for command.
+    alias: quest
+    # Command cooldown.
+    cooldown: 0
+    # Value to use.
+    value: 0.0
+    disabled_worlds: [
+      ]
+    disabled_regions: [
+      ]
+   
+  # player command
+  quest:
+    help:
+      aliases: help
+      show: <click:suggest_command:"/{_clan} {_quest} "><hover:show_text:'<green>Click to expand.'> <aqua>/{_clan} {_quest} <gray>-<yellow> Expand quest commands.</hover></click> <hover:show_text:'<green>With sub commands.'><green>[!]</hover>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_quest} {_help}'
+      error: '%tag% <red>Error to use.'
+      success: '%tag% <green>Success to execute.'
+    list:
+      aliases: list
+      show: <click:suggest_command:"/{_clan} {_quest} {_list} "><hover:show_text:'<green>Click to list.'> <aqua>/{_clan} {_quest} {_list} <light_purple>(-gui) <gray>-<yellow> List quests.</hover></click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_quest} {_list} <light_purple>(-gui)'
+      error: '%tag% <red>List!'
+      success: '%tag% <green>Success'
+    status:
+      aliases: status
+      show: <click:suggest_command:"/{_clan} {_quest} {_status} "><hover:show_text:'<green>Click to view.'> <aqua>/{_clan} {_quest} {_status} <gray>-<yellow> See quest status.</hover></click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_quest} {_status}'
+      error: '%tag% <red>Error.'
+      success: '%tag% <green>Success.'
+    start:
+      aliases: start
+      show: <click:suggest_command:"/{_clan} {_quest} {_start} "><hover:show_text:'<green>Click to view.'> <aqua>/{_clan} {_quest} {_start} <red><name> <gray>-<yellow> Start a quest.</hover></click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_quest} {_start} <red><name>'
+      error: '%tag% <red>There was an error starting the quest'
+      success: '%tag% <green>Quest started successfully'
+    abandon:
+      aliases: abandon
+      show: <click:suggest_command:"/{_clan} {_quest} {_abandon} "><hover:show_text:'<green>Click to view.'> <aqua>/{_clan} {_quest} {_abandon} <gray>-<yellow> Abandon a quest in progress.</hover></click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_quest} {_abandon}'
+      error: '%tag% <red>An error occurred while abandoning the quest'
+      success: '%tag% <green>Quest abandoned successfully.'
+  #command
+  clanquest:
+    help:
+      aliases:
+      - ajuda
+      show: ' <green>/clanquest help <gray>- <yellow>Show help menu.'
+      usage: '%tag% <red>Error, use: <green>/clanquest help'
+      error: '%tag% <red>Error to execute.'
+      success: '%tag% <green>Success to execute.'
+    addpoint:
+      aliases:
+      - addpontos
+      show: ' <green>/clanquest addpoint <red><mission> <player> <amount> <gray>- <yellow>Add points to player missions.'
+      usage: '%tag% <red>Error, use: <green>/clanquest addpoint <red><mission> <player> <amount>'
+      error: '%tag% <red>An error occurred while adding the points.'
+      success: '%tag% <green>Points successfully added.'
+    reload:
+      aliases:
+      - recarregar
+      show: ' <green>/clanquest reload <gray>- <yellow>Reload settings.'
+      usage: '%tag% <red>Error, use: <green>/clanquest reload'
+      error: '%tag% <red>An error occurred while reloading.'
+      success: '%tag% <green>Plugin reloaded successfully.'

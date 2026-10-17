@@ -1,0 +1,56 @@
+Config:
+  version: '1'
+  # available: [EN]
+  language: EN
+   
+  Farm:
+    enabled: true
+    only_with_clan: true
+    disabled_worlds:
+    - disable_world
+    # Wg region
+    disabled_regions:
+    - disable_region
+    # If FALSE, when collected the value is sent directly to the clan and the player does not receive the item
+    allow_pickup: true
+    disable_creative: true
+    use_customname: true
+    money_format: '#,##0'
+    name: <aqua>Farm Coins
+     
+    # If TRUE the placed and broken blocks will start to be followed.
+    # NOTE: This is not persistent on server reload or plugin reload.
+    follow_player: true
+    # These will be the blocks to be followed for place and break. for all blocks use 'ALL'
+    follow_block:
+    - IRON_ORE
+    - COAL_ORE
+    - DIAMOND_ORE
+    - EMERALD_ORE
+     
+    # If TRUE the filter will be applied to all placed blocks, regardless of the player.
+    follow_allplayers_placed: false
+   
+  #Permissions are for advanced connoisseurs, be careful when editing this!
+  Permissions:
+    coin_pickup:
+      name: Coin-Pickup
+      default_value: true
+      applicable_roles:
+      - member
+      - moderator
+      - admin
+    coin_save:
+      name: Coin-Save
+      default_value: true
+      applicable_roles:
+      - member
+      - moderator
+      - admin
+    coin_drop:
+      name: Coin-Drop
+      default_value: true
+      applicable_roles:
+      - member
+      - moderator
+      - admin

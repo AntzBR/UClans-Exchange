@@ -1,0 +1,203 @@
+General:
+  #Clan Logger config
+  clan_logger:
+    opensound: block.slime_block.hit
+    rows: 6
+    pagesize: 35
+    items:
+      fill:
+        # Use ; "<ITEM>;<ITEM>;<ITEM>" to add more than one item to the fill.
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        # This option can be applied to all items.
+        enabled: true
+        # This option can be applied to all items.
+        mimeslots:
+        - BOTTOM
+        # Nbts can be applied to all items in all menus by following this example
+        nbt:
+          string: [
+            ]
+        # Used for CustomModelData options, just add the number. This option can be applied to all items.
+        model: 0
+      fill2:
+        # Use ; "<ITEM>;<ITEM>;<ITEM>" to add more than one item to the fill2.
+        material: BLUE_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        # This option can be applied to all items.
+        enabled: true
+        # This option can be applied to all items.
+        mimeslots:
+        - 1
+        - 10
+        - 19
+        - 28
+        - 37
+        # Nbts can be applied to all items in all menus by following this example
+        nbt:
+          string: [
+            ]
+        # Used for CustomModelData options, just add the number. This option can be applied to all items.
+        model: 0
+      filter_all:
+        clicksound: ''
+        material: CLOCK
+        texture: ''
+        data: 0
+        amount: 1
+        glow: false
+        # This option can be applied to all items.
+        slot: 0
+      filter_all_current:
+        clicksound: ''
+        material: RED_STAINED_GLASS_PANE
+        texture: ''
+        data: 0
+        amount: 1
+        glow: true
+        # This option can be applied to all items.
+        slot: 0
+      filter_daily:
+        clicksound: ''
+        material: CLOCK
+        texture: ''
+        data: 0
+        amount: 1
+        glow: false
+        # This option can be applied to all items.
+        slot: 9
+      filter_daily_current:
+        clicksound: ''
+        material: RED_STAINED_GLASS_PANE
+        texture: ''
+        data: 0
+        amount: 1
+        glow: true
+        # This option can be applied to all items.
+        slot: 9
+      filter_weekly:
+        clicksound: ''
+        material: CLOCK
+        texture: ''
+        data: 0
+        amount: 1
+        glow: false
+        # This option can be applied to all items.
+        slot: 18
+      filter_weekly_current:
+        clicksound: ''
+        material: RED_STAINED_GLASS_PANE
+        texture: ''
+        data: 0
+        amount: 1
+        glow: true
+        # This option can be applied to all items.
+        slot: 18
+      filter_monthly:
+        clicksound: ''
+        material: CLOCK
+        texture: ''
+        data: 0
+        amount: 1
+        glow: false
+        # This option can be applied to all items.
+        slot: 27
+      filter_monthly_current:
+        clicksound: ''
+        material: RED_STAINED_GLASS_PANE
+        texture: ''
+        data: 0
+        amount: 1
+        glow: true
+        # This option can be applied to all items.
+        slot: 27
+      filter_yearly:
+        clicksound: ''
+        material: CLOCK
+        texture: ''
+        data: 0
+        amount: 1
+        glow: false
+        # This option can be applied to all items.
+        slot: 36
+      filter_yearly_current:
+        clicksound: ''
+        material: RED_STAINED_GLASS_PANE
+        texture: ''
+        data: 0
+        amount: 1
+        glow: true
+        # This option can be applied to all items.
+        slot: 36
+      clear:
+        clicksound: ''
+        material: BARRIER
+        texture: ''
+        data: 0
+        amount: 1
+        glow: true
+        # This option can be applied to all items.
+        slot: 53
+      previous:
+        clicksound: ''
+        material: ARROW
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 47
+      next:
+        clicksound: ''
+        material: ARROW
+        texture: ''
+        amount: 1
+        glow: false
+        slot: 51
+      current:
+        clicksound: ''
+        material: IRON_AXE
+        texture: ''
+        data: 0
+        amount: 1
+        glow: true
+      back:
+        clicksound: ''
+        material: IRON_DOOR
+        texture: ''
+        data: 0
+        amount: 1
+        glow: true
+        # This option can be applied to all items.
+        slot: 49
+  #Lock Home config
+  clear_logger_confirm:
+    opensound: block.slime_block.hit
+    rows: 3
+    items:
+      fill:
+        material: RED_STAINED_GLASS_PANE
+        amount: 1
+        glow: false
+        mimeslots:
+        - ALL
+      confirm:
+        clicksound: ''
+        material: DIAMOND_BLOCK
+        amount: 1
+        glow: true
+        slot: 10
+        mimeslots:
+        - 11
+        - 12
+      cancel:
+        clicksound: ''
+        material: REDSTONE_BLOCK
+        amount: 1
+        glow: true
+        # %player%, nicknames or base64Textures
+        texture: ''
+        slot: 14
+        mimeslots:
+        - 15
+        - 16

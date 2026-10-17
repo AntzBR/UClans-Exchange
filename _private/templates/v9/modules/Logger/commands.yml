@@ -1,0 +1,38 @@
+ 
+#permissions and alias
+Commands:
+   
+  player:
+    # Use empty for don't need permissions
+    permission: uclans.player.logger
+    # Alias for command.
+    alias: logger
+    # Command cooldown.
+    cooldown: 0
+    # Value to use.
+    value: 0.0
+    disabled_worlds: [
+      ]
+    disabled_regions: [
+      ]
+   
+  # Logger command
+  logger:
+    help:
+      aliases: logger
+      show: <click:run_command:"/{_clan} {_logger} "><hover:show_text:'<green>Click to expand logger commands.'> <aqua>/{_clan} {_logger} <gray>-<yellow> Clan Logger.</hover></click> <hover:show_text:'<green>With sub commands.'><green>[!]</hover>
+      usage: '%tag% <red>Use <aqua>/{_clan} {_logger}'
+      error: '%tag% <red>Error.'
+      success: '%tag% <green>Success.'
+    clear:
+      aliases: clear
+      show: <click:suggest_command:"/{_clan} {_logger} {_clear} "><hover:show_text:'<green>Click to clean clan log'> <aqua>/{_clan} {_logger} {_clear} <gray>-<yellow> Clear clan logger.</hover></click>
+      usage: '%tag% <red>Use <aqua>/{_clan} {_logger} {_clear}'
+      error: '%tag% <red>There was an error clearing the clan log.'
+      success: '%tag% <green>The clan log has been successfully cleared.'
+    view:
+      aliases: view
+      show: <click:suggest_command:"/{_clan} {_logger} {_view} "><hover:show_text:'<green>Click to view clan logger'> <aqua>/{_clan} {_logger} {_view} <light_purple>(time) <light_purple>(page) <light_purple>(-gui) <gray>-<yellow> View clan logger.</hover></click>
+      usage: '%tag% <red>Use <aqua>/{_clan} {_logger} {_view} <light_purple>(time) <light_purple>(page) <light_purple>(-gui)'
+      error: '%tag% <red>Error'
+      success: '%tag% <green>Success'

@@ -1,0 +1,26 @@
+ 
+#permissions and alias
+Commands:
+   
+  player:
+    # Use empty for don't need permissions
+    permission: uclans.player.chat
+    # Alias for command.
+    alias: chat
+    # Command cooldown.
+    cooldown: 0
+    # Value to use.
+    value: 0.0
+    disabled_worlds: [
+      ]
+    disabled_regions: [
+      ]
+   
+  # player command
+  chat:
+    help:
+      aliases: help
+      show: <click:suggest_command:"/{_clan} {_chat} "><hover:show_text:'<green>Click to toggle clan chat.'> <aqua>/{_clan} {_chat} <gray>-<yellow> Toggle clan chat.</hover></click>
+      usage: '%tag% <red>Use <aqua>/{_clan} {_chat}'
+      error: '%tag% <red>Error to use chat.'
+      success: '%tag% <green>Clan locked chat as now: <aqua>{locked_chat}'

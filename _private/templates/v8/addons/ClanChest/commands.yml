@@ -1,0 +1,67 @@
+ 
+#permissions and alias
+Commands:
+   
+  admin:
+    # NOT RECOMMENDED: Use empty for don't need permissions
+    permission: clanchest.admin
+    # Alias for command.
+    alias: clanchest
+   
+  player:
+    # Use empty for don't need permissions
+    permission: uclans.player.chest
+    # Alias for command.
+    alias: chest
+    # Command cooldown.
+    cooldown: 0
+    # Value to use.
+    value: 0.0
+    disabled_worlds: [
+      ]
+    disabled_regions: [
+      ]
+   
+  # player command
+  chest:
+    help:
+      aliases: help
+      show: <click:suggest_command:"/{_clan} {_chest} "><hover:show_text:'<green>Click to expand.'> <aqua>/{_clan} {_chest} <gray>-<yellow> Expand chest commands.</hover></click> <hover:show_text:'<green>With sub commands.'><green>[!]</hover>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_chest} {_help}'
+      error: '%tag% <red>Error to use.'
+      success: '%tag% <green>Success to execute.'
+    buy:
+      aliases: buy
+      show: <click:suggest_command:"/{_clan} {_chest} {_buy} "><hover:show_text:'<green>Click to buy.'> <aqua>/{_clan} {_chest} {_buy} <gray>-<yellow> Buy chest page.</hover></click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_chest} {_buy}'
+      error: '%tag% <red>There was an error buying, you may not be allowed to buy more!'
+      success: '%tag% <green>You have successfully purchased an extra chest page.'
+    open:
+      aliases: open
+      show: <click:suggest_command:"/{_clan} {_chest} {_open} "><hover:show_text:'<green>Click to view.'> <aqua>/{_clan} {_chest} {_open} <light_purple>(page) <gray>-<yellow> Open chest.</hover></click>
+      usage: '%tag% <red>Error, use: <aqua>/{_clan} {_chest} {_open} <light_purple>(page)'
+      error: '%tag% <red>Error.'
+      success: '%tag% <green>Success.'
+  #admin command
+  clanchest:
+    help:
+      aliases:
+      - ajuda
+      show: ' <click:run_command:"/clanchest help"><hover:show_text:"<green>Click to show."><green>/clanchest help <gray>- <yellow>Show help menu.</hover></click>'
+      usage: '%tag% <red>Error, use: <green>/clanchest help'
+      error: '%tag% <red>Error to execute.'
+      success: '%tag% <green>Success to execute.'
+    reload:
+      aliases:
+      - recarregar
+      show: ' <green>/clanchest reload <gray>- <yellow>Reload settings.'
+      usage: '%tag% <red>Error, use: <green>/clanchest reload'
+      error: '%tag% <red>An error occurred while reloading.'
+      success: '%tag% <green>Plugin reloaded successfully.'
+    open:
+      aliases:
+      - open
+      show: ' <green>/clanchest open <red><player|tag> <gray>- <yellow>Open clan chests.'
+      usage: '%tag% <red>Error, use: <green>/clanchest open <red><player|tag>'
+      error: '%tag% <red>There was an error opening the chest.'
+      success: '%tag% <green>The chest was opened successfully!'
